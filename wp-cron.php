@@ -14,7 +14,6 @@
  * visit when the cron job is needed to run.
  *
  * @package WordPress
- * sanjay
  */
 
 ignore_user_abort(true);
@@ -23,7 +22,6 @@ if ( !empty($_POST) || defined('DOING_AJAX') || defined('DOING_CRON') )
 	die();
 
 /**
- * Sukanta
  * Tell WordPress we are doing the CRON task.
  *
  * @var bool
