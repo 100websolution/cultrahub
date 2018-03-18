@@ -1,0 +1,12 @@
+/*Development Css*/
+.form_validation .error {
+    /*background: url(images/error_icon.png) no-repeat scroll 10px 2px #ffd1d1;*/
+    border: 1px solid #de7a7b;
+    border-radius: 2px;
+    color: #c00;
+    display: block;
+    text-align: left;
+	margin:0 !important;
+}
+.form_validation ul li label.error{display: none !important;}
+.form_validation #culture_selected-error{display: none !important;}
