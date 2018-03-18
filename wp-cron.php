@@ -22,6 +22,7 @@ if ( !empty($_POST) || defined('DOING_AJAX') || defined('DOING_CRON') )
 	die();
 
 /**
+ * Sukanta
  * Tell WordPress we are doing the CRON task.
  *
  * @var bool
