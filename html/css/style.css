@@ -3303,12 +3303,23 @@ li:last-child .quote_block:before{display: none;}
     margin-bottom: 20px;
 }
 
+.cultra_local_banner{
+    background: no-repeat top center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    color: #fff;
+}
+.cultra_local_banner .sliderImg2 img{
+    width: 90%;
+    margin: 0 0 -70px;
+}
+
 .coastIcons{
     width: 412px;
     height: 400px;
     background: url(../images/CoastGrayArrows.png) no-repeat center;
     position: relative;
-    margin: 0 auto; 
+    margin: -70px auto 0;
 }
 .coastIcons .img1, .coastIcons .img2, .coastIcons .img3, .coastIcons .img4{
     width: 122px;
