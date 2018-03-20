@@ -3303,6 +3303,33 @@ li:last-child .quote_block:before{display: none;}
     margin-bottom: 20px;
 }
 
+.cultra_local_category{
+    position: relative;
+    min-height: 470px;
+}
+.cultra_local_category_img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 36%;
+    margin-left: -18%;
+    text-align: center;
+}
+.cultra_cat{
+    text-align: center;
+    color: #58595b;
+    font-size: 9px;
+    line-height: 12px;
+}
+.cultra_cat a{color: inherit; display: block;}
+.cultra_cat_icon{
+    height: 55px;
+    margin-bottom: 10px;
+}
+.cultra_cat_icon img{
+    height: 100%;
+}
+
 .cultra_local_banner{
     background: no-repeat top center;
     -webkit-background-size: contain;
