@@ -343,6 +343,34 @@ $(function () {
 		}
     });
 
+    /*-------------------------------------CULTRA_CATEGORY-------------------------------------*/
+    $.fn.slotslider = function (options) {
+
+        var object = $(this);
+        var slot_number = object.children().size();
+        var slot_slide = Math.ceil(slot_number / 9);
+        var index = 0;
+        object.wrapInner('<ul class="clearfix">');
+        for (var i = 0; i < slot_slide; i++) {
+            var innerHtml = '';
+            for (var j = 0; j < 9; j++) {
+                if (object.children('ul').children('.cultra_cat').eq(index).length) {
+                    innerHtml += '<div class="cultra_cat">' + object.children('ul').children('.cultra_cat').eq(index).html() + '</div>';
+                    index++;
+                } else
+                    break;
+            }
+            object.children('ul').append('<li><div class="cultra_cat_inner_wrap">' + innerHtml + '<div class="clear"></div></div></li>')
+        }
+        object.children('ul').children('.cultra_cat').each(function () {
+            $(this).remove();
+        });
+    };
+    
+    $('.cultra_cat_wrap').each(function () {
+        $(this).slotslider();
+    });
+
     /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
     /*var ht = $(".nav_menu > ul").html();
     $(".sidebar-menu").append(ht);
