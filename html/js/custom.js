@@ -25,6 +25,75 @@ $(window).load(function () {
 
 $(function () {
 
+    /*-------------------------------------ANIMATION_WAYPOINT-------------------------------------*/
+    if ($('.scroll_effect')) {
+        var arrayElements = [],
+            isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function () {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            },
+            effectsOnMobiles = false,
+            doAnimations = false;
+        if (isMobile.any() && effectsOnMobiles) doAnimations = true;
+        if (isMobile.any() && !effectsOnMobiles) doAnimations = false;
+        if (!isMobile.any()) doAnimations = true;
+
+        function wayjs(link, effect, delay_e) {
+
+            if (doAnimations) {
+
+                link.css('opacity', '0');
+
+                var Animate_effect = false;
+
+                link.waypoint({
+                    handler: function () {
+                        animate_effect(link, Animate_effect, effect, delay_e);
+                    },
+                    offset: '100%',
+                    triggerOnce: true
+                }, function () {
+                    $.waypoints("refresh");
+                });
+            }
+        }
+
+        function animate_effect(link, Animate_effect, effect, delay_e) {
+            if (Animate_effect === false) {
+                setTimeout(function () {
+                    link.addClass('animated ' + effect);
+                    link.css('opacity', '1');
+                }, delay_e);
+
+            }
+            Animate_effect = true;
+        }
+
+        $('.scroll_effect').each(function () {
+            $(this).show();
+            var effect = $(this).attr('data-effect'),
+                delay_e = $(this).attr('data-delay');
+            if (delay_e == "") delay_e = 0;
+            wayjs($(this), effect, delay_e);
+        });
+    }
+
     /*-------------------------------------GO_TO_TOP-------------------------------------*/
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -57,6 +126,67 @@ $(function () {
         var dropText = $(this).text();
         $(this).parents('.dropwrap').find('.droptext').text(dropText);
     });
+
+    /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
+    if($("#topbanner").length){
+        if (typeof $.fn.layerSlider == "undefined") {
+            lsShowNotice('topbanner', 'jquery');
+        } else if (typeof $.transit == "undefined" || typeof $.transit.modifiedForLayerSlider == "undefined") {
+            lsShowNotice('topbanner', 'transit');
+        } else {
+            $("#topbanner").layerSlider({
+                width: '100%',
+                height: '462px',
+                responsive: true,
+                responsiveUnder: 1160,
+                sublayerContainer: 1160,
+                autoStart: true,
+                pauseOnHover: true,
+                firstLayer: 1,
+                animateFirstLayer: true,
+                randomSlideshow: false,
+                twoWaySlideshow: true,
+                loops: 0,
+                forceLoopNum: true,
+                autoPlayVideos: false,
+                autoPauseSlideshow: 'auto',
+                youtubePreview: 'maxresdefault.jpg',
+                keybNav: true,
+                touchNav: true,
+                skin: 'fullwidth',
+                skinsPath: 'css/',
+                globalBGColor: 'transparent',
+                globalBGImage: '',
+                navPrevNext: true,
+                navStartStop: false,
+                navButtons: false,
+                hoverPrevNext: true,
+                hoverBottomNav: false,
+                showBarTimer: false,
+                showCircleTimer: false,
+                //thumbnailNavigation : 'disabled',
+                thumbnailNavigation: 'hover',
+                tnWidth: 100,
+                tnHeight: 60,
+                tnContainerWidth: '60%',
+                tnActiveOpacity: 35,
+                tnInactiveOpacity: 100,
+                imgPreload: true,
+                yourLogo: false,
+                yourLogoStyle: 'left: 10px; top: 10px;',
+                yourLogoLink: false,
+                yourLogoTarget: '_self',
+                cbInit: function (element) {},
+                cbStart: function (data) {},
+                cbStop: function (data) {},
+                cbPause: function (data) {},
+                cbAnimStart: function (data) {},
+                cbAnimStop: function (data) {},
+                cbPrev: function (data) {},
+                cbNext: function (data) {}
+            });
+        }
+    }
     
     /*-------------------------------------BUSINESS_CULTURE-------------------------------------*/
     $('.business_culture').click(function (e) {
@@ -112,6 +242,40 @@ $(function () {
 				items: 4
 			}
 		}
+    });
+    
+    /*-------------------------------------MAIN_TAB-------------------------------------*/
+    $(".maintabslider").owlCarousel({
+        items: 1,
+    	loop: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+		margin: 0,
+		dots: false,
+		nav: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive: {
+			320: {
+				items: 1
+			},
+			480: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 1
+			},
+			1600: {
+				items: 1
+			}
+		},
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut'
     });
     
     /*-------------------------------------OWL1-------------------------------------*/
@@ -213,7 +377,7 @@ $(function () {
     /*-------------------------------------GENRE_SLIDER-------------------------------------*/
     $("#genre_slider").owlCarousel({
         items: 4,
-    	loop: true,
+    	loop: false,
         autoplay: false,
         autoplayHoverPause: true,
 		margin: 30,
