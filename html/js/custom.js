@@ -157,7 +157,7 @@ $(function () {
                 skinsPath: 'css/',
                 globalBGColor: 'transparent',
                 globalBGImage: '',
-                navPrevNext: true,
+                navPrevNext: false,
                 navStartStop: false,
                 navButtons: false,
                 hoverPrevNext: true,
@@ -216,7 +216,7 @@ $(function () {
     $("#culture_slider").owlCarousel({
         items: 4,
     	loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayHoverPause: true,
 		margin: 30,
 		dots: false,
@@ -248,7 +248,7 @@ $(function () {
     $(".maintabslider").owlCarousel({
         items: 1,
     	loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayHoverPause: true,
 		margin: 0,
 		dots: false,
@@ -282,7 +282,7 @@ $(function () {
     $(".owl1").owlCarousel({
         items: 1,
     	loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayHoverPause: true,
 		margin: 0,
 		dots: false,
@@ -377,8 +377,8 @@ $(function () {
     /*-------------------------------------GENRE_SLIDER-------------------------------------*/
     $("#genre_slider").owlCarousel({
         items: 4,
-    	loop: false,
-        autoplay: false,
+    	loop: true,
+        autoplay: true,
         autoplayHoverPause: true,
 		margin: 30,
 		dots: false,
