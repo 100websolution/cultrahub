@@ -141,7 +141,7 @@ $(function () {
                 responsiveUnder: 1160,
                 sublayerContainer: 1160,
                 autoStart: true,
-                pauseOnHover: true,
+                pauseOnHover: false,
                 firstLayer: 1,
                 animateFirstLayer: true,
                 randomSlideshow: false,
