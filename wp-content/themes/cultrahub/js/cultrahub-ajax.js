@@ -113,6 +113,54 @@ jQuery(document).ready(function($){
 		}
 	});
 	
+	//Get in touch
+	$('#get_in_touch').click(function(e){
+		$("#getintouch_form").validate({
+			rules: {
+				email_id: {
+					validate_email: true
+				}
+			}            
+		});
+		if( $("#getintouch_form").valid() ) {
+			$('#getintouch_msg').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
+			e.preventDefault();
+			var fname 		 	= $('#fname').val();
+			var lname 		 	= $('#lname').val();
+			var email_id	 	= $('#email_id').val();
+			var phone_number 	= $('#phone_number').val();
+			var businessname	= $('#businessname').val();
+			var topics 		 	= $('#topics').val();
+			var ymessage 		= $('#ymessage').val();
+			
+			var elem = { fname:fname, lname:lname, email_id:email_id, phone_number:phone_number, businessname:businessname, topics:topics, ymessage:ymessage };
+			
+			jQuery.ajax({
+				url : cultrahub_ajax_object.ajax_url,
+				type : 'POST',
+				data : {
+					action : 'cultrahub_getintouch', 
+					post_datas : elem
+				},
+				success : function( response ) {
+					if( response == 'success' ){
+						$("#getintouch_form")[0].reset();
+						$('#getintouch_msg').html('<small style="color:#00a74f;font-size:12px; text-align:center;">Thank you for your submission, we will get back to you soon.</small>');
+						setTimeout(function(){
+							$('#getintouch_msg').html('');
+						},5000);
+					}
+					else{
+						$('#getintouch_msg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
+						setTimeout(function(){
+							$('#getintouch_msg').html('');
+						},5000);
+					}
+				}
+			});
+		}
+    });
+	
 	
 	
 	//select_culture

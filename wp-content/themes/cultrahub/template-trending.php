@@ -138,10 +138,10 @@ if( !empty($banner_sliders) ){
 				</div>
 			</div>
 			
-			<hr class="mt70 mb50">
 			<?php
 			if(!empty($quote)){
 			?>
+			<hr class="mt70 mb50">
 			<div class="innerContainer">
 				<div class="quote">
 					<?php echo $quote;?>
