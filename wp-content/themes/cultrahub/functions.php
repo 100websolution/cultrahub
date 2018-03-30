@@ -742,6 +742,176 @@ function ch_hashtag(){
 }
 add_action( 'init', 'ch_hashtag' );
 
+//Cultrahub get in touch
+add_action( 'wp_ajax_cultrahub_getintouch', 'cultrahub_getintouch' );
+add_action( 'wp_ajax_nopriv_cultrahub_getintouch', 'cultrahub_getintouch' );
+function cultrahub_getintouch(){
+	if ( isset( $_POST['post_datas'] ) && ( $_POST['post_datas']['email_id'] != '' ) ) {
+		$fname 			= isset($_POST['post_datas']['fname'])?$_POST['post_datas']['fname']:'';
+		$lname 			= isset($_POST['post_datas']['lname'])?$_POST['post_datas']['lname']:'';
+		$email_id 		= isset($_POST['post_datas']['email_id'])?$_POST['post_datas']['email_id']:'';
+		$phone_number	= isset($_POST['post_datas']['phone_number'])?$_POST['post_datas']['phone_number']:'';
+		$businessname 	= isset($_POST['post_datas']['businessname'])?$_POST['post_datas']['businessname']:'';
+		$topics 		= isset($_POST['post_datas']['topics'])?$_POST['post_datas']['topics']:'';
+		$ymessage 		= isset($_POST['post_datas']['ymessage'])?$_POST['post_datas']['ymessage']:'';
+		
+		$post = array(
+					'post_title' 	=> wp_strip_all_tags( $fname ),					
+					'post_status'	=> 'publish',
+					'post_type' 	=> 'getintouch'  //Post type
+				);
+		$insert_id = wp_insert_post($post);
+		if( $insert_id != '' ){
+			update_post_meta( $insert_id, 'fname', $fname );
+			update_post_meta( $insert_id, 'lname', $lname );
+			update_post_meta( $insert_id, 'email_id', $email_id );
+			update_post_meta( $insert_id, 'phone_number', $phone_number );
+			update_post_meta( $insert_id, 'getintouch_businessname', $businessname );
+			update_post_meta( $insert_id, 'topics', $topics );
+			update_post_meta( $insert_id, 'ymessage', $ymessage );		
+			
+			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+			$logo_url = site_url() . '/cultrahub/wp-content/themes/cultrahub/images/logo.png';
+
+			$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <title>Cultrahub</title>
+                </head>
+                <body style="margin:0; padding:0px; background-color:#fff;">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" style="max-width:100%;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#282828;border: #ddd 1px solid;margin-top:30px;">
+                    <tr>
+                        <td align="center" style="padding: 15px 0;border-bottom: #ddd 1px solid; background-color:#EFEFEF">
+                            <a href="'.site_url().'" target="_blank"><img src="'. esc_url( $logo_url ) .'" width="275" alt="Cultrahub" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p style="padding:15px 15px 15px 15px; line-height:22px">
+                                Hello Admin,
+                            </p>
+                            <p style="padding:0px 15px 15px 15px; line-height:22px;">
+								A new submission has been posted. Please check admin panel for details. Details are:
+								<br /><br />
+                                First Name: ' . $fname . '<br />
+                                Last Name: ' . $lname . '<br />
+                                Email Address: ' . $email_id . '<br />
+                                Phone Number: ' . $phone_number . '<br />
+                                Business Name: ' . $businessname . '<br />								
+                                Topics: ' . $topics . '<br />								
+                                Message: ' . $ymessage . '<br />								
+							</p>							
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px 0;background-color:#2D2D2D">
+                            <p style="font-size: 12px; color:#fff !important; text-align:center;line-height: 18px;">Copyright &copy; '. date('Y') .' Cultrahub™. Designed &amp; Developed by <a href="<?php echo site_url();?>">Cultrahub</a>.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                </body>
+                </html>';
+			$headers = 'Content-Type: text/html; charset=UTF-8';
+			$headers .= 'From: Cultrahub < '. $email_id .' >';
+			//get_option('admin_email')
+			wp_mail( '100websolution@gmail.com', 'Get In Touch', $message, $headers );
+			
+			
+		}else{
+			echo 'error';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
+}
+//For Help & contact page get in touch management
+function ch_getintouch(){
+	$labels = array(
+				'name'				=> _x( 'Get In Touch', 'post type general name' ),
+				'singular_name'		=> _x( 'Get In Touch', 'post type singular name' ),
+				'add_new' 			=> _x( 'Add New', 'getintouch' ),
+				'add_new_item' 		=> __( 'Add New' ),
+				'edit_item' 		=> __( 'Edit' ),
+				'new_item' 			=> __( 'New' ),
+				'all_items' 		=> __( 'All' ),
+				'view_item' 		=> __( 'View' ),
+				'search_items' 		=> __( 'Search' ),
+				'not_found' 		=> __( 'No record found' ),
+				'not_found_in_trash'=> __( 'No record found in the trash' ),
+				'parent_item_colon' => '',
+				'menu_name' 		=> 'Get In Touch'
+			);
+	$args = array(
+				'labels'			=> $labels,
+				'description'		=> '',
+				'public'			=> true,
+				'menu_icon'			=> 'dashicons-groups',
+				'menu_position'		=> 15,
+				'supports'			=> array(''),
+				'has_archive' 		=> true,
+				'capability_type' 	=> 'post',
+				'capabilities' 		=> array(
+				    					'create_posts' => false,	//add new false
+				  						),
+										'map_meta_cap' => true,		//edit, view, delete allow
+			);
+	register_post_type( 'getintouch', $args );
+}
+add_action( 'init', 'ch_getintouch' );
+
+//Add column to get in touch page in admin panel
+add_filter( 'manage_getintouch_posts_columns', 'set_custom_edit_columns_getintouch' );
+function set_custom_edit_columns_getintouch( $columns ) {
+  	unset( $columns['title'] );
+  	unset( $columns['date'] );
+  	$columns['fname'] 					= __( 'First Name', 'Cultrahub' );
+  	$columns['lname'] 					= __( 'Last Name', 'Cultrahub' );
+  	$columns['email_id'] 				= __( 'Email Address', 'Cultrahub' );
+  	$columns['phone_number'] 			= __( 'Phone Number', 'Cultrahub' );  	
+  	$columns['getintouch_businessname'] = __( 'Business Name', 'Cultrahub' );
+  	$columns['topics']					= __( 'Topic', 'Cultrahub' );
+  	$columns['date'] 					= __( 'Date', 'date' );
+  	return $columns;
+}
+
+add_action( 'manage_getintouch_posts_custom_column' , 'custom_column_getintouch', 10, 2 );
+function custom_column_getintouch( $column, $post_id ) {
+  switch ( $column ) {
+
+    case 'fname' :
+      	echo get_field( 'fname' );
+      	break;
+		
+	case 'lname' :
+      	echo get_field( 'lname' );
+      	break;
+		
+	case 'email_id' :
+    	echo get_field( 'email_id' );
+      	break;
+	
+	case 'phone_number' :
+      	if( get_field( 'phone_number' ) != '' )echo get_field( 'phone_number' ); else echo '';
+      	break;
+
+    case 'getintouch_businessname' :
+      	echo get_field( 'getintouch_businessname' );
+      	break;
+
+	case 'topics' :
+      	if( get_field( 'topics' ) != '' )echo get_field( 'topics' ); else echo '';
+      	break;
+		
+	case 'ymessage' :
+      	if( get_field( 'ymessage' ) != '' )echo get_field( 'ymessage' ); else echo '';
+      	break;
+  }
+}
+
 // Encrypt and Decrypt Function
 function crypt_decrypt( $string, $action ) {
     $secret_key = '0123456789DefGHIjAbcklmonPwCultraHub';
@@ -787,7 +957,7 @@ function disallow_posts_with_same_title($messages) {
     $post_id = $post->ID;
     $current_posttype = get_post_type( $post_id );
 
-    if( !empty($current_posttype) && ($current_posttype == 'menucategory' || $current_posttype == 'genre' || $current_posttype == 'culture' || $current_posttype == 'blog' || $current_posttype == 'hashtag') ){
+    if( !empty($current_posttype) && ($current_posttype == 'menucategory' || $current_posttype == 'genre' || $current_posttype == 'culture' || $current_posttype == 'blog' || $current_posttype == 'hashtag' || $current_posttype == 'getintouch') ){
     	$wtitlequery = "SELECT post_title FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = '{$current_posttype}' AND post_title = '{$title}' AND ID != {$post_id} ";
 	    $wresults = $wpdb->get_results( $wtitlequery) ;
 
@@ -859,6 +1029,8 @@ function add_social_links_icons( ){
     return $html;
 }
 add_filter("init", "add_social_links_icons");
+
+
 
 
 //Convert youtube watch url to embeded code

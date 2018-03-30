@@ -10,3 +10,4 @@
 }
 .form_validation ul li label.error{display: none !important;}
 .form_validation #culture_selected-error{display: none !important;}
+.form_validation .error{background-color: #fff !important; padding: 5px 10px !important;}
