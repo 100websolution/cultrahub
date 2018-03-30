@@ -536,6 +536,16 @@ $(function () {
     });
 
     /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
+    $('[data-toggle="modal"]').on('click', function (e){
+        var modalToggle = $(this),
+            modalTarget = modalToggle.data('target');
+        $(modalTarget).addClass('modal-open');
+    });
+    $('[data-dismiss="modal"]').on('click', function (e){
+        $(this).parents('.modal').removeClass('modal-open');
+    });
+
+    /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
     /*var ht = $(".nav_menu > ul").html();
     $(".sidebar-menu").append(ht);
 
