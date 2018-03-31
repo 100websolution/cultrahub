@@ -96,11 +96,11 @@ if( !empty($banner_sliders) ){
 						</div>
 					</div>
 					<div class="clear"></div>
-				</div>				
-			</div>
+				</div>
 				<?php
 				}
 				?>
+			</div>
 		</div>
 	</div>
 	

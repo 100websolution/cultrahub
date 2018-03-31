@@ -237,24 +237,29 @@ if ( !function_exists( 'cultrahub_enqueue_scripts' ) ) {
 		// get theme version
 		$my_theme = wp_get_theme()->get('Version');
 		
-		// Add Font awesome.
-		wp_enqueue_style( 'cultrahub-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '1.0' );	
-		// Add plugins.css.
+		// Add Font awesome
+		//wp_enqueue_style( 'cultrahub-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '1.0' );	
+		// Add plugins.css
 		wp_enqueue_style( 'cultrahub-plugins', get_template_directory_uri() . '/css/plugins.css', array(), '1.0' );	
+		// Add layerslider
+		wp_enqueue_style( 'cultrahub-layerslider', get_template_directory_uri() . '/css/layerslider.css', array(), '1.0' );	
 		//Bootstrap
-		wp_enqueue_style( 'cultrahub-bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css');
-		// Theme stylesheet.
+		//wp_enqueue_style( 'cultrahub-bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css');
+		// Theme stylesheet
 		wp_enqueue_style( 'cultrahub-style', get_stylesheet_uri() );	
-		// Add plugins.css.
+		// Add plugins.css
 		wp_enqueue_style( 'cultrahub-responsive', get_template_directory_uri() . '/css/responsive.css', array(), '1.0' );
-		// Add development.css.
+		// Add development.css
 		wp_enqueue_style( 'cultrahub-development', get_template_directory_uri() . '/css/development.css', array(), '1.0' );
 		
 		//Scripts
 		wp_enqueue_script( 'cultrahub-jquery', get_template_directory_uri() . '/js/lib/jquery-1.12.2.min.js', array(), '1.12.2' );
 		wp_enqueue_script( 'cultrahub-plugins', get_template_directory_uri() . '/js/lib/plugins.js', array(), '1.12.1' );
-		wp_enqueue_script( 'cultrahub-custom', get_template_directory_uri() . '/js/custom.js', array(), '1.0' );
-		wp_enqueue_script( 'cultrahub-bootstrap-min', get_template_directory_uri() . '/js/bootstrap.min.js' );
+		wp_enqueue_script( 'cultrahub-layerslider', get_template_directory_uri() . '/js/lib/layerslider.kreaturamedia.jquery.js', array(), '1.0' );
+		wp_enqueue_script( 'cultrahub-jquerytransit', get_template_directory_uri() . '/js/lib/jquerytransit.js', array(), '1.0' );
+		wp_enqueue_script( 'cultrahub-jquerytransit', get_template_directory_uri() . '/js/lib/layerslider.transitions.js', array(), '1.0' );
+		wp_enqueue_script( 'cultrahub-layerslider-transitions', get_template_directory_uri() . '/js/custom.js', array(), '1.0' );
+		//wp_enqueue_script( 'cultrahub-bootstrap-min', get_template_directory_uri() . '/js/bootstrap.min.js' );
 		
 		/*for validation purpose*/
 		wp_enqueue_script( 'cultrahub-validation', get_template_directory_uri() . '/js/validation/jquery.validate.js' );
