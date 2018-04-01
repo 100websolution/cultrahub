@@ -590,7 +590,7 @@ form small{
     line-height: 16px;
     display: inline-block;
 }
-.input_checkbox label{
+.input_checkbox label, .input_radio label{
 	cursor: pointer;
 	margin: 0;
 	display: block;
@@ -598,8 +598,13 @@ form small{
 	color: inherit;
     line-height: 36px;
 }
-.input_checkbox label input{display: none;}
-.input_checkbox label em{
+.inline.input_checkbox label, .inline.input_radio label{
+    display: inline-block;
+    margin: 0 30px 0 0;
+}
+.inline.input_checkbox label:last-child, .inline.input_radio label:last-child{margin: 0;}
+.input_checkbox label input, .input_radio label input{display: none;}
+.input_checkbox label em, .input_radio label em{
 	width: 12px;
 	height: 12px;
     background: #f7f7f7;
@@ -611,11 +616,15 @@ form small{
     vertical-align: top;
     float: left;
 }
-.input_checkbox label input:checked + em{
+.input_radio label em{
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.input_checkbox label input:checked + em, .input_radio label input:checked + em{
 	//border-color: #000;
 	position: relative;
 }
-.input_checkbox label input:checked + em:before{
+.input_checkbox label input:checked + em:before, .input_radio label input:checked + em:before{
 	position: absolute;
 	content: "";
 	display: block;
@@ -625,16 +634,37 @@ form small{
 	height: 100%;
     background: url(../images/checkbox.png) no-repeat 1px 1px;
 }
-.input_checkbox label span{
+.input_radio label em{
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.input_radio label input:checked + em:before{
+    content: "";
+    background: #414042;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+}
+.input_checkbox label span, .input_radio label span{
     display: block;
     padding: 0 0 0 20px;
 }
-.input_checkbox label.f10{
+.input_checkbox label.f10, .input_radio label.f10{
     font-size: 10px;
     line-height: 16px;
 }
-.input_checkbox label.f10 em{margin-top: 2px;}
-.input_checkbox a{
+.input_checkbox label.f10 em, .input_radio label.f10 em{margin-top: 2px;}
+.input_checkbox.f14, .input_radio.f14{
+    font-size: 14px;
+    line-height: 16px;
+}
+.input_checkbox.f14 label em, .input_radio.f14 label em{margin-top: 2px;}
+.input_checkbox a, .input_radio a{
     color: #1c75b9;
     font-style: italic;
 }
@@ -645,6 +675,7 @@ form small{
 .social_login a, .social_login img{display: block;}
 
 .or{
+    clear: both;
 	position: relative;
     overflow: hidden;
     text-transform: uppercase;
@@ -668,7 +699,7 @@ form small{
 	display: block;
 	top: 50%;
     left: 100%;
-	width: 200px;
+	width: 500px;
 	height: 1px;
 	background: #8d8f92;
 }
@@ -1443,6 +1474,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     position: absolute;
     top: -15px;
     left: 15px;
+    z-index: 3;
 }
 .homeBannerText{
     text-align: center;
@@ -2257,7 +2289,7 @@ label.label_badge input:checked + span:before{
     font-family: 'RalewayBold';
     color: #00a74f;
 }
-.review_form [type="submit"]:hover, .review_form [type="submit"]:focus{
+.review_form [type="submit"]:hover, .review_form [type="submit"]:focus, .modal [type="submit"]:hover, .modal [type="submit"]:focus{
     background-color: #00a74f;
     border-color: #00a74f;
     color: #fff;
@@ -2431,143 +2463,154 @@ footer .social a{background: #e9e9e9;}
 
 /* MODAL
 ---------------------------------*/
-.modal-open {
-  overflow: hidden;
+[data-toggle="modal"]{cursor: pointer;}
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    -webkit-transition: -webkit-opacity .15s linear;
+         -o-transition: -o-opacity .15s linear;
+            transition: opacity .15s linear;
 }
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-  background: rgba(0,0,0,0.8);
+.modalBox{
+    width: 660px;
+    padding: 50px;
+    margin: 50px auto;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .3s ease-out;
+         -o-transition:      -o-transform .3s ease-out;
+            transition:         transform .3s ease-out;
+    -webkit-transform: translate(0, -200%);
+        -ms-transform: translate(0, -200%);
+         -o-transform: translate(0, -200%);
+            transform: translate(0, -200%);}
+.modalClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 30px;
+    color: #57585b;
+    cursor: pointer;
 }
-.modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform .3s ease-out;
-       -o-transition:      -o-transform .3s ease-out;
-          transition:         transform .3s ease-out;
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-       -o-transform: translate(0, -25%);
-          transform: translate(0, -25%);
+.modalOverlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    filter: alpha(opacity=0);
+    opacity: 0;
 }
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-       -o-transform: translate(0, 0);
-          transform: translate(0, 0);
+.modalOpen{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
-.modal-open.modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-    display: block;
+.modalOpen .modal{
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 10px;
+.modalOpen .modalOverlay{
+    filter: alpha(opacity=80);
+    opacity: 0.8;
 }
-.modal-content {
-  position: relative;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
-  outline: 0;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-}
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000;
-}
-.modal-backdrop.fade {
-  filter: alpha(opacity=0);
-  opacity: 0;
-}
-.modal-backdrop.in {
-  filter: alpha(opacity=50);
-  opacity: .5;
-}
-.modal-header {
-  padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-}
-.modal-header .close {
-  margin-top: -2px;
-}
-.modal-title {
-  margin: 0;
-  line-height: 1.42857143;
-}
-.modal-body {
-  position: relative;
-  padding: 15px;
-}
-.modal-footer {
-  padding: 15px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
-.modal-footer .btn + .btn {
-  margin-bottom: 0;
-  margin-left: 5px;
-}
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-.modal-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
-@media (min-width: 768px) {
-  .modal-dialog {
-    width: 600px;
-    margin: 30px auto;
-  }
-  .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-  }
-  .modal-sm {
-    width: 300px;
-  }
-}
-@media (min-width: 992px) {
-  .modal-lg {
-    width: 900px;
-  }
-}
-.modal-header:before,
-.modal-header:after,
-.modal-footer:before,
-.modal-footer:after {
-  display: table;
-  content: " ";
-}
-.modal-header:after,
-.modal-footer:after {
-  clear: both;
+.opened.modal{opacity: 1;}
+.opened.modal .modalBox{
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+         -o-transform: translate(0, 0);
+            transform: translate(0, 0);
 }
 /*MODAL END*/
+
+
+/* MODAL_FORM
+---------------------------------*/
+.modal .signup_form_wrap .subheading{
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.modal .signup_form_wrap .subheading:before{display: none;}
+.modal .subheading .color_dots{margin-top: 20px;}
+.modal .subheading .color_dots span{display: inline-block;}
+.modal form .subheading2.small{margin-bottom: 25px; font-size: 12px; font-family: 'RalewaySemiBold';}
+.modal form .ul{margin: 0 -15px -20px;}
+.modal form .ul > li{padding: 0 15px; margin-bottom: 20px;}
+.modal .or{margin: 20px 0;}
+.modal .or span{background: #fff;}
+.modal .border_btm{padding-bottom: 25px; margin-bottom: 25px;}
+.modal input[type="text"], .modal input[type="email"], .modal input[type="password"], .modal textarea, .modal select{background-color: #f9f9f9;}
+.dob:after{content: ""; display: block; clear: both;}
+.dob select{
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    padding-right: 18px;
+    background-position: 125% -8px;
+}
+.dob select:last-child{margin-right: 0;}
+.modal .ul.pick_badge{margin: 0 -10px;}
+.modal .ul.pick_badge > li{padding: 5px; margin: 0 -3px;}
+.modal form small{font-size: 12px;}
+.helptext{
+    font-size: 10px;
+    line-height: 16px;
+    position: absolute;
+    top: 4px;
+    right: 15px;
+}
+.helptext img{
+    height: 16px;
+    vertical-align: top;
+    margin: 0;
+}
+.helptext i{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #f9f9f9;
+    color: #1c75b9;
+    margin: -2px 0 -2px 5px;
+    cursor: pointer;
+}
+.helptext i:hover/*, .helptext a:hover i*/{
+    background: #1c75b9;
+    color: #fff;
+}
+.modal .input_checkbox label em, .modal .input_radio label em{
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+}
+.modal .input_checkbox label input:checked + em:before{background-position: 3px 2px;}
+.modal .input_radio label input:checked + em:before{top: 3px; right: 3px; bottom: 3px; left: 3px;}
+.modal .input_checkbox label span, .modal .input_radio label span{padding: 0 0 0 25px;}
+/*MODAL_FORM END*/
 
 
 /*--------------------------------------CULTURE PAGE START--------------------------------------*/
