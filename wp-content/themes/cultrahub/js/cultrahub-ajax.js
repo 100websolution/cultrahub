@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 		}
 	}, "Please enter a valid Email.");
 	
-	$.validator.addMethod("culture_empty_validation", function(value, element) {
+	/*$.validator.addMethod("culture_empty_validation", function(value, element) {
 		if(value == ''){
 			$('#culturemsg').html("Please select culture.");
 			return false;
@@ -18,7 +18,8 @@ jQuery(document).ready(function($){
 			return true;
 		}
 	}, "Please select culture.");
-		
+	*/
+	
 	//Home page signup section
     $('#signup').click(function(e){
 		$("#signup_form").validate({
@@ -26,26 +27,43 @@ jQuery(document).ready(function($){
 				email_address: {
 					validate_email: true
 				},
-				culture_selected: {
-					culture_empty_validation: true	
+				gender: {
+					validate_test: true
 				},
+				/*cultureselected: {
+					culture_empty_validation: true	
+				},*/
 				confirm_password: {
 					equalTo: "#password"
 				},
 			}            
 		});
 		if( $("#signup_form").valid() ) {
+			/*var cultureselected = $('#culture_selected').val();
+			if(cultureselected == ''){
+				$('#culturemsg').html("Please select culture.");
+				return false;
+			}
+			else {
+				$('#culturemsg').html("");
+				return true;
+			}*/
 			$('#message').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
 			e.preventDefault();
-			var full_name 		 = $('#full_name').val();
-			var producer		 = '';
+			var firstname 		 = $('#firstname').val();
+			var lastname 		 = $('#lastname').val();
+			var username 		 = $('#username').val();
+			var month 		 	 = $('#month').val();
+			var day 		 	 = $('#day').val();
+			var year 		 	 = $('#year').val();
+			/*var producer		 = '';
 			if($('#producer').prop('checked')) {
 				producer		 = $('#producer').val();
 			} else {
 				producer		 = '';
-			}
-			var business 		 = $('#business').val();
+			}*/
 			var email_address	 = $('#email_address').val();
+			var business 		 = $('#business').val();
 			var password	 	 = $('#password').val();
 			var confirm_password = $('#confirm_password').val();
 			var culture_selected = $('#culture_selected').val();
@@ -55,7 +73,7 @@ jQuery(document).ready(function($){
 			} else {
 				get_notification = '';
 			}
-			var elem = { full_name:full_name, producer:producer, business:business, email_address:email_address, password:password, culture_selected:culture_selected, get_notification:get_notification };
+			var elem = { firstname:firstname, lastname:lastname, username:username, month:month, day:day, year:year, email_address:email_address, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
 			
 			jQuery.ajax({
 				url : cultrahub_ajax_object.ajax_url,

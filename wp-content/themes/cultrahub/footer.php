@@ -87,7 +87,7 @@
 						<li class="col50">
 							<label>Username</label>
 							<input type="text" class="required" name="username" id="username" placeholder="Write your username">
-							<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable"> Username Unavailable</div>
+							<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable" /></div>
 						</li>
 						<li class="col50">
 							<label>Birthdate</label>
@@ -133,15 +133,15 @@
 							<label>E-mail Address</label>
 							<input type="email" class="required" id="email_address" name="email_address" placeholder="Write your e-mail address">
 						</li>
-						<li class="col50">
+						<li class="col50">						
 							<label>Gender</label>
 							<div class="input_radio inline f14">
 								<label class="">
-									<input type="radio" name="gender" id="gender" value="Female" class="required"><em></em>
+									<input type="radio" name="gender" id="gender_male" value="Female" class="required gen"><em></em>
 									<span>Female</span>
 								</label>
 								<label class="">
-									<input type="radio" name="gender" id="gender" value="Male" class="required"><em></em>
+									<input type="radio" name="gender" id="gender_female" value="Male" class="required gen"><em></em>
 									<span>Male</span>
 								</label>
 							</div>
@@ -215,6 +215,7 @@
 						<li class="col100 align_center">
 							<small>By clicking this button, you agree to our <a href="#">Terms of Service</a>.</small>
 						</li>
+						<li class="align_center" id="message"></li>
 				   </ul>
 				</div>
 			</form>
