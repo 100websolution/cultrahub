@@ -48,7 +48,7 @@
 					<div class="fright">
 						<div class="fleft ml30">
 							<ul class="borderbar_list">
-								<li><span data-toggle="modal" data-target="#myModal">Popup</span></li>
+								<li><span data-toggle="modal" data-target="#signUpForm">Sign Up</span></li>
 								<li><a href="#">About Us</a></li>
 								<li><a href="<?php echo get_permalink(2584);?>">Help &amp; Contact</a></li>
 								<li><a href="#">Careers</a></li>
@@ -142,7 +142,7 @@
 								<div class="culture_text">
 									<span class="culture_icon"><img src="<?php echo $icon['url'];?>" alt=""></span>
 									<div class="culture_text_inner">
-										<h3 class="culture_title"><a href="culture_hiphop.html"><?php echo $banner['homebanner_culture']->post_title;?></a></h3>
+										<h3 class="culture_title"><a href="<?php echo get_permalink($banner['homebanner_culture']->ID);?>"><?php echo $banner['homebanner_culture']->post_title;?></a></h3>
 										<div class="culture_info">Culture</div>
 									</div>
 									<div class="clear"></div>

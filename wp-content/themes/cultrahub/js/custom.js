@@ -8,6 +8,10 @@ $(window).load(function () {
             $(this).parents('.height_div').find('.hhalf').outerHeight(heightHalf);
             $(this).parents('.height_div').find('.hfull').outerHeight(heightFull);
         });
+        if($('.modalBox').outerHeight() > $window.height()){
+            $('.modalOpen').css('padding-right','17px');
+            $('.modalOpen .modal').css('padding-right','17px');
+        }
     }
     $window.resize(resize).trigger('resize');
     
@@ -539,10 +543,16 @@ $(function () {
     $('[data-toggle="modal"]').on('click', function (e){
         var modalToggle = $(this),
             modalTarget = modalToggle.data('target');
-        $(modalTarget).addClass('modal-open');
+        $('body').addClass('modalOpen');
+        $(modalTarget).addClass('opened').slideDown();
+        if($('.modalBox').outerHeight() > $(window).height()){
+            $('.modalOpen').css('padding-right','17px');
+            $('.modalOpen .modal').css('padding-right','17px');
+        }
     });
-    $('[data-dismiss="modal"]').on('click', function (e){
-        $(this).parents('.modal').removeClass('modal-open');
+    $('.modalClose').on('click', function (e){
+        $('body').removeClass('modalOpen').css('padding-right','0');
+        $(this).parents('.modal').slideUp().removeClass('opened').css('padding-right','0');
     });
 
     /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
