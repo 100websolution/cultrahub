@@ -3,77 +3,96 @@
 Template Name: Home
 */
 get_header();
+$about_cultrahub 	= get_field( 'about_cultrahub', $post->ID );
+$cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
 	<div class="section borderSection">
 		<div class="container">
-			<div class="heading_block">
-				<div class="heading2 center"><?php _e('Learn / Sell / Shop', 'cultrahub');?></div>
-				<div class="color_dots">
-					<span class="yellow"></span>
-					<span class="red"></span>
-					<span class="blue"></span>
-					<span class="green"></span>
-				</div>
-			</div>
 			<div class="innerContainer">
+				<div class="heading_block">
+					<div class="heading2 center"><img src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png" alt=""></div>
+					<div class="color_dots">
+						<span class="yellow"></span>
+						<span class="red"></span>
+						<span class="blue"></span>
+						<span class="green"></span>
+					</div>
+					<?php
+					if( !empty($about_cultrahub) ){
+					?>
+					<div class="heading_tag mt20"><?php echo $about_cultrahub;?></div>
+					<?php
+					}
+					?>
+				</div>
+				<?php
+				if( !empty($cultrahub_blocks) ){
+				?>
 				<ul class="row ul iconList">
+				<?php
+					foreach( $cultrahub_blocks as $cb ){
+				?>
 					<li class="col33">
 						<div class="iconBlock">
-							<?php dynamic_sidebar( 'learn-cultures-sidebar' );?>
+							<div class="iconImg scroll_effect" data-effect="fadeInUp" data-delay="300"><img src="<?php echo $cb['block_image']['url'];?>" alt=""></div>
+							<div class="iconText">
+								<h3 class="subheading2"><?php echo $cb['block_title'];?></h3>
+							</div>
 						</div>
 					</li>
-					<li class="col33">
-						<div class="iconBlock">
-							<?php dynamic_sidebar( 'sell-on-our-platform-sidebar' );?>
-						</div>
-					</li>
-					<li class="col33">
-						<div class="iconBlock">
-							<?php dynamic_sidebar( 'shop-among-cultures-sidebar' );?>
-						</div>
-					</li>
+				<?php
+					}
+				?>
 				</ul>
+				<?php
+				}
+				?>
 				
-				<div class="border_top seller_section">
+				<div class="seller_section">
 					<div class="sliderblockWrap odd rev">
 						<div class="sliderblock">
-							<?php the_content();?>
+							<?php
+							if ( have_posts() ) while ( have_posts() ) : the_post();
+								the_content();
+							endwhile;
+							wp_reset_query();
+							?>
 							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
 	
 	<div class="section">
 		<div class="container">
-			<?php dynamic_sidebar( 'cultrahub-cultures-discover' );?>
 			<div class="innerContainer">
+				<?php dynamic_sidebar( 'cultrahub-cultures-discover' );?>
 				<div class="owl-carousel" id="culture_slider">
 				<?php
 				query_posts('post_type=culture&order=asc&orderby=id');
 				if (have_posts()) : while (have_posts()) : the_post();
-					$culture_icon = get_field( 'icon', $post->ID );
-					//echo '<pre>'; print_r($culture_icon); die;
+					$culture_icon = get_field( 'icon', $post->ID );					
 				?>
 					<div class="item">
 						<div class="culture_block">
 							<div class="culture_img square_block imgEffect">
 								<a href="<?php the_permalink();?>">
 									<?php the_post_thumbnail( array( 256, 256 ) );?>
-								</a>
+								</a>								
 							</div>
 							<div class="culture_text">
-								<span class="culture_icon"><img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>" width="<?php echo $culture_icon['sizes']['cultrahub-home-icon-width'];?>" height="<?php echo $culture_icon['sizes']['cultrahub-home-icon-height'];?>" /></span>
+								<a href="<?php the_permalink();?>" class="culture_icon">
+									<img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>" width="<?php echo $culture_icon['sizes']['cultrahub-home-icon-width'];?>" height="<?php echo $culture_icon['sizes']['cultrahub-home-icon-height'];?>" />
+								</a>
 								<div class="culture_text_inner">
 									<h3 class="culture_title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-								<?php if( get_field( 'followers', $post->ID ) != '' ){ ?>
+									<?php if( get_field( 'followers', $post->ID ) != '' ){ ?>
 									<div class="culture_info">Culture <span><em><?php echo get_field( 'followers', $post->ID );?></em> Followers</span></div>
-								<?php } ?>
+									<?php } ?>									
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -83,56 +102,63 @@ get_header();
 				endwhile; endif;
 				wp_reset_query();
 				?>
-				</div>				
-				<?php dynamic_sidebar( 'cultrahub-quote' ); ?>
+				</div>
 			</div>
 		</div>
-	</div>	
-	<div class="section">
+	</div>
+	
+	<div class="section maintab">
 		<div class="container">
-			<div class="sliderblockWrap">
-			<?php
-			query_posts('post_type=menucategory&order=asc&orderby=id');
-			if (have_posts()) : while (have_posts()) : the_post();
-				$slider_icon = get_field( 'icon', $post->ID );
-				$slider_images = get_field( 'slider_images', $post->ID );
-				$details_page_link = get_field( 'details_page_link', $post->ID );				
-			?>
-				<div class="sliderblock">
-					<div class="sliderImg">
-						<div class="owl-carousel owl1">
-					<?php
-					if( !empty($slider_images) ){
-						foreach( $slider_images as $image ){
-					?>
-							<div class="item">
-								<div class="sliderImgBox">
-									<img src="<?php echo $image['image']['sizes']['cultrahub-menu-category'];?>" alt="" width="<?php echo $image['image']['sizes']['cultrahub-menu-category-width'];?>" height="<?php echo $image['image']['sizes']['cultrahub-menu-category-height'];?>" />
+			<div class="innerContainer">
+				<div class="owl-carousel maintabslider">
+				<?php
+				query_posts('post_type=menucategory&order=asc&orderby=id');
+				if (have_posts()) : while (have_posts()) : the_post();
+					$menucategory_short_title 	= get_field( 'menucategory_short_title', $post->ID );
+					$slider_icon 				= get_field( 'icon', $post->ID );
+					$slider_images 				= get_field( 'slider_images', $post->ID );
+					$details_page_link 			= get_field( 'details_page_link', $post->ID );				
+				?>
+					<div class="item">
+						<div class="sliderblockWrap odd">
+							<div class="sliderblock">
+							<?php
+							if( !empty($slider_images) ){
+								foreach( $slider_images as $image ){
+							?>
+								<div class="sliderImg scroll_effect" data-effect="fadeInLeft" data-delay="300">
+									<img src="<?php echo $image['image']['url'];?>" alt="" />
 								</div>
+							<?php
+								}
+							}
+							?>
+								<div class="sliderText scroll_effect" data-effect="fadeInRight" data-delay="300">
+									<div class="sliderIcon">
+										<img src="<?php echo $slider_icon['url'];?>" alt="<?php the_title();?>" />
+									</div>
+									<h2 class="heading"><?php the_title();?>,</h2>
+									<?php
+									if( !empty($menucategory_short_title) ){
+									?>
+									<h2 class="subheading2"><?php echo $menucategory_short_title;?></h2>
+									<?php
+									}
+									?>
+									<div class="">
+										<?php the_excerpt();?>
+									</div>
+									<a href="<?php echo get_permalink($details_page_link);?>" class="btn">Learn More</a>
+								</div>
+								<div class="clear"></div>
 							</div>
-					<?php
-						}
-					}
-					?>
 						</div>
 					</div>
-					<div class="sliderText">
-						<div class="sliderIcon">
-							<img src="<?php echo $slider_icon['url'];?>" alt="<?php the_title();?>" />
-							<span><?php echo get_field( 'name', $post->ID );?></span>
-						</div>
-						<h2 class="heading"><?php the_title();?></h2>
-						<div class="">
-							<?php the_excerpt();?>
-						</div>
-						<a href="<?php echo $details_page_link;?>" class="btn">Learn More</a>
-					</div>
-					<div class="clear"></div>
+				<?php
+				endwhile; endif;
+				wp_reset_query();
+				?>
 				</div>
-			<?php
-			endwhile; endif;
-			wp_reset_query();
-			?>
 			</div>
 		</div>
 	</div>
@@ -151,12 +177,8 @@ get_header();
 						<div class="genre_block">
 							<a href="#">
 								<div class="genre_box">
-									<div class="genre_img">
-										<?php the_post_thumbnail( array( 258, 400 ) );?>
-									</div>
-									<div class="genre_icon">
-										<img src="<?php echo $icon['url'];?>" alt="<?php echo $icon['title'];?>" />
-									</div>
+									<div class="genre_img"><?php the_post_thumbnail( array( 258, 400 ) );?></div>
+									<div class="genre_icon"><img src="<?php echo $icon['url'];?>" alt="<?php echo $icon['title'];?>" /></div>
 								</div>
 								<h2 class="subheading2"><?php the_title();?></h2>
 							</a>
@@ -173,68 +195,73 @@ get_header();
 	
 	<div class="section">
 		<div class="container">
-			<hr class="mb70 mt0">
+			<hr class="mb70 mt0" style="border-color: #8d8f92;">
 			<div class="innerContainer">
-				<div class="sliderblockWrap odd rev">
+				<div class="sliderblockWrap odd rev smallImg">
 				<?php
 				query_posts('post_type=blog&order=asc&orderby=id');
 				if (have_posts()) : while (have_posts()) : the_post();
-					$get_details = get_field( 'details', $post->ID );
+					$get_details 		= get_field( 'details', $post->ID );
+					$blog_short_heading = get_field( 'blog_short_heading', $post->ID );
 				?>
-					<div class="sliderblock">						
-						<?php
-						if( count($get_details) > 1 ){
-						?>
-							<div class="sliderImg2 sliderImgText">
-								<div class="owl-carousel owl1">
-						<?php
+					<div class="sliderblock">
+				<?php
+					if( count($get_details) > 1 ){
+				?>
+						<div class="sliderImg2 sliderImgText scroll_effect" data-effect="fadeInRight" data-delay="300">
+							<div class="owl-carousel owl1">
+				<?php
 							foreach( $get_details as $gd ){
-						?>
-									<div class="item">
+				?>
+								<div class="item">
+									<div class="sliderImgBoxWrap">
 										<div class="sliderImgBox">
-											<img src="<?php echo $gd['image']['sizes']['cultrahub-home-blog'];?>" alt="<?php echo $gd['image']['title'];?>" width="<?php echo $gd['image']['sizes']['cultrahub-home-blog-width'];?>" height="<?php echo $gd['image']['sizes']['cultrahub-home-blog-height'];?>" />
+											<img src="<?php echo $gd['image']['sizes']['cultrahub-home-blog'];?>" alt="<?php echo $gd['image']['title'];?>" />
 										</div>
-						<?php
-								if( $gd['name'] != '' || $gd['designation'] != '' ){
-						?>
+				<?php
+									if( $gd['name'] != '' || $gd['designation'] != '' ){
+				?>
 										<div class="sliderTextBox">
-						<?php
-									if( $gd['name'] != '' ){
-						?>
+				<?php
+										if( $gd['name'] != '' ){
+				?>
 											<h2 class="subheading"><?php echo $gd['name'];?></h2>
-						<?php
-									}
-									if( $gd['designation'] != '' ){
-						?>
+				<?php
+										}
+										if( $gd['designation'] != '' ){
+				?>
 											<span><?php echo $gd['designation'];?></span>
-						<?php
-									}
-						?>
+				<?php
+										}
+				?>
 										</div>
-						<?php
-								}
-						?>
+				<?php
+									}
+				?>
 									</div>
-						<?php
+								</div>
+				<?php
 							}
-						?>
-								</div>
+				?>
 							</div>
-						<?php
-						}else{
-						?>
-							<div class="sliderImg2">
-								<div class="sliderImgBox">
-									<img src="<?php echo $get_details[0]['image']['sizes']['cultrahub-home-blog'];?>" alt="<?php echo $get_details[0]['image']['title'];?>" width="<?php echo $get_details[0]['image']['sizes']['cultrahub-home-blog-width'];?>" height="<?php echo $get_details[0]['sizes']['cultrahub-home-blog-height'];?>" />
-								</div>
+						</div>
+				<?php
+					}
+					else{
+				?>
+						<div class="sliderImg2 scroll_effect" data-effect="fadeInLeft" data-delay="300">
+							<div class="sliderImgBox">
+								<img src="<?php echo $get_details[0]['image']['sizes']['cultrahub-home-blog'];?>" alt="<?php echo $get_details[0]['image']['title'];?>" />
 							</div>
-						<?php
-						}
-						?>
-						<div class="sliderText2">
+						</div>
+				<?php
+					}
+				?>
+						<div class="sliderText2 scroll_effect" data-effect="fadeInLeft" data-delay="300">
 							<h2 class="heading"><?php the_title();?></h2>
+							<h3 class="subheading2"><?php echo $blog_short_heading;?></h3>
 							<div class="">
-								<?php the_excerpt();?>								
+								<?php the_content();?>
 							</div>
 						</div>
 						<div class="clear"></div>
@@ -248,42 +275,61 @@ get_header();
 		</div>
 	</div>
 	<?php
-	$home_blog_lower = get_field( 'home_blog_lower_slider', $post->ID );
+	$home_blog_lower 		= get_field( 'home_blog_lower_slider', $post->ID );
+	$home_blog_lower_logo 	= get_field( 'home_blog_lower_logo', $post->ID );
 	?>
 	<div class="section mobSliderWrap">
 		<div class="container">
 			<div class="innerContainer">
-				<div class="sliderblockWrap odd1 rev">
-					<div class="sliderblock">
-					<?php
-					if(!empty($home_blog_lower)){					
-					?>
-						<div class="sliderImg2 mobSlider">
+				<div class="sliderblockWrap rev">
+					<div class="sliderblock height_div">
+						<div class="sliderImg2 mobSlider hfull scroll_effect" data-effect="fadeInLeft" data-delay="300">
+						<?php
+						if( !empty($home_blog_lower_logo) ){
+						?>
+							<div class="logo_cultralocal">
+								<a href="<?php echo get_permalink(2623);?>"><img src="<?php echo $home_blog_lower_logo['url'];?>" alt=""></a>
+							</div>
+						<?php
+						}
+						if(!empty($home_blog_lower)){
+						?>
 							<div class="owl-carousel owl1">
-					<?php
-							foreach($home_blog_lower as $hbl){
-					?>
+							<?php
+								foreach($home_blog_lower as $hbl){
+							?>
 								<div class="item">
 									<div class="sliderImgBox">
 										<img src="<?php echo $hbl['home_blog_lower_images']['url'];?>" alt="" />
 									</div>
 								</div>
-					<?php
-							}
-					?>
+							<?php
+								}
+							?>
+							</div>
+						<?php
+						}
+						?>
+							<div class="color_dots align_center">
+								<span class="yellow"></span>
+								<span class="red"></span>
+								<span class="blue"></span>
+								<span class="green"></span>
 							</div>
 						</div>
-					<?php
-					}
-					?>
-						<div class="sliderText2">
-							<h2 class="heading"><?php echo get_field( 'home_blog_lower_heading', $post->ID );?></h2>
-							<div class="">
-								<p><?php echo get_field( 'home_blog_lower_description', $post->ID );?></p>
-							</div>
-							<div class="btnGroup">
-								<a href="#" class="btn btnBlue">Read More</a>
-								<a href="#" class="btn">Contact Us</a>
+						<div class="sliderText2 hfull scroll_effect" data-effect="fadeInRight" data-delay="300">
+							<div class="table_box">
+								<div class="table_cell">
+									<h2 class="heading"><?php echo get_field( 'home_blog_lower_heading', $post->ID );?></h2>
+									<div class="">
+										<p><?php echo get_field( 'home_blog_lower_description', $post->ID );?></p>
+									</div>
+									<div class="btnGroup">
+										<a href="<?php echo get_permalink(2623);?>" class="btn btnBlue">Read More</a>
+										<a href="<?php echo get_permalink(2584);?>" class="btn">Contact Us</a>
+										<a href="mailto:info@cultrahub.com" class="btn mail"></a>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
@@ -292,41 +338,66 @@ get_header();
 			</div>
 		</div>
 	</div>
-	
-	<?php include( locate_template( 'newsletter-form.php' ) ); ?>
-	
-	<div class="section policy_section">
-		<div class="newsletter_img"><img src="<?php echo get_template_directory_uri();?>/images/bg_newsletter.jpg" alt="" /></div>		
-		<div class="border_line">
-			<span class="b_yellow"></span>
-			<span class="b_red"></span>
-			<span class="b_blue"></span>
-			<span class="b_green"></span>
-		</div>		
+	<?php
+	$share_yor_thought_icon 			= get_field( 'share_yor_thought_icon', $post->ID );
+	$share_yor_thought_title 			= get_field( 'share_yor_thought_title', $post->ID );
+	$share_yor_thought_description 		= get_field( 'share_yor_thought_description', $post->ID );
+	$share_yor_thought_short_description= get_field( 'share_yor_thought_short_description', $post->ID );
+	?>
+	<div class="section review_form">
 		<div class="container">
-			<ul class="ul row">
-				<li class="col33">
-					<div class="policy_block">
-						<?php dynamic_sidebar( 'cultrahub-sidebar-footer1' );?>
+			<div class="innerContainer">
+				<div class="sliderblockWrap odd rev">
+					<div class="sliderblock">
+						<div class="sliderText2 scroll_effect" data-effect="fadeInLeft" data-delay="300">
+							<div class="table_box">
+								<div class="table_cell">
+									<h2 class="heading">
+										<img src="<?php echo $share_yor_thought_icon['url'];?>" alt="" />
+										<?php echo $share_yor_thought_title;?>
+									</h2>
+									<div class="">
+										<?php echo $share_yor_thought_description;?>
+									</div>
+									<div class="border_top">
+										<small><?php echo $share_yor_thought_short_description;?></small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sliderImg2 scroll_effect" data-effect="fadeInRight" data-delay="300">
+							<?php echo do_shortcode( '[contact-form-7 id="2904" title="Share Your Thoughts"]' );?>
+						</div>
 						<div class="clear"></div>
 					</div>
-				</li>
-				<li class="col33">
-					<div class="policy_block">
-						<?php dynamic_sidebar( 'cultrahub-sidebar-footer2' );?>
-						<div class="clear"></div>
-					</div>
-				</li>
-				<li class="col33">
-					<div class="policy_block">
-						<?php dynamic_sidebar( 'cultrahub-sidebar-footer3' );?>
-						<div class="clear"></div>
-					</div>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
-	</div>		
+	</div>
+		
 </div>
 <!--MAIN CONTAINER END-->
+<script>
+$(document).ready(function(){
+	$('.wpcf7-list-item').each(function(){
+		var mood = $(this).text();
+		if( mood == 'Love it!' ){
+			$('#mood_0').prepend('<img src="<?php echo get_template_directory_uri();?>/images/mood5.png" alt="Love it!">');			
+		}
+		else if( mood == 'Awesome!' ){
+			$('#mood_1').prepend('<img src="<?php echo get_template_directory_uri();?>/images/mood4.png" alt="Awesome!">');
+		}
+		else if( mood == 'Like it!' ){
+			$('#mood_2').prepend('<img src="<?php echo get_template_directory_uri();?>/images/mood3.png" alt="Like it!">');
+		}
+		else if( mood == 'Don’t Like it!' ){
+			$('#mood_3').prepend('<img src="<?php echo get_template_directory_uri();?>/images/mood2.png" alt="Don’t Like it!">');
+		}
+		else if( mood == 'Boring!' ){
+			$('#mood_4').prepend('<img src="<?php echo get_template_directory_uri();?>/images/mood1.png" alt="Boring!">');
+		}
+	});
+});
+</script>
 <?php
 get_footer();

@@ -63,7 +63,7 @@ if ( ! function_exists( 'cultrahub_theme_setup' ) ) {
     	/* Configure WP 2.9+ thumbnails */
     	add_theme_support( 'post-thumbnails' );
 		
-		add_image_size( 'cultrahub-menu-category', 650, 450, true );
+		//add_image_size( 'cultrahub-menu-category', 650, 450, true );
 		add_image_size( 'cultrahub-home-blog', 545, 300, true );
 		add_image_size( 'cultrahub-cultures', 256, 256, true );
 		add_image_size( 'cultrahub-home-icon', 474, 492, true );	//Home and culture details page Icon
@@ -777,53 +777,19 @@ function cultrahub_getintouch(){
 			
 			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			$logo_url = site_url() . '/cultrahub/wp-content/themes/cultrahub/images/logo.png';
-
-			$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-                <html xmlns="http://www.w3.org/1999/xhtml">
-                <head>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <title>Cultrahub</title>
-                </head>
-                <body style="margin:0; padding:0px; background-color:#fff;">
-                <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" style="max-width:100%;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#282828;border: #ddd 1px solid;margin-top:30px;">
-                    <tr>
-                        <td align="center" style="padding: 15px 0;border-bottom: #ddd 1px solid; background-color:#EFEFEF">
-                            <a href="'.site_url().'" target="_blank"><img src="'. esc_url( $logo_url ) .'" width="275" alt="Cultrahub" /></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p style="padding:15px 15px 15px 15px; line-height:22px">
-                                Hello Admin,
-                            </p>
-                            <p style="padding:0px 15px 15px 15px; line-height:22px;">
-								A new submission has been posted. Please check admin panel for details. Details are:
-								<br /><br />
-                                First Name: ' . $fname . '<br />
-                                Last Name: ' . $lname . '<br />
-                                Email Address: ' . $email_id . '<br />
-                                Phone Number: ' . $phone_number . '<br />
-                                Business Name: ' . $businessname . '<br />								
-                                Topics: ' . $topics . '<br />								
-                                Message: ' . $ymessage . '<br />								
-							</p>							
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding:10px 0;background-color:#2D2D2D">
-                            <p style="font-size: 12px; color:#fff !important; text-align:center;line-height: 18px;">Copyright &copy; '. date('Y') .' Cultrahub™. Designed &amp; Developed by <a href="<?php echo site_url();?>">Cultrahub</a>.
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-                </body>
-                </html>';
+			
+			$message  = 'First Name: '.$fname.'<br />';
+			$message .= 'Last Name: '.$lname.'<br />';
+			$message = 'Email Address: '.$email_id.'<br />';
+			$message = 'Phone Number: '.$phone_number.'<br />';
+			$message = 'Business Name: '.$businessname.'<br />';
+			$message = 'Topics: '.$topics.'<br />';
+			$message = 'Message: '.$ymessage.'<br />';
+			
 			$headers = 'Content-Type: text/html; charset=UTF-8';
 			$headers .= 'From: Cultrahub < '. $email_id .' >';
 			//get_option('admin_email')
 			wp_mail( '100websolution@gmail.com', 'Get In Touch', $message, $headers );
-			
-			
 		}else{
 			echo 'error';
 		}

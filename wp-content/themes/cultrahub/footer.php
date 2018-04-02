@@ -25,15 +25,7 @@
 				<span class="green"></span>
 			</div>
 		</div>
-		<ul class="fnav">
-			<li><a href="#">Learn</a></li>
-			<li><a href="#">Buy</a></li>
-			<li><a href="#">Sell</a></li>
-			<li><a href="#">About Cultrahub</a></li>
-			<li><a href="#">Cultrahub Community</a></li>
-			<li><a href="#">Help & Contact</a></li>
-			<li><a href="#">Cultrahub Language</a></li>
-		</ul>
+		<?php wp_nav_menu( array( 'menu' => 'footer-menu', 'menu_class'=>'fnav') ); ?>
 		<div class="social">
 			<?php echo add_social_links_icons();?>
 		</div>

@@ -27,10 +27,7 @@
 				<div class="container">
 					<div class="fright">
 						<div class="fleft ml30">
-							<ul class="borderbar_list">
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Help &amp; Contact</a></li>
-							</ul>
+							<?php wp_nav_menu( array( 'menu' => 'top-header-menu', 'menu_class'=>'borderbar_list') ); ?>							
 						</div>
 						<div class="fleft ml30">
 							<div class="lang dropwrap">

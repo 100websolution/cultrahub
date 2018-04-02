@@ -1,4 +1,4 @@
-<div class="section newsletter">
+<?php /*<div class="section newsletter">
 	<div class="container">
 		<div class="color_dots">
 			<span class="yellow"></span>
@@ -13,4 +13,8 @@
 			<span id="eemail_msg" style="display:none;"></span>
 		</div>
 	</div>
+</div>*/ ?>
+<div class="homeForm">
+	<?php echo eemail_show(); ?>
+	<span id="eemail_msg" style="display:none;"></span>
 </div>
