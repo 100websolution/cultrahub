@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 	$("#username").blur(function(){
         var user_name = $(this).val();
 		var count = user_name.length;
-		if( count > 3 ){
+		if( user_name != '' ){
 			jQuery.ajax({
 				url : cultrahub_ajax_object.ajax_url,
 				type : 'POST',
