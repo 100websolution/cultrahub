@@ -1,5 +1,37 @@
 jQuery(document).ready(function($){
 	var websiteurl = $('#websiteurl').val();
+	
+	//Checking username
+	$("#username").blur(function(){
+        var user_name = $(this).val();
+		jQuery.ajax({
+			url : cultrahub_ajax_object.ajax_url,
+			type : 'POST',
+			data : {
+				action 	: 'checking_username', 
+				postdata: user_name
+			},
+			beforeSend: function() {
+				$('.helptext').html('<img src="'+websiteurl+'/images/loading.gif" />');
+			},
+			success : function( response ) {
+				if( response == 'success' ){
+					$('.helptext').html('<img src="'+websiteurl+'/images/icon_available.png" />');
+				}
+				else if( response == 'already exist' ){
+					$('#username').val('');
+					$('.helptext').html('<img src="'+websiteurl+'/images/icon_unavailable.png" />');
+				}
+				else{
+					$('.helptext').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
+					setTimeout(function(){
+						$('.helptext').html('');
+					},5000);
+				}
+			}
+		});
+    });
+	
 	$.validator.addMethod("validate_email", function(value, element) {
 		if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value)) {
 			return true;
@@ -8,38 +40,52 @@ jQuery(document).ready(function($){
 		}
 	}, "Please enter a valid Email.");
 	
-	/*$.validator.addMethod("culture_empty_validation", function(value, element) {
+	$.validator.addMethod("validate_gender", function(value, element) {
 		if(value == ''){
-			$('#culturemsg').html("Please select culture.");
+			$('#culturemsg_gender').html("Please select gender");
+			return false;
+		}
+		else {
+			$('#culturemsg_gender').html("");
+			return true;
+		}
+	}, "Please select gender");
+	
+	$.validator.addMethod("culture_empty_validation", function(value, element) {
+		if(value == ''){
+			$('#culturemsg').html("Please select culture");
 			return false;
 		}
 		else {
 			$('#culturemsg').html("");
 			return true;
 		}
-	}, "Please select culture.");
-	*/
+	}, "Please select culture");
 	
-	//Home page signup section
+	//Home page popup signup section
+	$('.gen').click(function(){
+		var gender_value = $(this).val();
+		$('#gender_selected').val(gender_value);
+	});
     $('#signup').click(function(e){
 		$("#signup_form").validate({
 			rules: {
 				email_address: {
 					validate_email: true
 				},
-				gender: {
-					validate_test: true
+				gender_selected: {
+					validate_gender: true
 				},
-				/*cultureselected: {
+				culture_selected: {
 					culture_empty_validation: true	
-				},*/
+				},
 				confirm_password: {
 					equalTo: "#password"
 				},
 			}            
 		});
 		if( $("#signup_form").valid() ) {
-			/*var cultureselected = $('#culture_selected').val();
+			var cultureselected = $('#culture_selected').val();
 			if(cultureselected == ''){
 				$('#culturemsg').html("Please select culture.");
 				return false;
@@ -47,7 +93,7 @@ jQuery(document).ready(function($){
 			else {
 				$('#culturemsg').html("");
 				return true;
-			}*/
+			}
 			$('#message').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
 			e.preventDefault();
 			var firstname 		 = $('#firstname').val();
@@ -63,6 +109,7 @@ jQuery(document).ready(function($){
 				producer		 = '';
 			}*/
 			var email_address	 = $('#email_address').val();
+			var gender			 = $('#gender_selected').val();
 			var business 		 = $('#business').val();
 			var password	 	 = $('#password').val();
 			var confirm_password = $('#confirm_password').val();
@@ -73,7 +120,7 @@ jQuery(document).ready(function($){
 			} else {
 				get_notification = '';
 			}
-			var elem = { firstname:firstname, lastname:lastname, username:username, month:month, day:day, year:year, email_address:email_address, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
+			var elem = { firstname:firstname, lastname:lastname, username:username, month:month, day:day, year:year, email_address:email_address, gender:gender, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
 			
 			jQuery.ajax({
 				url : cultrahub_ajax_object.ajax_url,
@@ -91,7 +138,7 @@ jQuery(document).ready(function($){
 						},5000);
 					}
 					else if( response == 'already exist' ){
-						$('#message').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address is already registered with us.</small>');
+						$('#message').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address or username is already registered with us.</small>');
 						setTimeout(function(){
 							$('#message').html('');
 						},5000);

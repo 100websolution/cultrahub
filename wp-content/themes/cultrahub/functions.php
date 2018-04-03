@@ -326,6 +326,7 @@ function cultrahub_signup(){
 		$day				= isset($_POST['post_datas']['day'])?$_POST['post_datas']['day']:'';
 		$year				= isset($_POST['post_datas']['year'])?$_POST['post_datas']['year']:'';
 		$email_address		= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'';
+		$gender				= isset($_POST['post_datas']['gender'])?$_POST['post_datas']['gender']:'';
 		$business 			= isset($_POST['post_datas']['business'])?$_POST['post_datas']['business']:'';		
 		$password			= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'123456';
 		$culture_selected 	= isset($_POST['post_datas']['culture_selected'])?$_POST['post_datas']['culture_selected']:'';
@@ -356,6 +357,7 @@ function cultrahub_signup(){
 				update_user_meta( $inserted_user_id, 'month', $month );
 				update_user_meta( $inserted_user_id, 'day', $day );
 				update_user_meta( $inserted_user_id, 'year', $year );
+				update_user_meta( $inserted_user_id, 'gender', $gender );
 				update_user_meta( $inserted_user_id, 'user_business', $business );
 				update_user_meta( $inserted_user_id, 'user_notification', $get_notification );
 				update_user_meta( $inserted_user_id, 'user_registration_date', $registration_date );
@@ -391,7 +393,6 @@ function cultrahub_signup(){
 	}
 	exit();
 }
-
 function email_exist( $email ){
 	if( $user = get_user_by( 'email', $email ) ){
 		return $user->ID;
@@ -399,13 +400,31 @@ function email_exist( $email ){
 		return 0;
 	}
 }
-
 function usernameexists( $username ){
 	if( $user = get_user_by( 'login', $username ) ){
 		return $user->ID;
 	}else{
 		return 0;
 	}
+}
+
+//Cultrahub checking username
+add_action( 'wp_ajax_checking_username', 'checking_username' );
+add_action( 'wp_ajax_nopriv_checking_username', 'checking_username' ); // This lines it's because we are using AJAX on the FrontEnd.
+function checking_username(){
+	if ( isset( $_POST['postdata'] ) && ( $_POST['postdata'] != '' ) ) {
+		$username 			= isset($_POST['postdata'])?$_POST['postdata']:'';
+		$existing_username 	= usernameexists( $username );
+		if( $existing_username == 0 ){
+			echo 'success';
+		}else{
+			echo 'already exist';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
 }
 
 function autoLoginUser($user_id){

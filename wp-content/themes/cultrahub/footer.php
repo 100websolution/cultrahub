@@ -43,6 +43,7 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+	<input type="hidden" id="websiteurl" value="<?php echo get_template_directory_uri();?>" />
 </footer>
 
 <div id="signUpForm" class="modal">
@@ -87,7 +88,8 @@
 						<li class="col50">
 							<label>Username</label>
 							<input type="text" class="required" name="username" id="username" placeholder="Write your username">
-							<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable" /></div>
+							<!--<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable" /></div>-->
+							<div class="helptext"></div>
 						</li>
 						<li class="col50">
 							<label>Birthdate</label>
@@ -145,6 +147,8 @@
 									<span>Male</span>
 								</label>
 							</div>
+							<input type="text" value="" name="gender_selected" id="gender_selected" class="selectgender" />
+							<span id="culturemsg_gender"></span>
 						</li>
 						<li class="col100">
 							<label>What’s Your Business?</label>
@@ -197,7 +201,7 @@
 				   </ul>
 				   <span id="culturemsg"></span>
 				</div>
-				<input type="hidden" value="" name="culture_selected" id="culture_selected" />
+				<input type="text" value="" name="culture_selected" id="culture_selected" class="selectculture" />
 
 				<div class="align_center">
 					<ul class="ul row">
