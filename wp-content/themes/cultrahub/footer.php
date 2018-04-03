@@ -89,7 +89,7 @@
 							<label>Username</label>
 							<input type="text" class="required" name="username" id="username" placeholder="Write your username">
 							<!--<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable" /></div>-->
-							<div class="helptext"></div>
+							<div class="helptext uservalidate"></div>
 						</li>
 						<li class="col50">
 							<label>Birthdate</label>

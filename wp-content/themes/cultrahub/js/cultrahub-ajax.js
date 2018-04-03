@@ -4,32 +4,35 @@ jQuery(document).ready(function($){
 	//Checking username
 	$("#username").blur(function(){
         var user_name = $(this).val();
-		jQuery.ajax({
-			url : cultrahub_ajax_object.ajax_url,
-			type : 'POST',
-			data : {
-				action 	: 'checking_username', 
-				postdata: user_name
-			},
-			beforeSend: function() {
-				$('.helptext').html('<img src="'+websiteurl+'/images/loading.gif" />');
-			},
-			success : function( response ) {
-				if( response == 'success' ){
-					$('.helptext').html('<img src="'+websiteurl+'/images/icon_available.png" />');
+		var count = user_name.length;
+		if( count > 3 ){
+			jQuery.ajax({
+				url : cultrahub_ajax_object.ajax_url,
+				type : 'POST',
+				data : {
+					action 	: 'checking_username', 
+					postdata: user_name
+				},
+				beforeSend: function() {
+					$('.uservalidate').html('<img src="'+websiteurl+'/images/loading.gif" />');
+				},
+				success : function( response ) {
+					if( response == 'success' ){
+						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_available.png" />');
+					}
+					else if( response == 'already exist' ){
+						$('#username').val('');
+						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_unavailable.png" />');
+					}
+					else{
+						$('.uservalidate').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
+						setTimeout(function(){
+							$('.uservalidate').html('');
+						},5000);
+					}
 				}
-				else if( response == 'already exist' ){
-					$('#username').val('');
-					$('.helptext').html('<img src="'+websiteurl+'/images/icon_unavailable.png" />');
-				}
-				else{
-					$('.helptext').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
-					setTimeout(function(){
-						$('.helptext').html('');
-					},5000);
-				}
-			}
-		});
+			});
+		}
     });
 	
 	$.validator.addMethod("validate_email", function(value, element) {
