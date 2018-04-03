@@ -18,11 +18,11 @@ jQuery(document).ready(function($){
 				},
 				success : function( response ) {
 					if( response == 'success' ){
-						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_available.png" />');
+						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_available.png" alt="Username available" /> Username available');
 					}
 					else if( response == 'already exist' ){
 						$('#username').val('');
-						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_unavailable.png" />');
+						$('.uservalidate').html('<img src="'+websiteurl+'/images/icon_unavailable.png" alt="Username Unavailable" /> Username Unavailable');
 					}
 					else{
 						$('.uservalidate').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
