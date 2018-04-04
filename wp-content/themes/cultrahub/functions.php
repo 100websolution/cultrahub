@@ -948,6 +948,16 @@ function custom_column_getintouch( $column, $post_id ) {
       	break;
   }
 }
+add_filter( 'post_row_actions', 'remove_row_actions', 10, 1 );
+function remove_row_actions( $actions ){
+    if( get_post_type() === 'getintouch' || get_post_type() === 'genre' || get_post_type() === 'menucategory' || get_post_type() === 'blog' || get_post_type() === 'product' || get_post_type() === 'hashtag' )
+        unset( $actions['view'] );
+    return $actions;
+	/*$actions['edit'] 
+	$actions['inline hide-if-no-js'] 
+	$actions['trash'] 
+	$actions['view'] */
+}
 
 // Encrypt and Decrypt Function
 function crypt_decrypt( $string, $action ) {
