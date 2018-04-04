@@ -314,50 +314,89 @@ $cultrahub_subscriber = add_role( 'cultrahub_subscriber', __( 'Cultrahub Subscri
 			)
 		);
 
+//Cultrahub Signup PART ONE
+add_action( 'wp_ajax_cultrahub_signup_partone', 'cultrahub_signup_partone' );
+add_action( 'wp_ajax_nopriv_cultrahub_signup_partone', 'cultrahub_signup_partone' );
+function cultrahub_signup_partone(){
+	if ( isset( $_POST['submission'] ) && ( $_POST['submission'] != '' ) ) {
+		$signup_partone_email	= isset($_POST['submission'])?$_POST['submission']:'';
+		$existing_check 		= email_exist( $signup_partone_email );
+		
+		if( $existing_check == 0 ){
+			echo 'success';
+		}else{
+			echo 'already exist';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
+}
+
 //Cultrahub Signup
 add_action( 'wp_ajax_cultrahub_signup', 'cultrahub_signup' );
 add_action( 'wp_ajax_nopriv_cultrahub_signup', 'cultrahub_signup' ); // This lines it's because we are using AJAX on the FrontEnd.
 function cultrahub_signup(){
 	if ( isset( $_POST['post_datas'] ) && ( $_POST['post_datas']['email_address'] != '' ) ) {
-		$full_name 			= isset($_POST['post_datas']['full_name'])?$_POST['post_datas']['full_name']:'';
-		$producer 			= isset($_POST['post_datas']['producer'])?$_POST['post_datas']['producer']:'';
-		$business 			= isset($_POST['post_datas']['business'])?$_POST['post_datas']['business']:'';
+		$firstname 			= isset($_POST['post_datas']['firstname'])?$_POST['post_datas']['firstname']:'';
+		$lastname 			= isset($_POST['post_datas']['lastname'])?$_POST['post_datas']['lastname']:'';
+		$username 			= isset($_POST['post_datas']['username'])?$_POST['post_datas']['username']:'';
+		$month				= isset($_POST['post_datas']['month'])?$_POST['post_datas']['month']:'';
+		$day				= isset($_POST['post_datas']['day'])?$_POST['post_datas']['day']:'';
+		$year				= isset($_POST['post_datas']['year'])?$_POST['post_datas']['year']:'';
 		$email_address		= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'';
+		$gender				= isset($_POST['post_datas']['gender'])?$_POST['post_datas']['gender']:'';
+		$business 			= isset($_POST['post_datas']['business'])?$_POST['post_datas']['business']:'';		
 		$password			= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'123456';
-		$get_notification 	= isset($_POST['post_datas']['get_notification'])?$_POST['post_datas']['get_notification']:'';
 		$culture_selected 	= isset($_POST['post_datas']['culture_selected'])?$_POST['post_datas']['culture_selected']:'';
+		$get_notification 	= isset($_POST['post_datas']['get_notification'])?$_POST['post_datas']['get_notification']:'';		
 		$firstname = ''; $lastname = '';
-		if( strpos($full_name, ' ') !== false ){
-			$exploded_value = explode(' ', $full_name);
-			$firstname 	= $exploded_value[0];
-			$lastname 	= $exploded_value[1];
-		}else{
-			$firstname 	= $full_name;
-			$lastname 	= $full_name;
-		}
 		
-		$existing_check = email_exist( $email_address );
-		if( $existing_check == 0 ){
+		$existing_check 	= email_exist( $email_address );
+		$existing_username 	= usernameexists( $username );
+		if( $existing_check == 0 && $existing_username == 0 ){
 			$userdata = array(
-				'user_login'      =>  strtolower( $firstname ),
-				'user_nicename'   =>  $firstname,
+				'user_login'      =>  strtolower( $username ),
+				'user_nicename'   =>  $username,
 				'user_pass'       =>  $password,
 				'user_email'      =>  $email_address,
-				'display_name'    =>  strtolower( $firstname ),
-				'nickname'        =>  $firstname,
+				'display_name'    =>  strtolower( $username ),
+				'nickname'        =>  $username,
 				'first_name'      =>  $firstname,
 				'last_name'       =>  $lastname,
 				'role'            =>  'cultrahub_subscriber'
-			);		 
+			);
+			
+			//echo '<pre>'; print_r($_POST['post_datas']); die;
+			
 			$inserted_user_id = wp_insert_user( $userdata );
 			
 			if( $inserted_user_id != '' ){
 				$registration_date = date('d/m/Y');
-				update_user_meta( $inserted_user_id, 'user_producer', $producer );
+				update_user_meta( $inserted_user_id, 'month', $month );
+				update_user_meta( $inserted_user_id, 'day', $day );
+				update_user_meta( $inserted_user_id, 'year', $year );
+				update_user_meta( $inserted_user_id, 'gender', $gender );
 				update_user_meta( $inserted_user_id, 'user_business', $business );
 				update_user_meta( $inserted_user_id, 'user_notification', $get_notification );
 				update_user_meta( $inserted_user_id, 'user_registration_date', $registration_date );
 				update_user_meta( $inserted_user_id, 'user_culture_selected', $culture_selected );
+				
+				/*$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				$logo_url = site_url() . '/cultrahub/wp-content/themes/cultrahub/images/logo.png';
+				
+				$message  = 'First Name: '.$firstname.'<br />';
+				$message .= 'Last Name: '.$lastname.'<br />';
+				$message .= 'Username: '.$username.'<br />';
+				$message .= 'Birthdate: '.$day.'/'.$month.'/'.$year.'<br />';
+				$message .= 'E-mail Address: '.$email_address.'<br />';				
+				$message = 'Business: '.$business.'<br />';
+				
+				$headers = 'Content-Type: text/html; charset=UTF-8';
+				$headers .= 'From: Cultrahub < '. $email_id .' >';
+				//get_option('admin_email')
+				wp_mail( '100websolution@gmail.com', 'Get In Touch', $message, $headers );*/
 				
 				autoLoginUser($inserted_user_id);
 				
@@ -374,13 +413,38 @@ function cultrahub_signup(){
 	}
 	exit();
 }
-
 function email_exist( $email ){
 	if( $user = get_user_by( 'email', $email ) ){
 		return $user->ID;
 	}else{
 		return 0;
 	}
+}
+function usernameexists( $username ){
+	if( $user = get_user_by( 'login', $username ) ){
+		return $user->ID;
+	}else{
+		return 0;
+	}
+}
+
+//Cultrahub checking username
+add_action( 'wp_ajax_checking_username', 'checking_username' );
+add_action( 'wp_ajax_nopriv_checking_username', 'checking_username' ); // This lines it's because we are using AJAX on the FrontEnd.
+function checking_username(){
+	if ( isset( $_POST['postdata'] ) && ( $_POST['postdata'] != '' ) ) {
+		$username 			= isset($_POST['postdata'])?$_POST['postdata']:'';
+		$existing_username 	= usernameexists( $username );
+		if( $existing_username == 0 ){
+			echo 'success';
+		}else{
+			echo 'already exist';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
 }
 
 function autoLoginUser($user_id){
@@ -587,6 +651,7 @@ function home_blogs(){
 }
 add_action( 'init', 'home_blogs' );
 
+/*
 //For Home Page Signup management//
 function registered_users(){
 	$labels = array(
@@ -656,6 +721,7 @@ function custom_column( $column, $post_id ) {
       	break;
   }
 }
+*/
 
 //For Cultures management//
 function ch_cultures(){
@@ -780,11 +846,11 @@ function cultrahub_getintouch(){
 			
 			$message  = 'First Name: '.$fname.'<br />';
 			$message .= 'Last Name: '.$lname.'<br />';
-			$message = 'Email Address: '.$email_id.'<br />';
-			$message = 'Phone Number: '.$phone_number.'<br />';
-			$message = 'Business Name: '.$businessname.'<br />';
-			$message = 'Topics: '.$topics.'<br />';
-			$message = 'Message: '.$ymessage.'<br />';
+			$message .= 'Email Address: '.$email_id.'<br />';
+			$message .= 'Phone Number: '.$phone_number.'<br />';
+			$message .= 'Business Name: '.$businessname.'<br />';
+			$message .= 'Topics: '.$topics.'<br />';
+			$message .= 'Message: '.$ymessage.'<br />';
 			
 			$headers = 'Content-Type: text/html; charset=UTF-8';
 			$headers .= 'From: Cultrahub < '. $email_id .' >';

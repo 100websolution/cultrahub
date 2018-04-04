@@ -34,9 +34,9 @@
         document.createElement("blockquote");
         document.createElement("figure");
         document.createElement("details");
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 			$('#eemail_txt_Button').val('Launching Soon');
-		});		
+		});*/
     </script>
     </head>
     <body>
@@ -170,7 +170,14 @@
 					<?php
 					}
 					?>
-						<?php include( locate_template( 'newsletter-form.php' ) ); ?>
+						<div class="homeForm">
+							<form method="post" enctype="multipart/form-data" id="signup_partone_form" class="form_validation">
+								<input type="email" id="signup_partone_email" name="signup_partone_email" placeholder="Enter your email to get notified..." autocomplete="off" />
+								<button type="submit" id="signup_partone">Launching Soon</button>
+							</form>
+							<span id="emailmsg" style="display:none; float: left; clear: both;"></span>
+						</div>
+						<?php //include( locate_template( 'newsletter-form.php' ) ); ?>
 					</div>
 				</div>
 			</div>
