@@ -95,12 +95,12 @@ jQuery(document).ready(function($){
 						$('#emailmsg').html('');
 						$('#emailmsg').hide();
 						$('#email_address').val(signup_partone_email);
-					        $('body').addClass('modalOpen');
-					        $('#signUpForm').addClass('opened').slideDown();
-					        if($('.modalBox').outerHeight() > $(window).height()){
-					            $('.modalOpen').css('padding-right','17px');
-					            $('.modalOpen .modal').css('padding-right','17px');
-					        }					
+						$('body').addClass('modalOpen');
+						$('#signUpForm').addClass('opened').slideDown();
+						if($('.modalBox').outerHeight() > $(window).height()){
+							$('.modalOpen').css('padding-right','17px');
+							$('.modalOpen .modal').css('padding-right','17px');
+						}					
 					}
 					else if( response == 'already exist' ){
 						$('#emailmsg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address is already registered with us.</small>');
