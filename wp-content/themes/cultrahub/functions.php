@@ -314,6 +314,26 @@ $cultrahub_subscriber = add_role( 'cultrahub_subscriber', __( 'Cultrahub Subscri
 			)
 		);
 
+//Cultrahub Signup PART ONE
+add_action( 'wp_ajax_cultrahub_signup_partone', 'cultrahub_signup_partone' );
+add_action( 'wp_ajax_nopriv_cultrahub_signup_partone', 'cultrahub_signup_partone' );
+function cultrahub_signup_partone(){
+	if ( isset( $_POST['submission'] ) && ( $_POST['submission'] != '' ) ) {
+		$signup_partone_email	= isset($_POST['submission'])?$_POST['submission']:'';
+		$existing_check 		= email_exist( $signup_partone_email );
+		
+		if( $existing_check == 0 ){
+			echo 'success';
+		}else{
+			echo 'already exist';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
+}
+
 //Cultrahub Signup
 add_action( 'wp_ajax_cultrahub_signup', 'cultrahub_signup' );
 add_action( 'wp_ajax_nopriv_cultrahub_signup', 'cultrahub_signup' ); // This lines it's because we are using AJAX on the FrontEnd.

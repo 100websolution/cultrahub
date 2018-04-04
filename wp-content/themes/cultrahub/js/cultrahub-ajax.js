@@ -70,6 +70,49 @@ jQuery(document).ready(function($){
 		var gender_value = $(this).val();
 		$('#gender_selected').val(gender_value);
 	});
+	$('#signup_partone').click(function(e){
+		$("#signup_partone_form").validate({
+			rules: {
+				signup_partone_email: {
+					validate_email: true
+				}
+			}
+		});
+		if( $("#signup_partone_form").valid() ) {
+			$('#emailmsg').show();
+			$('#emailmsg').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
+			e.preventDefault();
+			var signup_partone_email = $('#signup_partone_email').val();
+			jQuery.ajax({
+				url : cultrahub_ajax_object.ajax_url,
+				type : 'POST',
+				data : {
+					action : 'cultrahub_signup_partone', 
+					submission : signup_partone_email
+				},
+				success : function( response ) {
+					if( response == 'success' ){
+						$('#emailmsg').html('');
+						$('#emailmsg').hide();
+						$('#email_address').val(signup_partone_email);
+						//$('#signUpForm').modal();						
+					}
+					else if( response == 'already exist' ){
+						$('#emailmsg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address is already registered with us.</small>');
+						setTimeout(function(){
+							$('#emailmsg').html('');
+						},5000);
+					}
+					else{
+						$('#emailmsg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
+						setTimeout(function(){
+							$('#emailmsg').html('');
+						},5000);
+					}
+				}
+			});
+		}
+    });
     $('#signup').click(function(e){
 		$("#signup_form").validate({
 			rules: {
