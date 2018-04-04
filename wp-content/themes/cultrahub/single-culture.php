@@ -58,7 +58,7 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 	<div class="section">
 		<div class="container">
 			<hr class="mb35 mt0">
-			<div class="">
+			<div class="clearfix">
 				<div class="culture_banner_wrap">
 					<div class="owl-carousel culture_banner">
 					<?php
@@ -99,47 +99,47 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-		
-	<div class="section">
-		<div class="container">
-			<div class="heading_block">
-				<div class="heading2 center small"><img alt="" src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png"></div>
-				<div class="color_dots">
-					<span class="yellow"></span>
-					<span class="red"></span>
-					<span class="blue"></span>
-					<span class="green"></span>
-				</div>
-			</div>
-			<div class="innerContainer">
-				<div class="culture_bio">
-					<div class="bio_img">
-						<?php
-						if( $author_video_url != '' ){						
-							echo do_shortcode( '[arve url="' . $author_video_url . '" align="center" parameters="start=30" /]' );
-						}	
-						?>
-						<!--<div class="ytube_vdo">							
-							<span class="play_vdo"></span>
-						</div>-->
-					</div>
-					<div class="bio_text">
-						<h3 class="bio_title"><?php echo $author_name;?></h3>
-					<?php if( $author_designation != '' ){ ?>
-						<div class="bio_small"><?php echo $author_designation;?></div>
-					<?php } ?>
-						<div>
-							<?php echo strip_tags(substr($author_biography,0,350));?>
-						</div>
-					<?php if( $author_biography != '' ){ ?>
-						<div class="align_right">
-							<a href="javascript:void(0);" class="readRight" data-target="#fullBiography" data-toggle="modal">Full Biography</a>
-						</div>
-					<?php } ?>
-					</div>
-				</div>
+            <hr class="mt35 mb35">
+		    
+			<div class="">
+                <div class="heading_block">
+                    <div class="heading2 center small"><img alt="" src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png"></div>
+                    <div class="color_dots">
+                        <span class="yellow"></span>
+                        <span class="red"></span>
+                        <span class="blue"></span>
+                        <span class="green"></span>
+                    </div>
+                </div>
+                <div class="innerContainer">
+                    <div class="culture_bio">
+                        <div class="bio_img">
+                            <?php
+                            if( $author_video_url != '' ){						
+                                echo do_shortcode( '[arve url="' . $author_video_url . '" align="center" parameters="start=30" /]' );
+                            }	
+                            ?>
+                            <!--<div class="ytube_vdo">							
+                                <span class="play_vdo"></span>
+                            </div>-->
+                        </div>
+                        <div class="bio_text">
+                            <h3 class="bio_title"><?php echo $author_name;?></h3>
+                            <h3 class="bio_title small"><?php echo $author_name;?></h3>
+                        <?php if( $author_designation != '' ){ ?>
+                            <div class="bio_small"><?php echo $author_designation;?></div>
+                        <?php } ?>
+                            <div>
+                                <?php echo strip_tags(substr($author_biography,0,350));?>
+                            </div>
+                        <?php if( $author_biography != '' ){ ?>
+                            <div class="align_right">
+                                <a href="javascript:void(0);" class="readRight" data-target="#fullBiography" data-toggle="modal">Full Biography</a>
+                            </div>
+                        <?php } ?>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<!-- Modal -->

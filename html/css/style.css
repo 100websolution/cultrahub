@@ -1377,8 +1377,8 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 
 /* SLIDER
 ---------------------------------*/
-.owl-theme .owl-controls .owl-page{text-align: center;}
-.owl-theme .owl-controls .owl-page{
+.owl-theme .owl-controls .owl-page, .owl-carousel .owl-dots .owl-dot{text-align: center;}
+.owl-theme .owl-controls .owl-page, .owl-carousel .owl-dots .owl-dot{
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -1388,7 +1388,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     padding: 1px;
     margin: 0 16px;
 }
-.owl-theme .owl-controls .owl-page span{
+.owl-theme .owl-controls .owl-page span, .owl-carousel .owl-dots .owl-dot span{
     display: block;
     width: 100%;
     height: 100%;
@@ -1401,7 +1401,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 	-webkit-transition: all 300ms ease-in-out 0s;
 	transition: all 300ms ease-in-out 0s;
 }
-.owl-theme .owl-controls .owl-page.active span{background: #414042;}
+.owl-theme .owl-controls .owl-page.active span, .owl-carousel .owl-dots .owl-dot.active span{background: #414042;}
 .owl-theme .owl-controls .owl-buttons div, .custom_nav_slider .owl-pagination .owl-prev, .custom_nav_slider .owl-pagination .owl-next, .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next{
     position: absolute;
     top: 50%;
@@ -2624,15 +2624,16 @@ footer .social a{background: #e9e9e9;}
     display: block;
     width: 100%;
 }
-.culture_banner .owl-pagination{
+.culture_banner .owl-pagination, .culture_banner .owl-dots{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 10px;
+    text-align: center;
 }
-.culture_banner .owl-controls .owl-page, .padding_banner .owl-controls .owl-page{border-color: #fff;}
-.culture_banner .owl-controls .owl-page span, .padding_banner .owl-controls .owl-page span{background: rgba(255,255,255,0.6);}
-.culture_banner .owl-controls .owl-page.active span, .padding_banner .owl-controls .owl-page.active span{background: #fff;}
+.culture_banner .owl-controls .owl-page, .padding_banner .owl-controls .owl-page, .culture_banner .owl-dots .owl-dot, .padding_banner .owl-dots .owl-dot{border-color: #fff;}
+.culture_banner .owl-controls .owl-page span, .padding_banner .owl-controls .owl-page span, .culture_banner .owl-dots .owl-dot span, .padding_banner .owl-dots .owl-dot span{background: rgba(255,255,255,0.6);}
+.culture_banner .owl-controls .owl-page.active span, .padding_banner .owl-controls .owl-page.active span, .culture_banner .owl-dots .owl-dot.active span, .padding_banner .owl-dots .owl-dot.active span{background: #fff;}
 .culture_banner .owl-controls .owl-buttons div, .culture_banner.owl-carousel .owl-nav .owl-prev, .culture_banner.owl-carousel .owl-nav .owl-next, .padding_banner .owl-controls .owl-buttons div, .padding_banner.owl-carousel .owl-nav .owl-prev, .padding_banner.owl-carousel .owl-nav .owl-next{
     height: 40px;
     line-height: 40px;

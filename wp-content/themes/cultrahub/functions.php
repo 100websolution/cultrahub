@@ -247,7 +247,7 @@ if ( !function_exists( 'cultrahub_enqueue_scripts' ) ) {
 		//wp_enqueue_style( 'cultrahub-bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css');
 		// Theme stylesheet
 		wp_enqueue_style( 'cultrahub-style', get_stylesheet_uri() );	
-		// Add plugins.css
+		// Add responsive.css
 		wp_enqueue_style( 'cultrahub-responsive', get_template_directory_uri() . '/css/responsive.css', array(), '1.0' );
 		// Add development.css
 		wp_enqueue_style( 'cultrahub-development', get_template_directory_uri() . '/css/development.css', array(), '1.0' );
