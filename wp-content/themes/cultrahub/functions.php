@@ -651,6 +651,7 @@ function home_blogs(){
 }
 add_action( 'init', 'home_blogs' );
 
+/*
 //For Home Page Signup management//
 function registered_users(){
 	$labels = array(
@@ -720,6 +721,7 @@ function custom_column( $column, $post_id ) {
       	break;
   }
 }
+*/
 
 //For Cultures management//
 function ch_cultures(){
