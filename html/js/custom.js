@@ -288,6 +288,7 @@ $(function () {
     	loop: true,
         autoplay: true,
         autoplayHoverPause: true,
+        video: true,
 		margin: 0,
 		dots: false,
 		nav: true,

@@ -14,7 +14,7 @@
 		</div>
 	</div>
 </div>
-<div class="homeForm">
+<div class="homeForm mt0">
 	<?php echo eemail_show(); ?>
-	<span id="eemail_msg" style="display:none;"></span>
+	<div id="eemail_msg" style="display:none;"></div>
 </div>
