@@ -124,7 +124,7 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                             </div>-->
                         </div>
                         <div class="bio_text">
-                            <h3 class="bio_title"><?php echo $author_name;?></h3>
+                            <h3 class="bio_title">Featured Personality of the Week</h3>
                             <h3 class="bio_title small"><?php echo $author_name;?></h3>
                         <?php if( $author_designation != '' ){ ?>
                             <div class="bio_small"><?php echo $author_designation;?></div>
