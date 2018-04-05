@@ -133,8 +133,8 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                                 <?php echo strip_tags(substr($author_biography,0,350));?>
                             </div>
                         <?php if( $author_biography != '' ){ ?>
-                            <div class="align_right">
-                                <a href="javascript:void(0);" class="readRight" data-target="#fullBiography" data-toggle="modal">Full Biography</a>
+                            <div class="fright mt_25">
+                                <a href="javascript:void(0);" class="readRight" data-target="#fullBiography" data-toggle="modal">Read More</a>
                             </div>
                         <?php } ?>
                         </div>
@@ -183,9 +183,9 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 								<img src="<?php echo $fp_image[0];?>" width="<?php echo $fp_image[1];?>" alt="">
 								<a href="#" class="expand_icon"></a>
 							</div>
-							<div class="product_text">
+							<?php /*<div class="product_text">
 								<h3 class="product_title"><?php echo $product_name;?></h3>
-							</div>
+							</div>*/?>
 						</div>
 					</div>
 			<?php

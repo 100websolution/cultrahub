@@ -1075,6 +1075,7 @@ form small{
 .mt100{margin-top: 100px;}
 .mt_6{margin-top: -6px;}
 .mt_15{margin-top: -15px;}
+.mt_25{margin-top: -25px;}
 .mt_30{margin-top: -30px;}
 .mt_45{margin-top: -45px;}
 .mt_50{margin-top: -50px;}
@@ -2361,6 +2362,7 @@ label.label_badge input:checked + span:before{
     line-height: 40px;
     margin: 35px 0;
     font-family: 'RalewayMedium';
+    text-transform: none;
 }
 .newsletter_form{
     width: 850px;
@@ -2784,23 +2786,28 @@ footer .social a{background: #e9e9e9;}
     border-radius: 0;
 }
 .bio_img{
-    width: 545px;
+    width: 500px;
     float: left;
 }
 .bio_text{
-    margin: 0 0 0 545px;
-    padding: 20px 0 20px 30px;
+    margin: 0 0 0 500px;
+    padding: 0 0 0 30px;
 }
 .bio_title{
     font-size: 36px;
     line-height: 40px;
     font-family: 'RalewaySemiBold';
-    margin: 0;
+    margin: 0 0 10px;
 }
 .bio_title a{color: inherit;}
+.bio_title.small{
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+}
 .bio_small{
     color: #394998;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 16px;
     font-family: 'LatoRegular';
     margin: 6px 0;
@@ -2808,8 +2815,10 @@ footer .social a{background: #e9e9e9;}
 .readRight{
     font-size: 14px;
     line-height: 32px;
-    color: #394998;
+    //color: #394998;
+    color: #8d8f92;
 }
+.readRight:hover{color: #8d8f92;}
 /*CULTURE_BIO END*/
 
 
