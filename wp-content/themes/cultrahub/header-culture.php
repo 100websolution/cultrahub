@@ -22,12 +22,12 @@
     </head>
     <body>
 		<a class="scrollup" href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a>
-		<header>
+		<header class="innerHeader">
 			<div class="htop">
 				<div class="container">
 					<div class="fright">
 						<div class="fleft ml30">
-							<?php wp_nav_menu( array( 'menu' => 'top-header-menu', 'menu_class'=>'borderbar_list') ); ?>							
+							<?php wp_nav_menu( array( 'menu' => 'top-header-menu', 'menu_class'=>'borderbar_list') ); ?>
 						</div>
 						<div class="fleft ml30">
 							<div class="lang dropwrap">
@@ -46,15 +46,38 @@
 				<div class="container">
 					<div class="logo">
 						<a href="<?php echo site_url();?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo( 'name' );?>" />
+							<img src="<?php echo get_template_directory_uri();?>/images/logo_inner.png" alt="<?php echo get_bloginfo( 'name' );?>" />
 						</a>
+						<div class="color_dots">
+							<span class="green"></span>
+							<span class="yellow"></span>
+							<span class="red"></span>
+							<span class="blue"></span>
+						</div>
 					</div>
 					<div class="hright">
-						<div class="social align_right">
-							<?php echo add_social_links_icons();?>
-						</div>
+						<?php //echo '<div class="social align_right">'.add_social_links_icons().'</div>';?>
 						<div class="signup_form_wrap">
-							<h2 class="subheading"><a href="<?php echo site_url();?>"><span>Sign Up</span> For Your Next Adventure</a></h2>
+							<h2 class="subheading"><a href="<?php echo site_url();?>">Sign Up Now, It’s Free!</a></h2>
+						</div>
+						<div class="topmenu">
+						    <ul class="clearfix">
+						        <li>
+						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_popular_store.png" alt="Popular Stores"/> Popular Stores</a>
+						        </li>
+						        <li>
+						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_trending_now.png" alt="Trending Now"/> Trending Now</a>
+						        </li>
+						        <li>
+						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_exclusive.png" alt="Exclusive"/> Exclusive</a>
+						        </li>
+						        <li>
+						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_custom.png" alt="Customs"/> Customs</a>
+						        </li>
+						        <li>
+						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
+						        </li>
+						    </ul>
 						</div>
 					</div>
 				</div>

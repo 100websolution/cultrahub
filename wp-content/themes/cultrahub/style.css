@@ -1349,9 +1349,13 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 
 /* HEADER_BOTTOM
 ---------------------------------*/
+.hbtm{
+    padding: 0 0 20px;
+    margin: 0 0 -35px;
+}
 .hbtm .logo{
-    width: 195px;
-    margin: -30px 0 0;
+    width: 210px;
+    margin: -20px 0 0;
     float: left;
 }
 .hbtm .hright{
@@ -1369,8 +1373,10 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     margin: 0 50px 0 0;
 }
 .signup_form_wrap .subheading{
+    font-size: 20px;
+    font-family: 'RalewaySemiBold';
     margin: 0;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 50px;
     position: relative;
 }
 .signup_form_wrap .subheading:before{
@@ -1382,6 +1388,9 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     background: url(images/sprite.png) no-repeat -100px -100px;
     top: 0;
     left: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    margin: -3px -3px;
 }
 .signup_form{
     display: none;
@@ -1400,6 +1409,29 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     padding-top: 0;
     margin-top: 0;
 }
+.topmenu{float: right;}
+.topmenu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.topmenu ul > li{
+    padding: 0;
+    margin: 0 0 0 25px;
+    float: left;
+    font-size: 13px;
+    line-height: 30px;
+    color: #414042;
+}
+.topmenu ul > li:first-child{margin: 0;}
+.topmenu ul li a{color: inherit;}
+.topmenu ul > li img{
+    max-height: 34px;
+    line-height: 34px;
+    margin: -2px 6px -2px 0;
+    vertical-align: top;
+}
+.topmenu ul li:hover > a{color: #00a74f;}
 /*HEADER_BOTTOM END*/
 
 
@@ -2443,12 +2475,18 @@ label.label_badge input:checked + span:before{
 /* FOOTER
 ---------------------------------*/
 footer{
-	background: #f5f5f5;
 	background: #f9f9f9;
     font-family: 'RalewayMedium';
     position: relative;
     text-align: center;
     padding: 30px 0 0;
+}
+footer.noborder{
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #fafafa 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#fafafa 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#fafafa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 );
 }
 footer a{color: inherit;}
 footer a:hover, footer .active a, .f_nav li:hover a, .company{color: #eb4034;}
@@ -2461,7 +2499,16 @@ footer .border_line{
 footer .logo{
     margin: 0 auto;
     padding: 35px 0;
+    width: 316px;
 }
+footer .logo a{display: block;}
+footer .logo img{width: 100%;}
+footer .logo .color_dots span{
+    width: 10px;
+    height: 10px;
+    margin: 0 15px 0 0;
+}
+footer .logo .color_dots span:last-child{margin: 0;}
 .fnav{
     list-style: none;
     padding: 0;
