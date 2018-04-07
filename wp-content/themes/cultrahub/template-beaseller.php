@@ -66,8 +66,10 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 					</div>
 				</div>
 				<div class="">
-					<h2 class="heading center"><?php echo $section_1_heading;?></h2>
-					<div class="heading_tag"><?php echo $section_1_description;?></div>
+                    <div class="innerContainer">
+                        <h2 class="heading center"><?php echo $section_1_heading;?></h2>
+                        <div class="heading_tag"><?php echo $section_1_description;?></div>
+                    </div>
 				<?php
 				if( !empty($beaseller_description_1) ){
 				?>

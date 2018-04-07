@@ -114,7 +114,8 @@ $miscellaneous2 	= get_field( 'local_miscellaneous_2', $post->ID );
             <div class="container">
                 <div class="innerContainer">
                     <div class="align_center"><img src="<?php echo get_template_directory_uri();?>/images/logo_cultrahub_local_icon.png" alt="" /></div>
-                    <div class="heading_tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    <h2 class="heading center mt20">Support For The Locals</h2>
+                    <div class="heading_tag">The latest way to let your audience know you are here. Interact with them directly and put a personality behind the profile. List your best sellers, this years must have items, and information about what’s happening near you today.</div>
                 </div>
                 
                 <div class="cultra_local_category">
@@ -270,18 +271,7 @@ $miscellaneous2 	= get_field( 'local_miscellaneous_2', $post->ID );
             </div>
         </div>
         
-        <?php include( locate_template( 'newsletter-form.php' ) ); ?>
-		
-		<div class="section policy_section nopolicy">
-            <div class="newsletter_img"><img src="<?php echo get_template_directory_uri();?>/images/bg_newsletter.png" alt=""></div>
-            
-            <div class="border_line">
-                <span class="b_yellow"></span>
-                <span class="b_red"></span>
-                <span class="b_blue"></span>
-                <span class="b_green"></span>
-            </div>
-        </div>
+        <?php include( locate_template( 'newsletter-form-other.php' ) ); ?>
 			
 	</div>
 	<!--MAIN CONTAINER END-->

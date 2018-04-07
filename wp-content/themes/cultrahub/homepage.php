@@ -30,7 +30,7 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 				<?php
 				if( !empty($cultrahub_blocks) ){
 				?>
-				<ul class="row ul iconList">
+				<ul class="row ul iconList homeIcon">
 				<?php
 					foreach( $cultrahub_blocks as $cb ){
 				?>

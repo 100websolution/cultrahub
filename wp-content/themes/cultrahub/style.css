@@ -1790,19 +1790,26 @@ label.label_badge input:checked + span:before{
     height: 130px;
     margin: 0 auto 10px;
     padding: 15px;
-    position: relative;
 }
-.iconImg:before{
+.iconBlock:before, .homeIcon .iconImg:before{
     position: absolute;
     content: "";
     display: block;
+    top: 20px;
+    bottom: 20px;
+    right: -15px;
+    width: 1px;
+    background: #cbcdce;
+}
+.homeIcon .iconBlock:before{display: none;}
+.homeIcon .iconImg{position: relative;}
+.homeIcon .iconImg:before{
     top: 0;
     bottom: 0;
-    right: -15px;
     width: 2px;
     background: #57585b;
 }
-.iconImg:after {
+.homeIcon .iconImg:after {
     position: absolute;
     content: "";
     display: block;
@@ -2426,7 +2433,7 @@ label.label_badge input:checked + span:before{
 .border_line span.b_yellow{background: #ffb302;}
 
 .policy_section{
-    background: #f5f5f5;
+    //background: #f5f5f5;
     margin: -35px 0 0;
     font-size: 12px;
     line-height: 16px;
