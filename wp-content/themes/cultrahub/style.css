@@ -206,7 +206,6 @@ img {
 p {
 	padding-bottom: 20px;
 	margin: 0;
-    text-align: justify;
 }
 p:last-child{padding-bottom: 0;}
 p a{display: inline;}
@@ -568,10 +567,11 @@ input[readonly="readonly"]{cursor:not-allowed; background:#f4f4f4 !important;}
 
 /* ERROR_MSG
 ---------------------------------*/
-.error, .success, .information {
-    background: url(images/error_icon.png) no-repeat scroll 10px 2px #ffd1d1;
-    border: 1px solid #de7a7b;
-    border-radius: 5px;
+.error, .success, .wpcf7-not-valid {
+    background-color: #ffd1d1;
+    border-color: #de7a7b !important;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     color: #c00;
     display: block;
     font-size: 12px;
@@ -581,8 +581,8 @@ input[readonly="readonly"]{cursor:not-allowed; background:#f4f4f4 !important;}
 	text-align: left;
 }
 .success {
-    background: url(images/success_icon.png) no-repeat scroll 10px 2px #eaf7d9;
-    border-color: #6d9d03;
+    background-color: #eaf7d9;
+    border-color: #6d9d03 !important;
     color: #425c05;
 }
 .error p, .success p, .information p {
@@ -2799,6 +2799,7 @@ footer .social a{background: #e9e9e9;}
     float: right;
     margin-bottom: 10px;
 }
+.cultureP{line-height: 28px;}
 .cultureP:before {
     content: "";
     display: block;

@@ -167,9 +167,9 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
         ?>
         <div class="section">
             <div class="container">
+                <h2 class="heading center">Featured Products</h2>
+                <div class="heading_tag"><?php echo strip_tags( $featured_product_short_description );?></div>
                 <div class="innerContainer">
-                    <h2 class="heading center">Featured Products</h2>
-                    <div class="heading_tag"><?php echo strip_tags( $featured_product_short_description );?></div>
                     <div class="owl-carousel owl4">
                 <?php			
                     foreach( $featured_products as $val_fp ){
