@@ -1,21 +1,6 @@
 /*Development Css*/
-.form_validation .error {
-    /*background: url(images/error_icon.png) no-repeat scroll 10px 2px #ffd1d1;*/
-    border: 1px solid #de7a7b;
-    border-radius: 2px;
-    color: #c00;
-    display: block;
-    text-align: left;
-	margin:0 !important;
-}
-.form_validation ul li label.error{display: none !important;}
-.form_validation #culture_selected-error{display: none !important;}
-.form_validation .error{background-color: #fff !important; padding: 5px 10px !important;}
+.form_validation ul li label.error, .form_validation #culture_selected-error, span.wpcf7-not-valid-tip, #signup_partone_email-error{display: none !important;}
 .wpcf7-form-control-wrap {width: 100%;}
-/*span .wpcf7-not-valid {border: 1px solid #ff0000 !important;}
-span.wpcf7-not-valid-tip {display: none;}*/
 
-#culturemsg{color: #ff0000; font-size: 12px; text-align: center; width: 100%;}
-#culturemsg_gender{color: #ff0000; font-size: 12px; text-align: left; width: 100%;}
-.selectculture, .selectgender{width:1px !important; height:1px !important; padding:0 !important; visibility: collapse !important;}
-#signup_partone_email-error{display: none !important;}
+#culturemsg, #culturemsg_gender{color: #c00; font-size: 12px; text-align: left; width: 100%; display: block;}
+.selectculture, .selectgender{visibility: collapse !important; position: absolute;}
