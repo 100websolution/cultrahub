@@ -64,12 +64,13 @@ if( !empty($banner_sliders) ){
 				</div>
 				<?php
 				if( !empty($get_posts) ){
+					$m=1;
 				?>
 				<div class="sliderblockWrap odd rev">
 				<?php
 					foreach( $get_posts as $post ){
 				?>
-					<div class="sliderblock height_div badge_of_day">
+					<div class="sliderblock height_div <?php if(count($get_posts)==$m)echo 'badge_of_day';?>">
 						<div class="sliderImg2 quoteImg hfull">
 							<div class="img1">
 								<img src="<?php echo $post['shareaquote_image1']['url'];?>" alt="" />
@@ -96,6 +97,7 @@ if( !empty($banner_sliders) ){
 						<div class="clear"></div>
 					</div>
 				<?php
+					$m++;
 					}
 				?>
 				</div>

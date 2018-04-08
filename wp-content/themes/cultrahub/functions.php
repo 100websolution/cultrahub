@@ -374,9 +374,13 @@ function cultrahub_signup(){
 			
 			if( $inserted_user_id != '' ){
 				$registration_date = date('d/m/Y');
+				if( count($day) == 1 ){
+					$day = '0'.$day;
+				}
 				update_user_meta( $inserted_user_id, 'month', $month );
 				update_user_meta( $inserted_user_id, 'day', $day );
 				update_user_meta( $inserted_user_id, 'year', $year );
+				update_user_meta( $inserted_user_id, 'birthdate', $year.$month.$day );
 				update_user_meta( $inserted_user_id, 'gender', $gender );
 				update_user_meta( $inserted_user_id, 'user_business', $business );
 				update_user_meta( $inserted_user_id, 'user_notification', $get_notification );
@@ -427,6 +431,43 @@ function usernameexists( $username ){
 		return 0;
 	}
 }
+
+
+function extra_profile_fields( $user ) {
+?>   
+    <h3><?php _e('Extra User Details'); ?></h3>
+    <table class="form-table">
+        <!--<tr>
+            <th><label for="gender">Gender</label></th>
+            <td>
+            <input type="text" name="gmail" id="gmail" value="<?php echo esc_attr( get_the_author_meta( 'gender', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter your Gmail.</span>
+            </td>
+        </tr>-->
+        <tr>
+            <th><label for="yahoo">Yahoo</label></th>
+            <td>
+            <input type="text" name="yahoo" id="yahoo" value="<?php echo esc_attr( get_the_author_meta( 'yahoo', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter a Yahoo Email.</span>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="hotmail">Hotmail</label></th>
+            <td>
+            <input type="text" name="hotmail" id="hotmail" value="<?php echo esc_attr( get_the_author_meta( 'hotmail', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter your Hotmail.</span>
+            </td>
+        </tr>
+    </table>
+<?php
+}
+// Then we hook the function to "show_user_profile" and "edit_user_profile"
+add_action( 'show_user_profile', 'extra_profile_fields', 10 );
+add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
+
+
+
+
 
 //Cultrahub checking username
 add_action( 'wp_ajax_checking_username', 'checking_username' );

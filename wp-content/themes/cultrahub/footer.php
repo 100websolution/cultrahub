@@ -74,7 +74,7 @@
 				</ul>
 				<div class="or"><span>OR</span></div>
 			</div>
-			<form method="post" enctype="multipart/form-data" id="signup_form" class="form_validation">
+			<form method="post" id="signup_form">
 				<div class="border_btm">
 					<ul class="ul row">
 						<li class="col50">
@@ -201,7 +201,7 @@
 				   </ul>
 				   <span id="culturemsg"></span>
 				</div>
-				<input type="text" value="" name="culture_selected" id="culture_selected" class="selectculture" />
+				<input type="hidden" value="" name="culture_selected" id="culture_selected" class="selectculture" />
 
 				<div class="align_center">
 					<ul class="ul row">
@@ -214,7 +214,7 @@
 							</div>
 						</li>
 						<li class="col100">
-							<input type="submit" id="signup" value="LAUNCHING SOON" class="btnRed w80">
+							<input type="submit" id="signup" value="LAUNCHING SOON" class="btnRed w80 />
 						</li>
 						<li class="col100 align_center">
 							<small>By clicking this button, you agree to our <a href="#">Terms of Service</a>.</small>

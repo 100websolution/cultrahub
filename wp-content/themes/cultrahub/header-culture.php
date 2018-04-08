@@ -61,21 +61,21 @@
 							<h2 class="subheading"><a href="<?php echo site_url();?>">Sign Up Now, It’s Free!</a></h2>
 						</div>
 						<div class="topmenu">
-						    <ul class="clearfix">
+							<ul class="clearfix">
 						        <li>
-						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_popular_store.png" alt="Popular Stores"/> Popular Stores</a>
+						            <a href="<?php echo get_permalink(2543);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_popular_store.png" alt="Popular Stores"/> Popular Stores</a>
 						        </li>
 						        <li>
-						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_trending_now.png" alt="Trending Now"/> Trending Now</a>
+						            <a href="<?php echo get_permalink(2499);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_trending_now.png" alt="Trending Now"/> Trending Now</a>
 						        </li>
 						        <li>
-						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_exclusive.png" alt="Exclusive"/> Exclusive</a>
+						            <a href="<?php echo get_permalink(2671);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_exclusive.png" alt="Exclusive"/> Exclusive</a>
 						        </li>
 						        <li>
-						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_custom.png" alt="Customs"/> Customs</a>
+						            <a href="<?php echo get_permalink(2444);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_custom.png" alt="Customs"/> Customs</a>
 						        </li>
 						        <li>
-						            <a href=""><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
+						            <a href="<?php echo get_permalink(2770);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
 						        </li>
 						    </ul>
 						</div>
