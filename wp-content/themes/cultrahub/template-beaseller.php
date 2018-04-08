@@ -146,9 +146,13 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 			<hr class="mb35 mt0">
 			<div class="innerContainer">
 				<div class="seller_fees">
-					<h2 class="heading2"><?php echo $section_3_heading;?></h2>
+					<div class="seller_fees_head">
+						<h2 class="heading2"><?php echo $section_3_heading;?></h2>
+						<strong>“The greatest amount of wasted time is the time not getting started”</strong>
+						<p>Stop waiting for something to happen and make it happen! Design your brand, create your shop, and start promoting your business today.</p>
+					</div>
 					<div class="seller_fees_text">
-						<p><?php echo $section_3_description;?></p>
+						<h2 class="heading nobrdr"><?php echo $section_3_description;?></h2>
 					<?php
 					if(!empty($beaseller_description_3)){
 					?>
@@ -175,14 +179,11 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	}
 	?>
 	
-	<?php
-	if(!empty($section_4_heading)){
-	?>
 	<div class="section">
 		<div class="container">
 			<div class="innerContainer">
-				<h2 class="heading center"><?php echo $section_4_heading;?></h2>
-				<div class="heading_tag"><?php echo $section_4_description;?></div>
+				<?php echo (!empty($section_4_heading))? '<h2 class="heading center">'.$section_4_heading.'</h2>':'';?>
+				<?php echo (!empty($section_4_description))? '<div class="heading_tag">'.$section_4_description.'</div>':'';?>
 				<div class="seller_tool_wrap">
 				<?php
 				if(!empty($beaseller_description_4)){
@@ -211,9 +212,6 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 			<hr class="mb0 mt70">
 		</div>
 	</div>
-	<?php
-	}
-	?>
 	
 	<?php include( locate_template( 'newsletter-form.php' ) ); ?>
 		
