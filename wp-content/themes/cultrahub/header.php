@@ -70,7 +70,7 @@
 			<div class="section homeBanner">
 				<div class="container">
 					<div class="logo">
-						<a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
+						<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
 						<div class="color_dots">
 							<span class="green"></span>
 							<span class="yellow"></span>
