@@ -7,13 +7,14 @@ get_header('culture');
 //Banner Slider
 $banner_sliders	= get_field( 'banner_sliders', $post->ID );
 //Heading and details
-$heading_details		= get_field( 'heading_details', $post->ID );
-$menucategory_field_id 	= $heading_details->ID;
-$menucategory_icon		= get_field( 'icon', $menucategory_field_id );
-$menucategory_name		= get_field( 'name', $menucategory_field_id );
-$cpt_content			= get_post( $menucategory_field_id );
-$get_posts				= get_field( 'popular_page_posts', $post->ID );
-$quote					= get_field( 'quote', $post->ID );
+$heading_details			= get_field( 'heading_details', $post->ID );
+$menucategory_field_id 		= $heading_details->ID;
+$menucategory_icon			= get_field( 'icon', $menucategory_field_id );
+$menucategory_name			= get_field( 'name', $menucategory_field_id );
+$popularpageshortdescription= get_field( 'popularpageshortdescription', $post->ID );
+$cpt_content				= get_post( $menucategory_field_id );
+$get_posts					= get_field( 'popular_page_posts', $post->ID );
+$quote						= get_field( 'quote', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">
@@ -51,7 +52,16 @@ if( !empty($banner_sliders) ){
 				<div class="">
 					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
 					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
-					<div class="heading_tag"><?php echo strip_tags(apply_filters('the_content',$cpt_content->post_content));?></div>
+					<?php
+					if($popularpageshortdescription != ''){
+					?>
+						<div class="heading_tag">
+							<p><?php echo $popularpageshortdescription;?></p>
+							<?php //echo strip_tags(apply_filters('the_content',$cpt_content->post_content));?>
+						</div>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 			
