@@ -218,6 +218,6 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	<?php include( locate_template( 'newsletter-form.php' ) ); ?>
 		
 </div>
-<!--MAIN CONTAINER END-->
+<!--MAIN CONTAINER END -->
 <?php
 get_footer();
