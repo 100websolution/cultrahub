@@ -297,6 +297,9 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                     <div class="heading_tag"><?php echo $inner_culture_short_description_christianity;?></div>
                 <?php
                 }
+				?>
+                </div>
+				<?php
                 if( !empty($inner_cultures_christianity) ){
                 ?>
                     <ul class="row ul">
@@ -321,7 +324,6 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                 <?php
                 }
                 ?>
-                </div>
             </div>
         </div>
         <?php
