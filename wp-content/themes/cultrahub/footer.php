@@ -147,7 +147,7 @@
 									<span>Male</span>
 								</label>
 							</div>
-							<input type="text" value="" name="gender_selected" id="gender_selected" class="selectgender" />
+							<input type="hidden" value="" name="gender_selected" id="gender_selected" class="selectgender" />
 							<span id="culturemsg_gender"></span>
 						</li>
 						<li class="col100">
