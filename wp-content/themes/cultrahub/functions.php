@@ -350,8 +350,7 @@ function cultrahub_signup(){
 		$business 			= isset($_POST['post_datas']['business'])?$_POST['post_datas']['business']:'';		
 		$password			= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'123456';
 		$culture_selected 	= isset($_POST['post_datas']['culture_selected'])?$_POST['post_datas']['culture_selected']:'';
-		$get_notification 	= isset($_POST['post_datas']['get_notification'])?$_POST['post_datas']['get_notification']:'';		
-		$firstname = ''; $lastname = '';
+		$get_notification 	= isset($_POST['post_datas']['get_notification'])?$_POST['post_datas']['get_notification']:'';
 		
 		$existing_check 	= email_exist( $email_address );
 		$existing_username 	= usernameexists( $username );
@@ -366,17 +365,24 @@ function cultrahub_signup(){
 				'first_name'      =>  $firstname,
 				'last_name'       =>  $lastname,
 				'role'            =>  'cultrahub_subscriber'
-			);
-			
-			//echo '<pre>'; print_r($_POST['post_datas']); die;
-			
-			$inserted_user_id = wp_insert_user( $userdata );
-			
+			);			
+			$inserted_user_id = wp_insert_user( $userdata );			
 			if( $inserted_user_id != '' ){
 				$registration_date = date('d/m/Y');
 				if( count($day) == 1 ){
 					$day = '0'.$day;
 				}
+				$all_selected_cultures = array(); $cul = '';
+				if( $culture_selected != '' ){
+					if( substr_count($culture_selected, ',') > 0 ){
+						$all_selected_cultures = explode(',',$culture_selected);
+					}else{
+						$all_selected_cultures = $culture_selected;
+					}
+					$cul = serialize($all_selected_cultures);
+				}
+				update_user_meta( $inserted_user_id, 'first_name', $firstname );
+				update_user_meta( $inserted_user_id, 'last_name', $lastname );
 				update_user_meta( $inserted_user_id, 'month', $month );
 				update_user_meta( $inserted_user_id, 'day', $day );
 				update_user_meta( $inserted_user_id, 'year', $year );
@@ -385,7 +391,7 @@ function cultrahub_signup(){
 				update_user_meta( $inserted_user_id, 'user_business', $business );
 				update_user_meta( $inserted_user_id, 'user_notification', $get_notification );
 				update_user_meta( $inserted_user_id, 'user_registration_date', $registration_date );
-				update_user_meta( $inserted_user_id, 'user_culture_selected', $culture_selected );
+				update_user_meta( $inserted_user_id, 'user_culture_selected', $cul );
 				
 				/*$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				$logo_url = site_url() . '/cultrahub/wp-content/themes/cultrahub/images/logo.png';
@@ -402,7 +408,7 @@ function cultrahub_signup(){
 				//get_option('admin_email')
 				wp_mail( '100websolution@gmail.com', 'Get In Touch', $message, $headers );*/
 				
-				autoLoginUser($inserted_user_id);
+				//autoLoginUser($inserted_user_id);
 				
 				echo 'success';
 			}else{
@@ -431,39 +437,6 @@ function usernameexists( $username ){
 		return 0;
 	}
 }
-
-/*function extra_profile_fields( $user ) {
-?>   
-    <h3><?php _e('Extra User Details'); ?></h3>
-    <table class="form-table">
-        <!--<tr>
-            <th><label for="gender">Gender</label></th>
-            <td>
-            <input type="text" name="gmail" id="gmail" value="<?php echo esc_attr( get_the_author_meta( 'gender', $user->ID ) ); ?>" class="regular-text" /><br />
-            <span class="description">Enter your Gmail.</span>
-            </td>
-        </tr>-->
-        <tr>
-            <th><label for="yahoo">Yahoo</label></th>
-            <td>
-            <input type="text" name="yahoo" id="yahoo" value="<?php echo esc_attr( get_the_author_meta( 'yahoo', $user->ID ) ); ?>" class="regular-text" /><br />
-            <span class="description">Enter a Yahoo Email.</span>
-            </td>
-        </tr>
-        <tr>
-            <th><label for="hotmail">Hotmail</label></th>
-            <td>
-            <input type="text" name="hotmail" id="hotmail" value="<?php echo esc_attr( get_the_author_meta( 'hotmail', $user->ID ) ); ?>" class="regular-text" /><br />
-            <span class="description">Enter your Hotmail.</span>
-            </td>
-        </tr>
-    </table>
-<?php
-}
-// Then we hook the function to "show_user_profile" and "edit_user_profile"
-add_action( 'show_user_profile', 'extra_profile_fields', 10 );
-add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
-*/
 
 //Cultrahub checking username
 add_action( 'wp_ajax_checking_username', 'checking_username' );

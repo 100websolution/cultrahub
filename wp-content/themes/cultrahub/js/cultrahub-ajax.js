@@ -183,6 +183,8 @@ jQuery(document).ready(function($){
 				success : function( response ) {
 					if( response == 'success' ){
 						$("#signup_form")[0].reset();
+						$('#gender_selected').val('');
+						$('#culture_selected').val('');
 						$('#message').html('<small style="color:#00a74f;font-size:12px; text-align:center;">Thank you for signing with us.</small>');
 						setTimeout(function(){
 							$('#message').html('');
