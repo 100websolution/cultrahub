@@ -8,10 +8,11 @@ $cf_icon = get_field( 'icon', $post->ID );
 $banner_images = get_field( 'banner_images', $post->ID );
 
 //Person Details
-$author_name 		= get_field( 'name', $post->ID );
-$author_designation	= get_field( 'designation', $post->ID );
-$author_biography	= get_field( 'biography', $post->ID );
-$author_video_url 	= get_field( 'video_url', $post->ID );
+$author_name 					= get_field( 'name', $post->ID );
+$author_designation				= get_field( 'designation', $post->ID );
+$author_biography				= get_field( 'biography', $post->ID );
+$author_video_url 				= get_field( 'video_url', $post->ID );
+$featured_personality_image 	= get_field( 'featured_personality_image', $post->ID );
 
 //Featured Products
 $featured_product_short_description = get_field( 'featured_product_short_description', $post->ID );
@@ -115,7 +116,14 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                     <div class="culture_bio">
                         <div class="bio_img">
                             <?php
-                            if( $author_video_url != '' ){						
+							if( !empty($featured_personality_image) ){
+							?>
+								<div class="ytube_vdo">							
+									<img alt="" src="<?php echo $featured_personality_image['url'];?>">
+								</div>
+							<?php
+							}
+							else if( $author_video_url != '' ){
                                 echo do_shortcode( '[arve url="' . $author_video_url . '" align="center" parameters="start=30" /]' );
                             }	
                             ?>

@@ -58,7 +58,7 @@ if( !empty($banner_sliders) ){
 		<div class="container">
 			<div class="innerContainer">
 				<div class="">
-					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['cultrahub-menu-category'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['cultrahub-menu-category-width'];?>" height="<?php echo $menucategory_icon['sizes']['cultrahub-menu-category-height'];?>" /></div>
+					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
 					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
 					<div class="heading_tag"><?php echo apply_filters('the_content',$cpt_content->post_content);?></div>
 				</div>
