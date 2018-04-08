@@ -141,7 +141,7 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                                 <?php echo strip_tags(substr($author_biography,0,380));?>
                             </div>
                         <?php if( $author_biography != '' ){ ?>
-                            <div class="fright mt_25">
+                            <div class="fright">
                                 <!--<a href="javascript:void(0);" class="readRight" data-target="#fullBiography" data-toggle="modal">Read More</a>-->
                                 <a href="javascript:void(0);" class="readRight">Read More</a>
                             </div>
