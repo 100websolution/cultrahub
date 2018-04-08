@@ -1,5 +1,5 @@
 <?php
-get_header( 'culture' );
+get_header( 'culture-other' );
 global $post;
 $thePostID = $post->ID;
 
@@ -616,4 +616,4 @@ $(document).on('click', '.owl-prev', function () {
 });
 </script>
 <?php
-get_footer();
+get_footer('other');
