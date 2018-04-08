@@ -281,7 +281,6 @@ jQuery(document).ready(function($){
     });
 	
 	
-	
 	//select_culture
 	/*var culture_array = [];
 	$('.select_culture').click(function(e){
