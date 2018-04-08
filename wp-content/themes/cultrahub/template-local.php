@@ -81,6 +81,7 @@ $miscellaneous2 	= get_field( 'local_miscellaneous_2', $post->ID );
                         <div class="table_box">
                             <div class="table_cell">
                                 <h2 class="heading"><?php echo $lp['local_post_heading'];?></h2>
+                                <h2 class="sub_heading"><?php echo $lp['localsub_heading'];?></h2>
                                 <div class="">
                                     <?php echo $lp['local_post_description'];?>
                                 </div>

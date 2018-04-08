@@ -17,6 +17,8 @@ $beaseller_description_2= get_field( 'beaseller_description_2', $post->ID );
 
 //Section 3
 $section_3_heading 		= get_field( 'beaseller_heading_3', $post->ID );
+$beasellerheading_1 	= get_field( 'beasellerheading_1', $post->ID );
+$beasellerheading_2 	= get_field( 'beasellerheading_2', $post->ID );
 $section_3_description 	= get_field( 'beaseller_short_description_3', $post->ID );
 $beaseller_description_3= get_field( 'beaseller_description_3', $post->ID );
 
@@ -148,8 +150,18 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 				<div class="seller_fees">
 					<div class="seller_fees_head">
 						<h2 class="heading2"><?php echo $section_3_heading;?></h2>
-						<div><strong>“The greatest amount of wasted time is the time not getting started”</strong></div>
-						<div><p>Stop waiting for something to happen and make it happen! Design your brand, create your shop, and start promoting your business today.</p></div>
+						<?php
+						if( !empty($beasellerheading_1) ){
+						?>						
+						<div><strong><?php echo $beasellerheading_1;?></strong></div>
+						<?php
+						}
+						if( !empty($beasellerheading_2) ){
+						?>
+						<div><p><?php echo $beasellerheading_2;?></p></div>
+						<?php
+						}
+						?>
 					</div>
 					<div class="seller_fees_text">
 						<h2 class="heading nobrdr"><?php echo $section_3_description;?></h2>
