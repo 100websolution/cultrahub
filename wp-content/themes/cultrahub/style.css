@@ -3859,6 +3859,16 @@ li:last-child .quote_block:before{display: none;}
 .cultra_mockup.sliderblockWrap.odd .sliderText2{padding: 0 15px 0 110px;}
 .cultra_mockup.sliderblockWrap.odd .sliderblock:nth-child(even) .sliderText2{padding: 0 110px 0 15px;}
 .cultra_mockup .color_dots{margin-top: 50px;}
+.cultra_mockup .heading2{
+	font-size: 50px;
+	line-height: 64px;
+	letter-spacing: 0;
+	margin: 0;
+}
+.cultra_mockup .heading.nobrdr{
+	font-family: 'RalewayMedium';
+	margin-bottom: 10px;
+}
 
 .cultra_local_category{
     position: relative;
