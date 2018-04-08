@@ -432,8 +432,7 @@ function usernameexists( $username ){
 	}
 }
 
-
-function extra_profile_fields( $user ) {
+/*function extra_profile_fields( $user ) {
 ?>   
     <h3><?php _e('Extra User Details'); ?></h3>
     <table class="form-table">
@@ -464,10 +463,7 @@ function extra_profile_fields( $user ) {
 // Then we hook the function to "show_user_profile" and "edit_user_profile"
 add_action( 'show_user_profile', 'extra_profile_fields', 10 );
 add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
-
-
-
-
+*/
 
 //Cultrahub checking username
 add_action( 'wp_ajax_checking_username', 'checking_username' );
