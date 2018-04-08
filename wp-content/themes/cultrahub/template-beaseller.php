@@ -148,8 +148,8 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 				<div class="seller_fees">
 					<div class="seller_fees_head">
 						<h2 class="heading2"><?php echo $section_3_heading;?></h2>
-						<strong>“The greatest amount of wasted time is the time not getting started”</strong>
-						<p>Stop waiting for something to happen and make it happen! Design your brand, create your shop, and start promoting your business today.</p>
+						<div><strong>“The greatest amount of wasted time is the time not getting started”</strong></div>
+						<div><p>Stop waiting for something to happen and make it happen! Design your brand, create your shop, and start promoting your business today.</p></div>
 					</div>
 					<div class="seller_fees_text">
 						<h2 class="heading nobrdr"><?php echo $section_3_description;?></h2>
