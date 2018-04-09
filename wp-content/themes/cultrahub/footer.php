@@ -61,17 +61,7 @@
 			</h2>                
 			<div class="align_center">
 				<h4 class="subheading2 small">YOU CAN REGISTER USING YOUR ACCOUNTS FROM</h4>
-				<ul class="ul row social_login">
-					<li class="col33">
-						<a href="#"><img src="<?php echo get_template_directory_uri();?>/images/signup_fb.png" alt="Sign Up with Facebook"></a>
-					</li>
-					<li class="col33">
-						<a href="#"><img src="<?php echo get_template_directory_uri();?>/images/signup_tw.png" alt="Sign Up with Twitter"></a>
-					</li>
-					<li class="col33">
-						<a href="#"><img src="<?php echo get_template_directory_uri();?>/images/signup_ins.png" alt="Sign Up with Instagram"></a>
-					</li>
-				</ul>
+				<?php echo do_shortcode('[wordpress_social_login]');?>
 				<div class="or"><span>OR</span></div>
 			</div>
 			<form method="post" id="signup_form">
