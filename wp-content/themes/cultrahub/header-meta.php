@@ -1,4 +1,4 @@
-<?php /* Header Meta */ ?>
+<?php /* Header Meta */  ?>
 
 <?php if(! is_page(30)){	//If not contact us page ?>
 
