@@ -863,9 +863,12 @@ function cultrahub_getintouch(){
 			$message .= 'Message: '.$ymessage.'<br />';
 			
 			$headers = 'Content-Type: text/html; charset=UTF-8';
-			$headers .= 'From: Cultrahub < '. $email_id .' >';
+			$headers .= 'From: '.$fname.' '.$lname.' < '. $email_id .' >';
 			//get_option('admin_email')
-			wp_mail( '100websolution@gmail.com', 'Get In Touch', $message, $headers );
+			wp_mail( '100websolution@gmail', 'Get In Touch', $message, $headers );
+			
+			echo 'success';
+			
 		}else{
 			echo 'error';
 		}
