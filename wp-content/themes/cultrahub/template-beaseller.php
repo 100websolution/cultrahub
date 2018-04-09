@@ -145,7 +145,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	?>
 	<div class="section">
 		<div class="container">
-			<hr class="mb35 mt0">
+			<hr class="mb70 mt0">
 			<div class="innerContainer">
 				<div class="seller_fees">
 					<div class="seller_fees_head">
@@ -184,7 +184,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 					<div class="clear"></div>
 				</div>
 			</div>
-			<hr class="mt35 mb0">
+			<hr class="mt70 mb0">
 		</div>
 	</div>
 	<?php
@@ -230,4 +230,4 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 </div>
 <!--MAIN CONTAINER END -->
 <?php
-get_footer();
+get_footer('other');

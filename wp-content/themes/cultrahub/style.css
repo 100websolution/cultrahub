@@ -2131,10 +2131,25 @@ label.label_badge input:checked + span:before{
 }
 .genre_block:hover .genre_icon{top: 50%;}
 .genre_block:hover .genre_img img{opacity: 0.35;}
-.owl-item:nth-child(1) .genre_block:hover .subheading2, .owl-item:nth-child(7) .genre_block:hover .subheading2, .owl-item:nth-child(11) .genre_block:hover .subheading2, .owl-item:nth-child(16) .genre_block:hover .subheading2{color: #00a74f;}
-.owl-item:nth-child(2) .genre_block:hover .subheading2, .owl-item:nth-child(5) .genre_block:hover .subheading2, .owl-item:nth-child(10) .genre_block:hover .subheading2, .owl-item:nth-child(13) .genre_block:hover .subheading2{color: #394998;}
-.owl-item:nth-child(3) .genre_block:hover .subheading2, .owl-item:nth-child(6) .genre_block:hover .subheading2, .owl-item:nth-child(9) .genre_block:hover .subheading2, .owl-item:nth-child(14) .genre_block:hover .subheading2{color: #eb4034;}
-.owl-item:nth-child(4) .genre_block:hover .subheading2, .owl-item:nth-child(8) .genre_block:hover .subheading2, .owl-item:nth-child(12) .genre_block:hover .subheading2, .owl-item:nth-child(15) .genre_block:hover .subheading2{color: #ffb302;}
+.owl-item:nth-child(1) .genre_block:hover .subheading2, 
+.owl-item:nth-child(7) .genre_block:hover .subheading2, 
+.owl-item:nth-child(11) .genre_block:hover .subheading2, 
+.owl-item:nth-child(16) .genre_block:hover .subheading2{color: #00a74f;}
+
+.owl-item:nth-child(2) .genre_block:hover .subheading2, 
+.owl-item:nth-child(5) .genre_block:hover .subheading2, 
+.owl-item:nth-child(10) .genre_block:hover .subheading2, 
+.owl-item:nth-child(13) .genre_block:hover .subheading2{color: #394998;}
+
+.owl-item:nth-child(3) .genre_block:hover .subheading2, 
+.owl-item:nth-child(6) .genre_block:hover .subheading2, 
+.owl-item:nth-child(9) .genre_block:hover .subheading2, 
+.owl-item:nth-child(14) .genre_block:hover .subheading2{color: #eb4034;}
+
+.owl-item:nth-child(4) .genre_block:hover .subheading2, 
+.owl-item:nth-child(8) .genre_block:hover .subheading2, 
+.owl-item:nth-child(12) .genre_block:hover .subheading2, 
+.owl-item:nth-child(15) .genre_block:hover .subheading2{color: #ffb302;}
 /*GENRE END*/
 
 
