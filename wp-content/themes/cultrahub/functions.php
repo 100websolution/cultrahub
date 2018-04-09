@@ -1143,3 +1143,24 @@ function generateYoutubeEmbedCode($vid_id, $width, $height, $iframe_id){
 	$embedded_code = '<iframe id="clip_'.$id.'" width="'.$w.'" height="'.$h.'" src="http://www.youtube.com/embed/'.$vid_id.'?enablejsapi=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>';
 	return $embedded_code;
 }
+
+add_action( 'pre_user_query', 'wphsau_pre_user_query' );
+function wphsau_pre_user_query( $user_search ) {
+    global $wpdb;
+    $super_admins = get_super_admins();
+    $super_admin_list = "'" . implode( "','", $super_admins ) . "'";
+    $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login NOT IN ({$super_admin_list})", $user_search->query_where);
+}
+function wdm_user_role_dropdown($all_roles) {
+    global $pagenow;
+    //if( $pagenow == 'user-edit.php' ) {
+        // if current user is editor AND current page is edit user page
+        unset($all_roles['administrator']);
+        unset($all_roles['editor']);
+        unset($all_roles['super admin']);
+        unset($all_roles['contributor']);
+        unset($all_roles['author']);
+    //}
+    return $all_roles;
+}
+add_action('editable_roles','wdm_user_role_dropdown');
