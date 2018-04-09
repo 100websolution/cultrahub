@@ -74,7 +74,7 @@
 				</ul>
 				<div class="or"><span>OR</span></div>
 			</div>
-			<form method="post" id="signup_form">
+			<form method="post" id="signup_form" class="form_validation">
 				<div class="border_btm">
 					<ul class="ul row">
 						<li class="col50">
