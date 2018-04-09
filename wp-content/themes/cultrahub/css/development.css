@@ -2,5 +2,5 @@
 .form_validation ul li label.error, .form_validation #culture_selected-error, span.wpcf7-not-valid-tip, #signup_partone_email-error{display: none !important;}
 .wpcf7-form-control-wrap {width: 100%;}
 
-#culturemsg, #culturemsg_gender{color: #c00; font-size: 12px; text-align: left; width: 100%; display: block;}
+#culturemsg, #culturemsg_gender{color: #c00; font-size: 12px; text-align: left; width: 100%; display: block;} 
 .selectculture, .selectgender{visibility: collapse !important; position: absolute;}
