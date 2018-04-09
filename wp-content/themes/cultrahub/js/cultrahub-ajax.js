@@ -79,8 +79,9 @@ jQuery(document).ready(function($){
 			}
 		});
 		if( $("#signup_partone_form").valid() ) {
-			$('#emailmsg').show();
-			$('#emailmsg').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
+			//$('#emailmsg').show();
+			//$('#emailmsg').html('<span style="color:#00a74f;font-size:12px; text-align:center;"><img src="'+websiteurl+'/images/loading.gif" /></span>');
+			$('#signup_partone').addClass('clicked');
 			e.preventDefault();
 			var signup_partone_email = $('#signup_partone_email').val();
 			jQuery.ajax({
@@ -93,7 +94,7 @@ jQuery(document).ready(function($){
 				success : function( response ) {
 					if( response == 'success' ){
 						$('#emailmsg').html('');
-						$('#emailmsg').hide();
+						$('#signup_partone').removeClass('clicked');
 						$('#email_address').val(signup_partone_email);
 						$('body').addClass('modalOpen');
 						$('#signUpForm').addClass('opened').slideDown();
