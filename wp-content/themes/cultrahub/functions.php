@@ -865,7 +865,7 @@ function cultrahub_getintouch(){
 			$headers = 'Content-Type: text/html; charset=UTF-8';
 			$headers .= 'From: '.$fname.' '.$lname.' < '. $email_id .' >';
 			//get_option('admin_email')
-			wp_mail( '100websolution@gmail', 'Get In Touch', $message, $headers );
+			wp_mail( 'sukanta.info2@gmail.com', 'Get In Touch', $message, $headers );
 			
 			echo 'success';
 			
