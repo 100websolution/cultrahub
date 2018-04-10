@@ -996,7 +996,7 @@ function cultrahub_sharethoughts(){
 			$message1 .= 'Mood: '.$mood_sharethought.'<br />';
 			
 			$headers1 = 'Content-Type: text/html; charset=UTF-8';
-			$headers1 .= 'From: Cultrahub < info@techtimes-in.com >';
+			$headers1 .= 'From: Cultrahub < '. $_POST['post_datas']['email_sharethought'] .' >';
 			wp_mail( '100websolution@gmail.com', 'Share Your Thoughts', $message1, $headers1 );
 			
 			echo 'success';
@@ -1010,6 +1010,7 @@ function cultrahub_sharethoughts(){
 	}
 	exit();
 }
+
 //For Share Your Thoughts management
 function ch_sharethoughts(){
 	$labels = array(
