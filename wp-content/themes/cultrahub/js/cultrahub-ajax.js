@@ -298,10 +298,12 @@ jQuery(document).ready(function($){
 		if( $("#sharethought_form").valid() ) {
 			var moodselected = $('#mood_selected').val();
 			if(moodselected == ''){
+				$('#sharethought_mood').show();
 				$('#sharethought_mood').html("Please select mood.");
 				return false;
 			}
 			else {
+				$('#sharethought_mood').hide();
 				$('#sharethought_mood').html("");
 				//return true;
 			}

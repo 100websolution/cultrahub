@@ -410,7 +410,7 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 											</label>
 										</div>
 										<input type="hidden" value="" name="mood_selected" id="mood_selected" class="selectmood" />
-										<div id="sharethought_mood" style="color:#ff0000;"></div>
+										<div id="sharethought_mood" style="color:#ff0000; display:none;"></div>
 									</li>
 									<li class="col100 align_center">
 										<input type="submit" id="submit_sharethought" value="SUBMIT FEEDBACK" class="btnRed w80">
