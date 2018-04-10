@@ -174,8 +174,9 @@
 							<form method="post" enctype="multipart/form-data" id="signup_partone_form" class="form_validation">
 								<input type="email" id="signup_partone_email" name="signup_partone_email" placeholder="Enter your email to get notified..." autocomplete="off" />
 								<button type="submit" id="signup_partone" class="">Launching Soon</button>
+								<div class="clear"></div>
+								<div id="emailmsg" class="align_left f12" style="display: none;"></div>
 							</form>
-							<span id="emailmsg" style="display:none; float: left; clear: both;"></span>
 						</div>
 						<?php //include( locate_template( 'newsletter-form.php' ) ); ?>
 					</div>

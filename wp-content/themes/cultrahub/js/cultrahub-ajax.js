@@ -104,9 +104,10 @@ jQuery(document).ready(function($){
 						}					
 					}
 					else if( response == 'already exist' ){
-						$('#emailmsg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address is already registered with us.</small>');
+						$('#signup_partone').removeClass('clicked');
+						$('#emailmsg').html('<small style="color:#eb4034;font-size:12px; text-align:center;">This email address is already registered with us.</small>').slideDown(300);
 						setTimeout(function(){
-							$('#emailmsg').html('');
+							$('#emailmsg').slideUp(300).html('');
 						},5000);
 					}
 					else{
