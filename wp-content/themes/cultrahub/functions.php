@@ -961,9 +961,136 @@ function custom_column_getintouch( $column, $post_id ) {
       	break;
   }
 }
+
+//Cultrahub Share thoughts
+add_action( 'wp_ajax_cultrahub_sharethoughts', 'cultrahub_sharethoughts' );
+add_action( 'wp_ajax_nopriv_cultrahub_sharethoughts', 'cultrahub_sharethoughts' );
+function cultrahub_sharethoughts(){
+	if ( isset( $_POST['post_datas'] ) && ( $_POST['post_datas']['email_sharethought'] != '' ) ) {
+		$firstname_sharethought = isset($_POST['post_datas']['firstname_sharethought'])?$_POST['post_datas']['firstname_sharethought']:'';
+		$lastname_sharethought 	= isset($_POST['post_datas']['lastname_sharethought'])?$_POST['post_datas']['lastname_sharethought']:'';
+		$email_sharethought 	= isset($_POST['post_datas']['email_sharethought'])?$_POST['post_datas']['email_sharethought']:'';
+		$feedback_sharethought	= isset($_POST['post_datas']['feedback_sharethought'])?$_POST['post_datas']['feedback_sharethought']:'';
+		$mood_sharethought 		= isset($_POST['post_datas']['mood_sharethought'])?$_POST['post_datas']['mood_sharethought']:'';
+		
+		$post = array(
+					'post_title' 	=> wp_strip_all_tags( $firstname_sharethought ),
+					'post_status'	=> 'publish',
+					'post_type' 	=> 'sharethoughts'  //Post type
+				);
+		$insert_id = wp_insert_post($post);
+		if( $insert_id != '' ){
+			update_post_meta( $insert_id, 'firstname_sharethought', $firstname_sharethought );
+			update_post_meta( $insert_id, 'lastname_sharethought', $lastname_sharethought );
+			update_post_meta( $insert_id, 'email_sharethought', $email_sharethought );
+			update_post_meta( $insert_id, 'feedback_sharethought', $feedback_sharethought );
+			update_post_meta( $insert_id, 'mood_sharethought', $mood_sharethought );
+			
+			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+			$logo_url = site_url() . '/cultrahub/wp-content/themes/cultrahub/images/logo.png';
+			
+			$message1  = 'First Name: '.$firstname_sharethought.'<br />';
+			$message1 .= 'Last Name: '.$lastname_sharethought.'<br />';
+			$message1 .= 'Email Address: '.$email_sharethought.'<br />';
+			$message1 .= 'Feedback: '.$feedback_sharethought.'<br />';
+			$message1 .= 'Mood: '.$mood_sharethought.'<br />';
+			
+			$headers1 = 'Content-Type: text/html; charset=UTF-8';
+			$headers1 .= 'From: Cultrahub < '. $_POST['email_sharethought'] .' >';
+			wp_mail( '100websolution@gmail.com', 'Share Your Thoughts', $message1, $headers1 );
+			
+			echo 'success';
+			
+		}else{
+			echo 'error';
+		}
+	}
+	else {
+		echo 'error';
+	}
+	exit();
+}
+//For Share Your Thoughts management
+function ch_sharethoughts(){
+	$labels = array(
+				'name'				=> _x( 'Share Your Thoughts', 'post type general name' ),
+				'singular_name'		=> _x( 'Share Your Thoughts', 'post type singular name' ),
+				'add_new' 			=> _x( 'Add New', 'Thought' ),
+				'add_new_item' 		=> __( 'Add New' ),
+				'edit_item' 		=> __( 'Edit' ),
+				'new_item' 			=> __( 'New' ),
+				'all_items' 		=> __( 'All' ),
+				'view_item' 		=> __( 'View' ),
+				'search_items' 		=> __( 'Search' ),
+				'not_found' 		=> __( 'No record found' ),
+				'not_found_in_trash'=> __( 'No record found in the trash' ),
+				'parent_item_colon' => '',
+				'menu_name' 		=> 'Share Thoughts'
+			);
+	$args = array(
+				'labels'			=> $labels,
+				'description'		=> '',
+				'public'			=> true,
+				'menu_icon'			=> 'dashicons-awards',
+				'menu_position'		=> 15,
+				'supports'			=> array(''),
+				'has_archive' 		=> true,
+				'capability_type' 	=> 'post',
+				'capabilities' 		=> array(
+				    					'create_posts' => false,	//add new false
+				  						),
+										'map_meta_cap' => true,		//edit, view, delete allow
+			);
+	register_post_type( 'sharethoughts', $args );
+}
+add_action( 'init', 'ch_sharethoughts' );
+
+//Add column to Share Your Thought page in admin panel
+add_filter( 'manage_sharethoughts_posts_columns', 'set_custom_edit_columns_sharethoughts' );
+function set_custom_edit_columns_sharethoughts( $columns ) {
+  	unset( $columns['title'] );
+  	unset( $columns['date'] );
+  	$columns['firstname_sharethought'] 	= __( 'First Name', 'Cultrahub' );
+  	$columns['lastname_sharethought'] 	= __( 'Last Name', 'Cultrahub' );
+  	$columns['email_sharethought'] 		= __( 'Email Address', 'Cultrahub' );
+  	$columns['feedback_sharethought'] 	= __( 'Feedback', 'Cultrahub' );  	
+  	$columns['mood_sharethought'] 		= __( 'Mood', 'Cultrahub' );
+  	$columns['date'] 					= __( 'Date', 'date' );
+  	return $columns;
+}
+
+add_action( 'manage_sharethoughts_posts_custom_column' , 'custom_column_sharethoughts', 10, 2 );
+function custom_column_sharethoughts( $column, $post_id ) {
+  switch ( $column ) {
+
+    case 'firstname_sharethought' :
+      	echo get_field( 'firstname_sharethought' );
+      	break;
+		
+	case 'lastname_sharethought' :
+      	echo get_field( 'lastname_sharethought' );
+      	break;
+		
+	case 'email_sharethought' :
+    	echo get_field( 'email_sharethought' );
+      	break;
+	
+	case 'phone_number' :
+      	if( get_field( 'phone_number' ) != '' )echo get_field( 'phone_number' ); else echo '';
+      	break;
+
+    case 'feedback_sharethought' :
+      	echo get_field( 'feedback_sharethought' );
+      	break;
+
+	case 'mood_sharethought' :
+      	echo get_field( 'mood_sharethought' );
+      	break;
+  }
+}
 add_filter( 'post_row_actions', 'remove_row_actions', 10, 1 );
 function remove_row_actions( $actions ){
-    if( get_post_type() === 'getintouch' || get_post_type() === 'genre' || get_post_type() === 'menucategory' || get_post_type() === 'blog' || get_post_type() === 'product' || get_post_type() === 'hashtag' )
+    if( get_post_type() === 'getintouch' || get_post_type() === 'genre' || get_post_type() === 'menucategory' || get_post_type() === 'blog' || get_post_type() === 'product' || get_post_type() === 'hashtag' || get_post_type() === 'sharethoughts' )
         unset( $actions['view'] );
     return $actions;
 	/*$actions['edit'] 
@@ -1164,6 +1291,9 @@ function wdm_user_role_dropdown($all_roles) {
         unset($all_roles['contributor']);
         unset($all_roles['author']);
     //}
+	
+	unset($all_roles['view'] );
+	
     return $all_roles;
 }
 add_action('editable_roles','wdm_user_role_dropdown');

@@ -366,7 +366,61 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 							</div>
 						</div>
 						<div class="sliderImg2 scroll_effect" data-effect="fadeInRight" data-delay="300">
-							<?php echo do_shortcode( '[contact-form-7 id="2904" title="Share Your Thoughts"]' );?>
+							<?php //echo do_shortcode( '[contact-form-7 id="2904" title="Share Your Thoughts"]' );?>
+							<form method="post" id="sharethought_form" class="form_validation">
+								<ul class="ul row">
+									<li class="col50">
+										<label>First Name</label>
+										<input type="text" class="required" placeholder="Write your first name" id="firstname_sharethought" name="firstname_sharethought">
+									</li>
+									<li class="col50">
+										<label>Last Name</label>
+										<input type="text" class="required" placeholder="Write your last name" id="lastname_sharethought" name="lastname_sharethought">
+									</li>
+									<li class="col100">
+										<label>Email Address</label>
+										<input type="email" placeholder="Write your email address" id="email_sharethought" name="email_sharethought">
+									</li>
+									<li class="col100">
+										<label>Feedback</label>
+										<textarea placeholder="Your feedback about the site" class="required" id="feedback_sharethought" name="feedback_sharethought"></textarea>
+									</li>
+									<li class="col100">
+										<label>Mood</label>
+										<div class="mood_list">
+											<label>
+												<input type="radio" class="md" name="review_sharethought" value="Love it!">
+												<span><img src="<?php echo get_template_directory_uri();?>/images/mood5.png" alt="">Love it!</span>
+											</label>
+											<label>
+												<input type="radio" class="md" name="review_sharethought" value="Awesome!">
+												<span><img src="<?php echo get_template_directory_uri();?>/images/mood4.png" alt="">Awesome!</span>
+											</label>
+											<label>
+												<input type="radio" class="md" name="review_sharethought" value="Like it!">
+												<span><img src="<?php echo get_template_directory_uri();?>/images/mood3.png" alt="">Like it!</span>
+											</label>
+											<label>
+												<input type="radio" class="md" name="review_sharethought" value="Don’t Like it!">
+												<span><img src="<?php echo get_template_directory_uri();?>/images/mood2.png" alt="">Don’t Like it!</span>
+											</label>
+											<label>
+												<input type="radio" class="md" name="review_sharethought" value="Boring!">
+												<span><img src="<?php echo get_template_directory_uri();?>/images/mood1.png" alt="">Boring!</span>
+											</label>
+										</div>
+										<input type="hidden" value="" name="mood_selected" id="mood_selected" class="selectmood" />
+										<span id="sharethought_mood" style="color:#ff0000;"></span>
+									</li>
+									<li class="col100 align_center">
+										<input type="submit" id="submit_sharethought" value="SUBMIT FEEDBACK" class="btnRed w80">
+										<div class="">
+											<small>You can also email us at <a href="mailto:info@cultrahub.com">info@cultrahub.com</a>.</small>
+										</div>
+									</li>
+									<li class="align_center" id="sharethought_message"></li>
+								</ul>
+							</form>
 						</div>
 						<div class="clear"></div>
 					</div>

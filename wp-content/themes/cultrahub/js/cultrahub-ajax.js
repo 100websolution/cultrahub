@@ -282,6 +282,67 @@ jQuery(document).ready(function($){
 		}
     });
 	
+	//Share your thought
+	$('.md').click(function(){
+		var value = $(this).val();
+		$('#mood_selected').val(value);
+	});
+	$('#submit_sharethought').click(function(e){
+		$("#sharethought_form").validate({
+			rules: {
+				email_sharethought: {
+					validate_email: true
+				}
+			}            
+		});
+		if( $("#sharethought_form").valid() ) {
+			var moodselected = $('#mood_selected').val();
+			if(moodselected == ''){
+				$('#sharethought_mood').html("Please select mood.");
+				return false;
+			}
+			else {
+				$('#sharethought_mood').html("");
+				//return true;
+			}
+			$('#submit_sharethought').addClass('clicked');
+			e.preventDefault();
+			var firstname_sharethought 	= $('#firstname_sharethought').val();
+			var lastname_sharethought 	= $('#lastname_sharethought').val();
+			var email_sharethought	 	= $('#email_sharethought').val();
+			var feedback_sharethought 	= $('#feedback_sharethought').val();
+			var mood_sharethought 		= $('#mood_selected').val();
+			
+			var elem = { firstname_sharethought:firstname_sharethought, lastname_sharethought:lastname_sharethought, email_sharethought:email_sharethought, feedback_sharethought:feedback_sharethought, mood_sharethought:mood_sharethought };
+			
+			jQuery.ajax({
+				url : cultrahub_ajax_object.ajax_url,
+				type : 'POST',
+				data : {
+					action : 'cultrahub_sharethoughts', 
+					post_datas : elem
+				},
+				success : function( response ) {
+					$('#mood_selected').val('');
+					$('#submit_sharethought').removeClass('clicked');
+					if( response == 'success' ){
+						$("#sharethought_form")[0].reset();
+						$('#sharethought_message').html('<small style="color:#00a74f;font-size:12px; text-align:center;">Thank you for your submission, we will get back to you soon.</small>');
+						setTimeout(function(){
+							$('#sharethought_message').html('');
+						},5000);
+					}
+					else{
+						$('#sharethought_message').html('<small style="color:#eb4034;font-size:12px; text-align:center;">Some error occurred.</small>');
+						setTimeout(function(){
+							$('#sharethought_message').html('');
+						},5000);
+					}
+				}
+			});
+		}
+    });
+	
 	
 	//select_culture
 	/*var culture_array = [];

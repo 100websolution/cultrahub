@@ -14,7 +14,6 @@
  * @author Vasyl Martyniuk <vasyl@vasyltech.com>
  */
 class AAM_Backend_Filter {
-
     /**
      * Instance of itself
      * 
