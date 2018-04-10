@@ -48,7 +48,7 @@
 					<div class="fright">
 						<div class="fleft ml30">
 							<ul class="borderbar_list">
-								<li><span data-toggle="modal" data-target="#signUpForm">Sign Up</span></li>
+								<!-- <li><span data-toggle="modal" data-target="#signUpForm">Sign Up</span></li> -->
 								<li><a href="#">About Us</a></li>
 								<li><a href="<?php echo get_permalink(2584);?>">Help &amp; Contact</a></li>
 								<li><a href="#">Careers</a></li>
