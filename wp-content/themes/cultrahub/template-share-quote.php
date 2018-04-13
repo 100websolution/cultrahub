@@ -31,7 +31,7 @@ $shareaquote_quotes			= get_field( 'shareaquote_quotes', $post->ID );
 <?php
 if( !empty($banner_sliders) ){
 ?>	
-	<div class="section">
+	<div class="section pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="full_banner">
@@ -60,7 +60,7 @@ if( !empty($banner_sliders) ){
 			<div class="innerContainer">
 				<div class="">
 					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
+					<h2 class="heading center"><?php echo the_title();?></h2>
 					<?php
 					if( $sharequoteshortdescription != '' ){
 					?>
@@ -80,8 +80,8 @@ if( !empty($banner_sliders) ){
 				<?php
 					foreach( $get_posts as $post ){
 				?>
-					<div class="sliderblock height_div <?php if(count($get_posts)==$m)echo 'badge_of_day';?>">
-						<div class="sliderImg2 quoteImg hfull">
+					<div class="sliderblock f24 rm <?php if(count($get_posts)==$m)echo 'badge_of_day';?>">
+						<div class="sliderImg2 quoteImg">
 							<div class="img1">
 								<img src="<?php echo $post['shareaquote_image1']['url'];?>" alt="" />
 							<?php
@@ -94,10 +94,11 @@ if( !empty($banner_sliders) ){
 							</div>
 							<div class="img2"><img src="<?php echo $post['shareaquote_image2']['url'];?>" alt="" /></div>
 						</div>
-						<div class="sliderText2 hfull">
+						<div class="sliderText2 ptb50">
 							<div class="table_box">
 								<div class="table_cell">
-									<h2 class="heading"><?php echo $post['shareaquote_title'];?></h2>
+									<h2 class="heading2 medium"><?php echo $post['shareaquote_title'];?></h2>
+									<h3 class="heading nobrdr rm">subheading</h3>
 									<div class="">
 										<?php echo $post['shareaquote_description'];?>
 									</div>
@@ -120,18 +121,16 @@ if( !empty($banner_sliders) ){
 	
 	<div class="section">
 		<div class="container">
-			<div class="innerContainer">
-				<div class="">
-					<h2 class="heading center"><?php echo $feature_aspects_title;?></h2>
-					<?php
-					if(!empty($feature_aspects_description)){
-					?>
-					<div class="heading_tag"><?php echo $feature_aspects_description;?></div>
-					<?php
-					}
-					?>
-				</div>
-			</div>
+            <div class="">
+                <h2 class="heading center"><?php echo $feature_aspects_title;?></h2>
+                <?php
+                if(!empty($feature_aspects_description)){
+                ?>
+                <div class="heading_tag"><?php echo $feature_aspects_description;?></div>
+                <?php
+                }
+                ?>
+            </div>
 			
 			<div class="feature_aspect_wrap">
 				<div class="feature_aspect_img"><img src="<?php echo $feature_aspects_image['url'];?>" alt="" /></div>
@@ -202,8 +201,7 @@ if( !empty($banner_sliders) ){
 			<?php
 			if(!empty($squote)){
 			?>
-			<hr class="mt70 mb50">
-			<div class="innerContainer">
+			<div class="innerContainer mt70">
 				<div class="quote">
 					<?php echo $squote;?>
 				</div>

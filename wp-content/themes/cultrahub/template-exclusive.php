@@ -59,7 +59,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	<div class="section">
 		<div class="container">
 		    <div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-            <h2 class="heading center"><?php echo $menucategory_name;?></h2>
+            <h2 class="heading center"><?php echo the_title();?></h2>
             <?php
             if($exclusivepageshortdescription != ''){
             ?>
@@ -183,11 +183,11 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 				foreach( $exclusive_store as $es ){
 					$culture_page_grey_icon	= get_field( 'culture_page_grey_icon', $es['exclusive_store_type']->ID );					
 			?>
-				<div class="sliderblock popular_store_block height_div">
-					<div class="sliderImg2 popular_store_img hfull">
+				<div class="sliderblock popular_store_block f24 rm">
+					<div class="sliderImg2 popular_store_img">
 						<img src="<?php echo $es['exclusive_store_image']['url'];?>" alt="" />
 					</div>
-					<div class="sliderText2 popular_store_text hfull">
+					<div class="sliderText2 popular_store_text ptb50">
 						<div class="table_box">
 							<div class="table_cell">
 								<div class="store_icon">

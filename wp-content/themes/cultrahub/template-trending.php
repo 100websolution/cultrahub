@@ -53,7 +53,7 @@ if( !empty($banner_sliders) ){
 			<div class="innerContainer">
 				<div class="">
 					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
+					<h2 class="heading center"><?php echo the_title();?></h2>
 					<?php
 					if($trendingpageshortdescription != ''){
 					?>
@@ -73,15 +73,15 @@ if( !empty($banner_sliders) ){
 				<?php
 					foreach($get_posts as $val_post){
 				?>
-					<div class="sliderblock height_div">
-						<div class="sliderImg2 doubleImg hfull">
+					<div class="sliderblock f24 rm">
+						<div class="sliderImg2 doubleImg">
 							<div class="img1"><img src="<?php echo $val_post['trending_image_1']['url'];?>" alt="" /></div>
 							<div class="img2"><img src="<?php echo $val_post['trending_image_2']['url'];?>" alt="" /></div>
 						</div>
-						<div class="sliderText2 hfull">
+						<div class="sliderText2 ptb50">
 							<div class="table_box">
 								<div class="table_cell">
-									<h2 class="heading"><?php echo $val_post['trending_post_title'];?></h2>
+									<h2 class="heading2 medium mb25"><?php echo $val_post['trending_post_title'];?></h2>
 									<div class="">
 										<?php echo $val_post['trending_post_description'];?>
 									</div>
@@ -93,11 +93,11 @@ if( !empty($banner_sliders) ){
 				<?php
 					}
 				?>				
-					<div class="sliderblock height_div f14">
-						<div class="sliderImg2 doubleImg hfull">
+					<div class="sliderblock f24 rm">
+						<div class="sliderImg2 doubleImg">
 							<div class="imgFull"><?php the_post_thumbnail('full');?></div>
 						</div>
-						<div class="sliderText2 hfull">
+						<div class="sliderText2 ptb50">
 							<div class="table_box">
 								<div class="table_cell">
 									<?php echo apply_filters('the_content',$post->post_content);?>
