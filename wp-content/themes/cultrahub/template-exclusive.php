@@ -32,7 +32,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	<?php
 	if( !empty($banner_sliders) ){
 	?>
-	<div class="section">
+	<div class="section pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="full_banner">
@@ -58,20 +58,20 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	?>
 	<div class="section">
 		<div class="container">
+		    <div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
+            <h2 class="heading center"><?php echo $menucategory_name;?></h2>
+            <?php
+            if($exclusivepageshortdescription != ''){
+            ?>
+                <div class="heading_tag">
+                    <p><?php echo nl2br($exclusivepageshortdescription);?></p>
+                    <?php //echo apply_filters('the_content',$cpt_content->post_content);?>
+                </div>
+            <?php
+            }
+            ?>
 			<div class="innerContainer">
 				<div class="">
-					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
-					<?php
-					if($exclusivepageshortdescription != ''){
-					?>
-						<div class="heading_tag">
-							<p><?php echo $exclusivepageshortdescription;?></p>
-							<?php //echo apply_filters('the_content',$cpt_content->post_content);?>
-						</div>
-					<?php
-					}
-					?>
 					<div class="exclusive_product">
 						<ul class="ul row height_div">
 							<li class="col25">
@@ -167,18 +167,14 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	
 	<div class="section">
 		<div class="container">
-			<div class="innerContainer">
-				<div class="">
-					<h2 class="heading center"><?php echo $exclusivestoretitle;?></h2>
-				<?php
-				if( !empty($exclusivestoredescription) ){
-				?>
-					<div class="heading_tag"><?php echo $exclusivestoredescription;?></div>
-				<?php
-				}
-				?>
-				</div>
-			</div>
+            <h2 class="heading center"><?php echo $exclusivestoretitle;?></h2>
+        <?php
+        if( !empty($exclusivestoredescription) ){
+        ?>
+            <div class="heading_tag"><?php echo nl2br($exclusivestoredescription);?></div>
+        <?php
+        }
+        ?>
 			<?php
 			if( !empty($exclusive_store) ){
 			?>
@@ -223,16 +219,16 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	
 	<div class="section">
 		<div class="container">
+            <h2 class="heading center"><?php echo $exclusivebrandtitle;?></h2>
+        <?php
+        if( !empty($exclusivebranddescription) ){
+        ?>
+            <div class="heading_tag"><?php echo nl2br($exclusivebranddescription);?></div>
+        <?php
+        }
+        ?>
 			<div class="innerContainer">
 				<div class="">
-					<h2 class="heading center"><?php echo $exclusivebrandtitle;?></h2>
-				<?php
-				if( !empty($exclusivebranddescription) ){
-				?>
-					<div class="heading_tag"><?php echo $exclusivebranddescription;?></div>
-				<?php
-				}
-				?>
 				<?php
 				if( !empty($exclusive_brand) ){
 				?>
@@ -268,8 +264,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 			<?php
 			if(!empty($quote)){
 			?>
-			<hr class="mt70 mb50">
-			<div class="innerContainer">
+			<div class="innerContainer mt70">
 				<div class="quote">
 					<?php echo $quote;?>
 				</div>

@@ -24,7 +24,7 @@ $quote							= get_field( 'quote', $post->ID );
 <?php
 if( !empty($banner_sliders) ){
 ?>	
-	<div class="section">
+	<div class="section pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="full_banner">

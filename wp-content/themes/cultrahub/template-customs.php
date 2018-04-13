@@ -21,7 +21,7 @@ $quote						= get_field( 'quote', $post->ID );
 <?php
 if( !empty($banner_sliders) ){
 ?>	
-	<div class="section">
+	<div class="section pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="full_banner">
@@ -47,60 +47,57 @@ if( !empty($banner_sliders) ){
 ?>	
 	<div class="section">
 		<div class="container">
-			<div class="innerContainer">
-				<div class="">
-					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-					<h2 class="heading center"><?php echo $menucategory_name;?></h2>
-					<?php
-					if($custompageshortdescription != ''){
-					?>
-						<div class="heading_tag">
-							<p><?php echo $custompageshortdescription;?></p>
-							<?php //echo apply_filters('the_content',$cpt_content->post_content);?>
-						</div>
-					<?php
-					}
-					?>					
-				</div>
-			</div>
+            <div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
+            <h2 class="heading center"><?php echo the_title();?></h2>
+            <?php
+            if($custompageshortdescription != ''){
+            ?>
+                <div class="heading_tag">
+                    <p><?php echo nl2br($custompageshortdescription);?></p>
+                    <?php //echo apply_filters('the_content',$cpt_content->post_content);?>
+                </div>
+            <?php
+            }
+            ?>
 			
 			<?php
 			if( !empty($get_posts) ){
 			?>
-			<div class="sliderblockWrap rev fullContainerText">
-			<?php
-				foreach($get_posts as $val_post){
-			?>
-				<div class="sliderblock height_div">
-					<div class="sliderImg2 threeImg hfull">
-						<div class="img1"><img src="<?php echo $val_post['customs_image_1']['url'];?>" alt="" /></div>
-						<div class="img2"><img src="<?php echo $val_post['customs_image_2']['url'];?>" alt="" /></div>
-						<div class="img3"><img src="<?php echo $val_post['customs_image_3']['url'];?>" alt="" /></div>
-					</div>
-					<div class="sliderText2 hfull">
-						<div class="table_box">
-							<div class="table_cell">
-								<h2 class="heading"><?php echo $val_post['custom_post_title'];?> <small><?php echo $val_post['custom_sub_heading'];?></small></h2>
-								<div class="">
-									<?php echo $val_post['custom_post_description'];?>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
+			<div class="innerContainer">
+                <div class="sliderblockWrap rev fullContainerText">
+                <?php
+                    foreach($get_posts as $val_post){
+                ?>
+                    <div class="sliderblock height_div f24 rm">
+                        <div class="sliderImg2 threeImg hfull">
+                            <div class="img1"><img src="<?php echo $val_post['customs_image_1']['url'];?>" alt="" /></div>
+                            <div class="img2"><img src="<?php echo $val_post['customs_image_2']['url'];?>" alt="" /></div>
+                        </div>
+                        <div class="sliderText2 hfull">
+                            <div class="table_box">
+                                <div class="table_cell">
+                                    <h2 class="heading2 medium"><?php echo $val_post['custom_post_title'];?></h2>
+                                    <h3 class="heading nobrdr rm"><?php echo $val_post['custom_sub_heading'];?></h3>
+                                    <div class="">
+                                        <?php echo $val_post['custom_post_description'];?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                <?php
+                }
+                ?>
+                </div>
+            </div>
 			<?php
 			}
 			?>
-			</div>
-			<?php
-			}
-			?>
-			<hr class="mt50 mb50">
 			<?php
 			if(!empty($quote)){
 			?>
-			<div class="innerContainer">
+			<div class="innerContainer mt70">
 				<div class="quote">
 					<?php echo $quote;?>
 				</div>
