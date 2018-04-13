@@ -171,10 +171,11 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 				<?php
 				query_posts('post_type=genre&order=asc&orderby=id');
 				if (have_posts()) : while (have_posts()) : the_post();
-					$icon = get_field( 'icon', $post->ID );					
+					$icon 			= get_field( 'icon', $post->ID );					
+					$genre_color	= get_field( 'genre_color', $post->ID );					
 				?>
 					<div class="item">
-						<div class="genre_block">
+						<div class="genre_block <?php echo $genre_color;?>">
 							<a href="#">
 								<div class="genre_box">
 									<div class="genre_img"><?php the_post_thumbnail( array( 258, 400 ) );?></div>
