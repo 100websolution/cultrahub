@@ -3,8 +3,11 @@
 Template Name: Home
 */
 get_header();
-$about_cultrahub 	= get_field( 'about_cultrahub', $post->ID );
-$cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
+$about_cultrahub 			= get_field( 'about_cultrahub', $post->ID );
+$cultrahub_blocks 			= get_field( 'cultrahub_blocks', $post->ID );
+$culture_postheading		= get_field( 'culture_postheading', $post->ID );
+$cultrahub_genres_heading	= get_field( 'cultrahub_genres_heading', $post->ID );
+$cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
@@ -70,7 +73,7 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 	<div class="section">
 		<div class="container">
 			<div class="innerContainer">
-				<?php dynamic_sidebar( 'cultrahub-cultures-discover' );?>
+				<h2 class="heading center"><?php echo $culture_postheading;?></h2>
 				<div class="owl-carousel" id="culture_slider">
 				<?php
 				query_posts('post_type=culture&order=asc&orderby=id');
@@ -166,6 +169,8 @@ $cultrahub_blocks 	= get_field( 'cultrahub_blocks', $post->ID );
 	<div class="section">
 		<div class="container">
 			<?php dynamic_sidebar( 'cultrahub-genres' );?>
+			<h2 class="heading center"><?php echo $cultrahub_genres_heading;?></h2>
+			<div class="heading_tag"><?php echo $cultrahub_genres_decription;?></div>
 			<div class="innerContainer">
 				<div class="owl-carousel" id="genre_slider">
 				<?php
