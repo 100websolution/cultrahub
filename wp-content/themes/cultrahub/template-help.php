@@ -47,41 +47,43 @@ $quote								= get_field( 'quote', $post->ID );
 		}
 		?>
 			<hr class="mt35 mb35">
-			<div class="">
-				<div class="heading_block">
-					<div class="heading2 center small"><img src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png" alt=""></div>
-					<div class="color_dots">
-						<span class="yellow"></span>
-						<span class="red"></span>
-						<span class="blue"></span>
-						<span class="green"></span>
-					</div>
-				</div>
-			<?php
-			if( !empty($contact_methods) ){
-			?>
-				<div class="">
-					<ul class="row ul iconList">
-			<?php
-					foreach( $contact_methods as $key_cm => $val_cm ){
-			?>
-						<li class="col25">
-							<div class="iconBlock contact_info">
-								<div class="iconImg"><img src="<?php echo $val_cm['method_image']['url'];?>" alt=""></div>
-								<div class="iconText">
-									<h3 class="subheading2"><?php echo $val_cm['method_heading'];?></h3>
-									<?php echo $val_cm['method_short_description'];?>
-								</div>
-							</div>
-						</li>
-			<?php
-					}
-			?>
-					</ul>
-				</div>
-			<?php
-			}
-			?>
+			<div class="innerContainer">
+                <div class="">
+                    <div class="heading_block">
+                        <div class="heading2 center small"><img src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png" alt=""></div>
+                        <div class="color_dots">
+                            <span class="yellow"></span>
+                            <span class="red"></span>
+                            <span class="blue"></span>
+                            <span class="green"></span>
+                        </div>
+                    </div>
+                <?php
+                if( !empty($contact_methods) ){
+                ?>
+                    <div class="">
+                        <ul class="row ul iconList">
+                <?php
+                        foreach( $contact_methods as $key_cm => $val_cm ){
+                ?>
+                            <li class="col33">
+                                <div class="iconBlock contact_info">
+                                    <div class="iconImg"><img src="<?php echo $val_cm['method_image']['url'];?>" alt=""></div>
+                                    <div class="iconText">
+                                        <h3 class="subheading2"><?php echo $val_cm['method_heading'];?></h3>
+                                        <?php echo $val_cm['method_short_description'];?>
+                                    </div>
+                                </div>
+                            </li>
+                <?php
+                        }
+                ?>
+                        </ul>
+                    </div>
+                <?php
+                }
+                ?>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -91,7 +93,7 @@ $quote								= get_field( 'quote', $post->ID );
 			<div class="innerContainer">
 				<div class="sliderblockWrap rev odd">
 					<div class="sliderblock contact_form_block">
-						<div class="sliderText2">
+						<div class="sliderText2 ptb50">
 							<div class="table_box">
 								<div class="table_cell">
 								<?php
@@ -146,12 +148,12 @@ $quote								= get_field( 'quote', $post->ID );
 										</li>
 										<li class="col100">
 											<input type="submit" name="submit" value="SUBMIT" id="get_in_touch" class="btnRed">
-											<div class="align_center">
+											<div class="align_center mt10">
 												<small>You can also email us at <a href="#">info@cultrahub.com</a>.</small>
 											</div>
+											<div class="align_center" id="getintouch_msg"></div>
 										</li>
-										<li class="align_center" id="getintouch_msg"></li>
-									</ul>									
+									</ul>
 								</form>
 							</div>
 						</div>
@@ -174,8 +176,7 @@ $quote								= get_field( 'quote', $post->ID );
 		<?php
 		if( !empty($quote) ){
 		?>
-			<hr class="mt50 mb50">
-			<div class="innerContainer">
+			<div class="innerContainer mt70">
 				<div class="quote"><?php echo $quote;?></div>
 			</div>
 		<?php
@@ -205,4 +206,4 @@ function check_message_length(getintouch_form){
 }
 </script>
 <?php
-get_footer();
+get_footer('other');

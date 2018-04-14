@@ -1794,29 +1794,23 @@ label.label_badge input:checked + span:before{
 .iconBlock p{text-align: inherit;}
 .iconImg{
     width: 100%;
-    height: 130px;
+    height: 110px;
     margin: 0 auto 10px;
     padding: 15px;
 }
-.iconBlock:before, .homeIcon .iconImg:before{
+.homeIcon .iconImg{height: 130px;}
+.iconBlock:before{
     position: absolute;
     content: "";
     display: block;
-    top: 20px;
-    bottom: 20px;
     right: -15px;
-    width: 1px;
-    background: #cbcdce;
-}
-.homeIcon .iconBlock:before{display: none;}
-.homeIcon .iconImg{position: relative;}
-.homeIcon .iconImg:before{
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    margin-top: -65px;
     width: 2px;
+    height: 130px;
     background: #57585b;
 }
-.homeIcon .iconImg:after {
+.iconBlock:after {
     position: absolute;
     content: "";
     display: block;
@@ -1830,8 +1824,9 @@ label.label_badge input:checked + span:before{
     top: 50%;
     margin-top: -6px;
 }
-.iconList > li:last-child .iconImg:before, .iconList > li:last-child .iconImg:after{display: none;}
-.iconBlock .subheading2{font-family: 'PoppinsMedium'; margin-bottom: 0;}
+.iconList > li:last-child .iconBlock:before, .iconList > li:last-child .iconBlock:after{display: none;}
+.iconBlock .subheading2{font-family: 'PoppinsMedium';}
+.iconBlock .subheading2:last-child{margin-bottom: 0;}
 
 .seller_section{margin-top: 120px;}
 .seller_section .sliderblock .heading{
@@ -3762,6 +3757,7 @@ li:last-child .quote_block:before{display: none;}
 .help_banner .heading2{padding-top: 0;}
 .help_banner .heading2:after{display: none;}
 
+.contact_info{min-height: 231px;}
 .contact_info p{padding: 0;}
 .contact_info a{
     font-size: 14px;
@@ -3770,6 +3766,11 @@ li:last-child .quote_block:before{display: none;}
 .contact_info a:hover{color: #eb4034;}
 .contact_info .subheading2{font-family: 'RalewaySemiBold';}
 
+.contact_form_block{
+    font-size: 24px;
+    line-height: 38px;
+    font-family: 'PoppinsLight';
+}
 .contact_form_block .heading{
     font-size: 50px;
     line-height: 60px;
@@ -3795,7 +3796,7 @@ li:last-child .quote_block:before{display: none;}
 .contact_form form .ul{margin-bottom: 0;}
 .contact_form form .ul > li{margin-bottom: 10px;}
 .contact_form form .ul > li:last-child{margin-bottom: 0;}
-.contact_form_block .sliderText2{height: 686px; padding-right: 30px !important;}
+.contact_form_block .sliderText2{padding-right: 30px !important;}
 
 .social_block{
     background: no-repeat center;
@@ -3804,7 +3805,7 @@ li:last-child .quote_block:before{display: none;}
     padding: 60px;
     text-align: center;
 }
-.social_block .heading{color: #fff;}
+.social_block .heading{color: #fff; margin-bottom: 50px;}
 .social_block .heading:before{background: #fff;}
 .social_block .social a{
     width: 50px;

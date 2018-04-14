@@ -95,7 +95,7 @@ if( !empty($banner_sliders) ){
 								if(!empty($val['category_popular'])){
 								?>
 									<div class="store_genre">
-										<a href="#"><img src="<?php echo $grey_icon['url'];?>" alt="" /> <?php echo $val['category_popular']->post_title;?></a>
+										<a href="#"><img src="<?php echo $grey_icon['url'];?>" alt="" /> <?php echo $val['category_popular']->post_title;?> Department</a>
 									</div>
 								<?php
 								}
@@ -125,12 +125,11 @@ if( !empty($banner_sliders) ){
 			</div>
 			<?php
 			}
-			?>			
-			<hr class="mt50 mb50">
+			?>
 			<?php
 			if(!empty($quote)){
 			?>
-			<div class="innerContainer">
+			<div class="innerContainer mt70">
 				<div class="quote">
 					<?php echo $quote;?>
 				</div>
