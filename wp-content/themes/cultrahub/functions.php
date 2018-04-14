@@ -180,22 +180,6 @@ if ( function_exists( 'register_sidebar' ) ) {
 		//'after_title' => '</h2>',
 	));
 	register_sidebar(array(
-		'name' => __( 'Cultrahub Genres Home Sidebar', 'cultrahub' ),
-		'id' => 'cultrahub-genres',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget' => '</section>',
-		'before_title' => '<h2 class="heading center">',
-		'after_title' => '</h2>',
-	));
-	register_sidebar(array(
-		'name' => __( 'Cultures & Discvover Home Sidebar', 'cultrahub' ),
-		'id' => 'cultrahub-cultures-discover',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget' => '</section>',
-		'before_title' => '<h2 class="heading center">',
-		'after_title' => '</h2>',
-	));
-	register_sidebar(array(
 		'name' => __( 'Footer Sidebar1', 'cultrahub' ),
 		'id' => 'cultrahub-sidebar-footer1',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',

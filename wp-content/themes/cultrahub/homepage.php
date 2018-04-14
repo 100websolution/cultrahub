@@ -168,7 +168,6 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 	
 	<div class="section">
 		<div class="container">
-			<?php dynamic_sidebar( 'cultrahub-genres' );?>
 			<h2 class="heading center"><?php echo $cultrahub_genres_heading;?></h2>
 			<div class="heading_tag"><?php echo $cultrahub_genres_decription;?></div>
 			<div class="innerContainer">
