@@ -98,7 +98,7 @@ if( !empty($banner_sliders) ){
 							<div class="table_box">
 								<div class="table_cell">
 									<h2 class="heading2 medium"><?php echo $post['shareaquote_title'];?></h2>
-									<h3 class="heading nobrdr rm">subheading</h3>
+									<h3 class="heading nobrdr rm"><?php echo $post['shareaquotesubheading'];?></h3>
 									<div class="">
 										<?php echo $post['shareaquote_description'];?>
 									</div>
