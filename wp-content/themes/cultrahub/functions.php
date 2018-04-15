@@ -1282,3 +1282,9 @@ function wdm_user_role_dropdown($all_roles) {
     return $all_roles;
 }
 add_action('editable_roles','wdm_user_role_dropdown');
+
+add_action('admin_menu' , 'add_to_cpt_menu'); 
+
+function add_to_cpt_menu() {
+    add_submenu_page('view.php?post_type=sharethoughts', 'Custom Post Type Admin', 'Custom Settings', 'view_posts', basename(__FILE__), 'cpt_menu_function');
+}   
