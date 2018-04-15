@@ -166,7 +166,7 @@ $quote								= get_field( 'quote', $post->ID );
 	<div class="section">
 		<div class="container">
 			<div class="innerContainer">
-				<div class="social_block" style="background-image: url(http://localhost/cultrahub/wp-content/uploads/2018/03/bg_social.jpg);">
+				<div class="social_block" style="background-image: url(<?php echo get_template_directory_uri();?>/images/bg_social.jpg);">
 					<h2 class="heading center">Our Social Media Channels</h2>
 					<div class="social">
 						<?php echo add_social_links_icons();?>

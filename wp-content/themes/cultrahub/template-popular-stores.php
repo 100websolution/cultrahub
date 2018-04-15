@@ -109,7 +109,10 @@ if( !empty($banner_sliders) ){
 								?>
 								<div class="store_culture">
 									<div class="store_culture_icon"><img src="<?php echo $icon['url'];?>" alt="" /></div>
-									<div class="store_culture_text"><strong><?php echo $val['culture_popular']->post_title;?></strong><span>Colombia</span></div>
+									<div class="store_culture_text">
+										<strong><?php echo $val['culture_popular']->post_title;?></strong>
+										<span><?php echo $val['culture_country'];?></span>
+									</div>
 								</div>
 								<?php
 								}

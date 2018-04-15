@@ -5,8 +5,8 @@ pwd : Admin@123456
 Facebook:
 cultrahub@gmail.com
 pwd : Cultrahub@123456
-App ID: 2006400122960839
-App Secret: 380e67291064c27e892d9f18766c1f84
+App ID: 218045808948043
+App Secret: e06ca67c931ff42634e3d0be7e6f9c44
 
 Gmail:
 Here is your client ID : 74862066790-7gti1j6e1q3beq5l4t6emsdpceps0e6g.apps.googleusercontent.com
@@ -18,3 +18,19 @@ pwd : Cultrahub@123456
 
 CLIENT ID : 83cd596afb174dbba450801c9f229812
 Secret : b2dc42da06d544ab8600bbb1a0df26c1
+
+
+//////////////
+Gmail:
+https://developer.wordpress.com/apps/
+Client ID	57871
+Client Secret	2ZvEyEmW6BeB6G5qNkNt06IITmecbRRsfsHRhcEqV0mzD6z209BGfMK5S2mSVbt9
+Redirect URLs	http://techtimes-in.com/projects/cultrahub_intro/wp-content/plugins/wordpress-social-login/hybridauth/?hauth.done=Google
+Javascript Origins	http://techtimes-in.com
+Type	Web
+Request token URL	https://public-api.wordpress.com/oauth2/token
+Authorize URL	https://public-api.wordpress.com/oauth2/authorize
+Authenticate URL	https://public-api.wordpress.com/oauth2/authenticate
+
+
+https://www.cloudways.com/blog/how-to-add-social-login-plugin-wordpress/
