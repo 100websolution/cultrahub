@@ -1189,6 +1189,9 @@ function add_social_links_icons( ){
     if(get_option("social-share-twitter") == 1){
 		$html = $html . "<a target='_blank' class='tw' href='http://www.twitter.com'><i class='fa fa-twitter'></i></a>";
     }
+    if(get_option("social-share-instagram") == 1){
+		$html = $html . "<a target='_blank' class='ins' href='http://www.instagram.com'><i class='fa fa-instagram'></i></a>";
+    }
     if(get_option("social-share-gplus") == 1){
 		$html = $html . "<a target='_blank' class='gplus' href='http://plus.google.com'><i class='fa fa-google-plus'></i></a>";
     }

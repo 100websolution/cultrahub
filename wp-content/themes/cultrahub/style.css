@@ -1205,6 +1205,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 
 .color_dots{line-height: 9px;}
 .color_dots span{
+    display: inline-block;
     width: 9px;
     height: 9px;
     -webkit-border-radius: 50%;
@@ -1501,6 +1502,10 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     margin: 0 8px 0 0;
 }
 .logo .color_dots span:last-child{margin: 0;}
+.homeHeader, .innerHeader{
+    position: relative;
+    z-index: 5;
+}
 .homeHeader{
     background: no-repeat center;
     -webkit-background-size: cover;
@@ -1720,8 +1725,8 @@ label.label_badge{
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 92%;
+    max-height: 92%;
 }
 label.label_badge input:checked + span{opacity: 1;}
 label.label_badge input:checked + span:before{
@@ -1732,7 +1737,7 @@ label.label_badge input:checked + span:before{
     height: 100%;
     top: 0;
     left: 0;
-    background: #f5f5f5;
+    background: #ebebeb;
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
@@ -2638,14 +2643,16 @@ footer .social a{background: #e9e9e9;}
 
 /* MODAL_FORM
 ---------------------------------*/
+.modal .signup_form_wrap .heading{margin: 0 0 30px;}
 .modal .signup_form_wrap .subheading{
     padding: 0;
     margin: 0 0 30px;
     text-align: center;
 }
 .modal .signup_form_wrap .subheading:before{display: none;}
-.modal .subheading .color_dots{margin-top: 20px;}
+.modal .heading .color_dots, .modal .subheading .color_dots{margin-top: 20px;}
 .modal .subheading .color_dots span{display: inline-block;}
+.modal .heading .color_dots span{width: 11px; height: 11px;}
 .modal form .subheading2.small{margin-bottom: 25px; font-size: 12px; font-family: 'RalewaySemiBold';}
 .modal form .ul{margin: 0 -15px -20px;}
 .modal form .ul > li{padding: 0 15px; margin-bottom: 20px;}
@@ -2663,7 +2670,7 @@ footer .social a{background: #e9e9e9;}
 }
 .dob select:first-child{margin-left: 0;}
 .modal .ul.pick_badge{margin: 0 -10px;}
-.modal .ul.pick_badge > li{padding: 5px; margin: 0 -3px;}
+.modal .ul.pick_badge > li{padding: 3px; margin: 0 -3px;}
 .modal form small{font-size: 12px;}
 .helptext{
     font-size: 10px;
