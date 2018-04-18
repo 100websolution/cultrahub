@@ -484,7 +484,7 @@ $(function () {
         stagePadding: 160,
         items: 1,
     	loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayHoverPause: true,
 		margin: 5,
 		dots: false,

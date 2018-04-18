@@ -47,20 +47,15 @@
 				<div class="container">
 					<div class="fright">
 						<div class="fleft ml30">
-							<ul class="borderbar_list">
-								<!-- <li><span data-toggle="modal" data-target="#signUpForm">Sign Up</span></li> -->
-								<li><a href="#">About Us</a></li>
-								<li><a href="<?php echo get_permalink(2584);?>">Help &amp; Contact</a></li>
-								<li><a href="#">Careers</a></li>
-							</ul>
+							<?php wp_nav_menu( array( 'menu' => 'top-header-menu', 'menu_class'=>'borderbar_list') ); ?>
 						</div>
 						<div class="fleft ml30">
 							<div class="lang dropwrap">
 								<span class="dropnav"><i class="siteicon icon_globe"></i> <em class="droptext">EN</em></span>
-								<!-- <ul class="droplist clearfix">
+								<ul class="droplist clearfix">
 									<li class="selected">EN</li>
-									<li>SP</li>
-								</ul> -->
+									<!--<li>SP</li>-->
+								</ul>
 							</div>
 						</div>
 					</div>

@@ -58,7 +58,7 @@
 					<div class="hright">
 						<?php //echo '<div class="social align_right">'.add_social_links_icons().'</div>';?>
 						<div class="signup_form_wrap">
-							<h2 class="subheading"><a href="javascript:void(0);" data-toggle="modal" data-target="#signUpForm">Sign Up Now, It’s Free!</a></h2>
+							<h2 class="subheading"><a href="javascript:void(0);" data-toggle="modal" data-target="#signUpForm">Sign Up, For The Culture!</a></h2>
 						</div>
 						<div class="topmenu">
 							<ul class="clearfix">

@@ -9,7 +9,7 @@
 		<h2 class="subheading"><strong class="blue"><?php _e('Interested?','cultrahub');?></strong> <?php _e('Leave us your email below to stay tuned and get more info!','cultrahub');?></h2>
 		<div class="newsletter_form">
 			<?php echo eemail_show(); ?>
-			<div class="rbNote">We promise to never to spam you!</div>
+			<!--<div class="rbNote">We promise to never to spam you!</div>-->
 			<span id="eemail_msg" style="display:none;"></span>
 		</div>
 	</div>
