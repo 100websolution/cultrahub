@@ -62,19 +62,19 @@
 						</div>
 						<div class="topmenu">
 							<ul class="clearfix">
-						        <li>
+						        <li <?php if($post->ID==2543)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2543);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_popular_store.png" alt="Popular Stores"/> Popular Stores</a>
 						        </li>
-						        <li>
+						        <li <?php if($post->ID==2499)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2499);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_trending_now.png" alt="Trending Now"/> Trending Now</a>
 						        </li>
-						        <li>
+						        <li <?php if($post->ID==2671)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2671);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_exclusive.png" alt="Exclusive"/> Exclusive</a>
 						        </li>
-						        <li>
+						        <li <?php if($post->ID==2444)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2444);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_custom.png" alt="Customs"/> Customs</a>
 						        </li>
-						        <li>
+						        <li <?php if($post->ID==2770)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2770);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
 						        </li>
 						    </ul>

@@ -35,12 +35,14 @@ function social_share_settings(){
 	add_settings_field("social-share-gplus", "Do you want to display Gplus link?", "social_share_gplus_checkbox", "social-share", "social_share_config_section");
 	add_settings_field("social-share-youtube", "Do you want to display YouTube link?", "social_share_youtube_checkbox", "social-share", "social_share_config_section");
     add_settings_field("social-share-linkedin", "Do you want to display LinkedIn link?", "social_share_linkedin_checkbox", "social-share", "social_share_config_section");
+	add_settings_field("social-share-instagram", "Do you want to display Instagram link?", "social_share_instagram_checkbox", "social-share", "social_share_config_section");
  
     register_setting("social_share_config_section", "social-share-facebook");
     register_setting("social_share_config_section", "social-share-twitter");
 	register_setting("social_share_config_section", "social-share-gplus");
 	register_setting("social_share_config_section", "social-share-youtube");
     register_setting("social_share_config_section", "social-share-linkedin");
+    register_setting("social_share_config_section", "social-share-instagram");
 }
  
 function social_share_facebook_checkbox(){  
@@ -66,6 +68,11 @@ function social_share_youtube_checkbox(){
 function social_share_linkedin_checkbox(){  
 ?>
 	<input type="checkbox" name="social-share-linkedin" value="1" <?php checked(1, get_option('social-share-linkedin'), true); ?> /> Yes
+<?php
+}
+function social_share_instagram_checkbox(){  
+?>
+	<input type="checkbox" name="social-share-instagram" value="1" <?php checked(1, get_option('social-share-instagram'), true); ?> /> Yes
 <?php
 }
 add_action("admin_init", "social_share_settings");
