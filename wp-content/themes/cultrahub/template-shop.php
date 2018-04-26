@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Career
+Template Name: Shop
 */
 get_header('culture');
 ?>

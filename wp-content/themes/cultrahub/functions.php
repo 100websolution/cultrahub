@@ -1201,9 +1201,6 @@ function add_social_links_icons( ){
 	if(get_option("social-share-linkedin") == 1){
 		$html = $html . "<a href='http://www.linkedin.com' target='_blank' class='in'><i class='fa fa-linkedin'></i></a>";
     }
-	if(get_option("social-share-instagram") == 1){
-		$html = $html . "<a href='http://www.instagram.com' target='_blank' class='in'><i class='fa fa-instagram'></i></a>";
-    }
     return $html;
 }
 add_filter("init", "add_social_links_icons");
