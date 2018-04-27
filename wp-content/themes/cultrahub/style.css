@@ -966,6 +966,22 @@ form small{
     background-size: contain;
     font-size: 0;
 }
+.bullet2.bullet li{
+    padding-top: 0;
+    margin-bottom: 25px;
+    font-family: 'RalewayMedium';
+}
+.bullet2.bullet li:last-child{margin-bottom: 0;}
+.bullet2.bullet li:before{
+    width: 8px;
+    height: 8px;
+    background: #414042;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    left: 21px;
+    top: 13px;
+}
+
 .border_list{
     list-style: none;
     padding: 0;
@@ -4006,21 +4022,8 @@ li:last-child .quote_block:before{display: none;}
     width: 64%;
 }
 .jobBlock .subheading2{font-family: 'RalewaySemiBold';}
-.jobBlock .bullet li{
-    padding-top: 0;
-    margin-bottom: 5px;
-    font-family: 'RalewayMedium';
-}
+.jobBlock .bullet li{margin-bottom: 5px;}
 .jobBlock .bullet li:last-child{margin-bottom: 0;}
-.jobBlock .bullet li:before{
-    width: 8px;
-    height: 8px;
-    background: #414042;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    left: 21px;
-    top: 13px;
-}
 
 .jobBox{
     padding: 15px 0;
@@ -4068,6 +4071,51 @@ li:last-child .quote_block:before{display: none;}
     width: 35%;
     padding: 30px 30px 30px 0;
     text-align: right;
+}
+
+
+/*--------------------------------------COMMUNITY PAGE START--------------------------------------*/
+.communityImg img{
+    display: block;
+    width: 100%;
+}
+
+.communityBox{
+    font-size: 24px;
+    line-height: 38px;
+    color: #414042;
+    font-family: 'RalewayMedium';
+    margin-bottom: 100px;
+}
+.communityBox:last-child{margin-bottom: 0;}
+.cmntyIcon{
+    width: 35%;
+    float: right;
+    border-left: 10px solid #ebebeb;
+    text-align: center;
+    padding: 75px 0;
+}
+.cmntyIcon img{max-height: 200px;}
+.cmntyText{
+    width: 65%;
+    float: left;
+    text-align: right;
+    padding: 50px 50px 0 0;
+}
+.communityBox .heading{
+    font-size: 48px;
+    line-height: 64px;
+    font-family: 'RalewayExtraBold';
+}
+.communityBox:nth-child(even) .cmntyIcon{
+    float: left;
+    border-left: none;
+    border-right: 10px solid #ebebeb;
+}
+.communityBox:nth-child(even) .cmntyText{
+    float: right;
+    text-align: left;
+    padding: 50px 0 0 50px;
 }
 
 

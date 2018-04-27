@@ -49,7 +49,7 @@ get_header('culture');
                                         <p>To ensure the best possible experience for our users, the engineering team are required to consistently evolve and update our platform, researching into using very latest software, languages and cutting-edge technology to assist in solving complex challenges facing any platform of this magnitude!</p>
 
                                         <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
+                                        <ul class="bullet bullet2">
                                             <li>Web/Software Support Engineers</li>
                                             <li>Search & Data Sciences</li>
                                         </ul>
@@ -74,7 +74,7 @@ get_header('culture');
                                         <p>Responsible for creating stunning visual designs, we are looking for people who can help consistently improve Cultrahub’s online shopping platform and deliver engaging solutions that deliver the best results.</p>
 
                                         <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
+                                        <ul class="bullet bullet2">
                                             <li>Graphic Designer</li>
                                             <li>UI | UX Developer</li>
                                             <li>Illustrator</li>
@@ -102,7 +102,7 @@ get_header('culture');
                                         <p>The community teams ensure users have the best possible experience whilst on the site and is responsible for developing tools and programs that assist both producers and consumers obtain the most from our platform.</p>
 
                                         <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
+                                        <ul class="bullet bullet2">
                                             <li>Marketplace Manager</li>
                                             <li>Market Research Analyst</li>
                                             <li>Content Writer/Journalist</li>
