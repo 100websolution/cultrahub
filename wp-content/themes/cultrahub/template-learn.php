@@ -16,7 +16,7 @@ get_header('culture');
 					<span class="b_red"></span>
 					<span class="b_yellow"></span>
 				</div>
-				<img src="<?php echo get_template_directory_uri();?>/images/shop_banner.jpg" alt="" />
+				<img src="<?php echo get_template_directory_uri();?>/images/learn_banner.jpg" alt="" />
 				<div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>
@@ -37,122 +37,125 @@ get_header('culture');
                         </div>
                     </div>
                     <div>
-                        <h2 class="heading center">Find What You Need At A Price You Can't Resist</h2>
-                        <div class="heading_tag">Celebrate diversity with a selection of the hottest swag, alternative arts and authentic handcrafted cultural products you won’t find anywhere else! Here you can get your hands on the latest and most unique set of products specially grouped by culture</div>
-                        <div class="seller_howitwork">
+                        <h2 class="heading center">Ready To Learn Something New?</h2>
+                        <div class="heading_tag">We’ll there’s no better time than the present. We have carefully curated our cultural content to bring you the very best articles, news, and video clips from top cultural leaders, businessmen, and Producers in your community. Let’s learn, share and grow!</div>
+                        <div class="seller_tool_wrap withdot w75 mlrauto">
                             <ul class="row ul">
                                 <li class="col33">
-                                    <div class="seller_block red">
-                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/1.png" alt=""><em>Step One</em></span>
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_find_product.png" alt=""></div>
-                                        <div class="seller_text">
-                                            <h3 class="subheading2">Find <br>Your Product</h3>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col33">
                                     <div class="seller_block green">
-                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/2.png" alt=""><em>Step Two</em></span>
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_secure_checkout.png" alt=""></div>
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_fav_culture.png" alt=""></div>
                                         <div class="seller_text">
-                                            <h3 class="subheading2">Pay Using Our Secure Checkout</h3>
+                                            <h3 class="subheading2">Click On Your Favourite Cultures</h3>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="col33">
                                     <div class="seller_block yellow">
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_get_delivered.png" alt=""></div>
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_article.png" alt=""></div>
                                         <div class="seller_text">
-                                            <h3 class="subheading2">Get It Delivered To Your Door</h3>
+                                            <h3 class="subheading2">Search Through Our Huge Range Of Articles And Videos</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col33">
+                                    <div class="seller_block blue">
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_like.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Comment, <br>Like Or Share!</h3>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
 			</div>
 			<hr class="mt70 mb70">
 			<div class="innerContainer">
-                <div class="shopSection">
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop1.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">For The More Conscious Consumer</h2>
-                            <p>We connect consensus consumers to business that really need the help. Whether you want to buy local and reduce your carbon footprint or want really to make a difference to an individual’s life we’ll help you make an informed choice.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop2.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Indigenous Street Artists</h2>
-                            <p>Often a family business these street artists are regularly overlooked. The true representation of culture can be found in these stools and local business and are a major part of the cultural eco system keeping traditions alive.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop3.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Special Occasions & Holidays</h2>
-                            <p>Finding that special gift for the holiday seasons can be a struggle. Cultrahub observe every cultural holiday from Cinco d mayo , Eid, Christmas, 4th of July to make sure you find that unique special gift for your loved ones.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop4.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">The Ultimate Apparel</h2>
-                            <p>Find the hottest gear on the streets or the latest in trending fashion from the catwalk. Cultrahub sets you apart from your peers with exclusive producers and designer brands</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop5.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Home Furnishing & Electricals</h2>
-                            <p>Check out our huge selection of Unique, weird, and wonderful Home Accessories from across the globe. From contemporary to traditional to custom handmade items we have it covered.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                
-			    <div class="seller_tool_wrap mt100">
-                    <ul class="row ul">
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_unique_seller.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">Find <br>Unique Sellers</h3>
+                <div class="learnList">
+                    <ul class="ul row">
+                        <li class="col50">
+                            <div class="learnBox">
+                                <div class="learnImg">
+                                    <img src="<?php echo get_template_directory_uri();?>/images/learn1.jpg" alt="">
                                 </div>
+                                <div class="learnText">
+                                    <h3 class="heading nobrdr">Articles, Blogs, And Interviews</h3>
+                                    <p>Browse learn and share the most current trending news, articles and issues around the cultures. Create and Publish your own article to start discussions around a topic you feel needs to be discussed.</p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_best_dealer.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">Source <br>The Best Deals</h3>
+                        <li class="col50">
+                            <div class="learnBox">
+                                <div class="learnImg">
+                                    <img src="<?php echo get_template_directory_uri();?>/images/learn2.jpg" alt="">
                                 </div>
+                                <div class="learnText">
+                                    <h3 class="heading nobrdr">Share A Quote Or Create Your Own</h3>
+                                    <p>Users can read influential quotes from renown cultural influencers and add words of wisdom to their arsenal. Find, create or share yours today.</p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_special_gift.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">Shop for A Special Gift</h3>
+                        <li class="col50">
+                            <div class="learnBox">
+                                <div class="learnImg">
+                                    <img src="<?php echo get_template_directory_uri();?>/images/learn3.jpg" alt="">
                                 </div>
+                                <div class="learnText">
+                                    <h3 class="heading nobrdr">In-Depth Bio’s From Cultural Leaders</h3>
+                                    <p>Read and learn about legendary cultural influencers daily. Read about their struggles, accomplishments, and values.</p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_tech_support.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">24 Online <br>Tech Support</h3>
+                        <li class="col50">
+                            <div class="learnBox">
+                                <div class="learnImg">
+                                    <img src="<?php echo get_template_directory_uri();?>/images/learn4.jpg" alt="">
                                 </div>
+                                <div class="learnText">
+                                    <h3 class="heading nobrdr">Listen, Read And Learn From Top Cultural Scholars</h3>
+                                    <p>Follow your favorite scholars and join their discussions and classes covering numerous subjects including Religion, Health & wellness, History, and business.</p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </li>
                     </ul>
+                </div>
+                
+			    <div class="mt100">
+                    <h2 class="heading center">Publish Your Content On Cultrahub</h2>
+                    <div class="heading_tag">Got something to say? Set up your page and publish your own content. Reach friends, family and millions of followers around the world with the help of Cultrahub. Let’s go viral!</div>
+                    <div class="seller_tool_wrap w75 mlrauto">
+                        <ul class="row ul">
+                            <li class="col33">
+                                <div class="seller_block">
+                                    <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_setup_page.png" alt=""></div>
+                                    <div class="seller_text">
+                                        <h3 class="subheading2">Set Up Your <br>Page</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col33">
+                                <div class="seller_block">
+                                    <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_post_blog.png" alt=""></div>
+                                    <div class="seller_text">
+                                        <h3 class="subheading2">Post Your <br>Videos And Blogs</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col33">
+                                <div class="seller_block">
+                                    <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_follower.png" alt=""></div>
+                                    <div class="seller_text">
+                                        <h3 class="subheading2">Watch As Your Followers Grow</h3>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 			</div>
 			<hr class="mt70 mb0">
