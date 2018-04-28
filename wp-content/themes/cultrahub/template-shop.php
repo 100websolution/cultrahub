@@ -10,7 +10,19 @@ get_header('culture');
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="seller_banner help_banner">
-				<img src="<?php echo get_template_directory_uri();?>/images/career_banner.jpg" alt="" />
+			    <div class="border_line top">
+					<span class="b_green"></span>
+					<span class="b_blue"></span>
+					<span class="b_red"></span>
+					<span class="b_yellow"></span>
+				</div>
+				<img src="<?php echo get_template_directory_uri();?>/images/shop_banner.jpg" alt="" />
+				<div class="border_line">
+					<span class="b_green"></span>
+					<span class="b_blue"></span>
+					<span class="b_red"></span>
+					<span class="b_yellow"></span>
+				</div>
 			</div>
 			<hr class="mt35 mb35">
 			<div class="innerContainer">
@@ -24,158 +36,126 @@ get_header('culture');
                             <span class="green"></span>
                         </div>
                     </div>
-                    
-                    <div class="f18 mb50">
-                        <h2 class="heading nobrdr"><img src="<?php echo get_template_directory_uri();?>/images/icon_hiring.png" alt="" class="heading_icon_left"> We are Hiring!</h2>
-                        <p>Have a passion for social ecommerce and diversity? Do you get excited about new ideas, investment in people, and bringing cultural stakeholders together to shape the future? If so, Cultrahub could be the place for you.</p>
-                        <p>Teamwork is at the heart of great achievement, and we believe it takes a diverse team packed with different cultures, backgrounds and beliefs to deliver our global mission. Our team hails from around the world and we value the individual as a necessary part of a diverse team. If you are looking to have fun, grow your skills, interact with a global audience, and join a revolutionary cultural platform, look no further than our current openings!</p>
-                    </div>
                     <div>
-                        <ul class="ul border_list jobList">
-                            <li>
-                                <div class="jobBlock">
-                                    <div class="jobLeft">
-                                        <h2 class="heading red">Engineering</h2>
-                                        <div>Job Number: N/A</div>
-                                        <div>Location: Indianapolis, IN - United States</div>
-                                        <div class="align_right">
-                                            <div class="f10">APPLY NOW WITH...</div>
-                                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/linkedin.png" alt=""></a>
+                        <h2 class="heading center">Find What You Need At A Price You Can't Resist</h2>
+                        <div class="heading_tag">Celebrate diversity with a selection of the hottest swag, alternative arts and authentic handcrafted cultural products you won’t find anywhere else! Here you can get your hands on the latest and most unique set of products specially grouped by culture</div>
+                        <div class="seller_howitwork">
+                            <ul class="row ul">
+                                <li class="col33">
+                                    <div class="seller_block red">
+                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/1.png" alt=""><em>Step One</em></span>
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_find_product.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Find <br>Your Product</h3>
                                         </div>
                                     </div>
-                                    <div class="jobRight">
-                                        <h2 class="heading nobrdr">What We Require...</h2>
-                                        <p>Be a part of our dedicated engineering teams and help us keep Cultrahub running smooth and at optimum performance!</p>
-                                        <p>To ensure the best possible experience for our users, the engineering team are required to consistently evolve and update our platform, researching into using very latest software, languages and cutting-edge technology to assist in solving complex challenges facing any platform of this magnitude!</p>
-
-                                        <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
-                                            <li>Web/Software Support Engineers</li>
-                                            <li>Search & Data Sciences</li>
-                                        </ul>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jobBlock">
-                                    <div class="jobLeft">
-                                        <h2 class="heading red">Design</h2>
-                                        <div>Job Number: N/A</div>
-                                        <div>Location: Indianapolis, IN - United States</div>
-                                        <div class="align_right">
-                                            <div class="f10">APPLY NOW WITH...</div>
-                                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/linkedin.png" alt=""></a>
+                                </li>
+                                <li class="col33">
+                                    <div class="seller_block green">
+                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/2.png" alt=""><em>Step Two</em></span>
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_secure_checkout.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Pay Using Our Secure Checkout</h3>
                                         </div>
                                     </div>
-                                    <div class="jobRight">
-                                        <h2 class="heading nobrdr">What We Require...</h2>
-                                        <p>Our highly creative teams work together as one unit to bring both unique and aspiring ideas to life, building a platform leading in creativity for others to envy.</p>
-                                        <p>Responsible for creating stunning visual designs, we are looking for people who can help consistently improve Cultrahub’s online shopping platform and deliver engaging solutions that deliver the best results.</p>
-
-                                        <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
-                                            <li>Graphic Designer</li>
-                                            <li>UI | UX Developer</li>
-                                            <li>Illustrator</li>
-                                            <li>Product/Advertisement</li>
-                                            <li>Digital Marketing Assistant</li>
-                                        </ul>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jobBlock">
-                                    <div class="jobLeft">
-                                        <h2 class="heading red">Community <br>Manager</h2>
-                                        <div>Job Number: N/A</div>
-                                        <div>Location: Indianapolis, IN - United States</div>
-                                        <div class="align_right">
-                                            <div class="f10">APPLY NOW WITH...</div>
-                                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/linkedin.png" alt=""></a>
+                                </li>
+                                <li class="col33">
+                                    <div class="seller_block yellow">
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_get_delivered.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Get It Delivered To Your Door</h3>
                                         </div>
                                     </div>
-                                    <div class="jobRight">
-                                        <h2 class="heading nobrdr">What We Require...</h2>
-                                        <p>Our Community Management teams engage and interact with Cultrahub’s global community of users creating relationships and ultimately build the company’s brand and profile, both online and off.</p>
-                                        <p>The community teams ensure users have the best possible experience whilst on the site and is responsible for developing tools and programs that assist both producers and consumers obtain the most from our platform.</p>
-
-                                        <h3 class="subheading2">Current Openings</h3>
-                                        <ul class="bullet">
-                                            <li>Marketplace Manager</li>
-                                            <li>Market Research Analyst</li>
-                                            <li>Content Writer/Journalist</li>
-                                        </ul>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    
                 </div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="section">
-		<div class="container">
-			<hr class="mt0 mb70">
+			<hr class="mt70 mb70">
 			<div class="innerContainer">
-                <div class="f18">
-                    <h2 class="heading nobrdr"><img src="<?php echo get_template_directory_uri();?>/images/icon_opening.png" alt="" class="heading_icon_left"> Don’t See An Opening For Yourself?</h2>
-                    <p>We are always looking for the world’s best marketers, engineers, and strategists to help shape the future of our e-commerce platform. Even if you don’t see yourself in our posted jobs, send us your CV with a brief cover letter about why you feel your skills can add to our success!</p>
+                <div class="shopSection">
+                    <div class="shopBlock">
+                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop1.jpg" alt=""></div>
+                        <div class="shopText">
+                            <h2 class="heading nobrdr">For The More Conscious Consumer</h2>
+                            <p>We connect consensus consumers to business that really need the help. Whether you want to buy local and reduce your carbon footprint or want really to make a difference to an individual’s life we’ll help you make an informed choice.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="shopBlock">
+                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop2.jpg" alt=""></div>
+                        <div class="shopText">
+                            <h2 class="heading nobrdr">Indigenous Street Artists</h2>
+                            <p>Often a family business these street artists are regularly overlooked. The true representation of culture can be found in these stools and local business and are a major part of the cultural eco system keeping traditions alive.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="shopBlock">
+                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop3.jpg" alt=""></div>
+                        <div class="shopText">
+                            <h2 class="heading nobrdr">Special Occasions & Holidays</h2>
+                            <p>Finding that special gift for the holiday seasons can be a struggle. Cultrahub observe every cultural holiday from Cinco d mayo , Eid, Christmas, 4th of July to make sure you find that unique special gift for your loved ones.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="shopBlock">
+                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop4.jpg" alt=""></div>
+                        <div class="shopText">
+                            <h2 class="heading nobrdr">The Ultimate Apparel</h2>
+                            <p>Find the hottest gear on the streets or the latest in trending fashion from the catwalk. Cultrahub sets you apart from your peers with exclusive producers and designer brands</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="shopBlock">
+                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop5.jpg" alt=""></div>
+                        <div class="shopText">
+                            <h2 class="heading nobrdr">Home Furnishing & Electricals</h2>
+                            <p>Check out our huge selection of Unique, weird, and wonderful Home Accessories from across the globe. From contemporary to traditional to custom handmade items we have it covered.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
                 </div>
-                <div class="mt30">
-                    <ul class="row ul jobList">
+                
+			    <div class="seller_tool_wrap mt100">
+                    <ul class="row ul">
                         <li class="col25">
-                            <div class="jobBox">
-                                <h2 class="heading nobrdr red">Marketing & Communications</h2>
-                                <div>Job Number: N/A</div>
-                                <div>Location: Indianapolis, IN</div>
-                                <div class="align_right">
-                                    <a href="#" class="applyLink">View & Apply</a>
+                            <div class="seller_block">
+                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_unique_seller.png" alt=""></div>
+                                <div class="seller_text">
+                                    <h3 class="subheading2">Find <br>Unique Sellers</h3>
                                 </div>
                             </div>
                         </li>
                         <li class="col25">
-                            <div class="jobBox">
-                                <h2 class="heading nobrdr red">Customer Spt. & Services</h2>
-                                <div>Job Number: N/A</div>
-                                <div>Location: Indianapolis, IN</div>
-                                <div class="align_right">
-                                    <a href="#" class="applyLink">View & Apply</a>
+                            <div class="seller_block">
+                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_best_dealer.png" alt=""></div>
+                                <div class="seller_text">
+                                    <h3 class="subheading2">Source <br>The Best Deals</h3>
                                 </div>
                             </div>
                         </li>
                         <li class="col25">
-                            <div class="jobBox">
-                                <h2 class="heading nobrdr red">Research & Development</h2>
-                                <div>Job Number: N/A</div>
-                                <div>Location: Indianapolis, IN</div>
-                                <div class="align_right">
-                                    <a href="#" class="applyLink">View & Apply</a>
+                            <div class="seller_block">
+                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_special_gift.png" alt=""></div>
+                                <div class="seller_text">
+                                    <h3 class="subheading2">Shop for A Special Gift</h3>
                                 </div>
                             </div>
                         </li>
                         <li class="col25">
-                            <div class="jobBox">
-                                <h2 class="heading nobrdr red">&nbsp; <br>Internships</h2>
-                                <div>Job Number: N/A</div>
-                                <div>Location: Indianapolis, IN</div>
-                                <div class="align_right">
-                                    <a href="#" class="applyLink">View & Apply</a>
+                            <div class="seller_block">
+                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_tech_support.png" alt=""></div>
+                                <div class="seller_text">
+                                    <h3 class="subheading2">24 Online <br>Tech Support</h3>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
 			</div>
-			
-			<div class="innerContainer mt70">
-				<div class="quote">To make the world a better place by creating a digital platform that fosters knowledge, spreads culture, and celebrates diversity.</div>
-			</div>
-			<hr class="mt50 mb0">
+			<hr class="mt70 mb0">
 		</div>
 	</div>
 	
