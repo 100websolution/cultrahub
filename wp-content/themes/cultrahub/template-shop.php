@@ -3,6 +3,16 @@
 Template Name: Shop
 */
 get_header('culture');
+$banner_image	= get_field( 'shop_banner', $post->ID );
+
+//Section 1
+$section_1_heading 		= get_field( 'shop_section1_heading', $post->ID );
+$section_1_description 	= get_field( 'shop_section1_description', $post->ID );
+$shop_section_1			= get_field( 'shop_section1_steps', $post->ID );
+//Section 2
+$section_2_posts		= get_field( 'section_2_posts', $post->ID );
+//Section 3
+$section_3_posts		= get_field( 'section_3_posts', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
@@ -16,7 +26,7 @@ get_header('culture');
 					<span class="b_red"></span>
 					<span class="b_yellow"></span>
 				</div>
-				<img src="<?php echo get_template_directory_uri();?>/images/shop_banner.jpg" alt="" />
+				<img src="<?php echo $banner_image['url'];?>" alt="" />
 				<div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>
@@ -37,124 +47,92 @@ get_header('culture');
                         </div>
                     </div>
                     <div>
-                        <h2 class="heading center">Find What You Need At A Price You Can't Resist</h2>
-                        <div class="heading_tag">Celebrate diversity with a selection of the hottest swag, alternative arts and authentic handcrafted cultural products you won’t find anywhere else! Here you can get your hands on the latest and most unique set of products specially grouped by culture</div>
+                        <h2 class="heading center"><?php echo $section_1_heading;?></h2>
+                        <div class="heading_tag"><?php echo $section_1_description;?></div>
+						<?php
+						if(!empty($shop_section_1)){
+						?>
                         <div class="seller_howitwork">
                             <ul class="row ul">
+							<?php
+							foreach($shop_section_1 as $section1){
+							?>
                                 <li class="col33">
-                                    <div class="seller_block red">
-                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/1.png" alt=""><em>Step One</em></span>
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_find_product.png" alt=""></div>
+                                    <div class="seller_block <?php echo $section1['shop_section1_color'];?>">
+									<?php
+									if(!empty($section1['shop_section1_image'])){
+									?>
+                                        <span class="steps"><img src="<?php echo $section1['shop_section1_image']['url'];?>" alt=""><em><?php echo $section1['shop_section1_step_title'];?></em></span>
+									<?php
+									}
+									?>
+                                        <div class="seller_icon"><img src="<?php echo $section1['shop_section1_icon']['url'];?>" alt=""></div>
                                         <div class="seller_text">
-                                            <h3 class="subheading2">Find <br>Your Product</h3>
+                                            <h3 class="subheading2"><?php echo $section1['shop_section1_title'];?></h3>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="col33">
-                                    <div class="seller_block green">
-                                        <span class="steps"><img src="<?php echo get_template_directory_uri();?>/images/2.png" alt=""><em>Step Two</em></span>
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_secure_checkout.png" alt=""></div>
-                                        <div class="seller_text">
-                                            <h3 class="subheading2">Pay Using Our Secure Checkout</h3>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col33">
-                                    <div class="seller_block yellow">
-                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_get_delivered.png" alt=""></div>
-                                        <div class="seller_text">
-                                            <h3 class="subheading2">Get It Delivered To Your Door</h3>
-                                        </div>
-                                    </div>
-                                </li>
+							<?php
+							}
+							?>
                             </ul>
                         </div>
+						<?php
+						}
+						?>
                     </div>
                     
                 </div>
 			</div>
 			<hr class="mt70 mb70">
+			
 			<div class="innerContainer">
+			<?php
+			if(!empty($section_2_posts)){
+			?>
                 <div class="shopSection">
+			<?php
+				foreach($section_2_posts as $post){
+			?>
                     <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop1.jpg" alt=""></div>
+                        <div class="shopImg"><img src="<?php echo $post['shop_section2_image']['url'];?>" alt=""></div>
                         <div class="shopText">
-                            <h2 class="heading nobrdr">For The More Conscious Consumer</h2>
-                            <p>We connect consensus consumers to business that really need the help. Whether you want to buy local and reduce your carbon footprint or want really to make a difference to an individual’s life we’ll help you make an informed choice.</p>
+                            <h2 class="heading nobrdr"><?php echo $post['shop_section2_heading'];?></h2>
+                            <p><?php echo $post['shop_section2_description'];?></p>
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop2.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Indigenous Street Artists</h2>
-                            <p>Often a family business these street artists are regularly overlooked. The true representation of culture can be found in these stools and local business and are a major part of the cultural eco system keeping traditions alive.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop3.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Special Occasions & Holidays</h2>
-                            <p>Finding that special gift for the holiday seasons can be a struggle. Cultrahub observe every cultural holiday from Cinco d mayo , Eid, Christmas, 4th of July to make sure you find that unique special gift for your loved ones.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop4.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">The Ultimate Apparel</h2>
-                            <p>Find the hottest gear on the streets or the latest in trending fashion from the catwalk. Cultrahub sets you apart from your peers with exclusive producers and designer brands</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="shopBlock">
-                        <div class="shopImg"><img src="<?php echo get_template_directory_uri();?>/images/shop5.jpg" alt=""></div>
-                        <div class="shopText">
-                            <h2 class="heading nobrdr">Home Furnishing & Electricals</h2>
-                            <p>Check out our huge selection of Unique, weird, and wonderful Home Accessories from across the globe. From contemporary to traditional to custom handmade items we have it covered.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+            <?php
+				}
+			?>
                 </div>
-                
+            <?php
+			}
+			if(!empty($section_3_posts)){
+			?>    
 			    <div class="seller_tool_wrap mt100">
                     <ul class="row ul">
+			<?php
+					foreach($section_3_posts as $post3){
+			?>
                         <li class="col25">
                             <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_unique_seller.png" alt=""></div>
+                                <div class="seller_icon"><img src="<?php echo $post3['shop_section3_image']['url'];?>" alt=""></div>
                                 <div class="seller_text">
-                                    <h3 class="subheading2">Find <br>Unique Sellers</h3>
+                                    <h3 class="subheading2"><?php echo $post3['shop_section3_heading'];?></h3>
                                 </div>
                             </div>
                         </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_best_dealer.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">Source <br>The Best Deals</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_special_gift.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">Shop for A Special Gift</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col25">
-                            <div class="seller_block">
-                                <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_tech_support.png" alt=""></div>
-                                <div class="seller_text">
-                                    <h3 class="subheading2">24 Online <br>Tech Support</h3>
-                                </div>
-                            </div>
-                        </li>
+            <?php
+					}
+			?>
                     </ul>
                 </div>
+			<?php
+				}
+			?>
 			</div>
+			
 			<hr class="mt70 mb0">
 		</div>
 	</div>

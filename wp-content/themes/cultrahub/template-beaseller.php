@@ -81,7 +81,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 					foreach( $beaseller_description_1 as $key_1 => $val_1 ){
 				?>
 							<li class="col25">
-								<div class="seller_block">
+								<div class="seller_block <?php echo $val_1['beaseller_step_color'];?>">
 								<?php if( !empty($val_1['image_section_1']) ){ ?>
 									<span class="steps"><img src="<?php echo $val_1['image_section_1']['url'];?>" width="<?php echo $val_1['image_section_1']['width'];?>" alt="" /><em><?php echo $val_1['step_title_1'];?></em></span>
 								<?php } ?>

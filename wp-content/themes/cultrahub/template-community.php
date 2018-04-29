@@ -3,6 +3,12 @@
 Template Name: Community
 */
 get_header('culture');
+$banner_image					= get_field( 'community_page_banner', $post->ID );
+$community_page_heading 		= get_field( 'community_page_heading', $post->ID );
+$community_page_description 	= get_field( 'community_page_description', $post->ID );
+$community_page_image 			= get_field( 'community_page_image', $post->ID );
+$community_page_description_2 	= get_field( 'community_page_description_2', $post->ID );
+$community_page_posts 			= get_field( 'community_page_posts', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
@@ -16,7 +22,7 @@ get_header('culture');
 					<span class="b_red"></span>
 					<span class="b_yellow"></span>
 				</div>
-				<img src="<?php echo get_template_directory_uri();?>/images/community_banner.jpg" alt="" />
+				<img src="<?php echo $banner_image['url'];?>" alt="" />
                 <div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>
@@ -38,21 +44,16 @@ get_header('culture');
                     </div>
                     
                     <div>
-                        <h2 class="heading center">Cultrahub Community</h2>
-                        <div class="heading_tag">Our Cultrahub community consists of community groups and cultural representatives from different target markets who want to help shape and improve their neighborhood and increase awareness of social issues affecting their culture. A worldwide community for communities where its members can have fun, share ideas, tips, and knowledge, to get the most out of the platform.</div>
+                        <h2 class="heading center"><?php echo $community_page_heading;?></h2>
+                        <div class="heading_tag"><?php echo $community_page_description;?></div>
                         
                         <div class="row communityBlock f18">
                             <div class="col50">
-                                <div class="communityImg"><img src="<?php echo get_template_directory_uri();?>/images/community.jpg" alt=""></div>
+                                <div class="communityImg"><img src="<?php echo $community_page_image['url'];?>" alt=""></div>
                             </div>
                             <div class="col50">
                                 <div class="communityText">
-                                    <h3 class="heading nobrdr">What Makes The Cultrahub Community</h3>
-                                    <ul class="bullet bullet2">
-                                        <li>Users from all parts of the world working together to ensure the best possible outcomes for local people.</li>
-                                        <li>Our community the most learned scholars and teachers from all walks of life sharing their knowledge and skills to their followers.</li>
-                                        <li>The essence of Cultrahub community is a place where members can learn, discuss, communicate and grow</li>
-                                    </ul>
+                                    <?php echo $community_page_description_2;?>
                                 </div>
                             </div>
                         </div>
@@ -60,50 +61,30 @@ get_header('culture');
                 </div>
 			</div>
 			<hr class="mt70 mb70">
+			<?php
+			if(!empty($community_page_posts)){
+			?>
 			<div class="innerContainer">
 			    <div class="communityList">
+			<?php
+				foreach($community_page_posts as $post2){
+			?>
 			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_community1.png" alt="" /></div>
+			            <div class="cmntyIcon"><img src="<?php echo $post2['community_post_image']['url'];?>" alt="" /></div>
 			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">OUR SOCIAL <br>RESPONSABILITY</h2>
-			                <p>Cultrahub puts emphasis on social involvement and having a positive impact in the community. Our mission is to ensure a balance between the local communities and having a positive relationship on society.</p>
+			                <h2 class="heading nobrdr"><?php echo $post2['community_post_heading'];?></h2>
+			                <p><?php echo $post2['community_post_description'];?></p>
 			            </div>
 			            <div class="clear"></div>
 			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_community2.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">CHARITIES & COMMUNITY FUNDRAISING</h2>
-			                <p>Cultrahub endeavors to lead the way in charitable contributions through partnering with community centers, community out-reach programs, and non-for-profits to reach those in need. Check out the latest projects right here.</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_community3.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">DISCUSSION BOARD</h2>
-			                <p>Got a topic you will like to discuss with other members? Go right ahead. Our Discussion Board is the best place to air your concerns in your community, debate current issues surrounding your cultures, and form business relationships to further grow your empire.</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_community4.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">ASK A QUESTION ON <br>OUR FORUM</h2>
-			                <p>Our community members are on hand 24/7 to answer questions relating to the use of the site. A meeting point for its members to ask questions and exchange tips, advice, and services.</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_community5.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">CULTRAHUB <br>EVENTS AND NEWS</h2>
-			                <p>Here we acknowledge the great work being done by you in the community and provide you details of events and outreach campaigns sponsored by Cultrahub. Mark us in your calendar, Join us in your community, and get involved!</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
+			<?php
+				}
+			?>
 			    </div>
 			</div>
+		<?php
+			}
+		?>
 			<hr class="mt70 mb0">
 		</div>
 	</div>
