@@ -794,7 +794,7 @@ form small{
 .heading{
     color: #414042;
     font-size: 36px;
-    line-height: 40px;
+    line-height: 48px;
     font-family: 'RalewaySemiBold';
 	margin-bottom: 20px;
 	padding-bottom: 20px;
@@ -4119,6 +4119,24 @@ li:last-child .quote_block:before{display: none;}
 }
 
 
+/*--------------------------------------LEARN PAGE START--------------------------------------*/
+.learnList > .ul{margin-bottom: -60px;}
+.learnList > .ul > li{margin-bottom: 60px;}
+.learnBox{
+    text-align: center;
+    padding: 0 35px;
+    font-size: 18px;
+    line-height: 34px;
+    color: #414042;
+}
+.learnImg{margin: 0 auto 40px;}
+.learnImg img{
+    display: block;
+    width: 100%;
+}
+.learnText{min-height: 236px;}
+
+
 /*--------------------------------------SHOP PAGE START--------------------------------------*/
 .shopBlock{
     font-size: 18px;
@@ -4155,16 +4173,164 @@ li:last-child .quote_block:before{display: none;}
 }
 .connectingRight{
     float: right;
-    width: 65%;
-    padding: 30px 0 30px 30px;
+    width: 66%;
+    padding: 25px 0 25px 35px;
     border-left: 10px solid #ebebeb;
 }
 .connectingLeft{
     float: left;
-    width: 35%;
-    padding: 30px 30px 30px 0;
+    width: 34%;
+    padding: 30px 35px 30px 0;
     text-align: right;
 }
+
+.connectingRight > .ul{margin-bottom: -50px;}
+.connectingRight > .ul > li{margin-bottom: 50px;}
+.aiIcon{
+    width: 92px;
+    height: 92px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.aiIcon img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.aboutIconBox .subheading2, .coreFour .subheading{
+    font-family: 'PoppinsMedium';
+    line-height: 32px;
+    margin: 0;
+    padding: 14px 0;
+}
+.aiText{
+    float: left;
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.coreFour{
+    position: relative;
+    margin: 50px 0 0;
+}
+.coreFourImg{
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 291px;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+.coreFourImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+.coreFour > .ul{margin-bottom: -70px;}
+.coreFour > .ul > li{margin-bottom: 70px;}
+.coreFour .aboutIconBox{
+    font-size: 21px;
+    line-height: 34px;
+    color: #414042;
+    text-align: right;
+    padding: 0 130px 0 10px;
+}
+.coreFour .aiIcon{
+    width: 76px;
+    height: 73px;
+    float: right;
+    margin: 0 20px;
+}
+.coreFour .subheading{
+    line-height: 30px;
+    padding: 21px 0;
+}
+.coreFour > .ul > li:nth-child(even) .aboutIconBox{
+    text-align: left;
+    padding: 0 10px 0 130px;
+}
+.coreFour > .ul > li:nth-child(even) .aiIcon{float: left;}
+
+.teamList{
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+}
+.teamList:before, .teamList:after{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50px;
+    bottom: 160px;
+    left: 33%;
+    width: 1px;
+    background: #cbcdce;
+}
+.teamList:after{left: auto; right: 33%;}
+.teamList .ul{margin-bottom: -30px;}
+.teamList .ul > li{margin-bottom: 30px;}
+.teamList .teamImg{
+    width: 200px;
+    margin: 0 auto 15px;
+    float: none;
+}
+.teamList .subheading2{
+    font-family: 'PoppinsMedium';
+    margin: 0;
+}
+.teamList .color_dots span{
+    width: 6px;
+    height: 6px;
+    margin: 0 8px 0 0;
+}
+.teamList .color_dots span:last-child{margin: 0;}
+
+.abtSection{
+    font-size: 18px;
+    line-height: 34px;
+    color: #414042;
+}
+.abtImg{
+    width: 50%;
+    float: left;
+    padding: 80px 30px 80px 0;
+    position: relative;
+}
+.abtImg img{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.abtImg:before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    width: 500%;
+    background: #f4f4f4;
+}
+.abtText{
+    width: 50%;
+    float: right;
+    padding: 80px 0 80px 30px;
+}
+
+.abtSection.odd .abtImg{
+    float: right;
+    padding: 80px 0 0 30px;
+}
+.abtSection.odd .abtImg:before{right: auto; left: 50%;}
+.abtSection.odd .abtText{
+    float: left;
+    padding: 80px 30px 0 0;
+    text-align: right;
+}
+.abtSection.odd .heading:before{left: auto; right: 0;}
+.abtSection.odd .bullet li{padding-left: 0; padding-right: 50px;}
+.abtSection.odd .bullet li:before{left: auto; right: 21px;}
 
 
 /*--------------------------------------TEAM PAGE START--------------------------------------*/
@@ -4231,24 +4397,6 @@ li:last-child .quote_block:before{display: none;}
     vertical-align: top;
     margin: 7px;
 }
-
-
-/*--------------------------------------LEARN PAGE START--------------------------------------*/
-.learnList > .ul{margin-bottom: -60px;}
-.learnList > .ul > li{margin-bottom: 60px;}
-.learnBox{
-    text-align: center;
-    padding: 0 35px;
-    font-size: 18px;
-    line-height: 34px;
-    color: #414042;
-}
-.learnImg{margin: 0 auto 40px;}
-.learnImg img{
-    display: block;
-    width: 100%;
-}
-.learnText{min-height: 236px;}
 
 
 /*--------------------------------------LOGIN PAGE START--------------------------------------*/
