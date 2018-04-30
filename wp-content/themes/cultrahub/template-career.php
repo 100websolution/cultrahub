@@ -4,7 +4,7 @@ Template Name: Career
 */
 get_header('culture');
 
-$career_banner_image	= get_field('career_banner_image',$post->ID);
+$career_banner_image		= get_field('career_banner_image',$post->ID);
 $career_page_heading		= get_field('career_page_heading',$post->ID);
 $career_icon				= get_field('career_icon',$post->ID);
 $career_page_decription		= get_field('career_page_decription',$post->ID);

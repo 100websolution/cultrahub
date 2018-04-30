@@ -807,6 +807,36 @@ function ch_hashtag(){
 }
 add_action( 'init', 'ch_hashtag' );
 
+//For Team management//
+function ch_team(){
+	$labels = array(
+				'name'				=> _x( 'Team', 'post type general name' ),
+				'singular_name'		=> _x( 'Team', 'post type singular name' ),
+				'add_new' 			=> _x( 'Add New', 'team' ),
+				'add_new_item' 		=> __( 'Add New' ),
+				'edit_item' 		=> __( 'Edit' ),
+				'new_item' 			=> __( 'New' ),
+				'all_items' 		=> __( 'All' ),
+				'view_item' 		=> __( 'View' ),
+				'search_items' 		=> __( 'Search' ),
+				'not_found' 		=> __( 'No record found' ),
+				'not_found_in_trash'=> __( 'No record found in the trash' ),
+				'parent_item_colon' => '',
+				'menu_name' 		=> 'Team Members'
+			);
+	$args = array(
+				'labels'			=> $labels,
+				'description'		=> '',
+				'public'			=> true,
+				'menu_icon'			=> 'dashicons-tickets-alt',
+				'menu_position'		=> 15,
+				'supports'			=> array('title','thumbnail','editor'),
+				'has_archive' 		=> false,
+			);
+	register_post_type( 'team', $args );
+}
+add_action( 'init', 'ch_team' );
+
 //Cultrahub get in touch
 add_action( 'wp_ajax_cultrahub_getintouch', 'cultrahub_getintouch' );
 add_action( 'wp_ajax_nopriv_cultrahub_getintouch', 'cultrahub_getintouch' );
@@ -1286,8 +1316,8 @@ function wdm_user_role_dropdown($all_roles) {
 }
 add_action('editable_roles','wdm_user_role_dropdown');
 
-add_action('admin_menu' , 'add_to_cpt_menu'); 
+/*add_action('admin_menu' , 'add_to_cpt_menu'); 
 
 function add_to_cpt_menu() {
     add_submenu_page('view.php?post_type=sharethoughts', 'Custom Post Type Admin', 'Custom Settings', 'view_posts', basename(__FILE__), 'cpt_menu_function');
-}   
+}*/
