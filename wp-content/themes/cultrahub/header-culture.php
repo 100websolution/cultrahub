@@ -48,12 +48,6 @@
 						<a href="<?php echo site_url();?>">
 							<img src="<?php echo get_template_directory_uri();?>/images/logo_inner.png" alt="<?php echo get_bloginfo( 'name' );?>" />
 						</a>
-						<div class="color_dots">
-							<span class="green"></span>
-							<span class="yellow"></span>
-							<span class="red"></span>
-							<span class="blue"></span>
-						</div>
 					</div>
 					<div class="hright">
 						<?php //echo '<div class="social align_right">'.add_social_links_icons().'</div>';?>
