@@ -67,7 +67,7 @@ $team_member_key_skills 		= get_field('team_member_key_skills',$thePostID);
 				    
 				    <div class="mt30">
 				        <p>Please feel free to connect, I look forward to answering any questions you may have</p>
-                        <a href="<?php echo get_permalink(3054);?>" class="goback fright"><img src="<?php echo get_template_directory_uri();?>/images/icon_refresh.png" alt=""> Go Back</a>
+                        <a href="<?php echo get_permalink(3054).'#team-section';?>" class="goback fright"><img src="<?php echo get_template_directory_uri();?>/images/icon_refresh.png" alt=""> Go Back</a>
                     </div>
 				</div>
 				<div class="clear"></div>
