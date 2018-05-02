@@ -18,12 +18,6 @@
 	<div class="container">
 		<div class="logo">
 			<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt=""></a>
-			<div class="color_dots mt15">
-				<span class="yellow"></span>
-				<span class="red"></span>
-				<span class="blue"></span>
-				<span class="green"></span>
-			</div>
 		</div>
 		<?php wp_nav_menu( array( 'menu' => 'footer-menu', 'menu_class'=>'fnav') ); ?>
 		<div class="social">

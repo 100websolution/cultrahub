@@ -66,12 +66,6 @@
 				<div class="container">
 					<div class="logo">
 						<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
-						<div class="color_dots">
-							<span class="green"></span>
-							<span class="yellow"></span>
-							<span class="red"></span>
-							<span class="blue"></span>
-						</div>
 					</div>
 					<?php
 					if( !empty($home_banners) ){					

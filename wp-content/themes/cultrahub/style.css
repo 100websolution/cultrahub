@@ -1244,10 +1244,14 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 ---------------------------------*/
 .htop{
     padding: 10px 0;
-    font-family: 'PoppinsSemiBold';
-    color: #414042;
-    font-size: 13px;
+    font-family: 'RalewayMedium';
+    color: #58595b;
+    font-size: 12px;
     line-height: 20px;
+}
+.homeHeader .htop{
+    font-family: 'RalewayBold';
+    font-size: 13px;
 }
 .htop a, .borderbar_list > li a{color: inherit;}
 .htop a:hover, .borderbar_list li > a:hover, .borderbar_list li.active > a, .borderbar_list li.current-menu-item > a{color: #eb4034;}
@@ -1272,6 +1276,11 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 .borderbar_list > li:last-child:before{display: none;}
 
 .lang{text-transform: uppercase;}
+.htop .dropwrap{
+    font-family: 'RalewaySemiBold';
+    color: #414042;
+    font-size: 14px;
+}
 .dropwrap{position: relative;}
 .dropnav{
     cursor: pointer;
@@ -1389,17 +1398,17 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     font-size: 20px;
     font-family: 'RalewaySemiBold';
     margin: 0;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 40px;
     position: relative;
 }
 .signup_form_wrap .subheading:before{
     position: absolute;
     content: "";
     display: block;
-    width: 36px;
-    height: 36px;
-    background: url(images/sprite.png) no-repeat -100px -100px;
-    top: 0;
+    width: 30px;
+    height: 30px;
+    background: url(images/sprite.png) no-repeat -150px -100px;
+    top: 2px;
     left: 0;
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
