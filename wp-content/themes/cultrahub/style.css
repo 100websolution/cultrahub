@@ -4099,29 +4099,33 @@ li:last-child .quote_block:before{display: none;}
 .communityBox:last-child{margin-bottom: 0;}
 .cmntyIcon{
     width: 35%;
-    float: right;
-    border-left: 10px solid #ebebeb;
     text-align: center;
     padding: 75px 0;
 }
 .cmntyIcon img{max-height: 200px;}
-.cmntyText{
-    width: 65%;
-    float: left;
-    text-align: right;
-    padding: 50px 50px 0 0;
-}
+.cmntyText{width: 65%;}
 .communityBox .heading{
     font-size: 48px;
     line-height: 64px;
     font-family: 'RalewayExtraBold';
 }
-.communityBox:nth-child(even) .cmntyIcon{
+
+.communityBox .cmntyIcon, .odd.communityList .communityBox:nth-child(even) .cmntyIcon{
+    float: right;
+    border-left: 10px solid #ebebeb;
+    border-right: none;
+}
+.communityBox:nth-child(even) .cmntyIcon, .odd.communityList .communityBox .cmntyIcon{
     float: left;
     border-left: none;
     border-right: 10px solid #ebebeb;
 }
-.communityBox:nth-child(even) .cmntyText{
+.cmntyText, .odd.communityList .communityBox:nth-child(even) .cmntyText{
+    float: left;
+    text-align: right;
+    padding: 50px 50px 0 0;
+}
+.communityBox:nth-child(even) .cmntyText, .odd.communityList .communityBox .cmntyText{
     float: right;
     text-align: left;
     padding: 50px 0 0 50px;
@@ -4406,6 +4410,28 @@ li:last-child .quote_block:before{display: none;}
     vertical-align: top;
     margin: 7px;
 }
+
+
+/*--------------------------------------LANGUAGE PAGE START--------------------------------------*/
+.clanguage{
+    font-size: 18px;
+    line-height: 34px;
+    color: #414042;
+}
+.clanguage .seller_fees_head{padding: 0 25px 0 0;}
+.clanguage .seller_fees_text{padding: 0 0 0 25px;}
+.clanguage.seller_fees .heading2{
+    letter-spacing: 0;
+    padding: 70px 0;
+    margin: 0;
+    font-family: 'RalewayExtraBold';
+}
+.clanguage .subheading2{
+    margin: 0;
+    font-family: 'RalewaySemiBold';
+}
+.clanguage .bullet2.bullet li{padding-left: 30px;}
+.clanguage .bullet2.bullet li:before{left: 0; top: 10px;}
 
 
 /*--------------------------------------LOGIN PAGE START--------------------------------------*/
