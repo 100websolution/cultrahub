@@ -12,6 +12,7 @@ $(window).load(function () {
             $('.modalOpen').css('padding-right','17px');
             $('.modalOpen .modal').css('padding-right','17px');
         }
+        $('.page404').outerHeight($window.height());
     }
     $window.resize(resize).trigger('resize');
     

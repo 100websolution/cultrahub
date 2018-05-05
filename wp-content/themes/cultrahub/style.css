@@ -150,6 +150,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'BebasKaiRegular';
+    src: url('fonts/bebaskai-regular-webfont.woff2') format('woff2'),
+         url('fonts/bebaskai-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	font-family: 'RalewayRegular';
 	font-size: 16px;
@@ -4432,6 +4440,34 @@ li:last-child .quote_block:before{display: none;}
 }
 .clanguage .bullet2.bullet li{padding-left: 30px;}
 .clanguage .bullet2.bullet li:before{left: 0; top: 10px;}
+
+
+/*--------------------------------------LOGIN PAGE START--------------------------------------*/
+.page404{
+    background: no-repeat top right;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+}
+.text404{
+    width: 470px;
+    position: absolute;
+    top: 66%;
+    right: 15%;
+}
+.heading404{
+    font-size: 44px;
+    line-height: 50px;
+    color: #414042;
+    font-family: 'BebasKaiRegular';
+    margin: 0;
+}
+.page404 .btn{
+    height: 40px;
+    line-height: 41px;
+}
 
 
 /*--------------------------------------LOGIN PAGE START--------------------------------------*/
