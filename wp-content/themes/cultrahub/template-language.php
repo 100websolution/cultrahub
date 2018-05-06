@@ -3,12 +3,12 @@
 Template Name: Language
 */
 get_header('culture');
-$banner_image					= get_field( 'community_page_banner', $post->ID );
-$community_page_heading 		= get_field( 'community_page_heading', $post->ID );
-$community_page_description 	= get_field( 'community_page_description', $post->ID );
-$community_page_image 			= get_field( 'community_page_image', $post->ID );
-$community_page_description_2 	= get_field( 'community_page_description_2', $post->ID );
-$community_page_posts 			= get_field( 'community_page_posts', $post->ID );
+$banner_image								= get_field( 'language_page_banner_image', $post->ID );
+$language_page_heading 						= get_field( 'language_page_heading', $post->ID );
+$language_page_short_description 			= get_field( 'language_page_short_description', $post->ID );
+$language_page_section_1_heading_left_side 	= get_field( 'language_page_section_1_heading_left_side', $post->ID );
+$language_page_section_1_heading_right_side = get_field( 'language_page_section_1_heading_right_side', $post->ID );
+$language_page_posts 						= get_field( 'language_page_posts', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
@@ -22,7 +22,7 @@ $community_page_posts 			= get_field( 'community_page_posts', $post->ID );
 					<span class="b_red"></span>
 					<span class="b_yellow"></span>
 				</div>
-				<img src="<?php echo get_template_directory_uri();?>/images/language_banner.jpg" alt="" />
+				<img src="<?php echo $banner_image['url'];?>" alt="" />
                 <div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>
@@ -44,32 +44,15 @@ $community_page_posts 			= get_field( 'community_page_posts', $post->ID );
                     </div>
                     
                     <div>
-                        <h2 class="heading center">Cultrahub Languages</h2>
-                        <div class="heading_tag">Whatever your first language might be, we are dedicated to helping you navigate our marketplace providing translations of our content into numerous languages from around the world. So let’s get started!</div>
+                        <h2 class="heading center"><?php echo $language_page_heading;?></h2>
+                        <div class="heading_tag"><?php echo $language_page_short_description;?></div>
                         
                         <div class="seller_fees clanguage">
                             <div class="seller_fees_head">
-                                <h2 class="heading2">THE IMPORTANCE OF LEARNING A SECOND LANGUAGE</h2>
+                                <h2 class="heading2"><?php echo $language_page_section_1_heading_left_side;?></h2>
                             </div>
                             <div class="seller_fees_text">
-                                <ul class="bullet bullet2">
-                                    <li>
-                                        <h3 class="subheading2">For A Better Aociety</h3>
-                                        <p>Learn to communicate effectively with your neighbors and loved ones both locally and across the globe.</p>
-                                    </li>
-                                    <li>
-                                        <h3 class="subheading2">Brush Up On Your Mother Tongue</h3>
-                                        <p>Growing up in a place dominated by a different language may cause you to forget or be out of practice of your own.</p>
-                                    </li>
-                                    <li>
-                                        <h3 class="subheading2">Improve Your Business Prospects</h3>
-                                        <p>The ability to communicate in multiple languages is becoming more and more important in the global business community.</p>
-                                    </li>
-                                    <li>
-                                        <h3 class="subheading2">Become Smarter</h3>
-                                        <p>Learning a new language is not just about vocabulary, it’s about learning new gestures, sounds, and ways of thinking.</p>
-                                    </li>
-                                </ul>
+                                <?php echo $language_page_section_1_heading_right_side;?>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -77,43 +60,31 @@ $community_page_posts 			= get_field( 'community_page_posts', $post->ID );
                 </div>
 			</div>
 			<hr class="mt70 mb70">
+		<?php
+		if(!empty($language_page_posts)){
+		?>
 			<div class="innerContainer">
 			    <div class="communityList odd">
+			<?php
+				foreach($language_page_posts as $post){
+			?>
 			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_language1.png" alt="" /></div>
+			            <div class="cmntyIcon"><img src="<?php echo $post['language_page_post_image']['url'];?>" alt="" /></div>
 			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">PICK A LANGUAGE, <br>ANY LANGUAGE</h2>
-			                <p>Never miss out on what’s happening.<br> Users can select the language of their choice for all content on the site, no matter who posted it!</p>
+			                <h2 class="heading nobrdr"><?php echo $post['language_page_post_title'];?></h2>
+			                <p><?php echo $post['language_page_post_description'];?></p>
 			            </div>
 			            <div class="clear"></div>
 			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_language2.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">START SPEAKING LIKE <br>THE LOCAL!</h2>
-			                <p>We have a variety of ways to learn a new language on Cultrahub, from online classes, to full courses, to helping you find the best tutors in your locale.</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_language3.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">SELL YOUR PRODUCTS GLOBALLY WITH EASE</h2>
-			                <p>We automatically convert your product description and content into any desired language making sure you don’t miss out on that valuable sale.</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
-			        <div class="communityBox">
-			            <div class="cmntyIcon"><img src="<?php echo get_template_directory_uri();?>/images/icon_language4.png" alt="" /></div>
-			            <div class="cmntyText">
-			                <h2 class="heading nobrdr">JUST <br>GET STUCK IN!</h2>
-			                <p>Drive straight into the deep end and start interacting with other users from different cultures. Learn the language and make new friends! It’s a win win!</p>
-			            </div>
-			            <div class="clear"></div>
-			        </div>
+			<?php
+				}
+			?>
 			    </div>
 			</div>
 			<hr class="mt70 mb0">
+		<?php
+		}
+		?>
 		</div>
 	</div>
 	
