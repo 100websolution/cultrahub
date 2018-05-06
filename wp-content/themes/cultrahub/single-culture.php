@@ -190,7 +190,7 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                             <div class="product_block">
                                 <div class="product_img square_block">
                                     <img src="<?php echo $fp_image[0];?>" width="<?php echo $fp_image[1];?>" alt="">
-                                    <a href="#" class="expand_icon"></a>
+                                    <!--<a href="#" class="expand_icon"></a>-->
                                 </div>
                                 <?php /*<div class="product_text">
                                     <h3 class="product_title"><?php echo $product_name;?></h3>

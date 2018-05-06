@@ -567,55 +567,55 @@ class UCP {
     $out = '';
 
     if (!empty($options['social_facebook'])) {
-      $out .= '<a title="Facebook" href="' . $options['social_facebook'] . '" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>';
+      $out .= '<a title="Facebook" href="' . $options['social_facebook'] . '" target="_blank" class="fb"><i class="fa fa-facebook"></i></a>';
     }
     if (!empty($options['social_twitter'])) {
-      $out .= '<a title="Twitter" href="' . $options['social_twitter'] . '" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_google'])) {
-      $out .= '<a title="Google+" href="' . $options['social_google'] . '" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_linkedin'])) {
-      $out .= '<a title="LinkedIn" href="' . $options['social_linkedin'] . '" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_youtube'])) {
-      $out .= '<a title="YouTube" href="' . $options['social_youtube'] . '" target="_blank"><i class="fa fa-youtube-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_vimeo'])) {
-      $out .= '<a title="Vimeo" href="' . $options['social_vimeo'] . '" target="_blank"><i class="fa fa-vimeo-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_pinterest'])) {
-      $out .= '<a title="Pinterest" href="' . $options['social_pinterest'] . '" target="_blank"><i class="fa fa-pinterest-square fa-3x"></i></a>';
-    }
-    if (!empty($options['social_dribbble'])) {
-      $out .= '<a title="Dribbble" href="' . $options['social_dribbble'] . '" target="_blank"><i class="fa fa-dribbble fa-3x"></i></a>';
-    }
-    if (!empty($options['social_behance'])) {
-      $out .= '<a title="Behance" href="' . $options['social_behance'] . '" target="_blank"><i class="fa fa-behance-square fa-3x"></i></a>';
+      $out .= '<a title="Twitter" href="' . $options['social_twitter'] . '" target="_blank" class="tw"><i class="fa fa-twitter"></i></a>';
     }
     if (!empty($options['social_instagram'])) {
-      $out .= '<a title="Instagram" href="' . $options['social_instagram'] . '" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>';
+      $out .= '<a title="Instagram" href="' . $options['social_instagram'] . '" target="_blank" class="ins"><i class="fa fa-instagram"></i></a>';
+    }
+    if (!empty($options['social_youtube'])) {
+      $out .= '<a title="YouTube" href="' . $options['social_youtube'] . '" target="_blank" class="yt"><i class="fa fa-youtube-play"></i></a>';
+    }
+    if (!empty($options['social_linkedin'])) {
+      $out .= '<a title="LinkedIn" href="' . $options['social_linkedin'] . '" target="_blank" class="in"><i class="fa fa-linkedin"></i></a>';
+    }
+    if (!empty($options['social_google'])) {
+      $out .= '<a title="Google+" href="' . $options['social_google'] . '" target="_blank" class="gplus"><i class="fa fa-google-plus"></i></a>';
+    }
+    if (!empty($options['social_vimeo'])) {
+      $out .= '<a title="Vimeo" href="' . $options['social_vimeo'] . '" target="_blank" class="vmo"><i class="fa fa-vimeo"></i></a>';
+    }
+    if (!empty($options['social_pinterest'])) {
+      $out .= '<a title="Pinterest" href="' . $options['social_pinterest'] . '" target="_blank" class="pin"><i class="fa fa-pinterest"></i></a>';
+    }
+    if (!empty($options['social_dribbble'])) {
+      $out .= '<a title="Dribbble" href="' . $options['social_dribbble'] . '" target="_blank" class="drbl"><i class="fa fa-dribbble"></i></a>';
+    }
+    if (!empty($options['social_behance'])) {
+      $out .= '<a title="Behance" href="' . $options['social_behance'] . '" target="_blank" class="bhnc"><i class="fa fa-behance"></i></a>';
     }
     if (!empty($options['social_tumblr'])) {
-      $out .= '<a title="Tumblr" href="' . $options['social_tumblr'] . '" target="_blank"><i class="fa fa-tumblr-square fa-3x"></i></a>';
+      $out .= '<a title="Tumblr" href="' . $options['social_tumblr'] . '" target="_blank" class="tmblr"><i class="fa fa-tumblr"></i></a>';
     }
     if (!empty($options['social_vk'])) {
-      $out .= '<a title="VK" href="' . $options['social_vk'] . '" target="_blank"><i class="fa fa-vk fa-3x"></i></a>';
+      $out .= '<a title="VK" href="' . $options['social_vk'] . '" target="_blank" class="vk"><i class="fa fa-vk"></i></a>';
     }
     if (!empty($options['social_skype'])) {
-      $out .= '<a title="Skype" href="skype:' . $options['social_skype'] . '?chat"><i class="fa fa-skype fa-3x"></i></a>';
+      $out .= '<a title="Skype" href="skype:' . $options['social_skype'] . '?chat" class="skyp"><i class="fa fa-skype"></i></a>';
     }
     if (!empty($options['social_whatsapp'])) {
-      $out .= '<a title="WhatsApp" href="whatsapp:' . $options['social_whatsapp'] . '"><i class="fa fa-whatsapp fa-3x"></i></a>';
+      $out .= '<a title="WhatsApp" href="whatsapp:' . $options['social_whatsapp'] . '" class="wa"><i class="fa fa-whatsapp"></i></a>';
     }
     if (!empty($options['social_telegram'])) {
-      $out .= '<a title="Telegram" href="' . $options['social_telegram'] . '"><i class="fa fa-telegram fa-3x"></i></a>';
+      $out .= '<a title="Telegram" href="' . $options['social_telegram'] . '" class="tlgrm"><i class="fa fa-telegram"></i></a>';
     }
     if (!empty($options['social_email'])) {
-      $out .= '<a title="Email" href="mailto:' . self::encode_email($options['social_email']) . '"><i class="fa fa-envelope fa-3x"></i></a>';
+      $out .= '<a title="Email" href="mailto:' . self::encode_email($options['social_email']) . '" class="env"><i class="fa fa-envelope"></i></a>';
     }
     if (!empty($options['social_phone'])) {
-      $out .= '<a title="Phone" href="tel:' . $options['social_phone'] . '"><i class="fa fa-phone-square fa-3x"></i></a>';
+      $out .= '<a title="Phone" href="tel:' . $options['social_phone'] . '"><i class="fa fa-phone-square" class="hn"></i></a>';
     }
 
     return $out;
