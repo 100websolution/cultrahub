@@ -61,21 +61,25 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 			<hr class="mb35 mt0">
 			<div class="clearfix">
 				<div class="culture_banner_wrap">
-					<div class="owl-carousel culture_banner">
-					<?php
-					if( !empty( $banner_images ) ){
-						foreach( $banner_images as $val_bi ){
-					?>
-						<div class="item">
-							<div class="banner_block">
-								<a href="javascript:void(0);"><img src="<?php echo $val_bi['image']['sizes']['cultrahub-culture-banner'];?>" width="<?php echo $val_bi['image']['sizes']['cultrahub-culture-banner-width'];?>" alt="<?php echo $val_bi['image']['title'];?>" /></a>
-							</div>
-						</div>
-					<?php
-						}
-					}
-					?>	
-					</div>
+                    <?php if( !empty( $banner_images ) ){
+                        if(count($banner_images) > 1) {
+                        ?>
+                            <div class="owl-carousel culture_banner">
+                            <?php foreach( $banner_images as $val_bi ){ ?>
+                                <div class="item">
+                                    <div class="banner_block">
+                                        <a href="javascript:void(0);"><img src="<?php echo $val_bi['image']['sizes']['cultrahub-culture-banner'];?>" width="<?php echo $val_bi['image']['sizes']['cultrahub-culture-banner-width'];?>" alt="<?php echo $val_bi['image']['title'];?>" /></a>
+                                    </div>
+                                </div>
+                            <?php } ?>	
+                            </div>
+                        <?php } else {?>	
+                        <div class="banner_block">
+                            <a href="javascript:void(0);"><img src="<?php echo $banner_images[0]['image']['sizes']['cultrahub-culture-banner'];?>" width="<?php echo $banner_images[0]['image']['sizes']['cultrahub-culture-banner-width'];?>" alt="<?php echo $banner_images[0]['image']['title'];?>" /></a>
+                        </div>
+                        <?php }
+                    }
+                    ?>
 				</div>
 				
 				<div class="culture_desp">

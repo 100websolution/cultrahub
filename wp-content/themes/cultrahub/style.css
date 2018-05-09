@@ -2249,7 +2249,7 @@ label.label_badge input:checked + span:before{
 .sliderblockWrap.odd.rev .heading:before{left: auto; right: 0;}
 
 .sliderblockWrap.odd.rev .sliderText2 .bullet > li{padding: 3px 35px 0 0;}
-.sliderblockWrap.odd.rev .sliderText2 .bullet > li:before{left: auto; right: 0; top: 20px; margin: 0; width: 21px; height: 20px}
+.sliderblockWrap.odd.rev .sliderText2 .bullet > li:before{left: auto; right: 0; top: 6px; margin: 0; width: 21px; height: 20px}
 
 .sliderblockWrap.odd.rev .sliderblock:nth-child(even) .sliderText2{text-align: left;}
 .sliderblockWrap.odd.rev .sliderblock:nth-child(even) .sliderText2 .btnGroup{text-align: right;}
