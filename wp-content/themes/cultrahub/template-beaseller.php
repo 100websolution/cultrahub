@@ -41,10 +41,10 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 					<span class="b_yellow"></span>
 				</div>
 				<img src="<?php echo $featured_image[0];?>" width="<?php echo $featured_image[1];?>" />
-				<div class="seller_banner_text">
+				<?php /*<div class="seller_banner_text">
 					<h2 class="heading2"><?php echo $banner_heading;?></h2>
 					<p><?php echo $banner_short_heading;?></p>
-				</div>
+				</div>*/?>
 				<div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>
