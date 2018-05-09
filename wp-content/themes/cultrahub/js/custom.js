@@ -315,6 +315,38 @@ $(function () {
 			}
 		}
     });
+    $(".owl1_noarrow").owlCarousel({
+        items: 1,
+    	loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 2000,
+        video: true,
+		margin: 0,
+		dots: false,
+		nav: false,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive: {
+			320: {
+				items: 1
+			},
+			480: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 1
+			},
+			1600: {
+				items: 1
+			}
+		}
+    });
     
     /*-------------------------------------OWL4-------------------------------------*/
     $(".owl4").owlCarousel({

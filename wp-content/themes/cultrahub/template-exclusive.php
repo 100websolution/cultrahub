@@ -191,12 +191,12 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 						<div class="table_box">
 							<div class="table_cell">
 								<div class="store_icon">
-									<a href="#"><img src="<?php echo $es['exlusive_store_logo']['url'];?>" alt="" /></a>
+									<img src="<?php echo $es['exlusive_store_logo']['url'];?>" alt="" />
 								</div>
 								<div class="store_head">
-									<h2 class="heading"><a href="#"><?php echo $es['exlusive_store_title'];?></a></h2>
+									<h2 class="heading"><?php echo $es['exlusive_store_title'];?></h2>
 									<div class="store_genre">
-										<a href="#"><img src="<?php echo $culture_page_grey_icon['url'];?>" alt="" /> <?php echo $es['exclusive_store_type']->post_title;?></a>
+										<img src="<?php echo $culture_page_grey_icon['url'];?>" alt="" /> <?php echo $es['exclusive_store_type']->post_title;?>
 									</div>
 								</div>
 								<div class="store_body">
