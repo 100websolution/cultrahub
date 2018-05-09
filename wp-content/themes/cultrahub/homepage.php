@@ -204,6 +204,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 			<div class="innerContainer">
 				<div class="sliderblockWrap odd rev smallImg">
 				<?php
+				$n=1;
 				query_posts('post_type=blog&order=asc&orderby=id');
 				if (have_posts()) : while (have_posts()) : the_post();
 					$get_details 		= get_field( 'details', $post->ID );
@@ -214,7 +215,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 					if( count($get_details) > 1 ){
 				?>
 						<div class="sliderImg2 sliderImgText scroll_effect" data-effect="fadeInRight" data-delay="300">
-							<div class="owl-carousel owl1">
+							<div class="owl-carousel <?php if($n==1)echo 'owl1';else echo 'owl1_noarrow';?>">
 				<?php
 							foreach( $get_details as $gd ){
 				?>
@@ -272,6 +273,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 						<div class="clear"></div>
 					</div>
 				<?php
+				$n++;
 				endwhile; endif;
 				wp_reset_query();
 				?>
