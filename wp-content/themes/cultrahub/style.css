@@ -2551,7 +2551,7 @@ footer.noborder{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 );
 }
 footer a{color: inherit;}
-footer a:hover, footer .active a, .f_nav li:hover a, .company{color: #eb4034;}
+footer a:hover, footer .active a, .f_nav li:hover a, .fnav li.current-menu-item a, .company{color: #eb4034 !important;}
 
 footer .border_line{
     bottom: auto;
