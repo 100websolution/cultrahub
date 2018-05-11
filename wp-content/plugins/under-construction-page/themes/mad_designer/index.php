@@ -31,6 +31,12 @@ if (!defined('ABSPATH')) {
         <div class="page404 under_construction" style="background-image: url(<?php echo get_template_directory_uri();?>/images/under_construction.jpg);">
             <div class="text404">
                 <h1 class="heading404">[heading1]</h1>
+                <div class="skillBarWrap">
+                    <div class="skillBar" skill-percentage="31%" skill-color="#0090a2"><span class="skillBarW">31%</span></div>
+                </div>
+                <!--<div class="progress progress-striped">
+                    <div class="progress-bar" role="progressbar" data-transitiongoal="20"></div>
+                </div>-->
                 <div class="color_dots mt30 mb30">
                     <span class="green"></span>
                     <span class="yellow"></span>
