@@ -2324,8 +2324,8 @@ label.label_badge input:checked + span:before{
 .maintab:before{
     z-index: 0;
     background: #f9f9f9;
-    top: 310px;
-    bottom: 0;
+    height: 310px;
+    top: 0;
 }
 .maintab .sliderImg{
     width: 545px;
@@ -2355,7 +2355,7 @@ label.label_badge input:checked + span:before{
 }
 .maintab .sliderblock .heading{margin-bottom: 10px;}
 .maintab .sliderblock .subheading2{margin-bottom: 50px;}
-.maintab .sliderblockWrap.odd .sliderblock .btn{float: right; margin-top: 20px;}
+.maintab .sliderblockWrap.odd .sliderblock .btn{float: right; margin-top: 30px;}
 .maintab .owl-theme .owl-controls .owl-buttons div, .maintab .custom_nav_slider .owl-pagination .owl-prev, .maintab .custom_nav_slider .owl-pagination .owl-next, .maintab .owl-carousel .owl-nav .owl-prev, .maintab .owl-carousel .owl-nav .owl-next{background: transparent;}
 /*SLIDER_BOX2 END*/
 
@@ -4486,6 +4486,54 @@ li:last-child .quote_block:before{display: none;}
 .under_construction .heading404{
     font-size: 60px;
     line-height: 65px;
+}
+.under_construction .social a{
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    background-color: #ededed;
+}
+.skillBarWrap {
+	width: 100%;
+	height: 20px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+	position: relative;
+	background: #dbdbdb;
+    margin: 40px 0 0;
+}
+.skillBar {
+    background-image: -webkit-linear-gradient(-45deg, #006876 25%, #0090a2 25%, #0090a2 50%, #006876 50%, #006876 75%, #0090a2 75%, #0090a2);
+    background-image: -o-linear-gradient(-45deg, #006876 25%, #0090a2 25%, #0090a2 50%, #006876 50%, #006876 75%, #0090a2 75%, #0090a2);
+    background-image: linear-gradient(-45deg, #006876 25%, #0090a2 25%, #0090a2 50%, #006876 50%, #006876 75%, #0090a2 75%, #0090a2);
+    background-size: 50px 50px;
+	width: 31%;
+	height: 100%;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+	position: absolute;
+	background-color: transparent;
+	transition: 2s;
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+}
+.skillBarW{
+    position: absolute;
+    top: -30px;;
+    right: 0;
+    width: 28px;
+    height: 25px;
+    background: url(images/bg_skillText.png) no-repeat center;
+    font-family: 'BebasKaiRegular';
+    font-size: 11px;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-align: center;
 }
 
 
