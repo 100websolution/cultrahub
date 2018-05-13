@@ -250,6 +250,37 @@ $(function () {
 		}
     });
     
+    $("#allCulture").owlCarousel({
+        items: 12,
+    	loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+		margin: 30,
+		dots: false,
+		nav: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive: {
+			320: {
+				items: 3
+			},
+			480: {
+				items: 3
+			},
+			600: {
+				items: 6
+			},
+			768: {
+				items: 8
+			},
+			992: {
+				items: 10
+			},
+			1600: {
+				items: 12
+			}
+		}
+    });
+    
     /*-------------------------------------MAIN_TAB-------------------------------------*/
     $(".maintabslider").owlCarousel({
         items: 1,

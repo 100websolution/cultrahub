@@ -25,7 +25,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 					<?php
 					if( !empty($about_cultrahub) ){
 					?>
-					<div class="heading_tag mt20"><?php echo $about_cultrahub;?></div>
+					<div class="heading_tag mt20"><?php echo nl2br($about_cultrahub);?></div>
 					<?php
 					}
 					?>
@@ -39,10 +39,12 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				?>
 					<li class="col33">
 						<div class="iconBlock">
-							<div class="iconImg scroll_effect" data-effect="fadeInUp" data-delay="300"><img src="<?php echo $cb['block_image']['url'];?>" alt=""></div>
-							<div class="iconText">
-								<h3 class="subheading2"><?php echo $cb['block_title'];?></h3>
-							</div>
+                            <a href="#">
+                                <div class="iconImg scroll_effect" data-effect="fadeInUp" data-delay="300"><img src="<?php echo $cb['block_image']['url'];?>" alt=""></div>
+                                <div class="iconText">
+                                    <h3 class="subheading2"><?php echo $cb['block_title'];?></h3>
+                                </div>
+                            </a>
 						</div>
 					</li>
 				<?php
@@ -52,20 +54,6 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				<?php
 				}
 				?>
-				
-				<div class="seller_section">
-					<div class="sliderblockWrap odd rev">
-						<div class="sliderblock">
-							<?php
-							if ( have_posts() ) while ( have_posts() ) : the_post();
-								the_content();
-							endwhile;
-							wp_reset_query();
-							?>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -112,6 +100,72 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 	
 	<div class="section maintab">
 		<div class="container">
+            <div class="innerContainer">
+                <div class="allCulture">
+                    <div class="owl-carousel" id="allCulture">
+                    <?php
+                    query_posts('post_type=culture&order=asc&orderby=id');
+                    if (have_posts()) : while (have_posts()) : the_post();
+                        $culture_icon = get_field( 'icon', $post->ID );					
+                    ?>
+                        <div class="item">
+                            <div class="allCultureBox">
+								<a href="<?php the_permalink();?>">
+                                    <div class="culture_box">
+									    <img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>">
+                                    </div>
+                                    <div class="allCultureText"><?php the_title();?> Culture</div>
+								</a>
+							</div>
+                        </div>
+                    <?php
+                    endwhile; endif;
+                    wp_reset_query();
+                    ?>
+                        <div class="item">
+                            <div class="allCultureBox">
+								<a href="#">
+                                    <div class="culture_box">
+									    <img src="<?php echo get_template_directory_uri();?>/images/badge_canadian.png" alt="Canadian">
+                                    </div>
+                                    <div class="allCultureText">Canadian Culture</div>
+								</a>
+							</div>
+                        </div>
+                        <div class="item">
+                            <div class="allCultureBox">
+								<a href="#">
+                                    <div class="culture_box">
+									    <img src="<?php echo get_template_directory_uri();?>/images/badge_indian.png" alt="Indian">
+                                    </div>
+                                    <div class="allCultureText">Indian Culture</div>
+								</a>
+							</div>
+                        </div>
+                        <div class="item">
+                            <div class="allCultureBox">
+								<a href="#">
+                                    <div class="culture_box">
+									    <img src="<?php echo get_template_directory_uri();?>/images/badge_judaism.png" alt="Judaism">
+                                    </div>
+                                    <div class="allCultureText">Judaism Culture</div>
+								</a>
+							</div>
+                        </div>
+                        <div class="item">
+                            <div class="allCultureBox">
+								<a href="#">
+                                    <div class="culture_box">
+									    <img src="<?php echo get_template_directory_uri();?>/images/badge_middie_eastern.png" alt="Middle Eastern">
+                                    </div>
+                                    <div class="allCultureText">Middle Eastern Culture</div>
+								</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb70 mt70">
 			<div class="innerContainer">
 				<div class="owl-carousel maintabslider">
 				<?php
@@ -195,14 +249,32 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				?>
 				</div>
 			</div>
+			<hr class="mb0 mt70" style="border-color: #8d8f92;">
 		</div>
 	</div>
 	
+	<div class="section seller_section">
+		<div class="container">
+		    <div class="innerContainer">
+                <div class="sliderblockWrap odd rev">
+                    <div class="sliderblock">
+                        <?php
+                        if ( have_posts() ) while ( have_posts() ) : the_post();
+                            the_content();
+                        endwhile;
+                        wp_reset_query();
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+		    </div>
+        </div>
+    </div>
+	
 	<div class="section">
 		<div class="container">
-			<hr class="mb70 mt0" style="border-color: #8d8f92;">
 			<div class="innerContainer">
-				<div class="sliderblockWrap odd rev smallImg">
+				<div class="sliderblockWrap rev smallImg">
 				<?php
 				$n=1;
 				query_posts('post_type=blog&order=asc&orderby=id');
@@ -269,6 +341,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 							<div class="">
 								<?php the_content();?>
 							</div>
+                            <a href="#" class="btn">Learn More</a>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -366,9 +439,6 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 									<div class="">
 										<?php echo $share_yor_thought_description;?>
 									</div>
-									<div class="border_top">
-										<small><?php echo $share_yor_thought_short_description;?></small>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -430,6 +500,9 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 							</form>
 						</div>
 						<div class="clear"></div>
+                        <div class="border_top align_center">
+                            <small><?php echo $share_yor_thought_short_description;?><br>Please <a href="#" class="blueLight">Click Here</a> for full terms and conditions</small>
+                        </div>
 					</div>
 				</div>
 			</div>
