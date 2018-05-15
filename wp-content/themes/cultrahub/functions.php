@@ -64,7 +64,7 @@ if ( ! function_exists( 'cultrahub_theme_setup' ) ) {
     	add_theme_support( 'post-thumbnails' );
 		
 		//add_image_size( 'cultrahub-menu-category', 650, 450, true );
-		add_image_size( 'cultrahub-home-blog', 545, 300, true );
+		//add_image_size( 'cultrahub-home-blog', 545, 300, true );
 		add_image_size( 'cultrahub-cultures', 256, 256, true );
 		add_image_size( 'cultrahub-home-icon', 474, 492, true );	//Home and culture details page Icon
 		add_image_size( 'cultrahub-culture-slider', 900, 400, true );

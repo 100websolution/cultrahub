@@ -35,11 +35,11 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				?>
 				<ul class="row ul iconList homeIcon">
 				<?php
-					foreach( $cultrahub_blocks as $cb ){
+					foreach( $cultrahub_blocks as $cb ){						
 				?>
 					<li class="col33">
 						<div class="iconBlock">
-                            <a href="#">
+                            <a href="<?php echo $cb['home_culture_blocks_page_link'];?>">
                                 <div class="iconImg scroll_effect" data-effect="fadeInUp" data-delay="300"><img src="<?php echo $cb['block_image']['url'];?>" alt=""></div>
                                 <div class="iconText">
                                     <h3 class="subheading2"><?php echo $cb['block_title'];?></h3>
@@ -64,8 +64,22 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				<h2 class="heading center"><?php echo $culture_postheading;?></h2>
 				<div class="owl-carousel" id="culture_slider">
 				<?php
-				query_posts('post_type=culture&order=asc&orderby=id');
-				if (have_posts()) : while (have_posts()) : the_post();
+				$culture_slider_args = array(
+											'post_type'		=> 'culture',
+											'post_status'	=> 'publish',
+											'post_per_page'	=> -1,
+											'orderby'		=> 'id',
+											'order'			=> 'ASC',
+											'meta_query'	=> array(
+																	array(
+																		'key'		=> 'show_in_main_culture_slider',
+																		'value'		=> 'Yes',
+																		'compare'	=> '='
+																	)	
+																)
+										);
+				$culture_slider		 = new WP_Query( $culture_slider_args );
+				if ( $culture_slider->have_posts() ) : while ( $culture_slider->have_posts() ) : $culture_slider->the_post();
 					$culture_icon = get_field( 'icon', $post->ID );					
 				?>
 					<div class="item">
@@ -122,46 +136,6 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
                     endwhile; endif;
                     wp_reset_query();
                     ?>
-                        <div class="item">
-                            <div class="allCultureBox">
-								<a href="#">
-                                    <div class="culture_box">
-									    <img src="<?php echo get_template_directory_uri();?>/images/badge_canadian.png" alt="Canadian">
-                                    </div>
-                                    <div class="allCultureText">Canadian Culture</div>
-								</a>
-							</div>
-                        </div>
-                        <div class="item">
-                            <div class="allCultureBox">
-								<a href="#">
-                                    <div class="culture_box">
-									    <img src="<?php echo get_template_directory_uri();?>/images/badge_indian.png" alt="Indian">
-                                    </div>
-                                    <div class="allCultureText">Indian Culture</div>
-								</a>
-							</div>
-                        </div>
-                        <div class="item">
-                            <div class="allCultureBox">
-								<a href="#">
-                                    <div class="culture_box">
-									    <img src="<?php echo get_template_directory_uri();?>/images/badge_judaism.png" alt="Judaism">
-                                    </div>
-                                    <div class="allCultureText">Judaism Culture</div>
-								</a>
-							</div>
-                        </div>
-                        <div class="item">
-                            <div class="allCultureBox">
-								<a href="#">
-                                    <div class="culture_box">
-									    <img src="<?php echo get_template_directory_uri();?>/images/badge_middie_eastern.png" alt="Middle Eastern">
-                                    </div>
-                                    <div class="allCultureText">Middle Eastern Culture</div>
-								</a>
-							</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -294,7 +268,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 								<div class="item">
 									<div class="sliderImgBoxWrap">
 										<div class="sliderImgBox">
-											<img src="<?php echo $gd['image']['sizes']['cultrahub-home-blog'];?>" alt="<?php echo $gd['image']['title'];?>" />
+											<img src="<?php echo $gd['image']['sizes']['large'];?>" alt="<?php echo $gd['image']['title'];?>" />
 										</div>
 				<?php
 									if( $gd['name'] != '' || $gd['designation'] != '' ){
