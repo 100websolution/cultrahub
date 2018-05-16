@@ -594,7 +594,7 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 				if (have_posts()) : while (have_posts()) : the_post();
 						$culture_icon = get_field( 'icon', $post->ID );
 				?>
-						<li class="col12_5<?php if( $thePostID == $post->ID )echo ' active';?>">
+						<li class="col10<?php if( $thePostID == $post->ID )echo ' active';?>">
 							<div class="culture_box">
 								<a href="<?php the_permalink();?>">
 									<img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>" />

@@ -1126,7 +1126,7 @@ form small{
     content: "";
 }
 .row:after{clear: both;}
-.col5, .col11, .col12_5, .col16, .col20, .col24, .col25, .col28, .col30, .col31, .col32_5, .col33, .col35, .col36, .col37_5, .col38, .col40, .col50, .col55, .col60, .col62_5, .col64, .col65, .col66, .col67_5, .col69, .col70, .col72, .col75, .col80, .col95, .col100{
+.col5, .col10, .col11, .col12_5, .col16, .col20, .col24, .col25, .col28, .col30, .col31, .col32_5, .col33, .col35, .col36, .col37_5, .col38, .col40, .col50, .col55, .col60, .col62_5, .col64, .col65, .col66, .col67_5, .col69, .col70, .col72, .col75, .col80, .col95, .col100{
     position: relative;
     min-height: 1px;
     padding-right: 15px;
@@ -1134,6 +1134,7 @@ form small{
     float: left;
 }
 .col5{width: 5%;}
+.col10{width: 10%;}
 .col11{width: 11.11%;}
 .col12_5{width: 12.5%;}
 .col16{width: 16.66%;}
