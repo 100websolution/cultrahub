@@ -77,7 +77,8 @@
 							$icon = get_field( 'icon', $banner['homebanner_culture']->ID );
 					?>
 						<div class="ls-layer" style="slidedirection: top; slidedelay: 6000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: ; delayout: 500; ">
-							<div class="ls-s1" style="position:absolute; top:0; left:50%; margin-left:205px; slidedirection: top; slideoutdirection: top; durationin: 1000; durationout: 750; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 600; delayout: 0; showuntil: 0; font-size:72px; line-height:90px; color:#231f20; font-family:'TahuRegular';"><?php echo $banner['homebanner_title'];?></div>
+							<?php /*<div class="ls-s1" style="position:absolute; top:0; left:50%; margin-left:205px; slidedirection: top; slideoutdirection: top; durationin: 1000; durationout: 750; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 600; delayout: 0; showuntil: 0; font-size:72px; line-height:90px; color:#231f20; font-family:'TahuRegular';"><?php echo $banner['homebanner_title'];?></div>*/?>
+							<div class="ls-s1" style="position:absolute; top:0; left:50%; margin-left:205px; slidedirection: top; slideoutdirection: top; durationin: 1000; durationout: 750; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 600; delayout: 0; showuntil: 0; font-size:72px; line-height:90px; color:#231f20; font-family:'TahuRegular';"><img src="<?php echo get_template_directory_uri();?>/images/Launching2018.png" alt="" width="450" /></div>
 							<?php
 							if( $k % 2 != 0 ){
 							?>
