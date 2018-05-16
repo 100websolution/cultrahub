@@ -37,28 +37,58 @@ $learn_page_section3_posts	= get_field( 'learn_page_section3_posts', $post->ID )
 				</div>
 			</div>
 			<hr class="mt35 mb35">
-			<div class="innerContainer">
-                <div class="">
-                    <div class="heading_block">
-                        <div class="heading2 center small"><img src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png" alt=""></div>
-                        <div class="color_dots">
-                            <span class="yellow"></span>
-                            <span class="red"></span>
-                            <span class="blue"></span>
-                            <span class="green"></span>
-                        </div>
+            <div class="">
+                <div class="heading_block">
+                    <div class="heading2 center small"><img src="<?php echo get_template_directory_uri();?>/images/learn_sell_shop.png" alt=""></div>
+                    <div class="color_dots">
+                        <span class="yellow"></span>
+                        <span class="red"></span>
+                        <span class="blue"></span>
+                        <span class="green"></span>
                     </div>
-                    <div>
-                        <h2 class="heading center">Charities</h2>
-                        <div class="heading_tag">There are some fantastic charities right in our neighborhood making a big difference in your community. It’s important to support and give back to the community when we can. Helping in your local area, charity, or community group can make all the difference to those in need lives.</div>
-					    
-                        
+                </div>
+                <div>
+                    <h2 class="heading center">Charities</h2>
+                    <div class="heading_tag">There are some fantastic charities right in our neighborhood making a big difference in your community. It’s important to support and give back to the <br>community when we can. Helping in your local area, charity, or community group can make all the difference to those in need lives.</div>
+
+                    <div class="innerContainer">
+                        <div class="charity_icon_wrap">
+                            <ul class="ul row">
+                                <li class="col33">
+                                    <div class="seller_block">
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_raising_money.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Start Raising <br>Money</h3>
+                                            <p>Create a profile page for your Charity and provide relief and development services where they are needed the most. Just follow our simple instructions to set up your page and start collecting.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col33">
+                                    <div class="seller_block">
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_charity.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Local & International <br>Charities</h3>
+                                            <p>Cultrahub endeavors to lead the way in charitable contributions through partnering with community centers, community out-reach programs, and foundations.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col33">
+                                    <div class="seller_block">
+                                        <div class="seller_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_box.png" alt=""></div>
+                                        <div class="seller_text">
+                                            <h3 class="subheading2">Send A <br>Gift Of Hope</h3>
+                                            <p>Support your loved ones away from home by sending gifts, experiences, memberships, and subscriptions to institutions throughout the word.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 			</div>
 			<hr class="mt70 mb70">		
 			<div class="innerContainer">
-                <div class="learnList">
+                <div class="learnList gblist">
                     <ul class="ul row">
                         <li class="col50">
                             <div class="learnBox">
