@@ -130,7 +130,7 @@
 					if (have_posts()) : while (have_posts()) : the_post();
 						$culture_icon = get_field( 'icon', $post->ID );
 					?>
-						<li id="<?php echo $post->ID;?>" class="col11">
+						<li id="<?php echo $post->ID;?>" class="col10">
 							<label class="label_badge">
 								<input id="check_<?php echo $post->ID;?>" type="checkbox">
 								<span><img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>" /></span>
