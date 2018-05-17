@@ -99,6 +99,9 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
 							<div class="cultureP">
 								<?php echo get_field( 'culture_description' );?>
 							</div>
+                            <div class="align_right">
+                                <a href="#">Read More</a>
+                            </div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -196,9 +199,9 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                                     <img src="<?php echo $fp_image[0];?>" width="<?php echo $fp_image[1];?>" alt="">
                                     <!--<a href="#" class="expand_icon"></a>-->
                                 </div>
-                                <?php /*<div class="product_text">
+                                <?php /**/?><div class="product_text">
                                     <h3 class="product_title"><?php echo $product_name;?></h3>
-                                </div>*/?>
+                                </div>
                             </div>
                         </div>
                 <?php
