@@ -353,7 +353,7 @@ function cultrahub_signup(){
 			$inserted_user_id = wp_insert_user( $userdata );			
 			if( $inserted_user_id != '' ){
 				$registration_date = date('d/m/Y');
-				if( count($day) == 1 ){
+				if( strlen($day) == 1 ){
 					$day = '0'.$day;
 				}
 				$all_selected_cultures = array(); $cul = '';
@@ -1189,9 +1189,9 @@ function ch_login_logo() { ?>
 	#login{padding: 2% 0 0 !important;}
     #login h1 a, .login h1 a {
         background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-		height:153px;
-		width:275px;
-		background-size: 275px 153px;
+		height:207px;
+		width:316px;
+		background-size: 316px 207px;
 		background-repeat: no-repeat;
     	padding-bottom: 20px;
     }
@@ -1321,3 +1321,57 @@ add_action('editable_roles','wdm_user_role_dropdown');
 function add_to_cpt_menu() {
     add_submenu_page('view.php?post_type=sharethoughts', 'Custom Post Type Admin', 'Custom Settings', 'view_posts', basename(__FILE__), 'cpt_menu_function');
 }*/
+
+/********* Export to csv ***********/
+add_action('admin_footer', 'export_users');
+function export_users(){
+    $screen = get_current_screen();
+    if ( $screen->id != "users" )   // Only add to users.php page
+        return;
+    ?>
+    <script type="text/javascript">
+    jQuery(document).ready( function($){
+		$('.tablenav.top .clear, .tablenav.bottom .clear').before('<input type="hidden" id="mytheme_export_csv" name="mytheme_export_csv" value="1" /><input class="button button-primary user_export_button" style="margin-top:3px;" type="submit" value="<?php esc_attr_e('Export All as CSV', 'mytheme');?>" />');
+        });
+    </script>
+<?php
+}
+add_action('admin_init', 'export_csv'); //you can use admin_init as well
+function export_csv() {
+    if (!empty($_GET['mytheme_export_csv']) && !empty($_GET['users'])) {		
+        if (current_user_can('manage_options')) {
+            header("Content-type: application/force-download");
+            header('Content-Disposition: inline; filename="users'.date('YmdHis').'.csv"');
+
+            // WP_User_Query arguments
+            $args = array (
+						'include' => $_GET['users'],
+						'order'   => 'ASC',
+						'orderby' => 'display_name',
+						'fields'  => 'all',
+					);            
+            $users = get_users( $args );
+			//echo '<pre>'; print_r($users); die;
+            
+			//for first row:
+			echo '"First Name","Last Name","User Name","Birthdate","E-mail Address","Gender","What is Your Business?","Registration Date"' . "\r\n";
+            foreach ( $users as $user ) {
+                $meta = get_user_meta($user->ID);
+				//echo '<pre>'; print_r($meta); die;
+                $role = $user->roles;
+                $email = $user->user_email;
+				
+                $first_name 		= ( isset($meta['first_name'][0]) && $meta['first_name'][0] != '' ) ? $meta['first_name'][0] : '' ;
+                $last_name  		= ( isset($meta['last_name'][0]) && $meta['last_name'][0] != '' ) ? $meta['last_name'][0] : '' ;
+                $user_name  		= ( isset($meta['nickname'][0]) && $meta['nickname'][0] != '' ) ? $meta['nickname'][0] : '' ;
+                $birthdate  		= $meta['day'][0].'-'.$meta['month'][0].'-'.$meta['year'][0];
+                $gender  			= ( isset($meta['gender'][0]) && $meta['gender'][0] != '' ) ? $meta['gender'][0] : '' ;
+                $business  			= ( isset($meta['user_business'][0]) && $meta['user_business'][0] != '' ) ? $meta['user_business'][0] : '' ;
+				$registration_date  = ( isset($meta['user_registration_date'][0]) && $meta['user_registration_date'][0] != '' ) ? str_replace('/','-',$meta['user_registration_date'][0]) : '' ;
+				
+                echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$birthdate.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
+            }
+            exit();
+        }
+    }
+}
