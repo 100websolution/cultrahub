@@ -443,25 +443,28 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                                 foreach( $ps_video_clips as $val_psvc ){
                             ?>
                                     <div class="item">
-                                        <div class="sliderImgBox">
-                                            <div class="ytube_vdo red">
+                                        <div class="sliderImgBox">                                            
 											<?php
 											if( !empty($val_psvc['cultr_image']) ){
 											?>
-												<img src="<?php echo $val_psvc['cultr_image']['url'];?>" />
+												<div class="ytube_vdo <?php if(!empty($val_psvc['video_icon_color']))echo $val_psvc['video_icon_color'];else echo 'red';?>">
+													<img src="<?php echo $val_psvc['cultr_image']['url'];?>" />
+													<a href="#" class="play_vdo"></a>
+												</div>
 											<?php
 											}else{
 											?>
-                                                <?php //echo do_shortcode( '[arve url="' . $val_psvc['video_url'] . '" align="center" parameters="start=30" /]' );?>
-                                                <!--<iframe id="fitvid<?php echo $b;?>" class="example" width="560" height="315" src="https://www.youtube.com/embed/RmXiItk49Gw?enablejsapi=1&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-                                                <!--<div class="ytube_vdo red">											
-                                                    <a href="#" class="play_vdo"></a>
-                                                </div>-->										
-                                                <?php echo $embed_code = youtubeEmbedFromUrl($val_psvc['video_url'], '100%', '100%', $b);	//100 means 100% ?>
+												<div class="ytube_vdo">
+													<?php //echo do_shortcode( '[arve url="' . $val_psvc['video_url'] . '" align="center" parameters="start=30" /]' );?>
+													<!--<iframe id="fitvid<?php echo $b;?>" class="example" width="560" height="315" src="https://www.youtube.com/embed/RmXiItk49Gw?enablejsapi=1&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+													<!--<div class="ytube_vdo red">											
+														<a href="#" class="play_vdo"></a>
+													</div>-->
+													<?php echo $embed_code = youtubeEmbedFromUrl($val_psvc['video_url'], '100%', '100%', $b);	//100 means 100% ?>
+												</div>
 											<?php
 											}
-											?>
-                                            </div>
+											?>                                            
                                         </div>
                                         <div class="sliderTextBox">
                                             <h2 class="subheading rsb"><?php echo $val_psvc['title'];?></h2>
