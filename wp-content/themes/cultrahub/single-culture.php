@@ -51,6 +51,10 @@ $inner_cultures_school					= get_field( 'school_inner_cultures', $post->ID );
 $inner_culture_heading_islamic 			= get_field( 'islamic_inner_culture_heading', $post->ID );
 $inner_culture_short_description_islamic= get_field( 'islamic_inner_culture_short_description', $post->ID );
 $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
+//for Latin
+$inner_culture_heading_latin 			= get_field( 'latin_inner_culture_heading', $post->ID );
+$inner_culture_short_description_latin	= get_field( 'latin_inner_culture_short_description', $post->ID );
+$inner_cultures_latin					= get_field( 'latin_inner_cultures', $post->ID );
 
 ?>
 <!--MAIN CONTAINER START-->
@@ -410,6 +414,47 @@ $inner_cultures_islamic					= get_field( 'islamic_inner_cultures', $post->ID );
                                 </div>
                                 <div class="product_text">
                                     <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['islamic_culture_title'];?></a></h3>
+                                </div>
+                            </div>
+                        </li>
+                <?php
+                    }
+                ?>
+                    </ul>
+                <?php
+                }
+                ?>
+                </div>
+            </div>
+        </div>
+        <?php
+	}
+	if( !empty($inner_culture_heading_latin) ){
+        ?>
+        <div class="section">
+            <div class="container">
+                <div class="innerContainer">
+                    <h2 class="heading center"><?php echo $inner_culture_heading_latin;?></h2>
+                <?php
+                if( !empty($inner_culture_short_description_latin) ){
+                ?>
+                    <div class="heading_tag"><?php echo $inner_culture_short_description_latin;?></div>
+                <?php
+                }
+                if( !empty($inner_cultures_latin) ){
+                ?>
+                    <ul class="row ul">
+                <?php
+                    foreach($inner_cultures_latin as $val_lc){
+                ?>
+                        <li class="col20">
+                            <div class="product_block">
+                                <div class="product_img square_block">
+                                    <img src="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_lc['latinculture_image']['title'];?>" width="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
+                                    <a href="#" class="expand_icon"></a>
+                                </div>
+                                <div class="product_text">
+                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_lc['latinculture_title'];?></a></h3>
                                 </div>
                             </div>
                         </li>
