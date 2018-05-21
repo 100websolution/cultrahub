@@ -255,6 +255,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 				if (have_posts()) : while (have_posts()) : the_post();
 					$get_details 		= get_field( 'details', $post->ID );
 					$blog_short_heading = get_field( 'blog_short_heading', $post->ID );
+					$cultra_page_link 	= get_field( 'cultra_page_link', $post->ID );
 				?>
 					<div class="sliderblock">
 				<?php
@@ -315,7 +316,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 							<div class="">
 								<?php the_content();?>
 							</div>
-                            <a href="#" class="btn">Learn More</a>
+                            <a href="<?php if(!empty($cultra_page_link))echo $cultra_page_link;else echo '#';?>" class="btn">Learn More</a>
 						</div>
 						<div class="clear"></div>
 					</div>
