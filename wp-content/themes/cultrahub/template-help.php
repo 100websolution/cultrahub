@@ -108,7 +108,7 @@ $quote								= get_field( 'quote', $post->ID );
 						</div>
 						<div class="sliderImg2">
 							<div class="contact_form">
-								<h2 class="subheading">Get In Touch With Us</h2>
+								<h2 class="subheading">How Can We Help?</h2>
 								<form method="post" enctype="multipart/form-data" id="getintouch_form" class="form_validation">
 									<ul class="ul row">
 										<li class="col50">

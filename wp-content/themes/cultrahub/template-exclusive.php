@@ -262,7 +262,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 			</div>
 			
 			<?php
-			if(!empty($quote)){
+			/*if(!empty($quote)){
 			?>
 			<div class="innerContainer mt70">
 				<div class="quote">
@@ -270,7 +270,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 				</div>
 			</div>
 			<?php
-			}
+			}*/
 			?>
 			<hr class="mt50 mb0">
 		</div>
