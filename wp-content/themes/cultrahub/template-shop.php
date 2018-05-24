@@ -60,11 +60,11 @@ $section_3_posts		= get_field( 'section_3_posts', $post->ID );
                                 <li class="col33">
                                     <div class="seller_block <?php echo $section1['shop_section1_color'];?>">
 									<?php
-									if(!empty($section1['shop_section1_image'])){
+									/*if(!empty($section1['shop_section1_image'])){
 									?>
                                         <span class="steps"><img src="<?php echo $section1['shop_section1_image']['url'];?>" alt=""><em><?php echo $section1['shop_section1_step_title'];?></em></span>
 									<?php
-									}
+									}*/
 									?>
                                         <div class="seller_icon"><img src="<?php echo $section1['shop_section1_icon']['url'];?>" alt=""></div>
                                         <div class="seller_text">

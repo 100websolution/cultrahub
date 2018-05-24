@@ -166,8 +166,8 @@ if( !empty($banner_sliders) ){
 			</div>
 			
 			<div class="innerContainer mt70">
-				<div class="quote_list">
-					<div class="heading"><?php echo $shareaquote_quote_heading;?></div>
+				<div class="quote_list align_center">
+					<div class="heading nobrdr"><?php echo $shareaquote_quote_heading;?></div>
 					<?php
 					if( !empty($shareaquote_quotes) ){
 					?>
@@ -199,7 +199,7 @@ if( !empty($banner_sliders) ){
 				</div>
 			</div>
 			<?php
-			if(!empty($squote)){
+			/*if(!empty($squote)){
 			?>
 			<div class="innerContainer mt70">
 				<div class="quote">
@@ -207,7 +207,7 @@ if( !empty($banner_sliders) ){
 				</div>
 			</div>
 			<?php
-			}
+			}*/
 			?>
 			<hr class="mt50 mb0">
 		</div>

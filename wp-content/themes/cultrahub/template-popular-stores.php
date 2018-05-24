@@ -79,7 +79,7 @@ if( !empty($banner_sliders) ){
 						$icon			  	  = get_field( 'icon', $val['culture_popular']->ID );
 					}
 			?>
-				<div class="sliderblock popular_store_block height_div">
+				<div class="sliderblock popular_store_block f24 rm height_div">
 					<div class="sliderImg2 popular_store_img hfull">
 						<img src="<?php echo $val['popular_image']['url'];?>" alt="" />
 					</div>
@@ -130,7 +130,7 @@ if( !empty($banner_sliders) ){
 			}
 			?>
 			<?php
-			if(!empty($quote)){
+			/*if(!empty($quote)){
 			?>
 			<div class="innerContainer mt70">
 				<div class="quote">
@@ -138,7 +138,7 @@ if( !empty($banner_sliders) ){
 				</div>
 			</div>
 			<?php
-			}
+			}*/
 			?>
 			<hr class="mt50 mb0">
 		</div>
