@@ -3903,6 +3903,9 @@ li:last-child .quote_block:before{display: none;}
     line-height: 30px;
     margin: 0 0 30px;
 }
+.quote_list .ul > li:nth-child(1) .quote_block .subheading2{color: #eb4034;}
+.quote_list .ul > li:nth-child(2) .quote_block .subheading2{color: #394998;}
+.quote_list .ul > li:nth-child(3) .quote_block .subheading2{color: #00a74f;}
 .quote_block p{text-align: inherit;}
 
 
@@ -4263,6 +4266,12 @@ li:last-child .quote_block:before{display: none;}
     padding: 50px 0 0 50px;
     text-align: left;
 }
+
+.shop_icon_list{
+    width: 810px;
+    margin: 0 auto;
+}
+.shop_icon_list .seller_block{padding: 0;}
 
 
 /*--------------------------------------ABOUT PAGE START--------------------------------------*/

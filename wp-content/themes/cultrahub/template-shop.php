@@ -52,7 +52,7 @@ $section_3_posts		= get_field( 'section_3_posts', $post->ID );
 						<?php
 						if(!empty($shop_section_1)){
 						?>
-                        <div class="seller_howitwork">
+                        <div class="seller_howitwork shop_icon_list">
                             <ul class="row ul">
 							<?php
 							foreach($shop_section_1 as $section1){
