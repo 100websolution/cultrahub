@@ -4275,6 +4275,14 @@ li:last-child .quote_block:before{display: none;}
 
 
 /*--------------------------------------ABOUT PAGE START--------------------------------------*/
+.abtBg{
+    font-size: 21px;
+    line-height: 44px;
+    color: #414042;
+    text-align: center;
+    background: #f9f9f9;
+}
+.abtBg p{text-align: inherit;}
 .connectingBlock{
     font-size: 18px;
     line-height: 34px;

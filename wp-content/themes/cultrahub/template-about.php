@@ -43,43 +43,48 @@ $quote							= get_field( 'quote', $post->ID );
                     </div>
                 </div>
                 <div class="heading center"><?php echo $aboutus_page_heading;?></div>
-                <div class="connectingBlock">
-				<?php
-				if(!empty($aboutus_page_section_1)){
-				?>
-                    <div class="connectingRight">
+            <?php
+            if(!empty($aboutus_page_section_1)){
+            ?>
+                <div class="innerContainer mt40">
+                    <div class="seller_tool_wrap">
                         <ul class="ul row">
-				<?php
-						foreach($aboutus_page_section_1 as $post1){
-				?>
-                            <li class="col50">
-                                <div class="aboutIconBox">
-                                    <div class="aiIcon">
-                                        <img src="<?php echo $post1['aboutus_page_section1_image']['url'];?>" alt="">
+                <?php
+                        foreach($aboutus_page_section_1 as $post1){
+                ?>
+                            <li class="col25">
+                                <div class="seller_block">
+                                    <div class="seller_icon"><img src="<?php echo $post1['aboutus_page_section1_image']['url'];?>" alt=""></div>
+                                    <div class="seller_text">
+                                        <h3 class="subheading2"><?php echo $post1['aboutus_page_section1_heading'];?></h3>
+                                        <?php /*<div class="aiText">
+                                            <p><?php echo $post1['aboutus_page_section1_description'];?></p>
+                                        </div>*/?>
                                     </div>
-                                    <div class="subheading2"><?php echo $post1['aboutus_page_section1_heading'];?></div>
-                                    <div class="aiText">
-                                        <p><?php echo $post1['aboutus_page_section1_description'];?></p>
-                                    </div>
-                                    <div class="clear"></div>
                                 </div>
                             </li>
-				<?php
-						}
-				?>
+                <?php
+                        }
+                ?>
                         </ul>
                     </div>
-				<?php
-					}
-				?>
-                    <div class="connectingLeft">
-                        <?php echo $aboutus_page_decription;?>
-                    </div>
-                    <div class="clear"></div>
                 </div>
+            <?php
+                }
+            ?>
             </div>
+		</div>
+	</div>
+    
+    <div class="section abtBg">
+		<div class="container">
+            <?php echo $aboutus_page_decription;?>
+		</div>
+	</div>
             
-            <div class="innerContainer mt80" id="team-section">
+	<div class="section">
+		<div class="container">
+            <div class="innerContainer mt50" id="team-section">
                 <div class="heading center"><?php echo $aboutus_section_2_heading;?></div>
                 <div class="heading_tag"><?php echo $aboutus_section_2_description;?></div>
 				<div class="teamList">
