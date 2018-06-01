@@ -89,9 +89,38 @@ $quote							= get_field( 'quote', $post->ID );
                     <div class="heading center"><?php echo $aboutus_section_2_heading;?></div>
                     <div class="heading_tag"><?php echo $aboutus_section_2_description;?></div>
                     <div class="teamList">
-                        <ul class="ul row">
+                        <div class="owl-carousel teamSlider">
                         <?php
                         query_posts('post_type=team&order=asc&orderby=menu_order');
+                        if (have_posts()) : while (have_posts()) : the_post();
+                            $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+                            $designation 	= get_field( 'team_member_designation', $post->ID );					
+                        ?>
+                            <div class="item">
+                                <div class="teamBox">
+                                    <div class="teamImg">
+                                        <a href="<?php the_permalink();?>"><img src="<?php echo $featured_image[0];?>" alt=""></a>
+                                    </div>
+                                    <div class="teamTeaxt">
+                                        <h2 class="subheading2"><?php the_title();?></h2>
+                                        <div><?php echo $designation;?></div>
+                                        <div class="color_dots">
+                                            <span class="green"></span>
+                                            <span class="yellow"></span>
+                                            <span class="red"></span>
+                                            <span class="blue"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                        endwhile; endif;
+                        wp_reset_query();
+                        ?>
+                        </div>
+                        <!--<ul class="ul row">-->
+                        <?php
+                        /*query_posts('post_type=team&order=asc&orderby=menu_order');
                         if (have_posts()) : while (have_posts()) : the_post();
                             $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
                             $designation 	= get_field( 'team_member_designation', $post->ID );					
@@ -115,9 +144,9 @@ $quote							= get_field( 'quote', $post->ID );
                             </li>
                         <?php
                         endwhile; endif;
-                        wp_reset_query();
+                        wp_reset_query();*/
                         ?>
-                        </ul>
+                        <!--</ul>-->
                     </div>
                 </div>
 
