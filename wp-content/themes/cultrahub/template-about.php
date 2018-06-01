@@ -84,41 +84,50 @@ $quote							= get_field( 'quote', $post->ID );
             
 	<div class="section">
 		<div class="container">
-            <div class="innerContainer mt50" id="team-section">
-                <div class="heading center"><?php echo $aboutus_section_2_heading;?></div>
-                <div class="heading_tag"><?php echo $aboutus_section_2_description;?></div>
-				<div class="teamList">
-                    <ul class="ul row">
-					<?php
-					query_posts('post_type=team&order=asc&orderby=menu_order');
-					if (have_posts()) : while (have_posts()) : the_post();
-						$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-						$designation 	= get_field( 'team_member_designation', $post->ID );					
-					?>
-                        <li class="col33">
-                            <div class="teamBox">
-                                <div class="teamImg">
-                                    <a href="<?php the_permalink();?>"><img src="<?php echo $featured_image[0];?>" alt=""></a>
-                                </div>
-                                <div class="teamTeaxt">
-                                    <h2 class="subheading2"><?php the_title();?></h2>
-                                    <div><?php echo $designation;?></div>
-                                    <div class="color_dots mt10">
-                                        <span class="green"></span>
-                                        <span class="yellow"></span>
-                                        <span class="red"></span>
-                                        <span class="blue"></span>
+            <div class="innerContainer mt50">
+                <div id="team-section">
+                    <div class="heading center"><?php echo $aboutus_section_2_heading;?></div>
+                    <div class="heading_tag"><?php echo $aboutus_section_2_description;?></div>
+                    <div class="teamList">
+                        <ul class="ul row">
+                        <?php
+                        query_posts('post_type=team&order=asc&orderby=menu_order');
+                        if (have_posts()) : while (have_posts()) : the_post();
+                            $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+                            $designation 	= get_field( 'team_member_designation', $post->ID );					
+                        ?>
+                            <li class="col33">
+                                <div class="teamBox">
+                                    <div class="teamImg">
+                                        <a href="<?php the_permalink();?>"><img src="<?php echo $featured_image[0];?>" alt=""></a>
+                                    </div>
+                                    <div class="teamTeaxt">
+                                        <h2 class="subheading2"><?php the_title();?></h2>
+                                        <div><?php echo $designation;?></div>
+                                        <div class="color_dots">
+                                            <span class="green"></span>
+                                            <span class="yellow"></span>
+                                            <span class="red"></span>
+                                            <span class="blue"></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    <?php
-					endwhile; endif;
-					wp_reset_query();
-					?>
-                    </ul>
+                            </li>
+                        <?php
+                        endwhile; endif;
+                        wp_reset_query();
+                        ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+
+                <div class="mt20">
+                    <div class="quote quoteSmall">
+                        <?php echo nl2br($quote);?>
+                        <div class="quoteAuthor">-  J Talyor. CEO Cultrahub.</div>
+                    </div>
+                </div>
+			</div>
             
             <div class="abtSection mt80">
                 <div class="abtImg"><img src="<?php echo $aboutus_page_section_3_image['url'];?>" alt="" /></div>
@@ -193,10 +202,6 @@ $quote							= get_field( 'quote', $post->ID );
                 <div class="abtImg"><img src="<?php echo $aboutus_page_section_5_image['url'];?>" alt="" /></div>
                 <?php echo $aboutus_page_section_5_description;?>
             </div>
-			
-			<div class="innerContainer mt80">
-				<div class="quote"><?php echo $quote;?></div>
-			</div>
 			<hr class="mt50 mb0">
 		</div>
 	</div>
