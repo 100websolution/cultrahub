@@ -191,7 +191,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
         <div class="section">
             <div class="container">
                 <h2 class="heading center">Featured Products</h2>
-                <div class="heading_tag"><?php echo nl2br( strip_tags($featured_product_short_description) );?></div>
+                <div class="heading_tag"><?php echo $featured_product_short_description; ?></div>
                 <div class="innerContainer">
                     <div class="owl-carousel owl4">
                 <?php			
