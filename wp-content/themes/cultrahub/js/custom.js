@@ -604,6 +604,38 @@ $(function () {
     $('.cultra_cat_wrap').each(function () {
         $(this).slotslider();
     });
+    
+    /*-------------------------------------CULTURE_BANNER-------------------------------------*/
+    $(".teamSlider").owlCarousel({
+        items: 3,
+    	loop: true,
+        autoplay: false,
+        autoplayHoverPause: true,
+		margin: 1,
+		dots: false,
+		nav: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive: {
+			320: {
+				items: 2
+			},
+			480: {
+				items: 2
+			},
+			600: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			992: {
+				items: 3
+			},
+			1600: {
+				items: 3
+			}
+		}
+    });
 
     /*-------------------------------------MODAL-------------------------------------*/
     $('[data-toggle="modal"]').on('click', function (e){
