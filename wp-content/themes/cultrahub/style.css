@@ -2111,6 +2111,8 @@ label.label_badge input:checked + span:before{
     line-height: 34px;
     font-family: 'RalewayRegular';
 }
+.noicon.quote{padding: 0;}
+.noicon.quote:before, .noicon.quote:after{display: none;}
 /*QUOTEs END*/
 
 
@@ -2422,7 +2424,7 @@ label.label_badge input:checked + span:before{
     float: none;
     width: auto;
     margin: 0 0 0 545px;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 45px;
 }
 .maintab .sliderIcon{
     text-align: center;
@@ -4283,6 +4285,11 @@ li:last-child .quote_block:before{display: none;}
 }
 .shop_icon_list .seller_block{padding: 0;}
 
+.odd.shopSection .shopBlock .shopImg{float: left;}
+.odd.shopSection .shopBlock .shopText{margin: 0 0 0 350px; padding: 50px 0 0 50px; text-align: left;}
+.odd.shopSection .shopBlock:nth-child(even) .shopImg{float: right;}
+.odd.shopSection .shopBlock:nth-child(even) .shopText{margin: 0 350px 0 0; padding: 50px 50px 0 0; text-align: right;}
+
 
 /*--------------------------------------ABOUT PAGE START--------------------------------------*/
 .abtBg{
@@ -4574,6 +4581,37 @@ li:last-child .quote_block:before{display: none;}
 .charity_icon_wrap .ul > li:first-child .seller_icon:before{display: none;}
 
 .gblist .learnText {min-height: 218px;}
+
+
+/*--------------------------------------404 PAGE START--------------------------------------*/
+.schlar_icon{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    float: left;
+}
+.schlar_icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 80px;
+    max-height: 80px;
+}
+.schlar_text{
+    padding: 60px 0 0 150px;
+    font-size: 18px;
+    line-height: 34px;
+}
+.schlar_block .subheading2{
+    font-family: 'RalewaySemiBold';
+    font-size: 20px;
+    line-height: 34px;
+    margin: 0;
+}
+
+.innerContainer2{width: 1025px; margin: 0 auto;}
 
 
 /*--------------------------------------404 PAGE START--------------------------------------*/

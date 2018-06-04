@@ -128,7 +128,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
                                     <div class="culture_box">
 									    <img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>">
                                     </div>
-                                    <div class="allCultureText"><?php the_title();?> Culture</div>
+                                    <div class="allCultureText"><?php the_title();?></div>
 								</a>
 							</div>
                         </div>
