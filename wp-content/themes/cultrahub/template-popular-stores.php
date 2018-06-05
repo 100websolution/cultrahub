@@ -140,7 +140,7 @@ if( !empty($banner_sliders) ){
 			<?php
 			}*/
 			?>
-			<hr class="mt50 mb0">
+			<hr class="mt60 mb0">
 		</div>
 	</div>
 	

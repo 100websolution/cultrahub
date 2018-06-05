@@ -82,9 +82,9 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 				?>
 							<li class="col25">
 								<div class="seller_block <?php echo $val_1['beaseller_step_color'];?>">
-								<?php if( !empty($val_1['image_section_1']) ){ ?>
+								<?php /*if( !empty($val_1['image_section_1']) ){ ?>
 									<span class="steps"><img src="<?php echo $val_1['image_section_1']['url'];?>" width="<?php echo $val_1['image_section_1']['width'];?>" alt="" /><em><?php echo $val_1['step_title_1'];?></em></span>
-								<?php } ?>
+								<?php }*/ ?>
 									<div class="seller_icon"><img src="<?php echo $val_1['icon_section_1']['url'];?>" width="<?php echo $val_1['icon_section_1']['width'];?>" alt="" /></div>
 									<div class="seller_text">
 										<h3 class="subheading2"><?php echo $val_1['title_section_1'];?></h3>

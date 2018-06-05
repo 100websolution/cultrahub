@@ -133,7 +133,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                             <?php
 							if( !empty($featured_personality_image) ){
 							?>
-								<div class="ytube_vdo">							
+								<div class="ytube_img">							
 									<img alt="" src="<?php echo $featured_personality_image['url'];?>">
 								</div>
 							<?php
@@ -537,7 +537,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 											<?php
 											if( !empty($val_psvc['cultr_image']) ){
 											?>
-												<div class="ytube_vdo <?php if(!empty($val_psvc['video_icon_color']))echo $val_psvc['video_icon_color'];else echo 'red';?>">
+												<div class="ytube_img <?php if(!empty($val_psvc['video_icon_color']))echo $val_psvc['video_icon_color'];else echo 'red';?>">
 													<img src="<?php echo $val_psvc['cultr_image']['url'];?>" />
 													<a href="#" class="play_vdo"></a>
 												</div>

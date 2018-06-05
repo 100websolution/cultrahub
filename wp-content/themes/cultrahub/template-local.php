@@ -256,18 +256,15 @@ $miscellaneous2 	= get_field( 'local_miscellaneous_2', $post->ID );
                             <div class="clear"></div>
                         </div>
                     </div>
-                </div>
                 
             <?php
 			if( !empty($quote) ){
 			?>
-				<hr class="mt50 mb50">
-				<div class="innerContainer">
-					<div class="quote"><?php echo $quote;?></div>
-				</div>
+					<div class="quote mt80"><?php echo $quote;?></div>
 			<?php
 			}
 			?>
+				</div>
                 <hr class="mt50 mb0">
             </div>
         </div>
