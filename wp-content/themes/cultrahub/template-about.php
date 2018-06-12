@@ -118,42 +118,13 @@ $quote							= get_field( 'quote', $post->ID );
                         wp_reset_query();
                         ?>
                         </div>
-                        <!--<ul class="ul row">-->
-                        <?php
-                        /*query_posts('post_type=team&order=asc&orderby=menu_order');
-                        if (have_posts()) : while (have_posts()) : the_post();
-                            $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-                            $designation 	= get_field( 'team_member_designation', $post->ID );					
-                        ?>
-                            <li class="col33">
-                                <div class="teamBox">
-                                    <div class="teamImg">
-                                        <a href="<?php the_permalink();?>"><img src="<?php echo $featured_image[0];?>" alt=""></a>
-                                    </div>
-                                    <div class="teamTeaxt">
-                                        <h2 class="subheading2"><?php the_title();?></h2>
-                                        <div><?php echo $designation;?></div>
-                                        <div class="color_dots">
-                                            <span class="green"></span>
-                                            <span class="yellow"></span>
-                                            <span class="red"></span>
-                                            <span class="blue"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        <?php
-                        endwhile; endif;
-                        wp_reset_query();*/
-                        ?>
-                        <!--</ul>-->
                     </div>
                 </div>
 
                 <div class="mt20">
                     <div class="quote quoteSmall">
                         <?php echo nl2br($quote);?>
-                        <div class="quoteAuthor">-  J Talyor. CEO Cultrahub.</div>
+                        <div class="quoteAuthor">-  J. Taylor, CEO Cultrahub.</div>
                     </div>
                 </div>
 			</div>
