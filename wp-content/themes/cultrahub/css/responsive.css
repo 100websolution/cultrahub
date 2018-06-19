@@ -55,7 +55,7 @@
 .sidebar-wrapper.sidebar-default{z-index: 6;}
 .sidebar-wrapper.sidebar-default, .sidebar-wrapper .sidebar-menu > li > ul{
     background: #111;
-	color: #fff;
+	color: #fff; 
 }
 .sidebar-wrapper .sidebar-scroller{right: 0;}
 .sidebar-wrapper .sidebar-menu li, .sidebar-wrapper .sidebar-menu li ul li{border-top-color: #222;}
@@ -203,7 +203,19 @@
 
 /*992px*/
 @media only screen and (max-width: 1260px) {
-    
+    .logo_cultralocal{left: -10px;}
+    .hright .signup_form_wrap{margin: 0 15px 0 0;}
+    .signup_form_wrap .subheading{padding: 0 0 0 30px;}
+    .topmenu ul > li{margin: 0 0 0 15px;}
+    .topmenu ul li a{padding-left: 35px;}
+    .abtBg br, .abtSection br, .store_body br, .heading_tag br{display: none;}
+    .abtText, .abtSection.odd .abtText{padding: 50px 0;}
+    .newsletter .subheading{font-size: 30px; line-height: 30px;}
+    .seller_block{padding: 0;}
+    .feature_aspect_wrap{padding: 30px 0;}
+    .feature_aspect_list{margin-bottom: -35px;}
+    .feature_aspect_list > li{margin-bottom: 35px;}
+    .feature_aspect_box{min-height: 122px;}
 }
 
 /*768px*/
