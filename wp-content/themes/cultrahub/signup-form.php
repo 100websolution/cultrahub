@@ -94,7 +94,7 @@
 						</li>
 						<li class="col100">
 							<label>What’s Your Business?</label>
-							<input type="text" class="required" id="business" name="business" placeholder="Write the name of your business">
+							<input type="text" class="required" id="business" name="business" value="" placeholder="Write the name of your business">
 							<div class="helptext"><a href="#">Are you a producer? <i class="fa fa-question"></i></a></div>
 						</li>
 						<li class="col50">

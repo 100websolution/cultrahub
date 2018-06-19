@@ -399,7 +399,7 @@ $cultrahub_genres_decription= get_field( 'cultrahub_genres_decription', $post->I
 	$share_yor_thought_description 		= get_field( 'share_yor_thought_description', $post->ID );
 	$share_yor_thought_short_description= get_field( 'share_yor_thought_short_description', $post->ID );
 	?>
-	<div class="section review_form">
+	<div class="section review_form"><a id="share_thought"></a>
 		<div class="container">
 			<div class="innerContainer">
 				<div class="sliderblockWrap odd rev">

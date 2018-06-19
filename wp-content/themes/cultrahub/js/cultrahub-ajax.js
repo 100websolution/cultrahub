@@ -211,9 +211,8 @@ jQuery(document).ready(function($){
 	
 	//Select Culture
 	var culture_array = [];
-	$('.col11').click(function(e){
+	$('.col10').click(function(e){
 		var current_culture = $(this).attr("id");
-		//alert(current_culture);
 		if($('#check_'+current_culture).prop('checked')) {
 			if (jQuery.inArray(current_culture, culture_array)=='-1') {
 				culture_array.push(current_culture);

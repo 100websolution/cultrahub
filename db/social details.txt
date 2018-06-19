@@ -1,6 +1,34 @@
+Twitter:::
+==========
+Login details:
+cultrahub.com@gmail.com
+Pass : Admin@123
+
+Consumer Key (API Key) 		: jjBeV7N4T8dUrQMX4Ji21iNui
+Consumer Secret (API Secret) 	: gLZ2Rse8D0sasyPHBhLkRv05SrdCl8OQh32ymdFPyljXAvlgn2
+
+Access Token 			: 1008300729381994496-gBpBTx7LT7kBYAlKQCbkn2601PWD7s
+Access Token Secret		: E7RP970poVNwiJecQukp1usDDh2cKRinQNCJDOAPnozz4
+
+
+
+
+
+
+USED FOR LOGIN::
+================
+Twitter:
+========
+cultrahub@gmail.com
+pwd : Admin@123
+
+
+
 Gmail:
+======
 cultrahub@gmail.com
 pwd : Admin@123456
+
 
 Facebook:
 cultrahub@gmail.com
@@ -18,6 +46,7 @@ pwd : Cultrahub@123456
 
 CLIENT ID : 83cd596afb174dbba450801c9f229812
 Secret : b2dc42da06d544ab8600bbb1a0df26c1
+
 
 
 //////////////
