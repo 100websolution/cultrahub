@@ -33,7 +33,7 @@
 							<!--<div class="helptext"><img src="<?php echo get_template_directory_uri();?>/images/icon_unavailable.png" alt="Unavailable" /></div>-->
 							<div class="helptext uservalidate"></div>
 						</li>
-						<li class="col50">
+						<?php /*<li class="col50">
 							<label>Birthdate</label>
 							<div class="dob">
 								<select class="required" id="month" name="month">
@@ -72,10 +72,14 @@
 								?>
 								</select>
 							</div>
-						</li>
+						</li>*/ ?>
 						<li class="col50">
 							<label>E-mail Address</label>
 							<input type="email" class="required" id="email_address" name="email_address" placeholder="Write your e-mail address">
+						</li>
+						<li class="col50">
+							<label>Confirm E-mail Address</label>
+							<input type="email" class="required" id="confirm_email_address" name="confirm_email_address" placeholder="Write your confirm e-mail address">
 						</li>
 						<li class="col50">						
 							<label>Gender</label>
@@ -94,8 +98,8 @@
 						</li>
 						<li class="col100">
 							<label>What’s Your Business?</label>
-							<input type="text" class="required" id="business" name="business" value="" placeholder="Write the name of your business">
-							<div class="helptext"><a href="#">Are you a producer? <i class="fa fa-question"></i></a></div>
+							<input type="text" class="" id="business" name="business" value="" placeholder="Write the name of your business">
+							<div class="helptext"><!--<a href="#">Are you a producer?--> <i class="fa fa-question"></i></a></div>
 						</li>
 						<li class="col50">
 							<label>Password</label>

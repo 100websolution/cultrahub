@@ -126,6 +126,9 @@ jQuery(document).ready(function($){
 				email_address: {
 					validate_email: true
 				},
+				confirm_email_address: {
+					equalTo: "#email_address"
+				},
 				gender_selected: {
 					validate_gender: true
 				},
@@ -152,9 +155,9 @@ jQuery(document).ready(function($){
 			var firstname 		 = $('#firstname').val();
 			var lastname 		 = $('#lastname').val();
 			var username 		 = $('#username').val();
-			var month 		 	 = $('#month').val();
-			var day 		 	 = $('#day').val();
-			var year 		 	 = $('#year').val();
+			//var month 		 	 = $('#month').val();
+			//var day 		 	 = $('#day').val();
+			//var year 		 	 = $('#year').val();
 			/*var producer		 = '';
 			if($('#producer').prop('checked')) {
 				producer		 = $('#producer').val();
@@ -173,7 +176,8 @@ jQuery(document).ready(function($){
 			} else {
 				get_notification = '';
 			}
-			var elem = { firstname:firstname, lastname:lastname, username:username, month:month, day:day, year:year, email_address:email_address, gender:gender, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
+			//var elem = { firstname:firstname, lastname:lastname, username:username, month:month, day:day, year:year, email_address:email_address, gender:gender, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
+			var elem = { firstname:firstname, lastname:lastname, username:username, email_address:email_address, gender:gender, business:business, password:password, culture_selected:culture_selected, get_notification:get_notification };
 			
 			jQuery.ajax({
 				url : cultrahub_ajax_object.ajax_url,

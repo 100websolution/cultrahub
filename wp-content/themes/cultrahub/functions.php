@@ -326,9 +326,9 @@ function cultrahub_signup(){
 		$firstname 			= isset($_POST['post_datas']['firstname'])?$_POST['post_datas']['firstname']:'';
 		$lastname 			= isset($_POST['post_datas']['lastname'])?$_POST['post_datas']['lastname']:'';
 		$username 			= isset($_POST['post_datas']['username'])?$_POST['post_datas']['username']:'';
-		$month				= isset($_POST['post_datas']['month'])?$_POST['post_datas']['month']:'';
-		$day				= isset($_POST['post_datas']['day'])?$_POST['post_datas']['day']:'';
-		$year				= isset($_POST['post_datas']['year'])?$_POST['post_datas']['year']:'';
+		//$month				= isset($_POST['post_datas']['month'])?$_POST['post_datas']['month']:'';
+		//$day				= isset($_POST['post_datas']['day'])?$_POST['post_datas']['day']:'';
+		//$year				= isset($_POST['post_datas']['year'])?$_POST['post_datas']['year']:'';
 		$email_address		= isset($_POST['post_datas']['email_address'])?$_POST['post_datas']['email_address']:'';
 		$gender				= isset($_POST['post_datas']['gender'])?$_POST['post_datas']['gender']:'';
 		$business 			= isset($_POST['post_datas']['business'])?$_POST['post_datas']['business']:'';		
@@ -367,10 +367,10 @@ function cultrahub_signup(){
 				}
 				update_user_meta( $inserted_user_id, 'first_name', $firstname );
 				update_user_meta( $inserted_user_id, 'last_name', $lastname );
-				update_user_meta( $inserted_user_id, 'month', $month );
-				update_user_meta( $inserted_user_id, 'day', $day );
-				update_user_meta( $inserted_user_id, 'year', $year );
-				update_user_meta( $inserted_user_id, 'birthdate', $year.$month.$day );
+				//update_user_meta( $inserted_user_id, 'month', $month );
+				//update_user_meta( $inserted_user_id, 'day', $day );
+				//update_user_meta( $inserted_user_id, 'year', $year );
+				//update_user_meta( $inserted_user_id, 'birthdate', $year.$month.$day );
 				update_user_meta( $inserted_user_id, 'gender', $gender );
 				update_user_meta( $inserted_user_id, 'user_business', $business );
 				update_user_meta( $inserted_user_id, 'user_notification', $get_notification );
@@ -1606,7 +1606,7 @@ function export_csv() {
 			//echo '<pre>'; print_r($users); die;
             
 			//for first row:
-			echo '"First Name","Last Name","User Name","Birthdate","E-mail Address","Gender","What is Your Business?","Registration Date"' . "\r\n";
+			echo '"First Name","Last Name","User Name","E-mail Address","Gender","What is Your Business?","Registration Date"' . "\r\n";
             foreach ( $users as $user ) {
                 $meta = get_user_meta($user->ID);
 				//echo '<pre>'; print_r($meta); die;
@@ -1616,12 +1616,12 @@ function export_csv() {
                 $first_name 		= ( isset($meta['first_name'][0]) && $meta['first_name'][0] != '' ) ? $meta['first_name'][0] : '' ;
                 $last_name  		= ( isset($meta['last_name'][0]) && $meta['last_name'][0] != '' ) ? $meta['last_name'][0] : '' ;
                 $user_name  		= ( isset($meta['nickname'][0]) && $meta['nickname'][0] != '' ) ? $meta['nickname'][0] : '' ;
-                $birthdate  		= $meta['day'][0].'-'.$meta['month'][0].'-'.$meta['year'][0];
+                //$birthdate  		= $meta['day'][0].'-'.$meta['month'][0].'-'.$meta['year'][0];
                 $gender  			= ( isset($meta['gender'][0]) && $meta['gender'][0] != '' ) ? $meta['gender'][0] : '' ;
                 $business  			= ( isset($meta['user_business'][0]) && $meta['user_business'][0] != '' ) ? $meta['user_business'][0] : '' ;
 				$registration_date  = ( isset($meta['user_registration_date'][0]) && $meta['user_registration_date'][0] != '' ) ? str_replace('/','-',$meta['user_registration_date'][0]) : '' ;
 				
-                echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$birthdate.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
+                echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
             }
             exit();
         }
