@@ -6,7 +6,6 @@ get_header('culture');
 
 //Banner Slider
 $help_contact_banner_image			= get_field( 'help_contact_banner_image', $post->ID );
-$help_contact_banner_description	= get_field( 'help_contact_banner_description', $post->ID );
 //Heading and details
 $contact_methods					= get_field( 'contact_methods', $post->ID );
 $quote								= get_field( 'quote', $post->ID );
@@ -27,15 +26,6 @@ $quote								= get_field( 'quote', $post->ID );
 					<span class="b_yellow"></span>
 				</div>
 				<img src="<?php echo $help_contact_banner_image['url'];?>" alt="" />
-			<?php
-			if($help_contact_banner_description != ''){
-			?>
-				<div class="seller_banner_text">
-					<?php echo $help_contact_banner_description;?>
-				</div>
-			<?php
-			}
-			?>
 				<div class="border_line">
 					<span class="b_green"></span>
 					<span class="b_blue"></span>

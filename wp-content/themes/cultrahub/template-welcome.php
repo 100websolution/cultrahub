@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Trending Now
+Template Name: Welcome
 */
 //get_header('culture');
 if( isset($_GET) && $_GET['id'] != '' ){
@@ -78,7 +78,7 @@ if( isset($_GET) && $_GET['id'] != '' ){
 							<p style="margin:0 -100px;padding: 0 0 35px;"><img src="<?php echo get_template_directory_uri();?>/template_images/laptop_banner.png" alt="" width="100%" style="display: block;margin:0;" /></p>
 							
 							<p style="margin:0;padding: 0 0 15px;"><img src="<?php echo get_template_directory_uri();?>/template_images/learn-sell-shop.png" alt="" width="400" style="display: block;margin:0 auto;" /></p>
-							<p style="margin:0;padding: 0 0 30px;">The best place to start exploring our platform is from the "About us" page.  Here you\'ll find more details on our great team, and the wonderful work we aim to achieve. If you need any help, just let us know, <br>we\'ll be happy to assist!</p>
+							<p style="margin:0;padding: 0 0 30px;">The best place to start exploring our platform is from the "About us" page.  Here you'll find more details on our great team, and the wonderful work we aim to achieve. If you need any help, just let us know, <br>we'll be happy to assist!</p>
 							<p style="margin:0;padding: 0;"><a href="<?php echo get_permalink( 3054 );?>" style="text-decoration: none;color: #fff;line-height:30px;font-weight: bold;background: #ec4034;display: inline-block;padding: 0 30px;">Take a Look Around</a></p>
 						</td>
 					</tr>
@@ -131,7 +131,7 @@ if( isset($_GET) && $_GET['id'] != '' ){
 					<tr>
 						<td style="padding: 40px 0 0;font-size: 12px;line-height: 18px;">
 							<p style="margin:0;padding: 0 0 12px;font-size: 24px;line-height: 34px;font-weight: bold;">What Happens Now?</p>
-							<p style="margin:0;padding: 0;">We will be going live very soon! In the meantime, keep an eye on your inbox, we'll keep you updated on our progress. If you would like to share your thoughts, comments or recommendations for our site, please get in touch <a href="<?php echo get_template_directory_uri();?>#share_thought" style="text-decoration: none;color: #1755ca;">here</a> our team will be delighted to hear from you.</p>
+							<p style="margin:0;padding: 0;">We will be going live very soon! In the meantime, keep an eye on your inbox, we'll keep you updated on our progress. If you would like to share your thoughts, comments or recommendations for our site, please get in touch <a href="<?php echo site_url();?>#share_thought" style="text-decoration: none;color: #1755ca;">here</a> our team will be delighted to hear from you.</p>
 						</td>
 					</tr>
 					

@@ -1,3 +1,20 @@
+Gmail:
+======
+cultrahub@gmail.com
+pwd : Admin@123456
+
+G+ Login details:
+=================
+client ID : 839278883740-tf9mlnmqdhh44idj5mgkc6nmbn9gvs91.apps.googleusercontent.com
+client secret : 7Diw5qjKtJM7caPT5D0lgMlo
+
+
+
+
+
+
+
+
 Twitter:::
 ==========
 Login details:
@@ -24,10 +41,11 @@ pwd : Admin@123
 
 
 
-Gmail:
-======
-cultrahub@gmail.com
-pwd : Admin@123456
+
+
+
+
+
 
 
 Facebook:

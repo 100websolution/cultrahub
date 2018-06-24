@@ -501,7 +501,7 @@ function cultrahub_signup(){
 											<tr>
 												<td style="padding: 40px 0 0;font-size: 12px;line-height: 18px;">
 													<p style="margin:0;padding: 0 0 12px;font-size: 24px;line-height: 34px;font-weight: bold;">What Happens Now?</p>
-													<p style="margin:0;padding: 0;">We will be going live very soon! In the meantime, keep an eye on your inbox, we\'ll keep you updated on our progress. If you would like to share your thoughts, comments or recommendations for our site, please get in touch <a href="'.get_template_directory_uri().'#share_thought" style="text-decoration: none;color: #1755ca;">here</a> our team will be delighted to hear from you.</p>
+													<p style="margin:0;padding: 0;">We will be going live very soon! In the meantime, keep an eye on your inbox, we\'ll keep you updated on our progress. If you would like to share your thoughts, comments or recommendations for our site, please get in touch <a href="'.site_url().'#share_thought" style="text-decoration: none;color: #1755ca;">here</a> our team will be delighted to hear from you.</p>
 												</td>
 											</tr>
 											
@@ -1621,7 +1621,8 @@ function export_csv() {
                 $business  			= ( isset($meta['user_business'][0]) && $meta['user_business'][0] != '' ) ? $meta['user_business'][0] : '' ;
 				$registration_date  = ( isset($meta['user_registration_date'][0]) && $meta['user_registration_date'][0] != '' ) ? str_replace('/','-',$meta['user_registration_date'][0]) : '' ;
 				
-                echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
+                //echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$birthdate.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
+				echo '"'.$first_name.'","'.$last_name.'","'.$user_name.'","'.$email.'","'.$gender.'","'.$business.'","'.$registration_date.'"' . "\r\n";
             }
             exit();
         }
