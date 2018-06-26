@@ -239,7 +239,7 @@ $(function () {
 				items: 3
 			},
 			768: {
-				items: 4
+				items: 3
 			},
 			992: {
 				items: 4
@@ -270,7 +270,7 @@ $(function () {
 				items: 6
 			},
 			768: {
-				items: 8
+				items: 6
 			},
 			992: {
 				items: 10
@@ -465,7 +465,7 @@ $(function () {
 				items: 3
 			},
 			768: {
-				items: 4
+				items: 3
 			},
 			992: {
 				items: 4
@@ -626,7 +626,8 @@ $(function () {
 				items: 2
 			},
 			768: {
-				items: 3
+				items: 3,
+                margin: 30
 			},
 			992: {
 				items: 3
