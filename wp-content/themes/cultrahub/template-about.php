@@ -142,7 +142,7 @@ $quote							= get_field( 'quote', $post->ID );
 				<div class="heading center"><?php echo $aboutus_page_section_4_heading;?></div>
                 <div class="coreFour">
                     <div class="coreFourImg">
-                        <img src="<?php echo get_template_directory_uri();?>/images/coreFourArrow.png" alt="">
+                        <img src="<?php echo get_template_directory_uri();?>/images/coreFourArrow.png" alt="" class="coreFourArrow">
                         <img src="<?php echo get_template_directory_uri();?>/images/coreFour.png" alt="">
                     </div>
 					<ul class="ul row">

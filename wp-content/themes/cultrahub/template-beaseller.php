@@ -110,7 +110,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	<?php
 	if( !empty($beaseller_description_2) ){
 	?>
-	<div class="section">
+	<div class="section besellerblocks">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="sliderblockWrap rev">

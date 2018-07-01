@@ -48,7 +48,7 @@ if( !empty($banner_sliders) ){
 <?php
 }
 ?>
-	<div class="section">
+	<div class="section trendinblocks">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="">

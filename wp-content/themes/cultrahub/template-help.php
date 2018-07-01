@@ -52,7 +52,7 @@ $quote								= get_field( 'quote', $post->ID );
                 if( !empty($contact_methods) ){
                 ?>
                     <div class="">
-                        <ul class="row ul iconList">
+                        <ul class="row ul iconList contactIconList">
                 <?php
                         foreach( $contact_methods as $key_cm => $val_cm ){
                 ?>

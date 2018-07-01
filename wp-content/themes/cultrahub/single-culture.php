@@ -281,25 +281,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                 }
                 if( !empty($inner_cultures_mcatilands) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_mcatilands as $val_ic){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_ic['mcatilands_culture_image']['sizes']['cultrahub-culture-inner-mcatilands'];?>" alt="<?php echo $val_ic['mcatilands_culture_image']['title'];?>" width="<?php echo $val_ic['mcatilands_culture_image']['sizes']['cultrahub-culture-inner-mcatilands-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_mcatilands as $val_ic){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_ic['mcatilands_culture_image']['sizes']['cultrahub-culture-inner-mcatilands'];?>" alt="<?php echo $val_ic['mcatilands_culture_image']['title'];?>" width="<?php echo $val_ic['mcatilands_culture_image']['sizes']['cultrahub-culture-inner-mcatilands-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['mcatilands_culture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['mcatilands_culture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>
@@ -325,25 +327,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 				<?php
                 if( !empty($inner_cultures_christianity) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_christianity as $val_ic){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_ic['christianity_culture_image']['sizes']['cultrahub-culture-inner-christianity'];?>" alt="<?php echo $val_ic['christianity_culture_image']['title'];?>" width="<?php echo $val_ic['christianity_culture_image']['sizes']['cultrahub-culture-inner-christianity-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_christianity as $val_ic){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_ic['christianity_culture_image']['sizes']['cultrahub-culture-inner-christianity'];?>" alt="<?php echo $val_ic['christianity_culture_image']['title'];?>" width="<?php echo $val_ic['christianity_culture_image']['sizes']['cultrahub-culture-inner-christianity-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['christianity_culture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['christianity_culture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>		
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>		
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>
@@ -365,25 +369,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                 }
                 if( !empty($inner_cultures_school) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_school as $val_ic){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_ic['school_culture_image']['sizes']['cultrahub-culture-inner-school'];?>" alt="<?php echo $val_ic['school_culture_image']['title'];?>" width="<?php echo $val_ic['school_culture_image']['sizes']['cultrahub-culture-inner-school-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_school as $val_ic){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_ic['school_culture_image']['sizes']['cultrahub-culture-inner-school'];?>" alt="<?php echo $val_ic['school_culture_image']['title'];?>" width="<?php echo $val_ic['school_culture_image']['sizes']['cultrahub-culture-inner-school-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['school_culture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['school_culture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>
@@ -406,25 +412,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                 }
                 if( !empty($inner_cultures_islamic) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_islamic as $val_ic){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_ic['islamic_culture_image']['title'];?>" width="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_islamic as $val_ic){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_ic['islamic_culture_image']['title'];?>" width="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['islamic_culture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['islamic_culture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>
@@ -447,25 +455,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                 }
                 if( !empty($inner_cultures_latin) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_latin as $val_lc){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_lc['latinculture_image']['title'];?>" width="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_latin as $val_lc){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_lc['latinculture_image']['title'];?>" width="<?php echo $val_lc['latinculture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_lc['latinculture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_lc['latinculture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>
@@ -488,25 +498,27 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
                 }
                 if( !empty($inner_cultures_judaism) ){
                 ?>
-                    <ul class="row ul">
-                <?php
-                    foreach($inner_cultures_judaism as $val_ic){
-                ?>
-                        <li class="col20">
-                            <div class="product_block">
-                                <div class="product_img square_block">
-                                    <img src="<?php echo $val_ic['judaism_culture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_ic['judaism_culture_image']['title'];?>" width="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
-                                    <a href="#" class="expand_icon"></a>
+                    <div class="extra_pro_list">
+                        <ul class="row ul">
+                    <?php
+                        foreach($inner_cultures_judaism as $val_ic){
+                    ?>
+                            <li class="col20">
+                                <div class="product_block">
+                                    <div class="product_img square_block">
+                                        <img src="<?php echo $val_ic['judaism_culture_image']['sizes']['cultrahub-culture-inner-islamic'];?>" alt="<?php echo $val_ic['judaism_culture_image']['title'];?>" width="<?php echo $val_ic['islamic_culture_image']['sizes']['cultrahub-culture-inner-islamic-width'];?>" />
+                                        <a href="#" class="expand_icon"></a>
+                                    </div>
+                                    <div class="product_text">
+                                        <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['judaism_culture_title'];?></a></h3>
+                                    </div>
                                 </div>
-                                <div class="product_text">
-                                    <h3 class="product_title"><a href="javascript:void(0);"><?php echo $val_ic['judaism_culture_title'];?></a></h3>
-                                </div>
-                            </div>
-                        </li>
-                <?php
-                    }
-                ?>
-                    </ul>
+                            </li>
+                    <?php
+                        }
+                    ?>
+                        </ul>
+                    </div>
                 <?php
                 }
                 ?>

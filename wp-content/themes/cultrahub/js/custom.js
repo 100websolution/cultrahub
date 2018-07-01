@@ -230,13 +230,13 @@ $(function () {
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		responsive: {
 			320: {
-				items: 2
+				items: 1
 			},
 			480: {
-				items: 2
+				items: 1
 			},
 			600: {
-				items: 3
+				items: 2
 			},
 			768: {
 				items: 3
@@ -267,7 +267,7 @@ $(function () {
 				items: 3
 			},
 			600: {
-				items: 6
+				items: 5
 			},
 			768: {
 				items: 6
@@ -398,7 +398,7 @@ $(function () {
 				items: 2
 			},
 			600: {
-				items: 3
+				items: 2
 			},
 			768: {
 				items: 3
@@ -462,7 +462,7 @@ $(function () {
 				items: 2
 			},
 			600: {
-				items: 3
+				items: 2
 			},
 			768: {
 				items: 3
@@ -557,16 +557,20 @@ $(function () {
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		responsive: {
 			320: {
-				items: 1
+				items: 1,
+                stagePadding: 80
 			},
 			480: {
-				items: 1
+				items: 1,
+                stagePadding: 80
 			},
 			600: {
-				items: 1
+				items: 1,
+                stagePadding: 80
 			},
 			768: {
-				items: 1
+				items: 1,
+                stagePadding: 80
 			},
 			992: {
 				items: 1
@@ -617,13 +621,16 @@ $(function () {
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		responsive: {
 			320: {
-				items: 2
+				items: 2,
+                margin: 30
 			},
 			480: {
-				items: 2
+				items: 2,
+                margin: 30
 			},
 			600: {
-				items: 2
+				items: 2,
+                margin: 30
 			},
 			768: {
 				items: 3,
