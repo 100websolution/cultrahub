@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after
  *
  * @package Cultrahub
- */
+ */ 
 ?>
 <footer>
 	<div class="border_line">
