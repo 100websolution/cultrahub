@@ -413,12 +413,12 @@
     .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
     .homeBannerHeading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
     .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
-    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock{font-size: 16px; line-height: 24px; letter-spacing: 0;}
-    .heading{padding-bottom: 15px;}
+    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav{font-size: 16px; line-height: 24px; letter-spacing: 0;}
+    .heading, .sliderblock .heading{padding-bottom: 15px;}
     .ls2{letter-spacing: 0;}
     .allCulture{padding: 0;}
     .section{padding: 40px 0;}
-    .homeBanner, .seller_section{padding: 0 0 40px;}
+    .homeBanner, .seller_section, .review_form{padding: 0 0 40px;}
     .borderSection, .maintab{padding: 40px 0 0;}
     hr.mb70.mt70{margin: 40px 0;}
     hr.mb0.mt70{margin: 40px 0 0;}
@@ -427,6 +427,7 @@
     .genre_block .subheading2{margin-top: 10px;}
     .maintab .sliderblockWrap.odd .sliderblock .btn, .sliderblock .btn{margin-top: 20px;}
     .heading_tag{margin-bottom: 20px;}
+    .mood_list label, .mood_list{margin-bottom: 0;}
     .allCulture:before{top: -40px;}
     .seller_section .sliderImgBox{bottom: -40px;}
     .maintab .sliderIcon{height: auto;}
@@ -436,6 +437,11 @@
     a.mail.btn:hover{background-position: -50px -6px;}
     .btnGroup a, .btnGroup button, .btnGroup [type="submit"], .btnGroup [type="reset"]{margin-left: 10px;}
     .logo_cultralocal{left: auto; right: 0; top: -80px;}
+    #share_thought{display: block;}
+    footer .logo{width: 200px; padding: 30px 0;}
+    .fnav li{margin: 0 0 10px;}
+    footer .social{margin: 20px 0 30px;}
+    .copyright{padding: 30px 0;}
 }
 
 /*480px*/
