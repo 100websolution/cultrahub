@@ -3988,7 +3988,7 @@ li:last-child .quote_block:before{display: none;}
     background: no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
-    padding: 60px;
+    padding: 60px 15px;
     text-align: center;
 }
 .social_block .heading{color: #fff; margin-bottom: 50px;}

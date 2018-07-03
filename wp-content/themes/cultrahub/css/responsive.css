@@ -233,12 +233,13 @@
     .review_form .sliderblock .heading img{left: 0;}
     .fnav{font-size: 18px;}
     .fnav li{padding: 0 10px;}
-    .owl-carousel{padding: 0 50px;}
-    .smallImg.sliderblockWrap .sliderImg2 .owl-carousel, .padding_banner.owl-carousel, .sliderblock .sliderImgText .owl-carousel{padding: 0;}
-    .owl-theme .owl-controls .owl-buttons div.owl-prev, .owl-carousel .owl-nav .owl-prev{left: 0;}
-    .owl-theme .owl-controls .owl-buttons div.owl-next, .owl-carousel .owl-nav .owl-next{right: 0;}
-    .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-prev, .smallImg .sliderblock .owl-carousel .owl-nav .owl-prev, .padding_banner .owl-controls .owl-buttons div.owl-prev, .padding_banner.owl-carousel .owl-nav .owl-prev, .padding_banner:hover .owl-controls .owl-buttons div.owl-prev, .padding_banner.owl-carousel:hover .owl-nav .owl-prev{left: 0;}
-    .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-next, .smallImg .sliderblock .owl-carousel .owl-nav .owl-next, .padding_banner .owl-controls .owl-buttons div.owl-next, .padding_banner.owl-carousel .owl-nav .owl-next, .padding_banner:hover .owl-controls .owl-buttons div.owl-next, .padding_banner.owl-carousel:hover .owl-nav .owl-next{right: 0;}
+    .owl-carousel{padding: 0 30px;}
+    .smallImg.sliderblockWrap .sliderImg2 .owl-carousel, .padding_banner.owl-carousel, .sliderblock .sliderImgText .owl-carousel, #allCulture{padding: 0;}
+    .owl-theme .owl-controls .owl-buttons div.owl-prev, .owl-carousel .owl-nav .owl-prev, .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-prev, .smallImg .sliderblock .owl-carousel .owl-nav .owl-prev, .padding_banner .owl-controls .owl-buttons div.owl-prev, .padding_banner.owl-carousel .owl-nav .owl-prev, .padding_banner:hover .owl-controls .owl-buttons div.owl-prev, .padding_banner.owl-carousel:hover .owl-nav .owl-prev{left: -15px;}
+    .owl-theme .owl-controls .owl-buttons div.owl-next, .owl-carousel .owl-nav .owl-next, .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-next, .smallImg .sliderblock .owl-carousel .owl-nav .owl-next, .padding_banner .owl-controls .owl-buttons div.owl-next, .padding_banner.owl-carousel .owl-nav .owl-next, .padding_banner:hover .owl-controls .owl-buttons div.owl-next, .padding_banner.owl-carousel:hover .owl-nav .owl-next{right: -15px;}
+    .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-prev, .smallImg .sliderblock .owl-carousel .owl-nav .owl-prev{left: 0;}
+    .smallImg .sliderblock .owl-theme .owl-controls .owl-buttons div.owl-next, .smallImg .sliderblock .owl-carousel .owl-nav .owl-next{right: 0;}
+    
     .teamList:after{margin: 0 20px 0 0;}
     .teamList:before{margin: 0 0 0 20px;}
     .sliderblockWrap .popular_store_img.hfull, .sliderblockWrap .popular_store_text.hfull{height: auto !important;}
@@ -277,6 +278,7 @@
 @media only screen and (max-width: 991px) {
     .homeBannerHeading{font-size: 30px; line-height: 40px;}
     .homeBannerHeading span{font-size: inherit;}
+    .borderSection:after{top: -26px;}
     .maintab .sliderImg{float: none; margin: 0 auto;}
     .maintab .sliderText{margin: -40px 0 0; padding: 0; text-align: center;}
     .maintab .sliderblock .subheading2{min-height: inherit; margin-bottom: 20px;}
@@ -288,8 +290,8 @@
     .sliderblockWrap.odd.rev .heading:before{left: 0; right: auto;}
     .smallImg.sliderblockWrap .sliderImg2, .smallImg.sliderblockWrap .sliderblock:nth-child(even) .sliderImg2, .sliderblockWrap.odd .sliderImg2, .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2{width: 450px; padding: 0; margin: 0 auto 20px; float: none;}
     .smallImg.sliderblockWrap .sliderText2, .smallImg.sliderblockWrap .sliderblock:nth-child(even) .sliderText2{width: 100%; float: none; padding: 0; text-align: left;}
-    .sliderblockWrap.odd.rev .sliderText2 .bullet > li{padding: 3px 0 0 35px;}
-    .sliderblockWrap.odd.rev .sliderText2 .bullet > li:before{left: 0; right: auto;}
+    .sliderblockWrap.odd.rev .sliderText2 .bullet > li{padding: 0 0 0 35px;}
+    .sliderblockWrap.odd.rev .sliderText2 .bullet > li:before{top: 3px; left: 0; right: auto;}
     .logo_cultralocal{top: -90px;}
     .mobSliderWrap .hfull{height: auto !important;}
     .review_form .sliderblockWrap .sliderText2, .review_form .sliderblockWrap.odd .sliderImg2{width: 100%; float: none; padding: 0;}
@@ -366,11 +368,12 @@
 
 /*600px*/
 @media only screen and (max-width: 767px) {
+    .borderSection:after{top: -18px;}
     .allCultureText{bottom: 0;}
     .sliderblockWrap .sliderImg2, .sliderblockWrap.odd .sliderImg2, .sliderblockWrap .sliderText2, .sliderblockWrap.odd .sliderText2, .seller_fees_head{width: 100%; float: none; padding: 0; max-width: 100%; text-align: left;}
     .sliderblockWrap .sliderImg2, .sliderblockWrap.odd .sliderImg2, .learnImg{margin: 0 auto 20px; text-align: center;}
     .sliderblockWrap .sliderImg2 form, .sliderblockWrap.odd .sliderImg2 form{text-align: left;}
-    .learnImg{width: 470px;}
+    .learnImg{width: 470px; max-width: 100%;}
     .learnList > .ul > li{width: 100%;}
     .learnBox, .learnText{min-height: inherit;}
     .seller_tool_wrap .ul > li, .seller_howitwork .ul > li{width: 100%;}
@@ -393,8 +396,7 @@
     .jobLeft, .jobRight{float: none; width: 100%; padding: 0;}
     .communityBox .cmntyIcon, .odd.communityList .communityBox:nth-child(even) .cmntyIcon, .communityBox:nth-child(even) .cmntyIcon, .odd.communityList .communityBox .cmntyIcon{float: none; padding: 0; margin: 0 auto 20px;}
     .cmntyText, .odd.communityList .communityBox:nth-child(even) .cmntyText, .communityBox:nth-child(even) .cmntyText, .odd.communityList .communityBox .cmntyText{margin: 0; padding: 0; border: none; text-align: left;}
-    .contact_form{text-align: left;}
-    .social_block{padding: 60px 20px;}
+    .contact_form{text-align: left; padding: 40px 15px;}
     .contactIconList > li{width: 100%;}
     .contactIconList .iconBlock:before, .contactIconList .iconBlock:after{display: none;}
     .contactIconList .contact_info{min-height: inherit;}
@@ -404,21 +406,98 @@
     .opened.modal{padding-right: 0 !important;}
     .modalBox{max-width: 90%; padding: 30px;}
     .heading2{margin-right: 0;}
-    .heading2 img{max-width: 100%;}
-    .genre_icon_list > li{width: 12.5%;}
+    .heading2 img{max-width: 100%; height: auto !important;}
+    .genre_icon_wrap{display: none;}
+    .coast_list > .ul > li, .extra_pro_list .ul > li.col20{width: 50%;}
+    
+    .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
+    .homeBannerHeading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
+    .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
+    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock{font-size: 16px; line-height: 24px; letter-spacing: 0;}
+    .heading{padding-bottom: 15px;}
+    .ls2{letter-spacing: 0;}
+    .allCulture{padding: 0;}
+    .section{padding: 40px 0;}
+    .homeBanner, .seller_section{padding: 0 0 40px;}
+    .borderSection, .maintab{padding: 40px 0 0;}
+    hr.mb70.mt70{margin: 40px 0;}
+    hr.mb0.mt70{margin: 40px 0 0;}
+    .sliderblock{margin-bottom: 40px;}
+    #culture_slider, .seller_section, .seller_section .sliderblockWrap.odd .sliderImg2, .sliderTextBox .subheading{margin: 0;}
+    .genre_block .subheading2{margin-top: 10px;}
+    .maintab .sliderblockWrap.odd .sliderblock .btn, .sliderblock .btn{margin-top: 20px;}
+    .heading_tag{margin-bottom: 20px;}
+    .allCulture:before{top: -40px;}
+    .seller_section .sliderImgBox{bottom: -40px;}
+    .maintab .sliderIcon{height: auto;}
+    input[type="submit"], input[type="reset"], button, .btn, .homeForm [type="submit"]{height: 36px; line-height: 36px;}
+    .homeForm input[type="text"], .homeForm input[type="email"]{height: 36px;}
+    a.mail.btn{width: 36px; height: 36px; background-position: -5px -5px;}
+    a.mail.btn:hover{background-position: -50px -6px;}
+    .btnGroup a, .btnGroup button, .btnGroup [type="submit"], .btnGroup [type="reset"]{margin-left: 10px;}
+    .logo_cultralocal{left: auto; right: 0; top: -80px;}
 }
 
 /*480px*/
 @media only screen and (max-width: 599px) {
-    .homeForm{max-width: 100%; padding-right: 170px; position: relative;}
-    .homeForm input[type="text"], .homeForm input[type="email"]{width: 100%;}
+    .borderSection:after{top: -15px;}
+    .homeForm{max-width: 100%; position: relative;}
+    .homeForm input[type="text"], .homeForm input[type="email"]{width: 100%; padding-right: 180px;}
     .homeForm [type="submit"]{width: 170px; position: absolute; top: 0; right: 0;}
     input[type="submit"], input[type="reset"], button{padding: 0 15px;}
+    .culture_icon{width: 100px; height: 104px; margin: -55px 0 0;}
+    .maintab .sliderImg{width: 100%; height: auto;}
+    .bio_img{width: 100%; float: none; margin: 0 auto 20px; max-width: 100%;}
+    .bio_title, .bio_title.small, .bio_small {margin-left: 0; padding-left: 0;}
+    .more_culture > li{width: 20%;}
+    footer .borderbar_list > li{margin: 0 10px 0 0;}
+    footer .borderbar_list li:before{right: -8px;}
+    .aiText br, .jobBox:before{display: none;}
+    .coreFour .subheading{clear: both;}
+    .jobList.ul > li.col25{width: 100%;}
+    .jobBox{padding: 0; min-height: inherit;}
+    .jobBox .applyLink{margin-top: 10px;}
 }
 
 /*358px*/
 @media only screen and (max-width: 479px) {
-    
+    .homeForm input[type="text"], .homeForm input[type="email"]{padding-right: 10px;}
+    .homeForm [type="submit"]{position: relative; margin: 10px 0 0;}
+    .borderSection:after{top: -10px;}
+    .homeIcon > li{width: 100%;}
+    .homeIcon .iconBlock:before, .homeIcon .iconBlock:after{display: none;}
+    .homeIcon .contact_info{min-height: inherit;}
+    .homeIcon .iconImg{padding: 0; height: auto;}
+    .culture_icon {width: 55px; height: 57px; margin: -28px 0 0;}
+    .heading, .sliderblock .heading, .contact_form .subheading, .seller_fees .heading2, .communityBox .heading{font-size: 30px; line-height: 40px; letter-spacing: 0;}
+    .btnGroup a, .btnGroup button, .btnGroup [type="submit"], .btnGroup [type="reset"]{margin-left: 15px;}
+    .review_form .sliderblock .heading{padding-left: 0;}
+    .review_form .sliderblock .heading:before{left: 0;}
+    .review_form .sliderblock .heading img{opacity: 0.4;}
+    .mood_list label{margin-right: 0; width: 55px; font-size: 9px;}
+    .fnav li{padding: 0 5px;}
+    footer .borderbar_list > li{margin: 0 0 10px 0; display: block;}
+    footer .borderbar_list > li:before, .sliderTextBox .subheading br{display: none;}
+    .culture_desp .culture_icon{width: 100px; height: 110px;}
+    .culture_desp .culture_icon img{max-width: 100px; max-height: 104px; width: 100px;}
+    .culture_head{padding: 10px 0 0;}
+    .product_block{max-width: 248px; margin: 0 auto;}
+    .coreFour > .ul > li, .contact_form form .ul > li, #sharethought_form .ul > li{width: 100%;}
+    .coreFour .aboutIconBox{text-align: left;}
+    .coreFour .aiIcon{float: left;}
+    .coreFour .subheading{clear: none;}
+    .btnGroup .btn{padding: 0 12px; margin-left: 10px;}
+    footer .logo{max-width: 100%;}
+    .app_block a{margin: 0 20px 0 0;}
+    .sliderTextBox .subheading{font-size: 16px; line-height: 20px;}
+    .bio_title{font-size: 28px; line-height: 40px;}
+    .coast_list > .ul > li, .extra_pro_list .ul > li.col20{width: 100%;}
+    .newsletter_form input[type="text"]{padding-right: 10px;}
+    .newsletter_form [type="submit"]{position: relative; margin: 10px 0 0; float: right;}
+    .newsletter_form .eemail_msg, .newsletter_form #eemail_msg{margin: 46px 0 0;}
+    .seller_tool_wrap .seller_icon, .seller_howitwork .seller_icon, .seller_tool_wrap .ul > li:nth-child(even) .seller_icon, .seller_howitwork .ul > li:nth-child(even) .seller_icon{float: none; margin: 0 auto 10px; min-height: inherit;}
+    .seller_tool_wrap .seller_text, .seller_howitwork .seller_text, .seller_tool_wrap .ul > li:nth-child(even) .seller_text, .seller_howitwork .ul > li:nth-child(even) .seller_text{margin: 0; text-align: center; position: static; -webkit-transform: none; transform: none;}
+    .social_block .social a{width: 40px; height: 40px; line-height: 38px; font-size: 20px;}
 }
 
 /*320px*/
