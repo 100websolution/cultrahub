@@ -201,7 +201,7 @@ $(function () {
         autoplayHoverPause: true,
 		margin: 0,
 		dots: false,
-		nav: true,
+		nav: false,
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		responsive: {
 			320: {

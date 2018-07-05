@@ -255,6 +255,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .hbtm .hright{margin: 10px 0 0;}
     .hright .signup_form_wrap{position: relative; top: 0;}
     .homeBanner .logo{width: 160px; top: -30px;}
+    .homeBannerText{padding: 10px 0 0;}
     
     .homeBannerHeading{font-size: 30px; line-height: 40px;}
     .homeBannerHeading span{font-size: inherit;}
