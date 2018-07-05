@@ -1404,7 +1404,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 
 .hright .signup_form_wrap{
     float: left;
-    margin: 0 50px 0 0;
+    margin: 0 40px 0 0;
 }
 .signup_form_wrap .subheading{
     font-size: 20px;
@@ -1460,12 +1460,12 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
 .topmenu ul > li:first-child{margin: 0;}
 .topmenu ul li a{
     color: inherit;
-    padding-left: 40px;
+    padding-left: 35px;
     position: relative;
 }
 .topmenu ul > li img{
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 26px;
+    max-height: 26px;
     position: absolute;
     top: 50%;
     left: 0;
@@ -1675,6 +1675,7 @@ a.mail.btn:hover{background-color: #d54b3e !important; border-color: #d54b3e !im
     background-size: contain;
 }
 .ls-layer img {display: block;}
+#topbannermobile{display: none;}
 /*BANNER END*/
 
 

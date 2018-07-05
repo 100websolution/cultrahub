@@ -40,6 +40,21 @@
     </script>
     </head>
     <body>
+        <div class="bodyOverlay"></div>
+        <div class="responsive_nav mCustomScrollbar">
+            <div class="maintabnav">
+                <ul class="clearfix">
+                    <li <?php if($post->ID==2543)echo 'class="active"';?>><a href="<?php echo get_permalink(2543);?>">Popular Stores</a></li>
+                    <li <?php if($post->ID==2499)echo 'class="active"';?>><a href="<?php echo get_permalink(2499);?>">Trending Now</a></li>
+                    <li <?php if($post->ID==2671)echo 'class="active"';?>><a href="<?php echo get_permalink(2671);?>">Exclusive</a></li>
+                    <li <?php if($post->ID==2444)echo 'class="active"';?>><a href="<?php echo get_permalink(2444);?>">Customs</a></li>
+                    <li <?php if($post->ID==2770)echo 'class="active"';?>><a href="<?php echo get_permalink(2770);?>">Share a Quote</a></li>
+                    <li <?php if($post->ID==3886)echo 'class="active"';?>><a href="<?php echo get_permalink(3886);?>">Cultures</a></li>
+                </ul>
+            </div>
+            <?php wp_nav_menu( array( 'menu' => 'footer-menu', 'menu_class'=>'') ); ?>
+        </div>
+        
 		<a class="scrollup" href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a>
 		<header class="homeHeader" style="background-image: url(<?php echo get_template_directory_uri();?>/images/bg_home_banner.jpg);">
 			<div class="bg_cloud"><img src="<?php echo get_template_directory_uri();?>/images/cloud.png" alt="" /></div>
@@ -67,10 +82,26 @@
 					<div class="logo">
 						<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
 					</div>
+					<span class="responsive_btn"><span></span></span>
 					<?php
 					if( !empty($home_banners) ){					
 					?>
 					<div class="topbannerwrap">
+                        <div class="owl-carousel" id="topbannermobile">
+                        <?php
+                            $k = 1;
+                            foreach( $home_banners as $banner ){
+                        ?>
+                            <div class="item">
+                                <div class=topbannerimg"">
+                                    <img src="<?php echo $banner['homebanner_image_4']['url'];?>" alt="" />
+                                </div>
+                            </div>
+                        <?php
+                            $k++;
+                            }
+                        ?>
+                        </div>
                         <div id="topbanner" class="ls-wp-container" style="width: 100%; height: 462px; margin: 0px auto; overflow: hidden;">
                         <?php
                             $k = 1;

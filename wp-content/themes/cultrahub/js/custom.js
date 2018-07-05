@@ -194,6 +194,37 @@ $(function () {
         }
     }
     
+    $("#topbannermobile").owlCarousel({
+        items: 1,
+    	loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+		margin: 0,
+		dots: false,
+		nav: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive: {
+			320: {
+				items: 1
+			},
+			480: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 1
+			},
+			1600: {
+				items: 1
+			}
+		}
+    });
+    
     /*-------------------------------------BUSINESS_CULTURE-------------------------------------*/
     $('.business_culture').click(function (e) {
         $(this).children("ul").slideToggle();
@@ -558,11 +589,11 @@ $(function () {
 		responsive: {
 			320: {
 				items: 1,
-                stagePadding: 80
+                stagePadding: 0
 			},
 			480: {
 				items: 1,
-                stagePadding: 80
+                stagePadding: 50
 			},
 			600: {
 				items: 1,
@@ -665,13 +696,22 @@ $(function () {
     $(".skillBarWrap").skill();
 
     /*-------------------------------------RESPONSIVE_MENU-------------------------------------*/
-    /*var ht = $(".nav_menu > ul").html();
-    $(".sidebar-menu").append(ht);
+    $('.responsive_btn').click(function () {
+        $('html').addClass('responsive');
+    });
+    $('.bodyOverlay').click(function () {
+        if ($('html.responsive').length)
+            $('html').removeClass('responsive');
+    });
 
     $(document).on('click', '.subarrow', function () {
-    	$(this).siblings('ul').slideToggle();
-    	$(this).parent().toggleClass('active');
-    });*/
+        $(this).parent().siblings().find('.drop_menu').slideUp();
+        $(this).parent().siblings().removeClass('opened');
+
+        $(this).siblings('.drop_menu').slideToggle();
+        $(this).parent().toggleClass('opened');
+    });
+    $('.responsive_nav.mCustomScrollbar').mCustomScrollbar({scrollbarPosition: 'outside'});
 
     /*-------------------------------------HTML_CLICK-------------------------------------*/
     $('html').click(function () {
