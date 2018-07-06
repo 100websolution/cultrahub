@@ -198,7 +198,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
 /*992px*/
 @media only screen and (max-width: 1150px) {
     #topbanner{display: none;}
-    #topbannermobile{display: block;}
+    #topbannermobile{display: block; padding: 0;}
     
     .innerContainer{width: 100%;}
     .culture_icon{width: 55px; height: 57px; margin: -28px 0 0;}
@@ -349,6 +349,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
 
 /*600px*/
 @media only screen and (max-width: 767px) {
+	.topbannerwrap{padding: 60px 0 0;}
     .borderSection:after{top: -18px;}
     .allCultureText{bottom: 0;}
     .sliderblockWrap .sliderImg2, .sliderblockWrap.odd .sliderImg2, .sliderblockWrap .sliderText2, .sliderblockWrap.odd .sliderText2, .seller_fees_head{width: 100%; float: none; padding: 0; max-width: 100%; text-align: left;}
@@ -433,6 +434,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .hbtm .logo{float: none; margin: 0 auto;}
     .responsive_btn{float: right; margin: -8px 0 0;}
     .homeBanner .logo{top: 0;}
+	.topbannerwrap{padding: 110px 0 0;}
     
     .borderSection:after{top: -15px;}
     .homeForm{max-width: 100%; position: relative;}

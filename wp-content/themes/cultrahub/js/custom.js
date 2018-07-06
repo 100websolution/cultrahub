@@ -194,6 +194,12 @@ $(function () {
         }
     }
     
+    /*$("#topbannermobile").on('initialize.owl.carousel', function(event){ 
+		$("#topbannermobile").addClass('clicked');
+	});
+    $("#topbannermobile").on('initialized.owl.carousel', function(event){ 
+		$("#topbannermobile").removeClass('clicked');
+	});*/
     $("#topbannermobile").owlCarousel({
         items: 1,
     	loop: true,
