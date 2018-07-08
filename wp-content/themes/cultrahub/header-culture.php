@@ -30,7 +30,7 @@
                     <li <?php if($post->ID==2671)echo 'class="active"';?>><a href="<?php echo get_permalink(2671);?>">Exclusive</a></li>
                     <li <?php if($post->ID==2444)echo 'class="active"';?>><a href="<?php echo get_permalink(2444);?>">Customs</a></li>
                     <li <?php if($post->ID==2770)echo 'class="active"';?>><a href="<?php echo get_permalink(2770);?>">Share a Quote</a></li>
-                    <li <?php if($post->ID==3886)echo 'class="active"';?>><a href="<?php echo get_permalink(3886);?>">Cultures</a></li>
+                    <li <?php if($post->ID==3894)echo 'class="active"';?>><a href="<?php echo get_permalink(3894);?>">Cultures</a></li>
                 </ul>
             </div>
             <?php wp_nav_menu( array( 'menu' => 'footer-menu', 'menu_class'=>'') ); ?>
@@ -86,8 +86,8 @@
 						        <li <?php if($post->ID==2770)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2770);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
 						        </li>
-						        <li <?php if($post->ID==3886)echo 'class="active"';?>>
-						            <a href="<?php echo get_permalink(3886);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_culture.png" alt="Cultures"/> Cultures</a>
+						        <li <?php if($post->ID==3894)echo 'class="active"';?>>
+						            <a href="<?php echo get_permalink(3894);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_culture.png" alt="Cultures"/> Cultures</a>
 						        </li>
 						    </ul>
 						</div>

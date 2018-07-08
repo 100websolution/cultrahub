@@ -64,7 +64,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="clearfix">
@@ -188,7 +188,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	<?php
 	if( !empty($featured_products) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <h2 class="heading center">Featured Products</h2>
                 <div class="heading_tag"><?php echo $featured_product_short_description; ?></div>
@@ -227,7 +227,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	/* For Inner Culture Section Start Here */
 	if( !empty($inner_culture_heading_fyrbcoast) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_fyrbcoast;?></h2>
@@ -269,7 +269,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_mcatilands) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_mcatilands;?></h2>
@@ -312,7 +312,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_christianity) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_christianity;?></h2>
@@ -357,7 +357,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_school) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_school;?></h2>
@@ -400,7 +400,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_islamic) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_islamic;?></h2>
@@ -443,7 +443,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_latin) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_latin;?></h2>
@@ -486,7 +486,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($inner_culture_heading_judaism) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <h2 class="heading center"><?php echo $inner_culture_heading_judaism;?></h2>
@@ -533,7 +533,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	<?php
 	if( !empty( $ps_video_clips	 ) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <div class="sliderblockWrap odd rev">
@@ -646,7 +646,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
 	}
 	if( !empty($culture_categories) ){
         ?>
-        <div class="section">
+    <div class="section mob_pb0">
             <div class="container">
                 <h2 class="heading center">Categories Among the Culture</h2>
                 <div class="genre_wrap">
@@ -701,7 +701,7 @@ $inner_cultures_judaism					= get_field( 'judaism_inner_cultures', $post->ID );
         <?php
 	}
 	?>	
-	<div class="section">
+    <div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb70 mt0">
 			<h2 class="heading center">Explore More Cultures</h2>

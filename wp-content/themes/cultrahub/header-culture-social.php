@@ -21,7 +21,22 @@
 		?>
     </head>
     <body>
-		<a class="scrollup" href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a>
+        <div class="bodyOverlay"></div>
+        <div class="responsive_nav mCustomScrollbar">
+            <div class="maintabnav">
+                <ul class="clearfix">
+                    <li <?php if($post->ID==2543)echo 'class="active"';?>><a href="<?php echo get_permalink(2543);?>">Popular Stores</a></li>
+                    <li <?php if($post->ID==2499)echo 'class="active"';?>><a href="<?php echo get_permalink(2499);?>">Trending Now</a></li>
+                    <li <?php if($post->ID==2671)echo 'class="active"';?>><a href="<?php echo get_permalink(2671);?>">Exclusive</a></li>
+                    <li <?php if($post->ID==2444)echo 'class="active"';?>><a href="<?php echo get_permalink(2444);?>">Customs</a></li>
+                    <li <?php if($post->ID==2770)echo 'class="active"';?>><a href="<?php echo get_permalink(2770);?>">Share a Quote</a></li>
+                    <li <?php if($post->ID==3894)echo 'class="active"';?>><a href="<?php echo get_permalink(3894);?>">Cultures</a></li>
+                </ul>
+            </div>
+            <?php wp_nav_menu( array( 'menu' => 'footer-menu', 'menu_class'=>'') ); ?>
+        </div>
+
+        <a class="scrollup" href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a>
 		<header class="innerHeader">
 			<div class="htop">
 				<div class="container">
@@ -72,7 +87,8 @@
 						            <a href="<?php echo get_permalink(2770);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
 						        </li>
 						    </ul>
-						</div>
+                        </div>
+                        <span class="responsive_btn"><span></span></span>
 					</div>
 				</div>
 			</div>

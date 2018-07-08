@@ -200,7 +200,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     #topbanner{display: none;}
     #topbannermobile{display: block; padding: 0;}
     
-    .innerContainer{width: 100%;}
+    .innerContainer, .innerContainer2{width: 100%;}
     .culture_icon{width: 55px; height: 57px; margin: -28px 0 0;}
     .review_form .sliderblock .heading{padding-left: 115px;}
     .review_form .sliderblock .heading img{left: 0;}
@@ -267,7 +267,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .maintab .sliderblockWrap.odd .sliderblock .btn{float: none;}
     .seller_section .sliderblockWrap.odd .sliderImg2{width: 100%; opacity: 0.2;}
     .seller_section .sliderImgBox{right: 0;}
-    .sliderblockWrap.odd.rev .sliderText2{width: 100%; padding: 0 !important; text-align: left;}
+    .sliderblockWrap.odd.rev .sliderText2{float: none; width: 100%; padding: 0 !important; text-align: left;}
     .sliderblockWrap.odd.rev .heading:before{left: 0; right: auto;}
     .smallImg.sliderblockWrap .sliderImg2, .smallImg.sliderblockWrap .sliderblock:nth-child(even) .sliderImg2, .sliderblockWrap.odd .sliderImg2, .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2{width: 450px; padding: 0; margin: 0 auto 20px; float: none;}
     .smallImg.sliderblockWrap .sliderText2, .smallImg.sliderblockWrap .sliderblock:nth-child(even) .sliderText2{width: 100%; float: none; padding: 0; text-align: left;}
@@ -326,8 +326,8 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .exclusive_product .ul li{padding: 0 10px; margin-bottom: 20px;}
     .trendinblocks .sliderblockWrap.odd .sliderImg2, .shareqtblock .sliderblockWrap.odd .sliderImg2{float: right; width: 50%; padding: 0 0 0 15px;}
     .trendinblocks .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2, .shareqtblock .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2{float: left; width: 50%; padding: 0 15px 0 0;}
-    .trendinblocks .sliderblockWrap.odd .sliderText2.ptb50, .shareqtblock .sliderblockWrap.odd .sliderText2.ptb50{width: 50%; padding: 50px 15px 50px 0 !important; text-align: right;}
-    .trendinblocks .sliderblockWrap .sliderblock:nth-child(even) .sliderText2.ptb50, .shareqtblock .sliderblockWrap .sliderblock:nth-child(even) .sliderText2.ptb50{padding: 50px 0 50px 15px !important; text-align: left;}
+    .trendinblocks .sliderblockWrap.odd .sliderText2.ptb50, .shareqtblock .sliderblockWrap.odd .sliderText2.ptb50{width: 50%; padding: 0 15px 0 0 !important; text-align: right; float: left;}
+    .trendinblocks .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderText2.ptb50, .shareqtblock .sliderblockWrap .sliderblock:nth-child(even) .sliderText2.ptb50{padding: 0 0 0 15px !important; text-align: left; float: right;}
     
     .sliderblockWrap .sliderImg2.threeImg .img1, .sliderblockWrap .sliderImg2.threeImg .img2, .sliderblockWrap.odd .doubleImg .img1, .sliderblockWrap.odd .doubleImg .img2{width: 100%; height: auto; padding-top: 100%; position: relative; overflow: hidden;}
     .sliderblockWrap .sliderImg2.threeImg .img2, .sliderblockWrap.odd .doubleImg .img2{width: 60%; padding-top: 80%; position: absolute; right: 0;}
@@ -345,6 +345,12 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .quote_list .ul{margin-left: -15px; margin-right: -15px;}
     .quote_list .ul > li{padding-left: 15px; padding-right: 15px;}
     .quote_block:before{right: -15px;}
+    .contact_info{min-height: 260px;}
+    .schlar_icon{width: 100px; height: 80px; margin: 10px 20px 0 0;}
+    .schlar_text{padding: 0;}
+    .odd.shopSection .shopBlock .shopImg{margin: 0;}
+    .odd.shopSection .shopBlock .shopText{padding: 0 0 0 30px;}
+    .odd.shopSection .shopBlock:nth-child(even) .shopText{padding: 0 30px 0 0;}
 }
 
 /*600px*/
@@ -357,7 +363,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .sliderblockWrap .sliderImg2 form, .sliderblockWrap.odd .sliderImg2 form{text-align: left;}
     .learnImg{width: 470px; max-width: 100%;}
     .learnList > .ul > li{width: 100%;}
-    .learnBox, .learnText{min-height: inherit;}
+    .learnBox, .learnText, .gblist .learnText{min-height: inherit;}
     .seller_tool_wrap .ul > li, .seller_howitwork .ul > li{width: 100%;}
     .seller_block{position: relative;}
     .seller_block:after{content: ""; display: block; clear: both;}
@@ -369,7 +375,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .seller_fees_text{margin: 0; padding: 0; border: none;}
     .shopImg, .shopBlock:nth-child(even) .shopImg{float: none; margin: 0 auto 20px; max-width: 100%;}
     .shopText, .shopBlock:nth-child(even) .shopText{text-align: left;}
-    .quote{font-size: 20px; line-height: 30px; padding: 0 40px; line-height: 40px;}
+    .quote{font-size: 20px; line-height: 30px; padding: 0 40px;}
     .quote:before, .quote:after{width: 30px; height: 26px; top: 10px;}
     .abtImg, .abtSection.odd .abtImg{max-width: 100%; padding: 50px 0;}
     .coreFourImg img{opacity: 0.1;}
@@ -391,20 +397,27 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .heading2 img{max-width: 100%; height: auto !important;}
     .genre_icon_wrap{display: none;}
     .coast_list > .ul > li, .extra_pro_list .ul > li.col20{width: 50%;}
+    .odd.shopSection .shopBlock .shopImg, .odd.shopSection .shopBlock:nth-child(even) .shopImg{float: none; margin: 0 auto 20px;}
+    .odd.shopSection .shopBlock .shopText, .odd.shopSection .shopBlock:nth-child(even) .shopText{margin: 0; padding: 0; text-align: left;}
+    .schlar_icon_wrap .ul > li, .charity_icon_wrap .ul > li{width: 100%;}
+    .charity_icon_wrap .seller_block{min-height: inherit;}
+    .charity_icon_wrap .seller_icon{height: auto; line-height: normal; margin: 0 auto 20px;}
     
-    .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
-    .homeBannerHeading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
+    .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading, .heading2.small{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
+    .homeBannerHeading, .newsletter .subheading, .shopBlock .heading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
     .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
-    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav{font-size: 16px; line-height: 24px; letter-spacing: 0;}
+    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock{font-size: 16px; line-height: 24px; letter-spacing: 0;}
     .heading, .sliderblock .heading{padding-bottom: 15px;}
     .ls2{letter-spacing: 0;}
-    .allCulture{padding: 0;}
     .section{padding: 40px 0;}
     .homeBanner, .seller_section, .review_form{padding: 0 0 40px;}
-    .borderSection, .maintab{padding: 40px 0 0;}
-    hr.mb70.mt70{margin: 40px 0;}
+    .borderSection, .maintab, .mob_pb0{padding: 40px 0 0;}
+    hr.mb70.mt70, hr.mt35.mb35{margin: 40px 0;}
     hr.mb0.mt70{margin: 40px 0 0;}
-    .sliderblock{margin-bottom: 40px;}
+    hr.mb70.mt0{margin: 0 0 40px;}
+    .mt80{margin-top: 40px;}
+    .sliderblock, .shopBlock{margin-bottom: 40px;}
+    .allCulture, .culture_head, .mob_p0{padding: 0;}
     #culture_slider, .seller_section, .seller_section .sliderblockWrap.odd .sliderImg2, .sliderTextBox .subheading{margin: 0;}
     .genre_block .subheading2{margin-top: 10px;}
     .maintab .sliderblockWrap.odd .sliderblock .btn, .sliderblock .btn{margin-top: 20px;}
@@ -424,6 +437,20 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .fnav li{margin: 0 0 10px;}
     footer .social{margin: 20px 0 30px;}
     .copyright{padding: 30px 0;}
+    .culture_desp .culture_title br{display: none;}
+    .culture_desp .culture_icon {width: 100px; height: 110px; margin: -18px 10px 20px -15px;}
+    .culture_desp .culture_icon img{max-width: 100%; max-height: 100%; width: auto;}
+    .culture_desp .culture_text_inner .btn{margin: 0 0 10px;}
+    .bio_img{max-width: 100%; margin:  0 auto 20px; float: none;}
+    .bio_title, .bio_title.small, .bio_small{margin-left: 0; padding: 0;}
+    .newsletter .subheading{margin: 20px 0;}
+    footer.noborder{padding: 0;}
+    .newsletter_form [type="submit"]{-webkit-border-radius: 0 3px 3px 0; border-radius: 0 3px 3px 0;}
+    .sliderTextBox .subheading{font-size: 16px; line-height: 20px;}
+    .iconBlock{min-height: 192px;}
+    .sliderImgBox{max-width: 545px; margin: 0 auto;}
+    .sliderblock .sliderImgText .owl-theme .owl-controls .owl-buttons div, .sliderblock .sliderImgText .owl-carousel .owl-nav .owl-prev, .sliderblock .sliderImgText .owl-carousel .owl-nav .owl-next{height: 52px; line-height: 52px;}
+    .product_block{max-width: 248px; margin: 0 auto;}
 }
 
 /*480px*/
@@ -453,6 +480,8 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .jobList.ul > li.col25{width: 100%;}
     .jobBox{padding: 0; min-height: inherit;}
     .jobBox .applyLink{margin-top: 10px;}
+
+    .sliderImgBox{max-width: 100%;}
 }
 
 /*358px*/
@@ -483,7 +512,6 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .culture_desp .culture_icon{width: 100px; height: 110px;}
     .culture_desp .culture_icon img{max-width: 100px; max-height: 104px; width: 100px;}
     .culture_head{padding: 10px 0 0;}
-    .product_block{max-width: 248px; margin: 0 auto;}
     .coreFour > .ul > li, .contact_form form .ul > li, #sharethought_form .ul > li{width: 100%;}
     .coreFour .aboutIconBox{text-align: left;}
     .coreFour .aiIcon{float: left;}
@@ -500,6 +528,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .seller_tool_wrap .seller_icon, .seller_howitwork .seller_icon, .seller_tool_wrap .ul > li:nth-child(even) .seller_icon, .seller_howitwork .ul > li:nth-child(even) .seller_icon{float: none; margin: 0 auto 10px; min-height: inherit;}
     .seller_tool_wrap .seller_text, .seller_howitwork .seller_text, .seller_tool_wrap .ul > li:nth-child(even) .seller_text, .seller_howitwork .ul > li:nth-child(even) .seller_text{margin: 0; text-align: center; position: static; -webkit-transform: none; transform: none;}
     .social_block .social a{width: 40px; height: 40px; line-height: 38px; font-size: 20px;}
+    .schlar_icon{float: none; margin: 0 0 10px;}
 }
 
 /*320px*/
