@@ -16,7 +16,7 @@ $quote					= get_field( 'quote', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="seller_banner help_banner">

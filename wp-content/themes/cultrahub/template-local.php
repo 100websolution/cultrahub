@@ -230,7 +230,7 @@ $miscellaneous2 	= get_field( 'local_miscellaneous_2', $post->ID );
             </div>
         </div>
         
-        <div class="section">
+        <div class="section mob_pb0">
             <div class="container">
                 <div class="innerContainer">
                     <div class="sliderblockWrap odd rev">

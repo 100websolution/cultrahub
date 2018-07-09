@@ -143,7 +143,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	<?php
 	if(!empty($section_3_heading)){
 	?>
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb70 mt0">
 			<div class="innerContainer">
@@ -191,7 +191,7 @@ $beaseller_description_4= get_field( 'beaseller_description_4', $post->ID );
 	}
 	?>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<?php echo (!empty($section_4_heading))? '<h2 class="heading center">'.$section_4_heading.'</h2>':'';?>

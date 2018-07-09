@@ -56,7 +56,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 	<?php
 	}
 	?>
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 		    <div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
             <h2 class="heading center"><?php echo the_title();?></h2>
@@ -165,7 +165,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
             <h2 class="heading center"><?php echo $exclusivestoretitle;?></h2>
         <?php
@@ -217,7 +217,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
             <h2 class="heading center"><?php echo $exclusivebrandtitle;?></h2>
         <?php

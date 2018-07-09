@@ -12,7 +12,7 @@ $quote								= get_field( 'quote', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 		<?php
@@ -78,7 +78,7 @@ $quote								= get_field( 'quote', $post->ID );
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="sliderblockWrap rev odd">
@@ -153,7 +153,7 @@ $quote								= get_field( 'quote', $post->ID );
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="social_block" style="background-image: url(<?php echo get_template_directory_uri();?>/images/bg_social.jpg);">

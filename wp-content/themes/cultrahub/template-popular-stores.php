@@ -46,7 +46,7 @@ if( !empty($banner_sliders) ){
 }
 ?>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="">

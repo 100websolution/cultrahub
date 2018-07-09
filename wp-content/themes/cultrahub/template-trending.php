@@ -104,8 +104,8 @@ if( !empty($banner_sliders) ){
 								</div>
 							</div>
 						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="clear"></div>
 				</div>
 				<?php
 				}
@@ -114,7 +114,7 @@ if( !empty($banner_sliders) ){
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="">

@@ -20,7 +20,7 @@ $quote						= get_field('quote',$post->ID);
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="seller_banner help_banner">
@@ -39,7 +39,7 @@ $quote						= get_field('quote',$post->ID);
                         </div>
                     </div>
                     
-                    <div class="f18 mb50">
+                    <div class="f18 mb50 mob_mb30">
                         <h2 class="heading nobrdr"><img src="<?php echo $career_icon['url'];?>" alt="" class="heading_icon_left"><?php echo $career_page_heading;?></h2>
                         <?php echo $career_page_decription;?>
                     </div>
@@ -88,7 +88,7 @@ $quote						= get_field('quote',$post->ID);
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
 			<hr class="mt0 mb70">		
 			<div class="innerContainer">

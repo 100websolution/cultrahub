@@ -82,9 +82,9 @@ $quote							= get_field( 'quote', $post->ID );
 		</div>
 	</div>
             
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
-            <div class="innerContainer mt50">
+            <div class="innerContainer mt50 mob_mt0">
                 <div id="team-section">
                     <div class="heading center"><?php echo $aboutus_section_2_heading;?></div>
                     <div class="heading_tag"><?php echo $aboutus_section_2_description;?></div>
