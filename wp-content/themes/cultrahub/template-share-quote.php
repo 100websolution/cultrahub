@@ -119,7 +119,7 @@ if( !empty($banner_sliders) ){
 		</div>
 	</div>
 	
-	<div class="section">
+	<div class="section mob_pb0">
 		<div class="container">
             <div class="">
                 <h2 class="heading center"><?php echo $feature_aspects_title;?></h2>

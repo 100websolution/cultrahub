@@ -363,6 +363,8 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .cultra_cat_icon img{max-width: 100%; max-height: 100%; line-height: 50px;}
     .cultraIcon .seller_block{padding: 0;}
     .coastIcons{margin: 0 auto;}
+    .teamImg{margin: 0 30px 0 0;}
+    .teamText{margin: 0; padding: 0;}
 }
 
 /*600px*/
@@ -419,14 +421,14 @@ html.responsive, .responsive body{overflow-y: hidden;}
     
     .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading, .heading2.small, .cultra_mockup .heading2, .seller_fees .heading2, .communityBox .heading, .heading2.medium{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
     .homeBannerHeading, .newsletter .subheading, .shopBlock .heading, .cultra_mockup .heading.nobrdr, .sliderblock.f24 .heading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
-    .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading, .coreFour .subheading{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
+    .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading, .coreFour .subheading, .quote_block .subheading2{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
     .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock, .f18, .jobBlock, .abtBg, .abtSection, .coreFour .aboutIconBox, .f22, .communityBox, .clanguage, .sliderblock.f24{font-size: 16px; line-height: 24px; letter-spacing: 0;}
     .heading, .sliderblock .heading{padding-bottom: 15px;}
     .ls2{letter-spacing: 0;}
     .section, .jobList.border_list > li, .cultra_mockup .sliderblock{padding: 40px 0;}
     .homeBanner, .seller_section, .review_form{padding: 0 0 40px;}
     .borderSection, .maintab, .mob_pb0{padding: 40px 0 0;}
-    .pb0, .trendinblocks{padding-bottom: 0;}
+    .pb0, .trendinblocks, .shareqtblock{padding-bottom: 0;}
     hr.mb70.mt70, hr.mt35.mb35{margin: 40px 0;}
     hr.mb0.mt70, hr.mt50.mb0, hr.mt60.mb0, .coreFour{margin: 40px 0 0;}
     hr.mb70.mt0{margin: 0 0 40px;}
@@ -434,7 +436,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .sliderblock, .shopBlock, .learnList > .ul > li, .communityBox{margin-bottom: 40px;}
     .mob_mb30{margin-bottom: 30px;}
     .mob_mt0{margin-top: 0;}
-    .allCulture, .culture_head, .mob_p0, .nopolicy, .besellerblocks, .clanguage .seller_fees_head, .clanguage .seller_fees_text{padding: 0;}
+    .allCulture, .culture_head, .mob_p0, .nopolicy, .besellerblocks, .clanguage .seller_fees_head, .clanguage .seller_fees_text, .feature_aspect_wrap{padding: 0;}
     #culture_slider, .seller_section, .seller_section .sliderblockWrap.odd .sliderImg2, .sliderTextBox .subheading{margin: 0;}
     .genre_block .subheading2{margin-top: 10px;}
     .maintab .sliderblockWrap.odd .sliderblock .btn, .sliderblock .btn{margin-top: 20px;}
@@ -490,11 +492,31 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .sliderblockWrap .sliderblock:nth-child(even) .sliderText2{padding: 0;}
     .trendinblocks .sliderblockWrap.odd .sliderImg2, .shareqtblock .sliderblockWrap.odd .sliderImg2, .trendinblocks .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2, .shareqtblock .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderImg2{width: 100%; float: none; padding: 0;}
     .trendinblocks .sliderblockWrap.odd .sliderText2.ptb50, .shareqtblock .sliderblockWrap.odd .sliderText2.ptb50, .trendinblocks .sliderblockWrap.odd .sliderblock:nth-child(even) .sliderText2.ptb50, .shareqtblock .sliderblockWrap .sliderblock:nth-child(even) .sliderText2.ptb50{width: 100%; float: none; padding: 0 !important; text-align: left;}
-    .sliderblockWrap.odd .doubleImg .img1{padding-top: 0; text-align: left;}
-    .sliderblockWrap.odd .sliderblock:nth-child(even) .doubleImg .img1{text-align: right;}
-    .sliderblockWrap.odd .doubleImg .img1 img{position: static; -webkit-transform: none; transform: none; display: inline-block;}
+    .sliderblockWrap.odd .doubleImg .img1, .sliderblockWrap .sliderImg2.threeImg .img1{padding-top: 0; text-align: left; float: none;}
+    .sliderblockWrap.odd .sliderblock:nth-child(even) .doubleImg .img1, .fullContainerText.sliderblockWrap .sliderblock:nth-child(even) .sliderImg2.threeImg .img1{text-align: right; float: none;}
+    .sliderblockWrap .sliderImg2.threeImg .img2{width: 50%; padding-top: 65%;}
+    .sliderblockWrap.odd .doubleImg .img1 img, .sliderblockWrap .sliderImg2.threeImg .img1 img{position: static; -webkit-transform: none; transform: none; display: inline-block;}
     .sliderblockWrap.odd .doubleImg img{display: inline-block;}
+    .sliderblockWrap .sliderImg2.threeImg, .fullContainerText.sliderblockWrap .sliderblock:nth-child(even) .sliderImg2.threeImg{padding: 0;}
+    .sliderblockWrap .sliderblock:nth-child(even) .sliderText2{text-align: left;}
     .sliderblockWrap br{display: none;}
+    .exclusive_product .ul{margin: 0 -3px -6px;}
+    .exclusive_product .ul li{padding: 0 3px; margin-bottom: 6px;}
+    .exclusive_link{font-size: 14px; line-height: 20px; text-align: center;}
+    .exclusive_link.tl, .exclusive_link.tr{top: 10px; right: 10px; left: 10px;}
+    .exclusive_link.bl, .exclusive_link.br{bottom: 10px; right: 10px; left: 10px;}
+    .exbrand > .ul > li{width: 33.33%;}
+    .sliderblockWrap .sliderImg2.hfull, .sliderblockWrap .sliderText2.hfull{height: auto !important;}
+    .quoteImg:after{content: ""; display: block; clear: both;}
+    .feature_aspect_list{margin-bottom: -20px;}
+    .feature_aspect_list > li{width: 100%; margin-bottom: 20px;}
+    .feature_aspect_box{min-height: inherit;}
+    .quote_list .ul > li{width: 100%;}
+    .quote_block{min-height: inherit;}
+    .quote_block:before{display: none;}
+    .input_checkbox label, .input_radio label{line-height: 16px;}
+    .modal .input_checkbox label em, .modal .input_radio label em{margin-top: 2px;}
+    .teamHead{padding-bottom: 20px; margin-bottom: 25px;}
 }
 
 /*480px*/

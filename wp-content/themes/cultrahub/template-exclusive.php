@@ -232,7 +232,7 @@ $exclusive_brand				= get_field( 'exclusive_brand', $post->ID );
 				<?php
 				if( !empty($exclusive_brand) ){
 				?>
-					<div class="">
+					<div class="exbrand">
 						<ul class="ul row">
 				<?php
 						foreach( $exclusive_brand as $ex ){

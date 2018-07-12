@@ -15,7 +15,7 @@ $team_member_key_skills 		= get_field('team_member_key_skills',$thePostID);
 			<hr class="mb0 mt0">
         </div>
     </div>
-	<div class="section teamSection">
+	<div class="section teamSection mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 			    <div class="teamHead">
