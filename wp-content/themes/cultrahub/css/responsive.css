@@ -360,7 +360,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .cultra_cat_wrap ul > li{width: 50%;}
     .cultra_cat_wrap ul > li:nth-child(even){margin: 0;}
     .cultra_cat_wrap ul > li:nth-child(even) .cultra_cat_inner_wrap{margin: 0 0 -1px 0;}
-    .cultra_cat_icon img{max-width: 100%; max-height: 100%; line-height: 50px;}
+    .cultra_cat_icon img{max-width: 100%; max-height: 100%; line-height: 50px; height: auto;}
     .cultraIcon .seller_block{padding: 0;}
     .coastIcons{margin: 0 auto;}
     .teamImg{margin: 0 30px 0 0;}
@@ -419,10 +419,10 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .charity_icon_wrap .seller_block{min-height: inherit;}
     .charity_icon_wrap .seller_icon{height: auto; line-height: normal; margin: 0 auto 20px;}
     
-    .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading, .heading2.small, .cultra_mockup .heading2, .seller_fees .heading2, .communityBox .heading, .heading2.medium{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
+    .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading, .heading2.small, .cultra_mockup .heading2, .seller_fees .heading2, .communityBox .heading, .heading2.medium, .bio_title{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
     .homeBannerHeading, .newsletter .subheading, .shopBlock .heading, .cultra_mockup .heading.nobrdr, .sliderblock.f24 .heading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
-    .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading, .coreFour .subheading, .quote_block .subheading2{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
-    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock, .f18, .jobBlock, .abtBg, .abtSection, .coreFour .aboutIconBox, .f22, .communityBox, .clanguage, .sliderblock.f24{font-size: 16px; line-height: 24px; letter-spacing: 0;}
+    .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading, .coreFour .subheading, .quote_block .subheading2, .bio_title.small{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
+    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock, .f18, .jobBlock, .abtBg, .abtSection, .coreFour .aboutIconBox, .f22, .communityBox, .clanguage, .sliderblock.f24, .culture_bio{font-size: 16px; line-height: 24px; letter-spacing: 0;}
     .heading, .sliderblock .heading{padding-bottom: 15px;}
     .ls2{letter-spacing: 0;}
     .section, .jobList.border_list > li, .cultra_mockup .sliderblock{padding: 40px 0;}
@@ -517,6 +517,12 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .input_checkbox label, .input_radio label{line-height: 16px;}
     .modal .input_checkbox label em, .modal .input_radio label em{margin-top: 2px;}
     .teamHead{padding-bottom: 20px; margin-bottom: 25px;}
+    .modal .signup_form_wrap .heading{margin: 0 0 15px;}
+    .modal .heading .color_dots, .modal .subheading .color_dots{margin-top: 0;}
+    .modal .heading .color_dots span{width: 9px; height: 9px;}
+    .wp-social-login-provider-list{margin: 0 -5px;}
+    .wp-social-login-provider-list:after{content: ""; display: block; clear: both;}
+    .wp-social-login-provider-list a{margin: 0; padding: 0 5px; display: block; float: left; width: 33.33%;}
 }
 
 /*480px*/
@@ -538,13 +544,19 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .maintab .sliderImg{width: 100%; height: auto;}
     .bio_img{width: 100%; float: none; margin: 0 auto 20px; max-width: 100%;}
     .bio_title, .bio_title.small, .bio_small {margin-left: 0; padding-left: 0;}
-    .more_culture > li{width: 20%;}
+    .modal form .ul > li{width: 100%;}
+    .more_culture > li, .modal .ul.pick_badge > li{width: 20%;}
     footer .borderbar_list > li{margin: 0 10px 0 0;}
     footer .borderbar_list li:before{right: -8px;}
     .aiText br, .jobBox:before{display: none;}
     .coreFour .subheading{clear: both;}
 
     .sliderImgBox{max-width: 100%;}
+    .culture_block{max-width: 256px; margin: 0 auto;}
+    .cultra_cat_wrap ul > li{width: 100%;}
+    .cultra_cat_inner_wrap{margin: 0 0 0 -1px;}
+    .cultra_cat_wrap ul > li:nth-child(even) .cultra_cat_inner_wrap{margin: 0 0 -1px -1px;}
+    .cultra_cat span{height: auto;}
 }
 
 /*358px*/
