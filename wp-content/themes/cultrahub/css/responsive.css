@@ -422,7 +422,7 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .heading, .heading2, .sliderblock .heading, .seller_section .sliderblock .heading, .review_form .sliderblock .heading, .heading2.small, .cultra_mockup .heading2, .seller_fees .heading2, .communityBox .heading, .heading2.medium, .bio_title{font-size: 30px; line-height: 40px; margin-bottom: 15px; letter-spacing: 0;}
     .homeBannerHeading, .newsletter .subheading, .shopBlock .heading, .cultra_mockup .heading.nobrdr, .sliderblock.f24 .heading{font-size: 24px; line-height: 30px; margin-bottom: 10px; letter-spacing: 0;}
     .subheading, .subheading2, .maintab .sliderblock .subheading2, .sliderTextBox .subheading, .coreFour .subheading, .quote_block .subheading2, .bio_title.small{font-size: 20px; line-height: 26px; margin-bottom: 10px; letter-spacing: 0;}
-    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock, .f18, .jobBlock, .abtBg, .abtSection, .coreFour .aboutIconBox, .f22, .communityBox, .clanguage, .sliderblock.f24, .culture_bio{font-size: 16px; line-height: 24px; letter-spacing: 0;}
+    .heading_tag, .sliderblock, .mobSliderWrap .sliderblock, .review_form .sliderblock, .fnav, .schlar_text, .shopBlock, .f18, .jobBlock, .abtBg, .abtSection, .coreFour .aboutIconBox, .f22, .communityBox, .clanguage, .sliderblock.f24, .culture_bio, .charity_icon_wrap, .learnBox{font-size: 16px; line-height: 24px; letter-spacing: 0;}
     .heading, .sliderblock .heading{padding-bottom: 15px;}
     .ls2{letter-spacing: 0;}
     .section, .jobList.border_list > li, .cultra_mockup .sliderblock{padding: 40px 0;}
@@ -520,9 +520,10 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .modal .signup_form_wrap .heading{margin: 0 0 15px;}
     .modal .heading .color_dots, .modal .subheading .color_dots{margin-top: 0;}
     .modal .heading .color_dots span{width: 9px; height: 9px;}
-    .wp-social-login-provider-list{margin: 0 -5px;}
+    .wp-social-login-provider-list{margin: 0 -5px; padding: 0 5px 0 0;}
     .wp-social-login-provider-list:after{content: ""; display: block; clear: both;}
-    .wp-social-login-provider-list a{margin: 0; padding: 0 5px; display: block; float: left; width: 33.33%;}
+    .wp-social-login-provider-list a{margin: 0; padding: 0 5px; display: block; float: left; width: 33.33%; overflow: hidden; -webkit-border-radius: 2px; border-radius: 2px;}
+    .wp-social-login-provider-list img {height: 26px; width: auto; max-width: inherit; display: block;}
 }
 
 /*480px*/
@@ -575,7 +576,6 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .homeIcon .contact_info{min-height: inherit;}
     .homeIcon .iconImg{padding: 0; height: auto;}
     .culture_icon {width: 55px; height: 57px; margin: -28px 0 0;}
-    .heading, .sliderblock .heading, .contact_form .subheading, .seller_fees .heading2, .communityBox .heading{font-size: 30px; line-height: 40px; letter-spacing: 0;}
     .btnGroup a, .btnGroup button, .btnGroup [type="submit"], .btnGroup [type="reset"]{margin-left: 15px;}
     .review_form .sliderblock .heading{padding-left: 0;}
     .review_form .sliderblock .heading:before{left: 0;}
@@ -604,6 +604,15 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .seller_tool_wrap .seller_text, .seller_howitwork .seller_text, .seller_tool_wrap .ul > li:nth-child(even) .seller_text, .seller_howitwork .ul > li:nth-child(even) .seller_text{margin: 0; text-align: center; position: static; -webkit-transform: none; transform: none;}
     .social_block .social a{width: 40px; height: 40px; line-height: 38px; font-size: 20px;}
     .schlar_icon{float: none; margin: 0 0 10px;}
+    .homeForm [type="submit"], .newsletter_form [type="submit"]{-webkit-border-radius: 3px; border-radius: 3px;}
+    .iconBlock{min-height: inherit;}
+    .cultraIcon > .ul > li{width: 100%;}
+    .cultraIcon .seller_icon{height: auto; line-height: inherit; margin: 0 auto 20px;}
+    .cultra_cat span{height: 24px;}
+    .coastIcons{width: 290px; height: 300px;}
+    .coastIcons .img1, .coastIcons .img2, .coastIcons .img3, .coastIcons .img4{width: 100px; height: 116px;}
+    .coastIcons .img1, .coastIcons .img3{margin-left: -50px;}
+    .coastIcons .img2, .coastIcons .img4{margin-top: -58px;}
 }
 
 /*320px*/
