@@ -28,96 +28,129 @@ $shareaquote_quotes			= get_field( 'shareaquote_quotes', $post->ID );
 ?>
 <!--MAIN CONTAINER START-->
 <div class="mainContainer" id="mainContainer">
-<?php
-/*if( !empty($banner_sliders) ){
-?>	
+    
 	<div class="section pb0">
 		<div class="container">
 			<hr class="mb35 mt0">
 			<div class="full_banner">
 				<div class="owl-carousel padding_banner">
-				<?php
-				foreach( $banner_sliders as $val_bs ){					
-				?>
 					<div class="item">
 						<div class="banner_block">
-							<a><img src="<?php echo $val_bs['image_slider']['sizes']['menucategory-page-slider-image'];?>" alt="<?php echo $val_bs['image_slider']['title'];?>" width="<?php echo $val_bs['image_slider']['sizes']['menucategory-page-slider-image-width'];?>" /></a>
+                            <a><img src="<?php echo get_template_directory_uri();?>/images/culture_banner1.jpg" alt="" width="" /></a>
 						</div>
 					</div>
-				<?php
-				}
-				?>
+					<div class="item">
+						<div class="banner_block">
+                            <a><img src="<?php echo get_template_directory_uri();?>/images/culture_banner2.jpg" alt="" width="" /></a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="banner_block">
+                            <a><img src="<?php echo get_template_directory_uri();?>/images/culture_banner3.jpg" alt="" width="" /></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<hr class="mt35 mb0">
 		</div>
 	</div>
-<?php
-}*/
-?>
-	<?php /*<div class="section shareqtblock">
+	
+	<div class="section mob_pb0">
 		<div class="container">
 			<div class="innerContainer">
 				<div class="">
-					<div class="heading_icon"><img src="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image'];?>" alt="" width="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-width'];?>" height="<?php echo $menucategory_icon['sizes']['menucategory-page-slider-image-height'];?>" /></div>
-					<h2 class="heading center"><?php echo the_title();?></h2>
-					<?php
-					if( $sharequoteshortdescription != '' ){
-					?>
-						<div class="heading_tag">
-							<?php //echo apply_filters('the_content',$cpt_content->post_content);?>
-							<p><?php echo $sharequoteshortdescription;?></p>
-						</div>
-					<?php
-					}
-					?>					
+                    <div class="heading_icon"><img src="<?php echo get_template_directory_uri();?>/images/icon_culture.png" alt="" width="" height="" /></div>
+                    <h2 class="heading center">Explore Different Cultures</h2>
+                    <div class="heading_tag">
+                        <p>Explore diversity by checking out our huge range of cultures and sub-cultures. Learn about different customs and people, shop for traditional and unique products, and engage with communities and thought leaders on matters effecting the world.</p>
+                    </div>
 				</div>
-				<?php
-				if( !empty($get_posts) ){
-					$m=1;
-				?>
-				<div class="sliderblockWrap odd rev">
-				<?php
-					foreach( $get_posts as $post ){
-				?>
-					<div class="sliderblock f24 rm <?php if(count($get_posts)==$m)echo 'badge_of_day';?>">
-						<div class="sliderImg2 quoteImg">
-							<div class="img1">
-								<img src="<?php echo $post['shareaquote_image1']['url'];?>" alt="" />
-							<?php
-								if(!empty($post['shareaquote_badge'])){
-							?>
-								<span class="badge_of_day_icon"><img src="<?php echo $post['shareaquote_badge']['url'];?>" alt=""></span>
-							<?php
-								}
-							?>
-							</div>
-							<div class="img2"><img src="<?php echo $post['shareaquote_image2']['url'];?>" alt="" /></div>
-						</div>
-						<div class="sliderText2 ptb50">
-							<div class="table_box">
-								<div class="table_cell">
-									<h2 class="heading2 medium"><?php echo $post['shareaquote_title'];?></h2>
-									<h3 class="heading nobrdr rm"><?php echo $post['shareaquotesubheading'];?></h3>
-									<div class="">
-										<?php echo $post['shareaquote_description'];?>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-				<?php
-					$m++;
-					}
-				?>
+				
+				<div class="smallContainer">
+                    <div class="culture_list">
+                        <ul class="clearfix">
+                            <?php
+                            query_posts('post_type=culture&order=asc&orderby=id');
+                            if (have_posts()) : while (have_posts()) : the_post();
+                            $culture_icon = get_field( 'icon', $post->ID );					
+                            ?>
+                            <li>
+                                <div class="allCultureBox">
+                                    <a href="<?php the_permalink();?>">
+                                        <div class="culture_box">
+                                            <img src="<?php echo $culture_icon['sizes']['cultrahub-home-icon'];?>" alt="<?php the_title();?>">
+                                        </div>
+                                        <div class="allCultureText"><?php the_title();?></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <?php
+                            endwhile; endif;
+                            wp_reset_query();
+                            ?>
+                        </ul>
+                    </div>
 				</div>
-				<?php
-				}
-				?>
 			</div>
+            <hr class="mt60 mb0">
 		</div>
-	</div>*/?>
+	</div>
+  
+    <div class="section">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="sliderblockWrap rev odd">
+                    <div class="sliderblock contact_form_block">
+                        <div class="sliderText2">
+                            <h2 class="heading nobrdr">WE HAVE MORE CULTURES TO COME!</h2>
+                            <div class="color_dots mb25">
+                                <span class="yellow"></span>
+                                <span class="red"></span>
+                                <span class="blue"></span>
+                                <span class="green"></span>
+                            </div>
+                            <div class="cultrahub_helpandcontract f36">Don’t See Yours, Then Tell Us Who We Are Missing!</div>
+                        </div>
+                        <div class="sliderImg2">
+                            <div class="contact_form1">
+                                <form method="post" enctype="multipart/form-data" id="getintouch_form" class="form_validation">
+                                    <ul class="ul row">
+                                        <li class="col50">
+                                            <label>Your Name</label>
+                                            <input type="text" class="required" name="fname" id="fname" placeholder="Write your name...">
+                                        </li>
+                                        <li class="col50">
+                                            <label>Your Email Address</label>
+                                            <input type="text" class="required" name="email_id" id="email_id" placeholder="Write your email address...">
+                                        </li>
+                                        <li class="col100">
+                                            <label>Your Feedback</label>
+                                            <textarea class="required" name="ymessage" id="ymessage" onkeyup="check_message_length(this.form);" autocomplete="off" placeholder="Please, leave us your message..."></textarea>
+                                            <div class="align_right">
+                                                <small><span id="message_count">0</span>/500 Characters</small>
+                                            </div>
+                                        </li>
+                                        <li class="col100 align_center">
+                                            <input type="submit" name="submit" value="SUBMIT" id="get_in_touch" class="btnRed w80">
+                                            <div>
+                                                <small>You can also email us at <a href="#">info@cultrahub.com</a>.</small>
+                                            </div>
+                                            <div class="align_center" id="getintouch_msg"></div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section policy_section nopolicy">
+        <div class="newsletter_img"><img src="<?php echo get_template_directory_uri();?>/images/bg_newsletter.png" alt=""></div>
+    </div>
+   
+    <?php //include( locate_template( 'newsletter-form-other.php' ) ); ?>
 </div>
 <!--MAIN CONTAINER END-->
 <?php

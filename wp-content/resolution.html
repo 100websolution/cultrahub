@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Resolution</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+<div>
+<p>Windows width : <span id="winWidth"></span></p>
+<p>Windows height : <span id="winHeight"></span></p>
+</div>
+
+<script>
+$(window).load(function () {
+$('#winWidth').text( $( window ).width() + ' px' );
+$('#winHeight').text( $( window ).height() + ' px' );
+});
+</script>
+</body>
+</html>

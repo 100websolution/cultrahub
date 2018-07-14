@@ -4601,7 +4601,7 @@ li:last-child .quote_block:before{display: none;}
 .gblist .learnText {min-height: 218px;}
 
 
-/*--------------------------------------404 PAGE START--------------------------------------*/
+/*--------------------------------------SCHOLAR PAGE START--------------------------------------*/
 .schlar_icon{
     width: 150px;
     height: 150px;
@@ -4630,6 +4630,41 @@ li:last-child .quote_block:before{display: none;}
 }
 
 .innerContainer2{width: 1025px; margin: 0 auto;}
+
+
+/*--------------------------------------CULTURE PAGE START--------------------------------------*/
+.smallContainer{width: 880px; margin: 0 auto;}
+.culture_list{overflow: hidden;}
+.culture_list > ul{
+    list-style: none;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+}
+.culture_list > ul > li{
+    width: 25%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #cbcdce;
+    border-left: 1px solid #cbcdce;
+}
+.culture_list .allCultureBox{font-size: 18px; position: relative;}
+.culture_list .allCultureBox .culture_box:before{display: none;}
+.culture_list .culture_box img{width: 70%; margin: -20px 0 0;}
+.culture_list .allCultureBox:hover .culture_box img{width: 75%;}
+.culture_list .allCultureText{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    padding: 10px;
+}
+.culture_list .allCultureBox:hover .allCultureText{bottom: 10px;}
+.contact_form_block .f36{
+    font-size: 36px;
+    line-height: 48px;
+    font-family: 'RalewayMedium';
+}
 
 
 /*--------------------------------------404 PAGE START--------------------------------------*/
