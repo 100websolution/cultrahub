@@ -86,6 +86,9 @@
 						        <li <?php if($post->ID==2770)echo 'class="active"';?>>
 						            <a href="<?php echo get_permalink(2770);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_share_quote.png" alt="Share a Quote"/> Share a Quote</a>
 						        </li>
+                                <li <?php if($post->ID==3894)echo 'class="active"';?>>
+                                    <a href="<?php echo get_permalink(3894);?>"><img src="<?php echo get_template_directory_uri();?>/images/icon_culture.png" alt="Cultures"/> Cultures</a>
+                                </li>
 						    </ul>
                         </div>
                         <span class="responsive_btn"><span></span></span>
