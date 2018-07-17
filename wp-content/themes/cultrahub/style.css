@@ -4706,7 +4706,7 @@ li:last-child .quote_block:before{display: none;}
     font-size: 60px;
     line-height: 65px;
 }
-.under_construction .social a{
+.under_construction .social a, .thanku .social a{
     width: 36px;
     height: 36px;
     line-height: 36px;
@@ -4754,6 +4754,21 @@ li:last-child .quote_block:before{display: none;}
     color: #fff;
     text-align: center;
 }
+
+.thanku .text404{
+	width: 600px;
+	text-align: center;
+	top: 50%;
+	right: 50%;
+	-webkit-transform: translate(50%, -50%);
+	transform: translate(50%, -50%);
+}
+.thanku .heading404{
+    font-size: 48px;
+	margin: 0 0 10px;
+}
+.thanku .btn{text-transform: none;}
+.thanku .social{margin: 50px 0 0;}
 
 
 /*--------------------------------------LOGIN PAGE START--------------------------------------*/
