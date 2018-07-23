@@ -656,9 +656,11 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .responsive_nav{width: 260px; right: -260px;}
 }
 
-/*height 480px*/
-@media only screen and (max-height: 480px) {
+/*height 600px*/
+@media only screen and (max-height: 600px) {
     .page404{font-size: 16px; line-height: 24px;}
+    .text404{right: 10%; width: 410px;}
+    
     .thanku .text404{width: 100%; padding: 15px;}
     .thanku_icon{margin-bottom: 10px;}
     .thanku_icon img{width: 50px;}
@@ -671,7 +673,9 @@ html.responsive, .responsive body{overflow-y: hidden;}
 
 /*height 320px*/
 @media only screen and (max-height: 480px) {
-    .page404{font-size: 14px; line-height: 20px;}
+    .page404{font-size: 14px; line-height: 20px; background-position: top -100px right;}
+    .text404{width: 320px; padding: 15px; text-align: center; top: 45%; right: 20%;}
+    .page404.thanku{background-position: top center}
     .thanku_icon img{width: 30px;}
     .thanku_img img{width: 200px;}
     .thanku .color_dots{margin: 0 0 10px;}
