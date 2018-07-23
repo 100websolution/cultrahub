@@ -31,8 +31,8 @@ get_footer();*/
     <body>
         <div class="page404 thanku" style="background-image: url(<?php echo get_template_directory_uri();?>/images/thanku.jpg);">
             <div class="text404">
-				<div class="mb25"><img src="<?php echo get_template_directory_uri();?>/images/thanku_icon.png" alt="Thank You"></div>
-				<div><img src="<?php echo get_template_directory_uri();?>/images/thanku_heading.png" alt="Thank You"></div>
+				<div class="thanku_icon mb25"><img src="<?php echo get_template_directory_uri();?>/images/thanku_icon.png" alt="Thank You"></div>
+				<div class="thanku_img"><img src="<?php echo get_template_directory_uri();?>/images/thanku_heading.png" alt="Thank You"></div>
 				<div class="color_dots mt30 mb30">
                     <span class="green"></span>
                     <span class="yellow"></span>

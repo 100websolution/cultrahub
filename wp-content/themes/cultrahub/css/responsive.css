@@ -564,6 +564,16 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .cultra_cat_wrap ul > li:nth-child(even) .cultra_cat_inner_wrap{margin: 0 0 -1px -1px;}
     .cultra_cat span{height: auto;}
     .culture_list > ul > li{width: 50%;}
+    
+    .page404{font-size: 16px; line-height: 24px;}
+    .thanku .text404{width: 100%; padding: 15px;}
+    .thanku_icon{margin-bottom: 10px;}
+    .thanku_icon img{width: 50px;}
+    .thanku_img img{width: 300px;}
+    .thanku .color_dots{margin: 10px 0 15px;}
+    .page404 .heading404{font-size: 36px; line-height: 40px; margin: 0 0 10px;}
+    .thanku .social{margin: 30px 0 0;}
+    .page404 .btn{height: 36px; line-height: 36px;}
 }
 
 /*358px*/
@@ -627,6 +637,16 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .exbrand > .ul > li{width: 50%;}
     .quoteAuthor{margin-top: 10px;}
     .teamImg{float: none; margin: 0 auto 20px;}
+    
+    .page404{font-size: 14px; line-height: 20px;}
+    .thanku_icon img{width: 30px;}
+    .thanku_img img{width: 200px;}
+    .thanku .color_dots{margin: 0 0 10px;}
+    .page404 .color_dots span{width: 5px; height: 5px;}
+    .page404 .heading404{font-size: 24px; line-height: 26px;}
+    .page404 p{padding-bottom: 15px;}
+    .page404 p br{display: none;}
+    .thanku .social{margin: 20px 0 0;}
 }
 
 /*320px*/
@@ -634,4 +654,30 @@ html.responsive, .responsive body{overflow-y: hidden;}
     .icon_globe{margin-right: 4px;}
     .signup_form_wrap .subheading{font-size: 16px;}
     .responsive_nav{width: 260px; right: -260px;}
+}
+
+/*height 480px*/
+@media only screen and (max-height: 480px) {
+    .page404{font-size: 16px; line-height: 24px;}
+    .thanku .text404{width: 100%; padding: 15px;}
+    .thanku_icon{margin-bottom: 10px;}
+    .thanku_icon img{width: 50px;}
+    .thanku_img img{width: 300px;}
+    .thanku .color_dots{margin: 10px 0 15px;}
+    .page404 .heading404{font-size: 36px; line-height: 40px; margin: 0 0 10px;}
+    .thanku .social{margin: 30px 0 0;}
+    .page404 .btn{height: 36px; line-height: 36px;}
+}
+
+/*height 320px*/
+@media only screen and (max-height: 480px) {
+    .page404{font-size: 14px; line-height: 20px;}
+    .thanku_icon img{width: 30px;}
+    .thanku_img img{width: 200px;}
+    .thanku .color_dots{margin: 0 0 10px;}
+    .page404 .color_dots span{width: 5px; height: 5px;}
+    .page404 .heading404{font-size: 24px; line-height: 26px;}
+    .page404 p{padding-bottom: 15px;}
+    .page404 p br{display: none;}
+    .thanku .social{margin: 20px 0 0;}
 }
