@@ -37,7 +37,7 @@ $team_member_key_skills 		= get_field('team_member_key_skills',$thePostID);
 					<?php
 					if(!empty($team_member_social_media_icon)){
 					?>
-			        <a href="<?php echo $team_member_social_media_link;?>" class="fright">
+			        <a href="<?php echo $team_member_social_media_link;?>" class="fright" target="_blank">
 			            <img src="<?php echo $team_member_social_media_icon['url'];?>" alt="" height="25" class="display-block">
 			        </a>
 					<?php
